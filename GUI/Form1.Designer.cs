@@ -41,10 +41,10 @@ namespace GUI
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.chứcNăngChínhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -72,9 +72,10 @@ namespace GUI
             this.tabControl1.Controls.Add(this.tabPage8);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tabControl1.ImageList = this.imageList1;
-            this.tabControl1.ItemSize = new System.Drawing.Size(120, 40);
+            this.tabControl1.ItemSize = new System.Drawing.Size(300, 40);
             this.tabControl1.Location = new System.Drawing.Point(0, 24);
             this.tabControl1.Name = "tabControl1";
+            this.tabControl1.Padding = new System.Drawing.Point(10, 6);
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(901, 426);
             this.tabControl1.TabIndex = 1;
@@ -92,6 +93,7 @@ namespace GUI
             // 
             // tabPage2
             // 
+            this.tabPage2.ImageIndex = 1;
             this.tabPage2.Location = new System.Drawing.Point(4, 44);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -102,6 +104,7 @@ namespace GUI
             // 
             // tabPage3
             // 
+            this.tabPage3.ImageIndex = 5;
             this.tabPage3.Location = new System.Drawing.Point(4, 44);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -112,6 +115,7 @@ namespace GUI
             // 
             // tabPage4
             // 
+            this.tabPage4.ImageIndex = 2;
             this.tabPage4.Location = new System.Drawing.Point(4, 44);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -122,6 +126,7 @@ namespace GUI
             // 
             // tabPage5
             // 
+            this.tabPage5.ImageIndex = 3;
             this.tabPage5.Location = new System.Drawing.Point(4, 44);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
@@ -132,6 +137,7 @@ namespace GUI
             // 
             // tabPage6
             // 
+            this.tabPage6.ImageIndex = 4;
             this.tabPage6.Location = new System.Drawing.Point(4, 44);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
@@ -142,6 +148,7 @@ namespace GUI
             // 
             // tabPage7
             // 
+            this.tabPage7.ImageIndex = 7;
             this.tabPage7.Location = new System.Drawing.Point(4, 44);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
@@ -152,6 +159,7 @@ namespace GUI
             // 
             // tabPage8
             // 
+            this.tabPage8.ImageIndex = 6;
             this.tabPage8.Location = new System.Drawing.Point(4, 44);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
@@ -160,8 +168,22 @@ namespace GUI
             this.tabPage8.Text = "BÀI HÁT";
             this.tabPage8.UseVisualStyleBackColor = true;
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "House-icon.png");
+            this.imageList1.Images.SetKeyName(1, "Album-photo-icon.png");
+            this.imageList1.Images.SetKeyName(2, "document-audio-icon.png");
+            this.imageList1.Images.SetKeyName(3, "iBooks-Author-icon.png");
+            this.imageList1.Images.SetKeyName(4, "icons8-documentary-80.png");
+            this.imageList1.Images.SetKeyName(5, "music.png");
+            this.imageList1.Images.SetKeyName(6, "Music-Library-icon.png");
+            this.imageList1.Images.SetKeyName(7, "search.png");
+            // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.chứcNăngChínhToolStripMenuItem,
             this.trợGiúpToolStripMenuItem});
@@ -182,12 +204,6 @@ namespace GUI
             this.trợGiúpToolStripMenuItem.Name = "trợGiúpToolStripMenuItem";
             this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.trợGiúpToolStripMenuItem.Text = "Trợ giúp";
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "House-icon.png");
             // 
             // Form1
             // 
