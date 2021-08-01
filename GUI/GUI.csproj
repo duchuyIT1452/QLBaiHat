@@ -59,17 +59,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -86,7 +87,18 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ICON\House-icon.png" />
+    <Content Include="ICON\categories.png" />
+    <Content Include="ICON\close.png" />
+    <Content Include="ICON\help.png" />
+    <Content Include="ICON\icons8-documentary-80.png" />
+    <Content Include="ICON\info %281%29.png" />
+    <Content Include="ICON\info.png" />
+    <Content Include="ICON\Music-Library-icon.png" />
+    <Content Include="ICON\music_album.png" />
+    <Content Include="ICON\search.png" />
+    <Content Include="ICON\settings.png" />
+    <Content Include="ICON\singer.png" />
+    <Content Include="ICON\writer.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
