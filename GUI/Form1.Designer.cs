@@ -55,9 +55,22 @@ namespace GUI
             this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinSinhViênThựcHiệnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinĐềTàiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.tabControl_formChinh.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -92,6 +105,7 @@ namespace GUI
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.tableLayoutPanel1);
             this.tabPage1.ImageIndex = 0;
             this.tabPage1.Location = new System.Drawing.Point(4, 44);
             this.tabPage1.Name = "tabPage1";
@@ -323,6 +337,90 @@ namespace GUI
             this.thôngTinĐềTàiToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.thôngTinĐềTàiToolStripMenuItem.Text = "Thông tin đề tài";
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.listView1, 0, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 69F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(887, 372);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(881, 63);
+            this.panel2.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(266, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(359, 25);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "CHƯƠNG TRÌNH QUẢN LÝ BÀI HÁT";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6});
+            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(3, 72);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(881, 297);
+            this.listView1.TabIndex = 1;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "STT";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Tên Bài Hát";
+            this.columnHeader2.Width = 150;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Tên album";
+            this.columnHeader3.Width = 150;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Các ca sĩ thể hiện";
+            this.columnHeader4.Width = 150;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Thể loại";
+            this.columnHeader5.Width = 150;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Lời bài hát";
+            this.columnHeader6.Width = 100;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -336,8 +434,12 @@ namespace GUI
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabControl_formChinh.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -368,6 +470,16 @@ namespace GUI
         private System.Windows.Forms.ToolStripMenuItem đóngỨngDụngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thôngTinSinhViênThựcHiệnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thôngTinĐềTàiToolStripMenuItem;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
     }
 }
 
