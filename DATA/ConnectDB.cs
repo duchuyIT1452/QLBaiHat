@@ -24,7 +24,7 @@ namespace DATA
             da.Fill(dt);
             return dt;
         }
-        public void ExcuteNonQuery(String sql)
+        public void ExecuteNonQuery(String sql)
         {
             DataTable dt = new DataTable();
             SqlConnection conn = getConnect();
