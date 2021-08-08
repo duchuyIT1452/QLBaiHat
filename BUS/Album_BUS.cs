@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -87,6 +88,10 @@ namespace BUS
             this.maAlbum = ma;
             this.tenAlbum = ten;
             this.namPhatHanh = nam;
+        }
+        public DataTable getAlbum()
+        {
+            return newAlbum.getAlbum();
         }
     }
 }

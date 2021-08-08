@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
 
 namespace GUI
 {
@@ -60,6 +61,14 @@ namespace GUI
         private void Form1_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            load_Album();
+        }
+
+        private DataTable dtAlbum;
+        private void load_Album()
+        {
+            DataTable dtAlbum = new Album_BUS().getAlbum();
+            dgv_Album.DataSource = dtAlbum;
         }
     }
 }

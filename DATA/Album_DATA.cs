@@ -12,7 +12,7 @@ namespace DATA
         ConnectDB conn = new ConnectDB();
         public DataTable getAlbum()
         {
-            String sql = "SELECT * FROM ALBUM";
+            String sql = "SELECT ma_album, ten_album, year(namphathanh) AS namphathanh FROM ALBUM";
             DataTable dt = new DataTable();
             dt = conn.GetTable(sql);
             return dt;
