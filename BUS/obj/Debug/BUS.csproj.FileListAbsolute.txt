@@ -37,3 +37,6 @@ C:\Users\Admin\Desktop\New folder (2)\QLBaiHat\BUS\obj\Debug\BUS.csproj.CoreComp
 C:\Users\Admin\Desktop\New folder (2)\QLBaiHat\BUS\obj\Debug\BUS.csproj.CopyComplete
 C:\Users\Admin\Desktop\New folder (2)\QLBaiHat\BUS\obj\Debug\BUS.exe
 C:\Users\Admin\Desktop\New folder (2)\QLBaiHat\BUS\obj\Debug\BUS.pdb
+D:\tailieuhoctap\LT_Window\Project\Ctrinh\QLBaiHat\BUS\bin\Debug\BUS.exe.config
+D:\tailieuhoctap\LT_Window\Project\Ctrinh\QLBaiHat\BUS\obj\Debug\BUS.exe
+D:\tailieuhoctap\LT_Window\Project\Ctrinh\QLBaiHat\BUS\obj\Debug\BUS.pdb
