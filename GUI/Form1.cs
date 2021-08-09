@@ -62,6 +62,7 @@ namespace GUI
         {
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             load_Album();
+            load_TheLoai();
         }
 
         private DataTable dtAlbum;
@@ -82,10 +83,13 @@ namespace GUI
                 return;
             dgv_AlbumBaihat.Rows.Clear();
             DataTable dt = null;
-            try
-            {
-                dt = new 
-            }
+        }
+
+        private void load_TheLoai()
+        {
+            DataTable dtTheLoai = new TheLoai_BUS().getTheLoai();
+            dgv_theloai.DataSource = dtTheLoai;
+
         }
     }
 }
