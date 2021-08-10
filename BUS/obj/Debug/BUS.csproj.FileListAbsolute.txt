@@ -37,16 +37,3 @@ C:\Users\Admin\Desktop\New folder (2)\QLBaiHat\BUS\obj\Debug\BUS.csproj.CoreComp
 C:\Users\Admin\Desktop\New folder (2)\QLBaiHat\BUS\obj\Debug\BUS.csproj.CopyComplete
 C:\Users\Admin\Desktop\New folder (2)\QLBaiHat\BUS\obj\Debug\BUS.exe
 C:\Users\Admin\Desktop\New folder (2)\QLBaiHat\BUS\obj\Debug\BUS.pdb
-C:\Users\duchu\OneDrive\Documents\LTWindow\QLBaiHat-5268830d9af7cbe9584982d8effa3fbd2bb3bef9\BUS\bin\Debug\BUS.exe.config
-C:\Users\duchu\OneDrive\Documents\LTWindow\QLBaiHat-5268830d9af7cbe9584982d8effa3fbd2bb3bef9\BUS\bin\Debug\BUS.exe
-C:\Users\duchu\OneDrive\Documents\LTWindow\QLBaiHat-5268830d9af7cbe9584982d8effa3fbd2bb3bef9\BUS\bin\Debug\BUS.pdb
-C:\Users\duchu\OneDrive\Documents\LTWindow\QLBaiHat-5268830d9af7cbe9584982d8effa3fbd2bb3bef9\BUS\bin\Debug\DATA.exe
-C:\Users\duchu\OneDrive\Documents\LTWindow\QLBaiHat-5268830d9af7cbe9584982d8effa3fbd2bb3bef9\BUS\bin\Debug\DATA.pdb
-C:\Users\duchu\OneDrive\Documents\LTWindow\QLBaiHat-5268830d9af7cbe9584982d8effa3fbd2bb3bef9\BUS\bin\Debug\DATA.exe.config
-C:\Users\duchu\OneDrive\Documents\LTWindow\QLBaiHat-5268830d9af7cbe9584982d8effa3fbd2bb3bef9\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
-C:\Users\duchu\OneDrive\Documents\LTWindow\QLBaiHat-5268830d9af7cbe9584982d8effa3fbd2bb3bef9\BUS\obj\Debug\BUS.Properties.Resources.resources
-C:\Users\duchu\OneDrive\Documents\LTWindow\QLBaiHat-5268830d9af7cbe9584982d8effa3fbd2bb3bef9\BUS\obj\Debug\BUS.csproj.GenerateResource.cache
-C:\Users\duchu\OneDrive\Documents\LTWindow\QLBaiHat-5268830d9af7cbe9584982d8effa3fbd2bb3bef9\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
-C:\Users\duchu\OneDrive\Documents\LTWindow\QLBaiHat-5268830d9af7cbe9584982d8effa3fbd2bb3bef9\BUS\obj\Debug\BUS.csproj.CopyComplete
-C:\Users\duchu\OneDrive\Documents\LTWindow\QLBaiHat-5268830d9af7cbe9584982d8effa3fbd2bb3bef9\BUS\obj\Debug\BUS.exe
-C:\Users\duchu\OneDrive\Documents\LTWindow\QLBaiHat-5268830d9af7cbe9584982d8effa3fbd2bb3bef9\BUS\obj\Debug\BUS.pdb
