@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -67,6 +66,7 @@ namespace BUS
             this.maTheLoai = ma;
             this.tenTheLoai = ten;
         }
+<<<<<<< HEAD
 
         public DataTable getTheLoai()
         {
@@ -76,5 +76,7 @@ namespace BUS
         {
             newTheLoai.themTheLoai(maTheLoai, tenTheLoai);
         }
+=======
+>>>>>>> 14d71c2966f9a0d12211463ea35154d348ae963d
     }
 }

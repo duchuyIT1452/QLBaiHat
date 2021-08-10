@@ -46,6 +46,7 @@ namespace GUI
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
+<<<<<<< HEAD
             this.bt_dong = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dgv_AlbumBaihat = new System.Windows.Forms.DataGridView();
@@ -54,6 +55,8 @@ namespace GUI
             this.ten_album_theloai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loi_baihat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
+=======
+>>>>>>> 14d71c2966f9a0d12211463ea35154d348ae963d
             this.panel4 = new System.Windows.Forms.Panel();
             this.bt_xoa = new System.Windows.Forms.Button();
             this.bt_them = new System.Windows.Forms.Button();
@@ -91,6 +94,12 @@ namespace GUI
             this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinSinhViênThựcHiệnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinĐềTàiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+<<<<<<< HEAD
+=======
+            this.MaAlbum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenAlbum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NamPhatHanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+>>>>>>> 14d71c2966f9a0d12211463ea35154d348ae963d
             this.panel1.SuspendLayout();
             this.tabControl_formChinh.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -98,14 +107,15 @@ namespace GUI
             this.panel2.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_AlbumBaihat)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Album)).BeginInit();
+<<<<<<< HEAD
             this.tabPage3.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_theloai)).BeginInit();
+=======
+>>>>>>> 14d71c2966f9a0d12211463ea35154d348ae963d
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -257,8 +267,6 @@ namespace GUI
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.bt_dong);
-            this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(4, 4);
@@ -266,6 +274,7 @@ namespace GUI
             this.panel3.Size = new System.Drawing.Size(988, 468);
             this.panel3.TabIndex = 0;
             // 
+<<<<<<< HEAD
             // bt_dong
             // 
             this.bt_dong.Location = new System.Drawing.Point(719, 430);
@@ -338,6 +347,8 @@ namespace GUI
             this.label3.TabIndex = 0;
             this.label3.Text = "Danh sách các bài hát trong album";
             // 
+=======
+>>>>>>> 14d71c2966f9a0d12211463ea35154d348ae963d
             // panel4
             // 
             this.panel4.Controls.Add(this.bt_xoa);
@@ -346,7 +357,7 @@ namespace GUI
             this.panel4.Controls.Add(this.label2);
             this.panel4.Location = new System.Drawing.Point(4, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(362, 408);
+            this.panel4.Size = new System.Drawing.Size(370, 414);
             this.panel4.TabIndex = 0;
             // 
             // bt_xoa
@@ -379,7 +390,7 @@ namespace GUI
             this.dgv_Album.RowHeadersVisible = false;
             this.dgv_Album.RowHeadersWidth = 51;
             this.dgv_Album.RowTemplate.Height = 24;
-            this.dgv_Album.Size = new System.Drawing.Size(355, 314);
+            this.dgv_Album.Size = new System.Drawing.Size(349, 314);
             this.dgv_Album.TabIndex = 1;
             // 
             // MaAlbum
@@ -413,7 +424,7 @@ namespace GUI
             this.label2.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label2.Image = global::GUI.Properties.Resources.checklist;
-            this.label2.Location = new System.Drawing.Point(66, 0);
+            this.label2.Location = new System.Drawing.Point(47, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(199, 28);
             this.label2.TabIndex = 0;
@@ -421,7 +432,6 @@ namespace GUI
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.panel6);
             this.tabPage3.ImageIndex = 4;
             this.tabPage3.Location = new System.Drawing.Point(4, 44);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
@@ -723,6 +733,33 @@ namespace GUI
             this.thôngTinĐềTàiToolStripMenuItem.Size = new System.Drawing.Size(281, 26);
             this.thôngTinĐềTàiToolStripMenuItem.Text = "Thông tin đề tài";
             // 
+<<<<<<< HEAD
+=======
+            // MaAlbum
+            // 
+            this.MaAlbum.DataPropertyName = "ma_album";
+            this.MaAlbum.HeaderText = "Mã Album";
+            this.MaAlbum.MinimumWidth = 6;
+            this.MaAlbum.Name = "MaAlbum";
+            this.MaAlbum.Width = 75;
+            // 
+            // TenAlbum
+            // 
+            this.TenAlbum.DataPropertyName = "ten_album";
+            this.TenAlbum.HeaderText = "Tên Album";
+            this.TenAlbum.MinimumWidth = 6;
+            this.TenAlbum.Name = "TenAlbum";
+            this.TenAlbum.Width = 200;
+            // 
+            // NamPhatHanh
+            // 
+            this.NamPhatHanh.DataPropertyName = "namphathanh";
+            this.NamPhatHanh.HeaderText = "Năm phát hành";
+            this.NamPhatHanh.MinimumWidth = 6;
+            this.NamPhatHanh.Name = "NamPhatHanh";
+            this.NamPhatHanh.Width = 75;
+            // 
+>>>>>>> 14d71c2966f9a0d12211463ea35154d348ae963d
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -743,17 +780,17 @@ namespace GUI
             this.panel2.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_AlbumBaihat)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Album)).EndInit();
+<<<<<<< HEAD
             this.tabPage3.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_theloai)).EndInit();
+=======
+>>>>>>> 14d71c2966f9a0d12211463ea35154d348ae963d
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -802,13 +839,10 @@ namespace GUI
         private System.Windows.Forms.Button bt_xoa;
         private System.Windows.Forms.Button bt_them;
         private System.Windows.Forms.DataGridView dgv_Album;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.DataGridView dgv_AlbumBaihat;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button bt_dong;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaAlbum;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenAlbum;
         private System.Windows.Forms.DataGridViewTextBoxColumn NamPhatHanh;
+<<<<<<< HEAD
         private System.Windows.Forms.DataGridViewTextBoxColumn ten_baihat;
         private System.Windows.Forms.DataGridViewTextBoxColumn casi;
         private System.Windows.Forms.DataGridViewTextBoxColumn ten_album_theloai;
@@ -822,6 +856,8 @@ namespace GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn ma_theloai;
         private System.Windows.Forms.DataGridViewTextBoxColumn ten_theloai;
+=======
+>>>>>>> 14d71c2966f9a0d12211463ea35154d348ae963d
     }
 }
 

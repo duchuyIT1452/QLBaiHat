@@ -62,7 +62,6 @@ namespace GUI
         {
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             load_Album();
-            load_TheLoai();
         }
 
         private DataTable dtAlbum;
@@ -70,6 +69,7 @@ namespace GUI
         {
             DataTable dtAlbum = new Album_BUS().getAlbum();
             dgv_Album.DataSource = dtAlbum;
+<<<<<<< HEAD
             
         }
 
@@ -86,6 +86,8 @@ namespace GUI
             DataTable dtTheLoai = new TheLoai_BUS().getTheLoai();
             dgv_theloai.DataSource = dtTheLoai;
 
+=======
+>>>>>>> 14d71c2966f9a0d12211463ea35154d348ae963d
         }
 
         private void bt_themTheLoai_Click(object sender, EventArgs e)
