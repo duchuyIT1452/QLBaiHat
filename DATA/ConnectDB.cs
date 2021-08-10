@@ -12,7 +12,7 @@ namespace DATA
     {
         public SqlConnection getConnect()
         {
-            string connString = @"Data Source=DESKTOP-O6EL3EQ;Initial Catalog=DBBaiHat;Integrated Security=True";
+            string connString = @"Data Source=DESKTOP-CMM6T7Q;Initial Catalog=DBBaiHat;Integrated Security=True";
             return new SqlConnection(connString);
         }
 
@@ -32,11 +32,6 @@ namespace DATA
             SqlCommand cmd = new SqlCommand(sql, conn);
             cmd.ExecuteNonQuery();
             conn.Close();
-        }
-
-        internal int executeNonQuery(string p)
-        {
-            throw new NotImplementedException();
         }
     }
 }
