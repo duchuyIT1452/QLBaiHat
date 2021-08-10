@@ -46,15 +46,32 @@ namespace GUI
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.bt_dong = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dgv_AlbumBaihat = new System.Windows.Forms.DataGridView();
+            this.ten_baihat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.casi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ten_album_theloai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loi_baihat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.bt_xoa = new System.Windows.Forms.Button();
             this.bt_them = new System.Windows.Forms.Button();
             this.dgv_Album = new System.Windows.Forms.DataGridView();
+            this.MaAlbum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenAlbum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NamPhatHanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.bt_xoaTheLoai = new System.Windows.Forms.Button();
+            this.bt_themTheLoai = new System.Windows.Forms.Button();
+            this.dgv_theloai = new System.Windows.Forms.DataGridView();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ma_theloai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ten_theloai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label4 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
@@ -74,23 +91,6 @@ namespace GUI
             this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinSinhViênThựcHiệnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinĐềTàiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.MaAlbum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenAlbum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NamPhatHanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bt_dong = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dgv_theloai = new System.Windows.Forms.DataGridView();
-            this.ten_baihat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.casi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ten_album_theloai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loi_baihat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ma_theloai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ten_theloai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.tabControl_formChinh.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -103,10 +103,10 @@ namespace GUI
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Album)).BeginInit();
             this.tabPage3.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_theloai)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -133,7 +133,7 @@ namespace GUI
             this.tabControl_formChinh.Dock = System.Windows.Forms.DockStyle.Top;
             this.tabControl_formChinh.ImageList = this.imageList1;
             this.tabControl_formChinh.ItemSize = new System.Drawing.Size(300, 40);
-            this.tabControl_formChinh.Location = new System.Drawing.Point(0, 28);
+            this.tabControl_formChinh.Location = new System.Drawing.Point(0, 30);
             this.tabControl_formChinh.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl_formChinh.Name = "tabControl_formChinh";
             this.tabControl_formChinh.Padding = new System.Drawing.Point(10, 6);
@@ -266,6 +266,15 @@ namespace GUI
             this.panel3.Size = new System.Drawing.Size(988, 468);
             this.panel3.TabIndex = 0;
             // 
+            // bt_dong
+            // 
+            this.bt_dong.Location = new System.Drawing.Point(719, 430);
+            this.bt_dong.Name = "bt_dong";
+            this.bt_dong.Size = new System.Drawing.Size(75, 23);
+            this.bt_dong.TabIndex = 2;
+            this.bt_dong.Text = "Đóng";
+            this.bt_dong.UseVisualStyleBackColor = true;
+            // 
             // panel5
             // 
             this.panel5.Controls.Add(this.dgv_AlbumBaihat);
@@ -290,6 +299,34 @@ namespace GUI
             this.dgv_AlbumBaihat.Size = new System.Drawing.Size(601, 314);
             this.dgv_AlbumBaihat.TabIndex = 1;
             this.dgv_AlbumBaihat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_AlbumBaihat_CellContentClick);
+            // 
+            // ten_baihat
+            // 
+            this.ten_baihat.HeaderText = "Tên bài hát";
+            this.ten_baihat.MinimumWidth = 6;
+            this.ten_baihat.Name = "ten_baihat";
+            this.ten_baihat.Width = 125;
+            // 
+            // casi
+            // 
+            this.casi.HeaderText = "Ca sĩ thể hiện";
+            this.casi.MinimumWidth = 6;
+            this.casi.Name = "casi";
+            this.casi.Width = 125;
+            // 
+            // ten_album_theloai
+            // 
+            this.ten_album_theloai.HeaderText = "Thể loại";
+            this.ten_album_theloai.MinimumWidth = 6;
+            this.ten_album_theloai.Name = "ten_album_theloai";
+            this.ten_album_theloai.Width = 125;
+            // 
+            // loi_baihat
+            // 
+            this.loi_baihat.HeaderText = "Lời bài hát";
+            this.loi_baihat.MinimumWidth = 6;
+            this.loi_baihat.Name = "loi_baihat";
+            this.loi_baihat.Width = 125;
             // 
             // label3
             // 
@@ -345,6 +382,30 @@ namespace GUI
             this.dgv_Album.Size = new System.Drawing.Size(355, 314);
             this.dgv_Album.TabIndex = 1;
             // 
+            // MaAlbum
+            // 
+            this.MaAlbum.DataPropertyName = "ma_album";
+            this.MaAlbum.HeaderText = "Mã Album";
+            this.MaAlbum.MinimumWidth = 6;
+            this.MaAlbum.Name = "MaAlbum";
+            this.MaAlbum.Width = 75;
+            // 
+            // TenAlbum
+            // 
+            this.TenAlbum.DataPropertyName = "ten_album";
+            this.TenAlbum.HeaderText = "Tên Album";
+            this.TenAlbum.MinimumWidth = 6;
+            this.TenAlbum.Name = "TenAlbum";
+            this.TenAlbum.Width = 200;
+            // 
+            // NamPhatHanh
+            // 
+            this.NamPhatHanh.DataPropertyName = "namphathanh";
+            this.NamPhatHanh.HeaderText = "Năm phát hành";
+            this.NamPhatHanh.MinimumWidth = 6;
+            this.NamPhatHanh.Name = "NamPhatHanh";
+            this.NamPhatHanh.Width = 75;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -370,6 +431,91 @@ namespace GUI
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "THỂ LOẠI";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.panel7);
+            this.panel6.Location = new System.Drawing.Point(8, 7);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(980, 462);
+            this.panel6.TabIndex = 0;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.bt_xoaTheLoai);
+            this.panel7.Controls.Add(this.bt_themTheLoai);
+            this.panel7.Controls.Add(this.dgv_theloai);
+            this.panel7.Controls.Add(this.label4);
+            this.panel7.Location = new System.Drawing.Point(3, 3);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(344, 396);
+            this.panel7.TabIndex = 0;
+            // 
+            // bt_xoaTheLoai
+            // 
+            this.bt_xoaTheLoai.Location = new System.Drawing.Point(206, 340);
+            this.bt_xoaTheLoai.Name = "bt_xoaTheLoai";
+            this.bt_xoaTheLoai.Size = new System.Drawing.Size(75, 23);
+            this.bt_xoaTheLoai.TabIndex = 2;
+            this.bt_xoaTheLoai.Text = "Xóa";
+            this.bt_xoaTheLoai.UseVisualStyleBackColor = true;
+            // 
+            // bt_themTheLoai
+            // 
+            this.bt_themTheLoai.Location = new System.Drawing.Point(27, 340);
+            this.bt_themTheLoai.Name = "bt_themTheLoai";
+            this.bt_themTheLoai.Size = new System.Drawing.Size(75, 23);
+            this.bt_themTheLoai.TabIndex = 2;
+            this.bt_themTheLoai.Text = "Thêm";
+            this.bt_themTheLoai.UseVisualStyleBackColor = true;
+            this.bt_themTheLoai.Click += new System.EventHandler(this.bt_themTheLoai_Click);
+            // 
+            // dgv_theloai
+            // 
+            this.dgv_theloai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_theloai.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.STT,
+            this.ma_theloai,
+            this.ten_theloai});
+            this.dgv_theloai.Location = new System.Drawing.Point(3, 31);
+            this.dgv_theloai.Name = "dgv_theloai";
+            this.dgv_theloai.RowHeadersWidth = 51;
+            this.dgv_theloai.RowTemplate.Height = 24;
+            this.dgv_theloai.Size = new System.Drawing.Size(338, 252);
+            this.dgv_theloai.TabIndex = 1;
+            // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.MinimumWidth = 6;
+            this.STT.Name = "STT";
+            this.STT.Width = 50;
+            // 
+            // ma_theloai
+            // 
+            this.ma_theloai.DataPropertyName = "ma_theloai";
+            this.ma_theloai.HeaderText = "Mã thể loại";
+            this.ma_theloai.MinimumWidth = 6;
+            this.ma_theloai.Name = "ma_theloai";
+            this.ma_theloai.Width = 75;
+            // 
+            // ten_theloai
+            // 
+            this.ten_theloai.DataPropertyName = "ten_theloai";
+            this.ten_theloai.HeaderText = "Tên thể loại";
+            this.ten_theloai.MinimumWidth = 6;
+            this.ten_theloai.Name = "ten_theloai";
+            this.ten_theloai.Width = 150;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(71, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(210, 28);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Danh sách thể loại";
             // 
             // tabPage4
             // 
@@ -453,7 +599,7 @@ namespace GUI
             this.trợGiúpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1004, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1004, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -470,7 +616,7 @@ namespace GUI
             this.đóngỨngDụngToolStripMenuItem});
             this.chứcNăngChínhToolStripMenuItem.Image = global::GUI.Properties.Resources.settings;
             this.chứcNăngChínhToolStripMenuItem.Name = "chứcNăngChínhToolStripMenuItem";
-            this.chứcNăngChínhToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.chứcNăngChínhToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.chứcNăngChínhToolStripMenuItem.Text = "Chức năng chính";
             // 
             // quảnLýAlbumToolStripMenuItem
@@ -560,7 +706,7 @@ namespace GUI
             this.thôngTinĐềTàiToolStripMenuItem});
             this.trợGiúpToolStripMenuItem.Image = global::GUI.Properties.Resources.help;
             this.trợGiúpToolStripMenuItem.Name = "trợGiúpToolStripMenuItem";
-            this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(98, 24);
+            this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(98, 26);
             this.trợGiúpToolStripMenuItem.Text = "Trợ giúp";
             // 
             // thôngTinSinhViênThựcHiệnToolStripMenuItem
@@ -576,151 +722,6 @@ namespace GUI
             this.thôngTinĐềTàiToolStripMenuItem.Name = "thôngTinĐềTàiToolStripMenuItem";
             this.thôngTinĐềTàiToolStripMenuItem.Size = new System.Drawing.Size(281, 26);
             this.thôngTinĐềTàiToolStripMenuItem.Text = "Thông tin đề tài";
-            // 
-            // MaAlbum
-            // 
-            this.MaAlbum.DataPropertyName = "ma_album";
-            this.MaAlbum.HeaderText = "Mã Album";
-            this.MaAlbum.MinimumWidth = 6;
-            this.MaAlbum.Name = "MaAlbum";
-            this.MaAlbum.Width = 75;
-            // 
-            // TenAlbum
-            // 
-            this.TenAlbum.DataPropertyName = "ten_album";
-            this.TenAlbum.HeaderText = "Tên Album";
-            this.TenAlbum.MinimumWidth = 6;
-            this.TenAlbum.Name = "TenAlbum";
-            this.TenAlbum.Width = 200;
-            // 
-            // NamPhatHanh
-            // 
-            this.NamPhatHanh.DataPropertyName = "namphathanh";
-            this.NamPhatHanh.HeaderText = "Năm phát hành";
-            this.NamPhatHanh.MinimumWidth = 6;
-            this.NamPhatHanh.Name = "NamPhatHanh";
-            this.NamPhatHanh.Width = 75;
-            // 
-            // bt_dong
-            // 
-            this.bt_dong.Location = new System.Drawing.Point(719, 430);
-            this.bt_dong.Name = "bt_dong";
-            this.bt_dong.Size = new System.Drawing.Size(75, 23);
-            this.bt_dong.TabIndex = 2;
-            this.bt_dong.Text = "Đóng";
-            this.bt_dong.UseVisualStyleBackColor = true;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.panel7);
-            this.panel6.Location = new System.Drawing.Point(8, 7);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(980, 462);
-            this.panel6.TabIndex = 0;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.button2);
-            this.panel7.Controls.Add(this.button1);
-            this.panel7.Controls.Add(this.dgv_theloai);
-            this.panel7.Controls.Add(this.label4);
-            this.panel7.Location = new System.Drawing.Point(3, 3);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(344, 396);
-            this.panel7.TabIndex = 0;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(71, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(210, 28);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Danh sách thể loại";
-            // 
-            // dgv_theloai
-            // 
-            this.dgv_theloai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_theloai.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.STT,
-            this.ma_theloai,
-            this.ten_theloai});
-            this.dgv_theloai.Location = new System.Drawing.Point(3, 31);
-            this.dgv_theloai.Name = "dgv_theloai";
-            this.dgv_theloai.RowHeadersWidth = 51;
-            this.dgv_theloai.RowTemplate.Height = 24;
-            this.dgv_theloai.Size = new System.Drawing.Size(338, 252);
-            this.dgv_theloai.TabIndex = 1;
-            // 
-            // ten_baihat
-            // 
-            this.ten_baihat.HeaderText = "Tên bài hát";
-            this.ten_baihat.MinimumWidth = 6;
-            this.ten_baihat.Name = "ten_baihat";
-            this.ten_baihat.Width = 125;
-            // 
-            // casi
-            // 
-            this.casi.HeaderText = "Ca sĩ thể hiện";
-            this.casi.MinimumWidth = 6;
-            this.casi.Name = "casi";
-            this.casi.Width = 125;
-            // 
-            // ten_album_theloai
-            // 
-            this.ten_album_theloai.HeaderText = "Thể loại";
-            this.ten_album_theloai.MinimumWidth = 6;
-            this.ten_album_theloai.Name = "ten_album_theloai";
-            this.ten_album_theloai.Width = 125;
-            // 
-            // loi_baihat
-            // 
-            this.loi_baihat.HeaderText = "Lời bài hát";
-            this.loi_baihat.MinimumWidth = 6;
-            this.loi_baihat.Name = "loi_baihat";
-            this.loi_baihat.Width = 125;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(27, 340);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Thêm";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(206, 340);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Xóa";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // STT
-            // 
-            this.STT.HeaderText = "STT";
-            this.STT.MinimumWidth = 6;
-            this.STT.Name = "STT";
-            this.STT.Width = 50;
-            // 
-            // ma_theloai
-            // 
-            this.ma_theloai.DataPropertyName = "ma_theloai";
-            this.ma_theloai.HeaderText = "Mã thể loại";
-            this.ma_theloai.MinimumWidth = 6;
-            this.ma_theloai.Name = "ma_theloai";
-            this.ma_theloai.Width = 75;
-            // 
-            // ten_theloai
-            // 
-            this.ten_theloai.DataPropertyName = "ten_theloai";
-            this.ten_theloai.HeaderText = "Tên thể loại";
-            this.ten_theloai.MinimumWidth = 6;
-            this.ten_theloai.Name = "ten_theloai";
-            this.ten_theloai.Width = 150;
             // 
             // Form1
             // 
@@ -749,12 +750,12 @@ namespace GUI
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Album)).EndInit();
             this.tabPage3.ResumeLayout(false);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_theloai)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -814,8 +815,8 @@ namespace GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn loi_baihat;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bt_xoaTheLoai;
+        private System.Windows.Forms.Button bt_themTheLoai;
         private System.Windows.Forms.DataGridView dgv_theloai;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;

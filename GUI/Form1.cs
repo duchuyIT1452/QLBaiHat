@@ -91,5 +91,15 @@ namespace GUI
             dgv_theloai.DataSource = dtTheLoai;
 
         }
+
+        private void bt_themTheLoai_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Form_ThemTheLoai f = new Form_ThemTheLoai();
+            f.ShowDialog();
+            if (f.DialogResult == DialogResult.OK)
+                load_TheLoai();
+            this.Visible = true;
+        }
     }
 }

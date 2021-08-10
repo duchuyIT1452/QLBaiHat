@@ -67,9 +67,14 @@ namespace BUS
             this.maTheLoai = ma;
             this.tenTheLoai = ten;
         }
+
         public DataTable getTheLoai()
         {
             return newTheLoai.getTheLoai();
+        }
+        public void themTheLoai()
+        {
+            newTheLoai.themTheLoai(maTheLoai, tenTheLoai);
         }
     }
 }
