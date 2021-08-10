@@ -60,6 +60,3 @@ C:\Users\duchu\OneDrive\Documents\LTWindow\QLBaiHat-5268830d9af7cbe9584982d8effa
 C:\Users\duchu\OneDrive\Documents\LTWindow\QLBaiHat-5268830d9af7cbe9584982d8effa3fbd2bb3bef9\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\duchu\OneDrive\Documents\LTWindow\QLBaiHat-5268830d9af7cbe9584982d8effa3fbd2bb3bef9\GUI\obj\Debug\GUI.exe
 C:\Users\duchu\OneDrive\Documents\LTWindow\QLBaiHat-5268830d9af7cbe9584982d8effa3fbd2bb3bef9\GUI\obj\Debug\GUI.pdb
-C:\Users\duchu\OneDrive\Máy tính\New folder (3)\QLBaiHat\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
-C:\Users\duchu\OneDrive\Máy tính\New folder (3)\QLBaiHat\GUI\obj\Debug\GUI.exe
-C:\Users\duchu\OneDrive\Máy tính\New folder (3)\QLBaiHat\GUI\obj\Debug\GUI.pdb
