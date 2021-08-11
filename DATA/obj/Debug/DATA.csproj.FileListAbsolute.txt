@@ -25,3 +25,12 @@ C:\Users\Admin\Desktop\New folder (2)\QLBaiHat\DATA\obj\Debug\DATA.csproj.Genera
 C:\Users\Admin\Desktop\New folder (2)\QLBaiHat\DATA\obj\Debug\DATA.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Desktop\New folder (2)\QLBaiHat\DATA\obj\Debug\DATA.exe
 C:\Users\Admin\Desktop\New folder (2)\QLBaiHat\DATA\obj\Debug\DATA.pdb
+C:\Users\duchu\OneDrive\Máy tính\QLBaiHat-2a501ae54f954aaab4e6cfb9b7b4d87c6e947eb9\DATA\obj\Debug\DATA.csprojAssemblyReference.cache
+C:\Users\duchu\OneDrive\Máy tính\QLBaiHat-2a501ae54f954aaab4e6cfb9b7b4d87c6e947eb9\DATA\obj\Debug\DATA.Properties.Resources.resources
+C:\Users\duchu\OneDrive\Máy tính\QLBaiHat-2a501ae54f954aaab4e6cfb9b7b4d87c6e947eb9\DATA\obj\Debug\DATA.csproj.GenerateResource.cache
+C:\Users\duchu\OneDrive\Máy tính\QLBaiHat-2a501ae54f954aaab4e6cfb9b7b4d87c6e947eb9\DATA\obj\Debug\DATA.csproj.CoreCompileInputs.cache
+C:\Users\duchu\OneDrive\Máy tính\QLBaiHat-2a501ae54f954aaab4e6cfb9b7b4d87c6e947eb9\DATA\obj\Debug\DATA.exe
+C:\Users\duchu\OneDrive\Máy tính\QLBaiHat-2a501ae54f954aaab4e6cfb9b7b4d87c6e947eb9\DATA\obj\Debug\DATA.pdb
+C:\Users\duchu\OneDrive\Máy tính\QLBaiHat-2a501ae54f954aaab4e6cfb9b7b4d87c6e947eb9\DATA\bin\Debug\DATA.exe.config
+C:\Users\duchu\OneDrive\Máy tính\QLBaiHat-2a501ae54f954aaab4e6cfb9b7b4d87c6e947eb9\DATA\bin\Debug\DATA.exe
+C:\Users\duchu\OneDrive\Máy tính\QLBaiHat-2a501ae54f954aaab4e6cfb9b7b4d87c6e947eb9\DATA\bin\Debug\DATA.pdb

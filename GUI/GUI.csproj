@@ -52,28 +52,19 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_ThemAlbum.cs">
+    <Compile Include="fThem_HangSX.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_ThemAlbum.Designer.cs">
-      <DependentUpon>Form_ThemAlbum.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form_ThemTheLoai.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form_ThemTheLoai.Designer.cs">
-      <DependentUpon>Form_ThemTheLoai.cs</DependentUpon>
+    <Compile Include="fThem_HangSX.Designer.cs">
+      <DependentUpon>fThem_HangSX.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_ThemAlbum.resx">
-      <DependentUpon>Form_ThemAlbum.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_ThemTheLoai.resx">
-      <DependentUpon>Form_ThemTheLoai.cs</DependentUpon>
+    <EmbeddedResource Include="fThem_HangSX.resx">
+      <DependentUpon>fThem_HangSX.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

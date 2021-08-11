@@ -62,6 +62,7 @@ namespace GUI
         {
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             load_Album();
+            load_TheLoai();
         }
 
         private DataTable dtAlbum;
@@ -69,8 +70,11 @@ namespace GUI
         {
             DataTable dtAlbum = new Album_BUS().getAlbum();
             dgv_Album.DataSource = dtAlbum;
-<<<<<<< HEAD
-            
+            int dong = dgv_Album.Rows.Count;
+            for (int i=1; i<=dong;i++)
+            {
+                dgv_Album.Rows[i].Cells[0].Value = i++;
+            }
         }
 
         private void dgv_AlbumBaihat_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -86,18 +90,6 @@ namespace GUI
             DataTable dtTheLoai = new TheLoai_BUS().getTheLoai();
             dgv_theloai.DataSource = dtTheLoai;
 
-=======
->>>>>>> 14d71c2966f9a0d12211463ea35154d348ae963d
-        }
-
-        private void bt_themTheLoai_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            Form_ThemTheLoai f = new Form_ThemTheLoai();
-            f.ShowDialog();
-            if (f.DialogResult == DialogResult.OK)
-                load_TheLoai();
-            this.Visible = true;
         }
     }
 }
