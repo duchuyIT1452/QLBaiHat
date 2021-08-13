@@ -53,3 +53,16 @@ C:\Users\duchu\OneDrive\Máy tính\QLBaiHat-2a501ae54f954aaab4e6cfb9b7b4d87c6e94
 C:\Users\duchu\OneDrive\Máy tính\QLBaiHat-2a501ae54f954aaab4e6cfb9b7b4d87c6e947eb9\BUS\bin\Debug\DATA.pdb
 C:\Users\duchu\OneDrive\Máy tính\QLBaiHat-2a501ae54f954aaab4e6cfb9b7b4d87c6e947eb9\BUS\bin\Debug\DATA.exe.config
 C:\Users\duchu\OneDrive\Máy tính\QLBaiHat-2a501ae54f954aaab4e6cfb9b7b4d87c6e947eb9\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\duchu\OneDrive\Máy tính\New folder (3)\QLBaiHat\BUS\bin\Debug\BUS.exe.config
+C:\Users\duchu\OneDrive\Máy tính\New folder (3)\QLBaiHat\BUS\bin\Debug\BUS.exe
+C:\Users\duchu\OneDrive\Máy tính\New folder (3)\QLBaiHat\BUS\bin\Debug\BUS.pdb
+C:\Users\duchu\OneDrive\Máy tính\New folder (3)\QLBaiHat\BUS\bin\Debug\DATA.exe
+C:\Users\duchu\OneDrive\Máy tính\New folder (3)\QLBaiHat\BUS\bin\Debug\DATA.pdb
+C:\Users\duchu\OneDrive\Máy tính\New folder (3)\QLBaiHat\BUS\bin\Debug\DATA.exe.config
+C:\Users\duchu\OneDrive\Máy tính\New folder (3)\QLBaiHat\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+C:\Users\duchu\OneDrive\Máy tính\New folder (3)\QLBaiHat\BUS\obj\Debug\BUS.Properties.Resources.resources
+C:\Users\duchu\OneDrive\Máy tính\New folder (3)\QLBaiHat\BUS\obj\Debug\BUS.csproj.GenerateResource.cache
+C:\Users\duchu\OneDrive\Máy tính\New folder (3)\QLBaiHat\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\duchu\OneDrive\Máy tính\New folder (3)\QLBaiHat\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\duchu\OneDrive\Máy tính\New folder (3)\QLBaiHat\BUS\obj\Debug\BUS.exe
+C:\Users\duchu\OneDrive\Máy tính\New folder (3)\QLBaiHat\BUS\obj\Debug\BUS.pdb

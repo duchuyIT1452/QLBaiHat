@@ -37,13 +37,6 @@ namespace GUI
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
             this.bt_dong = new System.Windows.Forms.Button();
@@ -91,6 +84,13 @@ namespace GUI
             this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinSinhViênThựcHiệnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinĐềTàiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dgv_baihat_home = new System.Windows.Forms.DataGridView();
+            this.STT_TC1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenBaiHat_TC1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenAlbum_TC1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CaSi_TC1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TheLoai_TC1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoiBaiHat_TC1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.tabControl_formChinh.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -107,6 +107,7 @@ namespace GUI
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_theloai)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_baihat_home)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -116,7 +117,7 @@ namespace GUI
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(908, 454);
+            this.panel1.Size = new System.Drawing.Size(1302, 617);
             this.panel1.TabIndex = 0;
             // 
             // tabControl_formChinh
@@ -129,14 +130,14 @@ namespace GUI
             this.tabControl_formChinh.Controls.Add(this.tabPage6);
             this.tabControl_formChinh.Controls.Add(this.tabPage7);
             this.tabControl_formChinh.Controls.Add(this.tabPage8);
-            this.tabControl_formChinh.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tabControl_formChinh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl_formChinh.ImageList = this.imageList1;
             this.tabControl_formChinh.ItemSize = new System.Drawing.Size(300, 40);
             this.tabControl_formChinh.Location = new System.Drawing.Point(0, 28);
             this.tabControl_formChinh.Name = "tabControl_formChinh";
-            this.tabControl_formChinh.Padding = new System.Drawing.Point(10, 6);
+            this.tabControl_formChinh.Padding = new System.Drawing.Point(27, 6);
             this.tabControl_formChinh.SelectedIndex = 0;
-            this.tabControl_formChinh.Size = new System.Drawing.Size(908, 426);
+            this.tabControl_formChinh.Size = new System.Drawing.Size(1302, 589);
             this.tabControl_formChinh.TabIndex = 1;
             // 
             // tabPage1
@@ -145,8 +146,8 @@ namespace GUI
             this.tabPage1.ImageIndex = 0;
             this.tabPage1.Location = new System.Drawing.Point(4, 44);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage1.Size = new System.Drawing.Size(900, 378);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1294, 541);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "BÀI HÁT - HOME";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -154,17 +155,17 @@ namespace GUI
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 887F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 894F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.dgv_baihat_home, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.listView1, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 69F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(894, 372);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1288, 535);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel2
@@ -174,66 +175,19 @@ namespace GUI
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(888, 63);
+            this.panel2.Size = new System.Drawing.Size(1282, 63);
             this.panel2.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(266, 16);
+            this.label1.Location = new System.Drawing.Point(474, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(359, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "CHƯƠNG TRÌNH QUẢN LÝ BÀI HÁT";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(3, 72);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(888, 297);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "STT";
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Tên Bài Hát";
-            this.columnHeader2.Width = 150;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Tên album";
-            this.columnHeader3.Width = 150;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Các ca sĩ thể hiện";
-            this.columnHeader4.Width = 150;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Thể loại";
-            this.columnHeader5.Width = 150;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Lời bài hát";
-            this.columnHeader6.Width = 100;
             // 
             // tabPage2
             // 
@@ -241,8 +195,8 @@ namespace GUI
             this.tabPage2.ImageIndex = 7;
             this.tabPage2.Location = new System.Drawing.Point(4, 44);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage2.Size = new System.Drawing.Size(745, 378);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1294, 541);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "ALBUM";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -254,15 +208,15 @@ namespace GUI
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 3);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(739, 372);
+            this.panel3.Size = new System.Drawing.Size(1288, 535);
             this.panel3.TabIndex = 0;
             // 
             // bt_dong
             // 
             this.bt_dong.Location = new System.Drawing.Point(539, 349);
-            this.bt_dong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_dong.Margin = new System.Windows.Forms.Padding(2);
             this.bt_dong.Name = "bt_dong";
             this.bt_dong.Size = new System.Drawing.Size(56, 19);
             this.bt_dong.TabIndex = 2;
@@ -274,7 +228,7 @@ namespace GUI
             this.panel5.Controls.Add(this.dgv_AlbumBaihat);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Location = new System.Drawing.Point(279, 2);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(462, 332);
             this.panel5.TabIndex = 1;
@@ -288,7 +242,7 @@ namespace GUI
             this.ten_album_theloai,
             this.loi_baihat});
             this.dgv_AlbumBaihat.Location = new System.Drawing.Point(8, 25);
-            this.dgv_AlbumBaihat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_AlbumBaihat.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_AlbumBaihat.Name = "dgv_AlbumBaihat";
             this.dgv_AlbumBaihat.RowHeadersWidth = 51;
             this.dgv_AlbumBaihat.RowTemplate.Height = 24;
@@ -342,7 +296,7 @@ namespace GUI
             this.panel4.Controls.Add(this.dgv_Album);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Location = new System.Drawing.Point(3, 2);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(272, 332);
             this.panel4.TabIndex = 0;
@@ -350,7 +304,7 @@ namespace GUI
             // bt_xoa
             // 
             this.bt_xoa.Location = new System.Drawing.Point(142, 306);
-            this.bt_xoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_xoa.Margin = new System.Windows.Forms.Padding(2);
             this.bt_xoa.Name = "bt_xoa";
             this.bt_xoa.Size = new System.Drawing.Size(56, 19);
             this.bt_xoa.TabIndex = 3;
@@ -360,7 +314,7 @@ namespace GUI
             // bt_them
             // 
             this.bt_them.Location = new System.Drawing.Point(26, 306);
-            this.bt_them.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_them.Margin = new System.Windows.Forms.Padding(2);
             this.bt_them.Name = "bt_them";
             this.bt_them.Size = new System.Drawing.Size(56, 19);
             this.bt_them.TabIndex = 2;
@@ -375,7 +329,7 @@ namespace GUI
             this.TenAlbum,
             this.NamPhatHanh});
             this.dgv_Album.Location = new System.Drawing.Point(2, 25);
-            this.dgv_Album.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_Album.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_Album.Name = "dgv_Album";
             this.dgv_Album.RowHeadersVisible = false;
             this.dgv_Album.RowHeadersWidth = 51;
@@ -427,8 +381,8 @@ namespace GUI
             this.tabPage3.ImageIndex = 4;
             this.tabPage3.Location = new System.Drawing.Point(4, 44);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage3.Size = new System.Drawing.Size(745, 378);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1294, 541);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "THỂ LOẠI";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -437,7 +391,7 @@ namespace GUI
             // 
             this.panel6.Controls.Add(this.panel7);
             this.panel6.Location = new System.Drawing.Point(6, 6);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(735, 375);
             this.panel6.TabIndex = 0;
@@ -449,7 +403,7 @@ namespace GUI
             this.panel7.Controls.Add(this.dgv_theloai);
             this.panel7.Controls.Add(this.label4);
             this.panel7.Location = new System.Drawing.Point(2, 2);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(258, 322);
             this.panel7.TabIndex = 0;
@@ -457,7 +411,7 @@ namespace GUI
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(154, 276);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(56, 19);
             this.button2.TabIndex = 2;
@@ -467,7 +421,7 @@ namespace GUI
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(20, 276);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(56, 19);
             this.button1.TabIndex = 2;
@@ -482,7 +436,7 @@ namespace GUI
             this.ma_theloai,
             this.ten_theloai});
             this.dgv_theloai.Location = new System.Drawing.Point(2, 25);
-            this.dgv_theloai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_theloai.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_theloai.Name = "dgv_theloai";
             this.dgv_theloai.RowHeadersWidth = 51;
             this.dgv_theloai.RowTemplate.Height = 24;
@@ -528,8 +482,8 @@ namespace GUI
             this.tabPage4.ImageIndex = 5;
             this.tabPage4.Location = new System.Drawing.Point(4, 44);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage4.Size = new System.Drawing.Size(745, 378);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1294, 541);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "CA SĨ";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -539,8 +493,8 @@ namespace GUI
             this.tabPage5.ImageIndex = 6;
             this.tabPage5.Location = new System.Drawing.Point(4, 44);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage5.Size = new System.Drawing.Size(745, 378);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(1294, 541);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "TÁC GIẢ";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -550,8 +504,8 @@ namespace GUI
             this.tabPage6.ImageIndex = 1;
             this.tabPage6.Location = new System.Drawing.Point(4, 44);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage6.Size = new System.Drawing.Size(745, 378);
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(1294, 541);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "HÃNG SẢN XUẤT";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -561,8 +515,8 @@ namespace GUI
             this.tabPage7.ImageIndex = 3;
             this.tabPage7.Location = new System.Drawing.Point(4, 44);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage7.Size = new System.Drawing.Size(745, 378);
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(1294, 541);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "TRA CỨU - TÌM KIẾM";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -572,8 +526,8 @@ namespace GUI
             this.tabPage8.ImageIndex = 2;
             this.tabPage8.Location = new System.Drawing.Point(4, 44);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage8.Size = new System.Drawing.Size(745, 378);
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(1294, 541);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "BÀI HÁT";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -601,7 +555,7 @@ namespace GUI
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(908, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1302, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -725,13 +679,72 @@ namespace GUI
             this.thôngTinĐềTàiToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.thôngTinĐềTàiToolStripMenuItem.Text = "Thông tin đề tài";
             // 
+            // dgv_baihat_home
+            // 
+            this.dgv_baihat_home.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_baihat_home.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.STT_TC1,
+            this.TenBaiHat_TC1,
+            this.TenAlbum_TC1,
+            this.CaSi_TC1,
+            this.TheLoai_TC1,
+            this.LoiBaiHat_TC1});
+            this.dgv_baihat_home.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_baihat_home.Location = new System.Drawing.Point(3, 72);
+            this.dgv_baihat_home.Name = "dgv_baihat_home";
+            this.dgv_baihat_home.RowHeadersVisible = false;
+            this.dgv_baihat_home.Size = new System.Drawing.Size(1282, 460);
+            this.dgv_baihat_home.TabIndex = 2;
+            // 
+            // STT_TC1
+            // 
+            this.STT_TC1.HeaderText = "STT";
+            this.STT_TC1.Name = "STT_TC1";
+            // 
+            // TenBaiHat_TC1
+            // 
+            this.TenBaiHat_TC1.DataPropertyName = "ten_baihat";
+            this.TenBaiHat_TC1.HeaderText = "Tên bài hát";
+            this.TenBaiHat_TC1.Name = "TenBaiHat_TC1";
+            this.TenBaiHat_TC1.Width = 170;
+            // 
+            // TenAlbum_TC1
+            // 
+            this.TenAlbum_TC1.DataPropertyName = "ten_album";
+            this.TenAlbum_TC1.HeaderText = "Tên album";
+            this.TenAlbum_TC1.Name = "TenAlbum_TC1";
+            this.TenAlbum_TC1.Width = 180;
+            // 
+            // CaSi_TC1
+            // 
+            this.CaSi_TC1.DataPropertyName = "ten_casi";
+            this.CaSi_TC1.HeaderText = "Ca sĩ";
+            this.CaSi_TC1.Name = "CaSi_TC1";
+            this.CaSi_TC1.Width = 170;
+            // 
+            // TheLoai_TC1
+            // 
+            this.TheLoai_TC1.DataPropertyName = "ten_theloai";
+            this.TheLoai_TC1.HeaderText = "Thể loại";
+            this.TheLoai_TC1.Name = "TheLoai_TC1";
+            this.TheLoai_TC1.Width = 150;
+            // 
+            // LoiBaiHat_TC1
+            // 
+            this.LoiBaiHat_TC1.DataPropertyName = "loi_baihat";
+            this.LoiBaiHat_TC1.HeaderText = "Lời bài hát";
+            this.LoiBaiHat_TC1.Name = "LoiBaiHat_TC1";
+            this.LoiBaiHat_TC1.Width = 500;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(908, 454);
+            this.ClientSize = new System.Drawing.Size(1302, 617);
             this.Controls.Add(this.panel1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -757,6 +770,7 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.dgv_theloai)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_baihat_home)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -790,13 +804,6 @@ namespace GUI
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label2;
@@ -823,6 +830,13 @@ namespace GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn ma_theloai;
         private System.Windows.Forms.DataGridViewTextBoxColumn ten_theloai;
+        private System.Windows.Forms.DataGridView dgv_baihat_home;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT_TC1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenBaiHat_TC1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenAlbum_TC1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CaSi_TC1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TheLoai_TC1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LoiBaiHat_TC1;
     }
 }
 

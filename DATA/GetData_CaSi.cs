@@ -9,8 +9,9 @@ namespace DATA
 {
     public class GetData_CaSi
     {
+        #region Lấy toàn bộ ca sĩ
         ConnectDB conDB = new ConnectDB();
-
+        #endregion
         public DataTable getAllCaSi()
         {
             String sql = "Select * from CaSi";

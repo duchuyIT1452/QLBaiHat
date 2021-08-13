@@ -63,6 +63,21 @@ namespace GUI
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             load_Album();
             load_TheLoai();
+            LoadBaiHat_Home();
+        }
+
+        private void LoadBaiHat_Home()
+        {
+            BaiHat_BUS bus = new BaiHat_BUS();
+            DataTable dt = new DataTable();
+            dt = bus.getBaiHatHome();
+            dgv_baihat_home.DataSource = dt;
+            int dem = 0;
+            foreach (DataRow row in dt.Rows)
+            {
+                dgv_baihat_home.Rows[dem].Cells[0].Value = "Bài hát "+(dem+1);
+                dem++;
+            }
         }
 
         private DataTable dtAlbum;
@@ -89,6 +104,11 @@ namespace GUI
         {
             DataTable dtTheLoai = new TheLoai_BUS().getTheLoai();
             dgv_theloai.DataSource = dtTheLoai;
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

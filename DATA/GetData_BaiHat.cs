@@ -18,6 +18,14 @@ namespace DATA
             dt = conDB.GetTable(sql);
             return dt;
         }
+        public DataTable getAllBaiHatFormChinh()
+        {
+            String sql = "Select ten_baihat, ten_album, ten_casi, ten_theloai, loi_baihat from BaiHat b INNER JOIN album a ON b.ma_album = a.ma_album INNER JOIN CaSi c ON b.ma_casi = c.ma_casi INNER JOIN TheLoai t ON b.ma_theloai = t.ma_theloai";
+            DataTable dt = new DataTable();
+            dt = conDB.GetTable(sql);
+            return dt;
+        }
+
         public void InsertBaiHat(String maBaiHat, String tenBaiHat, String maTheLoai, String maAlbum, String maCaSi, String maTacGia, String maHSX, String loiBaiHat)
         {
             String sql = "Insert Into BaiHat Values('" + maBaiHat + "', '" + tenBaiHat + "', '" + maTheLoai + "','" + maAlbum + "','" + maCaSi + "','" + maTacGia + "','" + maHSX + "','" + loiBaiHat + "')";
