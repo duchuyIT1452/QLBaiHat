@@ -18,6 +18,7 @@ namespace GUI
             InitializeComponent();
         }
 
+        #region menu
         private void quảnLýAlbumToolStripMenuItem_Click(object sender, EventArgs e)
         {
             tabControl_formChinh.SelectedIndex = 1;
@@ -57,13 +58,15 @@ namespace GUI
         {
             Close();
         }
-
+        #endregion
         private void Form1_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             load_Album();
             load_TheLoai();
             LoadBaiHat_Home();
+            load_Tacgia();
+            load_Hangsx();
         }
 
         private void LoadBaiHat_Home()
@@ -107,9 +110,28 @@ namespace GUI
 
         }
 
+        #region Click thừa
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        #endregion
+
+        private DataTable dtTacGia;
+        private void load_Tacgia()
+        {
+            dtTacGia = new TacGia_BUS().getAllTacGia();
+            lst_dsnhacsi.DataSource = dtTacGia;
+            lst_dsnhacsi.DisplayMember = "ten_tacgia";
+            lst_dsnhacsi.ValueMember = "ma_tacgia";
+        }
+
+        private DataTable dtHangsx;
+        private void load_Hangsx()
+        {
+            dtHangsx = new HangSanXuat_BUS().getAllHangSX();
+            dgv_dsHangsx.DataSource = dtHangsx;
         }
     }
 }

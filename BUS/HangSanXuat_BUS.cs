@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace BUS
 {
-    class HangSanXuat_BUS
+    public class HangSanXuat_BUS
     {
         HangSanXuat_Data hangsx = new HangSanXuat_Data();
 
@@ -18,9 +18,6 @@ namespace BUS
         private string mahangsanxuat;
         private string tenhangsanxuat;
         private string thongtinhangsanxuat;
-        private string p1;
-        private string p2;
-        private string p3;
 
         public HangSanXuat_BUS() { }
         public HangSanXuat_BUS(string ma)

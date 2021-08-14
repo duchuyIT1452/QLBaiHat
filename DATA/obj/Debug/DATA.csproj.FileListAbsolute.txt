@@ -43,3 +43,12 @@ C:\Users\duchu\OneDrive\Máy tính\New folder (3)\QLBaiHat\DATA\obj\Debug\DATA.c
 C:\Users\duchu\OneDrive\Máy tính\New folder (3)\QLBaiHat\DATA\obj\Debug\DATA.csproj.CoreCompileInputs.cache
 C:\Users\duchu\OneDrive\Máy tính\New folder (3)\QLBaiHat\DATA\obj\Debug\DATA.exe
 C:\Users\duchu\OneDrive\Máy tính\New folder (3)\QLBaiHat\DATA\obj\Debug\DATA.pdb
+C:\Users\tuoip\Downloads\New folder\QLBaiHat\DATA\bin\Debug\DATA.exe.config
+C:\Users\tuoip\Downloads\New folder\QLBaiHat\DATA\bin\Debug\DATA.exe
+C:\Users\tuoip\Downloads\New folder\QLBaiHat\DATA\bin\Debug\DATA.pdb
+C:\Users\tuoip\Downloads\New folder\QLBaiHat\DATA\obj\Debug\DATA.csprojAssemblyReference.cache
+C:\Users\tuoip\Downloads\New folder\QLBaiHat\DATA\obj\Debug\DATA.Properties.Resources.resources
+C:\Users\tuoip\Downloads\New folder\QLBaiHat\DATA\obj\Debug\DATA.csproj.GenerateResource.cache
+C:\Users\tuoip\Downloads\New folder\QLBaiHat\DATA\obj\Debug\DATA.csproj.CoreCompileInputs.cache
+C:\Users\tuoip\Downloads\New folder\QLBaiHat\DATA\obj\Debug\DATA.exe
+C:\Users\tuoip\Downloads\New folder\QLBaiHat\DATA\obj\Debug\DATA.pdb

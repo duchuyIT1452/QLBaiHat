@@ -79,3 +79,21 @@ C:\Users\duchu\OneDrive\Máy tính\New folder (3)\QLBaiHat\GUI\obj\Debug\GUI.csp
 C:\Users\duchu\OneDrive\Máy tính\New folder (3)\QLBaiHat\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\duchu\OneDrive\Máy tính\New folder (3)\QLBaiHat\GUI\obj\Debug\GUI.exe
 C:\Users\duchu\OneDrive\Máy tính\New folder (3)\QLBaiHat\GUI\obj\Debug\GUI.pdb
+C:\Users\tuoip\Downloads\New folder\QLBaiHat\GUI\bin\Debug\GUI.exe.config
+C:\Users\tuoip\Downloads\New folder\QLBaiHat\GUI\bin\Debug\GUI.exe
+C:\Users\tuoip\Downloads\New folder\QLBaiHat\GUI\bin\Debug\GUI.pdb
+C:\Users\tuoip\Downloads\New folder\QLBaiHat\GUI\bin\Debug\BUS.exe
+C:\Users\tuoip\Downloads\New folder\QLBaiHat\GUI\bin\Debug\DATA.exe
+C:\Users\tuoip\Downloads\New folder\QLBaiHat\GUI\bin\Debug\BUS.pdb
+C:\Users\tuoip\Downloads\New folder\QLBaiHat\GUI\bin\Debug\BUS.exe.config
+C:\Users\tuoip\Downloads\New folder\QLBaiHat\GUI\bin\Debug\DATA.pdb
+C:\Users\tuoip\Downloads\New folder\QLBaiHat\GUI\bin\Debug\DATA.exe.config
+C:\Users\tuoip\Downloads\New folder\QLBaiHat\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
+C:\Users\tuoip\Downloads\New folder\QLBaiHat\GUI\obj\Debug\GUI.Form1.resources
+C:\Users\tuoip\Downloads\New folder\QLBaiHat\GUI\obj\Debug\GUI.fThem_HangSX.resources
+C:\Users\tuoip\Downloads\New folder\QLBaiHat\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\tuoip\Downloads\New folder\QLBaiHat\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\tuoip\Downloads\New folder\QLBaiHat\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\tuoip\Downloads\New folder\QLBaiHat\GUI\obj\Debug\GUI.csproj.CopyComplete
+C:\Users\tuoip\Downloads\New folder\QLBaiHat\GUI\obj\Debug\GUI.exe
+C:\Users\tuoip\Downloads\New folder\QLBaiHat\GUI\obj\Debug\GUI.pdb

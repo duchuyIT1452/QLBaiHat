@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using DATA;
 using System.Data.Sql;
 using System.Windows.Forms;
+using System.Data;
 
 namespace BUS
 {
@@ -111,7 +112,10 @@ namespace BUS
         {
             return tacgia.Update_TacGia(matacgia, tentacgia, thongtintacgia);
         }
-
+        public DataTable getAllTacGia()
+        {
+            return tacgia.getAllTacGia();
+        }
         #endregion
     }
 }

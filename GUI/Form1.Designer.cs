@@ -35,6 +35,13 @@ namespace GUI
             this.tabControl_formChinh = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.dgv_baihat_home = new System.Windows.Forms.DataGridView();
+            this.STT_TC1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenBaiHat_TC1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenAlbum_TC1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CaSi_TC1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TheLoai_TC1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoiBaiHat_TC1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -84,17 +91,39 @@ namespace GUI
             this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinSinhViênThựcHiệnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinĐềTàiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dgv_baihat_home = new System.Windows.Forms.DataGridView();
-            this.STT_TC1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenBaiHat_TC1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenAlbum_TC1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CaSi_TC1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TheLoai_TC1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LoiBaiHat_TC1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lbltennhacsi = new System.Windows.Forms.Label();
+            this.txt_thongtinnhacsi = new System.Windows.Forms.RichTextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lsv_BaiHat_NhacSi = new System.Windows.Forms.ListView();
+            this.lst_dsnhacsi = new System.Windows.Forms.ListBox();
+            this.btn_themnhacsi = new System.Windows.Forms.Button();
+            this.btn_xoanhacsi = new System.Windows.Forms.Button();
+            this.btn_suanhacsi = new System.Windows.Forms.Button();
+            this.btn_exit = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label6 = new System.Windows.Forms.Label();
+            this.btn_themhangsx = new System.Windows.Forms.Button();
+            this.dgv_dsHangsx = new System.Windows.Forms.DataGridView();
+            this.txt_thongtinhangsanxuat = new System.Windows.Forms.RichTextBox();
+            this.lsv_BaiHat_Hangsx = new System.Windows.Forms.ListView();
+            this.btn_xoahangsx = new System.Windows.Forms.Button();
+            this.btn_suahangsx = new System.Windows.Forms.Button();
+            this.btn_dong = new System.Windows.Forms.Button();
+            this.lbl_tenhangsx = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MaHangsx = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenHangsx = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.tabControl_formChinh.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_baihat_home)).BeginInit();
             this.panel2.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -106,8 +135,10 @@ namespace GUI
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_theloai)).BeginInit();
+            this.tabPage5.SuspendLayout();
+            this.tabPage6.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_baihat_home)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_dsHangsx)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -155,7 +186,7 @@ namespace GUI
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 894F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1288F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Controls.Add(this.dgv_baihat_home, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 0);
@@ -167,6 +198,63 @@ namespace GUI
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1288, 535);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // dgv_baihat_home
+            // 
+            this.dgv_baihat_home.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_baihat_home.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.STT_TC1,
+            this.TenBaiHat_TC1,
+            this.TenAlbum_TC1,
+            this.CaSi_TC1,
+            this.TheLoai_TC1,
+            this.LoiBaiHat_TC1});
+            this.dgv_baihat_home.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_baihat_home.Location = new System.Drawing.Point(3, 72);
+            this.dgv_baihat_home.Name = "dgv_baihat_home";
+            this.dgv_baihat_home.RowHeadersVisible = false;
+            this.dgv_baihat_home.Size = new System.Drawing.Size(1282, 460);
+            this.dgv_baihat_home.TabIndex = 2;
+            // 
+            // STT_TC1
+            // 
+            this.STT_TC1.HeaderText = "STT";
+            this.STT_TC1.Name = "STT_TC1";
+            // 
+            // TenBaiHat_TC1
+            // 
+            this.TenBaiHat_TC1.DataPropertyName = "ten_baihat";
+            this.TenBaiHat_TC1.HeaderText = "Tên bài hát";
+            this.TenBaiHat_TC1.Name = "TenBaiHat_TC1";
+            this.TenBaiHat_TC1.Width = 170;
+            // 
+            // TenAlbum_TC1
+            // 
+            this.TenAlbum_TC1.DataPropertyName = "ten_album";
+            this.TenAlbum_TC1.HeaderText = "Tên album";
+            this.TenAlbum_TC1.Name = "TenAlbum_TC1";
+            this.TenAlbum_TC1.Width = 180;
+            // 
+            // CaSi_TC1
+            // 
+            this.CaSi_TC1.DataPropertyName = "ten_casi";
+            this.CaSi_TC1.HeaderText = "Ca sĩ";
+            this.CaSi_TC1.Name = "CaSi_TC1";
+            this.CaSi_TC1.Width = 170;
+            // 
+            // TheLoai_TC1
+            // 
+            this.TheLoai_TC1.DataPropertyName = "ten_theloai";
+            this.TheLoai_TC1.HeaderText = "Thể loại";
+            this.TheLoai_TC1.Name = "TheLoai_TC1";
+            this.TheLoai_TC1.Width = 150;
+            // 
+            // LoiBaiHat_TC1
+            // 
+            this.LoiBaiHat_TC1.DataPropertyName = "loi_baihat";
+            this.LoiBaiHat_TC1.HeaderText = "Lời bài hát";
+            this.LoiBaiHat_TC1.Name = "LoiBaiHat_TC1";
+            this.LoiBaiHat_TC1.Width = 500;
             // 
             // panel2
             // 
@@ -490,6 +578,19 @@ namespace GUI
             // 
             // tabPage5
             // 
+            this.tabPage5.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.tabPage5.Controls.Add(this.btn_exit);
+            this.tabPage5.Controls.Add(this.btn_suanhacsi);
+            this.tabPage5.Controls.Add(this.btn_xoanhacsi);
+            this.tabPage5.Controls.Add(this.btn_themnhacsi);
+            this.tabPage5.Controls.Add(this.lsv_BaiHat_NhacSi);
+            this.tabPage5.Controls.Add(this.txt_thongtinnhacsi);
+            this.tabPage5.Controls.Add(this.lst_dsnhacsi);
+            this.tabPage5.Controls.Add(this.label8);
+            this.tabPage5.Controls.Add(this.label7);
+            this.tabPage5.Controls.Add(this.lbltennhacsi);
+            this.tabPage5.Controls.Add(this.label5);
+            this.tabPage5.ForeColor = System.Drawing.SystemColors.Desktop;
             this.tabPage5.ImageIndex = 6;
             this.tabPage5.Location = new System.Drawing.Point(4, 44);
             this.tabPage5.Name = "tabPage5";
@@ -497,10 +598,20 @@ namespace GUI
             this.tabPage5.Size = new System.Drawing.Size(1294, 541);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "TÁC GIẢ";
-            this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.label11);
+            this.tabPage6.Controls.Add(this.lsv_BaiHat_Hangsx);
+            this.tabPage6.Controls.Add(this.txt_thongtinhangsanxuat);
+            this.tabPage6.Controls.Add(this.dgv_dsHangsx);
+            this.tabPage6.Controls.Add(this.btn_dong);
+            this.tabPage6.Controls.Add(this.btn_suahangsx);
+            this.tabPage6.Controls.Add(this.btn_xoahangsx);
+            this.tabPage6.Controls.Add(this.btn_themhangsx);
+            this.tabPage6.Controls.Add(this.label10);
+            this.tabPage6.Controls.Add(this.lbl_tenhangsx);
+            this.tabPage6.Controls.Add(this.label6);
             this.tabPage6.ImageIndex = 1;
             this.tabPage6.Location = new System.Drawing.Point(4, 44);
             this.tabPage6.Name = "tabPage6";
@@ -679,62 +790,270 @@ namespace GUI
             this.thôngTinĐềTàiToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.thôngTinĐềTàiToolStripMenuItem.Text = "Thông tin đề tài";
             // 
-            // dgv_baihat_home
+            // label5
             // 
-            this.dgv_baihat_home.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_baihat_home.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.STT_TC1,
-            this.TenBaiHat_TC1,
-            this.TenAlbum_TC1,
-            this.CaSi_TC1,
-            this.TheLoai_TC1,
-            this.LoiBaiHat_TC1});
-            this.dgv_baihat_home.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_baihat_home.Location = new System.Drawing.Point(3, 72);
-            this.dgv_baihat_home.Name = "dgv_baihat_home";
-            this.dgv_baihat_home.RowHeadersVisible = false;
-            this.dgv_baihat_home.Size = new System.Drawing.Size(1282, 460);
-            this.dgv_baihat_home.TabIndex = 2;
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label5.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(55, 19);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(252, 41);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Danh Sách Nhạc Sĩ";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // STT_TC1
+            // lbltennhacsi
             // 
-            this.STT_TC1.HeaderText = "STT";
-            this.STT_TC1.Name = "STT_TC1";
+            this.lbltennhacsi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbltennhacsi.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltennhacsi.Location = new System.Drawing.Point(442, 19);
+            this.lbltennhacsi.Name = "lbltennhacsi";
+            this.lbltennhacsi.Size = new System.Drawing.Size(317, 41);
+            this.lbltennhacsi.TabIndex = 0;
             // 
-            // TenBaiHat_TC1
+            // txt_thongtinnhacsi
             // 
-            this.TenBaiHat_TC1.DataPropertyName = "ten_baihat";
-            this.TenBaiHat_TC1.HeaderText = "Tên bài hát";
-            this.TenBaiHat_TC1.Name = "TenBaiHat_TC1";
-            this.TenBaiHat_TC1.Width = 170;
+            this.txt_thongtinnhacsi.Location = new System.Drawing.Point(416, 114);
+            this.txt_thongtinnhacsi.Name = "txt_thongtinnhacsi";
+            this.txt_thongtinnhacsi.Size = new System.Drawing.Size(372, 281);
+            this.txt_thongtinnhacsi.TabIndex = 2;
+            this.txt_thongtinnhacsi.Text = "";
             // 
-            // TenAlbum_TC1
+            // label8
             // 
-            this.TenAlbum_TC1.DataPropertyName = "ten_album";
-            this.TenAlbum_TC1.HeaderText = "Tên album";
-            this.TenAlbum_TC1.Name = "TenAlbum_TC1";
-            this.TenAlbum_TC1.Width = 180;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(538, 93);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(122, 18);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Thông tin tác giả";
             // 
-            // CaSi_TC1
+            // lsv_BaiHat_NhacSi
             // 
-            this.CaSi_TC1.DataPropertyName = "ten_casi";
-            this.CaSi_TC1.HeaderText = "Ca sĩ";
-            this.CaSi_TC1.Name = "CaSi_TC1";
-            this.CaSi_TC1.Width = 170;
+            this.lsv_BaiHat_NhacSi.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
+            this.lsv_BaiHat_NhacSi.HideSelection = false;
+            this.lsv_BaiHat_NhacSi.Location = new System.Drawing.Point(841, 79);
+            this.lsv_BaiHat_NhacSi.Name = "lsv_BaiHat_NhacSi";
+            this.lsv_BaiHat_NhacSi.Size = new System.Drawing.Size(401, 316);
+            this.lsv_BaiHat_NhacSi.TabIndex = 3;
+            this.lsv_BaiHat_NhacSi.UseCompatibleStateImageBehavior = false;
+            this.lsv_BaiHat_NhacSi.View = System.Windows.Forms.View.Details;
             // 
-            // TheLoai_TC1
+            // lst_dsnhacsi
             // 
-            this.TheLoai_TC1.DataPropertyName = "ten_theloai";
-            this.TheLoai_TC1.HeaderText = "Thể loại";
-            this.TheLoai_TC1.Name = "TheLoai_TC1";
-            this.TheLoai_TC1.Width = 150;
+            this.lst_dsnhacsi.FormattingEnabled = true;
+            this.lst_dsnhacsi.Location = new System.Drawing.Point(8, 79);
+            this.lst_dsnhacsi.Name = "lst_dsnhacsi";
+            this.lst_dsnhacsi.Size = new System.Drawing.Size(355, 316);
+            this.lst_dsnhacsi.TabIndex = 1;
             // 
-            // LoiBaiHat_TC1
+            // btn_themnhacsi
             // 
-            this.LoiBaiHat_TC1.DataPropertyName = "loi_baihat";
-            this.LoiBaiHat_TC1.HeaderText = "Lời bài hát";
-            this.LoiBaiHat_TC1.Name = "LoiBaiHat_TC1";
-            this.LoiBaiHat_TC1.Width = 500;
+            this.btn_themnhacsi.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_themnhacsi.Location = new System.Drawing.Point(55, 419);
+            this.btn_themnhacsi.Name = "btn_themnhacsi";
+            this.btn_themnhacsi.Size = new System.Drawing.Size(252, 44);
+            this.btn_themnhacsi.TabIndex = 4;
+            this.btn_themnhacsi.Text = "Thêm nhạc sĩ";
+            this.btn_themnhacsi.UseVisualStyleBackColor = true;
+            // 
+            // btn_xoanhacsi
+            // 
+            this.btn_xoanhacsi.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_xoanhacsi.Location = new System.Drawing.Point(465, 419);
+            this.btn_xoanhacsi.Name = "btn_xoanhacsi";
+            this.btn_xoanhacsi.Size = new System.Drawing.Size(252, 44);
+            this.btn_xoanhacsi.TabIndex = 4;
+            this.btn_xoanhacsi.Text = "Xóa nhạc sĩ";
+            this.btn_xoanhacsi.UseVisualStyleBackColor = true;
+            // 
+            // btn_suanhacsi
+            // 
+            this.btn_suanhacsi.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_suanhacsi.Location = new System.Drawing.Point(897, 419);
+            this.btn_suanhacsi.Name = "btn_suanhacsi";
+            this.btn_suanhacsi.Size = new System.Drawing.Size(298, 44);
+            this.btn_suanhacsi.TabIndex = 4;
+            this.btn_suanhacsi.Text = "Sửa thông tin nhạc sĩ";
+            this.btn_suanhacsi.UseVisualStyleBackColor = true;
+            // 
+            // btn_exit
+            // 
+            this.btn_exit.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_exit.Location = new System.Drawing.Point(796, 489);
+            this.btn_exit.Name = "btn_exit";
+            this.btn_exit.Size = new System.Drawing.Size(252, 44);
+            this.btn_exit.TabIndex = 4;
+            this.btn_exit.Text = "Đóng ứng dụng";
+            this.btn_exit.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label7.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(924, 19);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(250, 41);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Các Bài hát sáng tác";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "STT";
+            this.columnHeader1.Width = 80;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Tên bài hát";
+            this.columnHeader2.Width = 250;
+            // 
+            // label6
+            // 
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label6.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(57, 30);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(241, 34);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Danh sách Hãng sản xuất";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btn_themhangsx
+            // 
+            this.btn_themhangsx.AutoSize = true;
+            this.btn_themhangsx.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_themhangsx.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btn_themhangsx.Location = new System.Drawing.Point(44, 408);
+            this.btn_themhangsx.Name = "btn_themhangsx";
+            this.btn_themhangsx.Size = new System.Drawing.Size(254, 50);
+            this.btn_themhangsx.TabIndex = 1;
+            this.btn_themhangsx.Text = "Thêm hãng sản xuất";
+            this.btn_themhangsx.UseVisualStyleBackColor = true;
+            // 
+            // dgv_dsHangsx
+            // 
+            this.dgv_dsHangsx.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_dsHangsx.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaHangsx,
+            this.TenHangsx});
+            this.dgv_dsHangsx.Location = new System.Drawing.Point(8, 79);
+            this.dgv_dsHangsx.Name = "dgv_dsHangsx";
+            this.dgv_dsHangsx.Size = new System.Drawing.Size(347, 312);
+            this.dgv_dsHangsx.TabIndex = 2;
+            // 
+            // txt_thongtinhangsanxuat
+            // 
+            this.txt_thongtinhangsanxuat.Location = new System.Drawing.Point(409, 133);
+            this.txt_thongtinhangsanxuat.Name = "txt_thongtinhangsanxuat";
+            this.txt_thongtinhangsanxuat.Size = new System.Drawing.Size(378, 258);
+            this.txt_thongtinhangsanxuat.TabIndex = 3;
+            this.txt_thongtinhangsanxuat.Text = "";
+            // 
+            // lsv_BaiHat_Hangsx
+            // 
+            this.lsv_BaiHat_Hangsx.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader3,
+            this.columnHeader4});
+            this.lsv_BaiHat_Hangsx.HideSelection = false;
+            this.lsv_BaiHat_Hangsx.Location = new System.Drawing.Point(856, 79);
+            this.lsv_BaiHat_Hangsx.Name = "lsv_BaiHat_Hangsx";
+            this.lsv_BaiHat_Hangsx.Size = new System.Drawing.Size(399, 312);
+            this.lsv_BaiHat_Hangsx.TabIndex = 4;
+            this.lsv_BaiHat_Hangsx.UseCompatibleStateImageBehavior = false;
+            this.lsv_BaiHat_Hangsx.View = System.Windows.Forms.View.Details;
+            // 
+            // btn_xoahangsx
+            // 
+            this.btn_xoahangsx.AutoSize = true;
+            this.btn_xoahangsx.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_xoahangsx.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btn_xoahangsx.Location = new System.Drawing.Point(459, 408);
+            this.btn_xoahangsx.Name = "btn_xoahangsx";
+            this.btn_xoahangsx.Size = new System.Drawing.Size(272, 50);
+            this.btn_xoahangsx.TabIndex = 1;
+            this.btn_xoahangsx.Text = "Xóa hãng sản xuất";
+            this.btn_xoahangsx.UseVisualStyleBackColor = true;
+            // 
+            // btn_suahangsx
+            // 
+            this.btn_suahangsx.AutoSize = true;
+            this.btn_suahangsx.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_suahangsx.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btn_suahangsx.Location = new System.Drawing.Point(894, 408);
+            this.btn_suahangsx.Name = "btn_suahangsx";
+            this.btn_suahangsx.Size = new System.Drawing.Size(318, 50);
+            this.btn_suahangsx.TabIndex = 1;
+            this.btn_suahangsx.Text = "Sửa thông tin hãng sản xuất";
+            this.btn_suahangsx.UseVisualStyleBackColor = true;
+            // 
+            // btn_dong
+            // 
+            this.btn_dong.AutoSize = true;
+            this.btn_dong.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_dong.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btn_dong.Location = new System.Drawing.Point(937, 488);
+            this.btn_dong.Name = "btn_dong";
+            this.btn_dong.Size = new System.Drawing.Size(254, 50);
+            this.btn_dong.TabIndex = 1;
+            this.btn_dong.Text = "Đóng ứng dụng";
+            this.btn_dong.UseVisualStyleBackColor = true;
+            // 
+            // lbl_tenhangsx
+            // 
+            this.lbl_tenhangsx.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_tenhangsx.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tenhangsx.Location = new System.Drawing.Point(477, 30);
+            this.lbl_tenhangsx.Name = "lbl_tenhangsx";
+            this.lbl_tenhangsx.Size = new System.Drawing.Size(241, 34);
+            this.lbl_tenhangsx.TabIndex = 0;
+            this.lbl_tenhangsx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label10.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(928, 30);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(241, 34);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Các bài hát phát hành";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(516, 103);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(170, 18);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "Thông tin hãng sản xuất";
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "STT";
+            this.columnHeader3.Width = 80;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Tên bài hát";
+            this.columnHeader4.Width = 200;
+            // 
+            // MaHangsx
+            // 
+            this.MaHangsx.DataPropertyName = "ma_hangsanxuat";
+            this.MaHangsx.HeaderText = "Mã hãng sản xuất";
+            this.MaHangsx.Name = "MaHangsx";
+            // 
+            // TenHangsx
+            // 
+            this.TenHangsx.DataPropertyName = "ten_hangsanxuat";
+            this.TenHangsx.HeaderText = "Tên hãng sản xuất";
+            this.TenHangsx.Name = "TenHangsx";
+            this.TenHangsx.Width = 200;
             // 
             // Form1
             // 
@@ -753,6 +1072,7 @@ namespace GUI
             this.tabControl_formChinh.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_baihat_home)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -768,9 +1088,13 @@ namespace GUI
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_theloai)).EndInit();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_baihat_home)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_dsHangsx)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -837,6 +1161,34 @@ namespace GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn CaSi_TC1;
         private System.Windows.Forms.DataGridViewTextBoxColumn TheLoai_TC1;
         private System.Windows.Forms.DataGridViewTextBoxColumn LoiBaiHat_TC1;
+        private System.Windows.Forms.Button btn_exit;
+        private System.Windows.Forms.Button btn_suanhacsi;
+        private System.Windows.Forms.Button btn_xoanhacsi;
+        private System.Windows.Forms.Button btn_themnhacsi;
+        private System.Windows.Forms.ListView lsv_BaiHat_NhacSi;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.RichTextBox txt_thongtinnhacsi;
+        private System.Windows.Forms.ListBox lst_dsnhacsi;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbltennhacsi;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ListView lsv_BaiHat_Hangsx;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.RichTextBox txt_thongtinhangsanxuat;
+        private System.Windows.Forms.DataGridView dgv_dsHangsx;
+        private System.Windows.Forms.Button btn_dong;
+        private System.Windows.Forms.Button btn_suahangsx;
+        private System.Windows.Forms.Button btn_xoahangsx;
+        private System.Windows.Forms.Button btn_themhangsx;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lbl_tenhangsx;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaHangsx;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenHangsx;
     }
 }
 

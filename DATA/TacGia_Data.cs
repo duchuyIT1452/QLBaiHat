@@ -14,7 +14,7 @@ namespace DATA
         #region Lấy tất cả dữ liệu bảng tác giả
         public DataTable getAllTacGia()
         {
-            string sql = "select *from TacGia";
+            string sql = "select *from TACGIA";
             DataTable dt = new DataTable();
             dt = conDB.GetTable(sql);
             return dt;

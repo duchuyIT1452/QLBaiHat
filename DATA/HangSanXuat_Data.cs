@@ -14,7 +14,7 @@ namespace DATA
         #region Lấy tất cả các giá trị trong bảng HSX
         public DataTable getAllHangSX()
         {
-            string sql = "select *from HangSanXuat";
+            string sql = "select ma_hangsanxuat, ten_hangsanxuat from HANGSANXUAT";
             DataTable dt = new DataTable();
             dt = conDB.GetTable(sql);
             return dt;
