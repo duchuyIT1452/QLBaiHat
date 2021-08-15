@@ -102,6 +102,9 @@ namespace BUS
         {
             BaiHat.UpdateBaiHat(maBaiHat, tenBaiHat, maTheLoai, maAlbum, maCaSi, maTacGia, maHangSanXuat, loiBaiHat);
         }
-
+        public DataTable listBaiHatTheoAlbum(String maAlbum)
+        {
+            return BaiHat.listBaiHatTheoAlbum(maAlbum);
+        }
     }
 }

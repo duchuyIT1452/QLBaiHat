@@ -11,11 +11,11 @@ namespace BUS
 {
     public class Album_BUS
     {
-        Album_DATA newAlbum = new Album_DATA();
+        GetData_Album newAlbum = new GetData_Album();
 
         private string maAlbum;
         private string tenAlbum;
-        private int namPhatHanh;
+        private DateTime namPhatHanh;
 
         public string MaAlbum
         {
@@ -59,7 +59,7 @@ namespace BUS
                 }
             }
         }
-        public int  NamPhatHanh
+        public DateTime  NamPhatHanh
         {
             get { return namPhatHanh; }
             set
@@ -83,11 +83,19 @@ namespace BUS
         {
 
         }
-        public Album_BUS(string ma, string ten, int nam)
+        public Album_BUS(string ma, string ten, DateTime nam)
         {
             this.maAlbum = ma;
             this.tenAlbum = ten;
             this.namPhatHanh = nam;
+        }
+        public void themAlbum()
+        {
+            newAlbum.themAlbum(maAlbum, tenAlbum, namPhatHanh);
+        }
+        public void xoaAlbum(string maAlbum)
+        {
+            newAlbum.xoaAlbum(maAlbum);
         }
         public DataTable getAlbum()
         {

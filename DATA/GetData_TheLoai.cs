@@ -7,7 +7,7 @@ using System.Data;
 
 namespace DATA
 {
-    public class TheLoai_DATA
+    public class GetData_TheLoai
     {
         ConnectDB conn = new ConnectDB();
 

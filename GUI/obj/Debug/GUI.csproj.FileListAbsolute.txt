@@ -97,3 +97,5 @@ C:\Users\tuoip\Downloads\New folder\QLBaiHat\GUI\obj\Debug\GUI.csproj.CoreCompil
 C:\Users\tuoip\Downloads\New folder\QLBaiHat\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\tuoip\Downloads\New folder\QLBaiHat\GUI\obj\Debug\GUI.exe
 C:\Users\tuoip\Downloads\New folder\QLBaiHat\GUI\obj\Debug\GUI.pdb
+C:\Users\Admin\Desktop\New folder (2)\QLBaiHat\GUI\obj\Debug\GUI.fThem_HangSX.resources
+C:\Users\Admin\Desktop\New folder (2)\QLBaiHat\GUI\obj\Debug\GUI.fThem_Album.resources

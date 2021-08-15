@@ -11,7 +11,7 @@ namespace BUS
 {
     public class TheLoai_BUS
     {
-        TheLoai_DATA newTheLoai = new TheLoai_DATA();
+        GetData_TheLoai newTheLoai = new GetData_TheLoai();
 
         private string maTheLoai;
         private string tenTheLoai;

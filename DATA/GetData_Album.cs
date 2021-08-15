@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DATA
 {
-    public class Album_DATA
+    public class GetData_Album
     {
         ConnectDB conn = new ConnectDB();
         public DataTable getAlbum()
@@ -24,12 +24,12 @@ namespace DATA
         }
         public void suaAlbum(string ma_album, string ten_album, DateTime namphathanh)
         {
-            String sql = "UPDATE ALBUM SET ma_album = '" + ma_album + "',N'" + ten_album + "',N'" + namphathanh + "')";
+            String sql = "UPDATE ALBUM SET ma_album = '" + ma_album + "',N'" + ten_album + "',N'" + namphathanh + "'";
             conn.ExecuteNonQuery(sql);
         }
         public void xoaAlbum(string ma_album)
         {
-            String sql = "DELETE ALBUM WHERE ma_album = '" + ma_album + "')";
+            String sql = "DELETE ALBUM WHERE ma_album = '" + ma_album + "'";
             conn.ExecuteNonQuery(sql);
         }
         public DataTable timkiemAlbumTheoMa(string ma_album)

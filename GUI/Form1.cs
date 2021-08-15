@@ -86,22 +86,18 @@ namespace GUI
         private DataTable dtAlbum;
         private void load_Album()
         {
-            DataTable dtAlbum = new Album_BUS().getAlbum();
-            dgv_Album.DataSource = dtAlbum;
-            int dong = dgv_Album.Rows.Count;
-            for (int i=1; i<=dong;i++)
+            Album_BUS bus = new Album_BUS();
+            DataTable dt = new DataTable();
+            dt = bus.getAlbum();
+            dgv_Album.DataSource = dt;
+            int dem = 0;
+            foreach (DataRow row in dt.Rows)
             {
-                dgv_Album.Rows[i].Cells[0].Value = i++;
+                dgv_Album.Rows[dem].Cells[0].Value = (dem + 1);
+                dem++;
             }
         }
 
-        private void dgv_AlbumBaihat_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dgv_Album.SelectedRows.Count == 0)
-                return;
-            dgv_AlbumBaihat.Rows.Clear();
-            DataTable dt = null;
-        }
 
         private void load_TheLoai()
         {
@@ -132,6 +128,58 @@ namespace GUI
         {
             dtHangsx = new HangSanXuat_BUS().getAllHangSX();
             dgv_dsHangsx.DataSource = dtHangsx;
+        }
+
+        private void tabControl_formChinh_MouseClick(object sender, MouseEventArgs e)
+        {
+            load_Album();
+        }
+
+        private void bt_them_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            fThem_Album f = new fThem_Album();
+            f.ShowDialog();
+            this.Visible = true;
+            load_Album();
+        }
+
+        private void bt_xoa_Click(object sender, EventArgs e)
+        {
+            Album_BUS bus = new Album_BUS();
+            string ma = dgv_Album.Rows[dgv_Album.CurrentCell.RowIndex].Cells[1].Value.ToString();
+            try
+            {
+                DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Xác nhận", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    bus.xoaAlbum(ma);
+                    load_Album();
+                }
+
+                else if (dialogResult == DialogResult.No)
+                    load_Album();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dgv_Album_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int d = e.RowIndex;
+            BaiHat_BUS bus = new BaiHat_BUS();
+            DataTable dt = new DataTable();
+            String ma = dgv_Album.Rows[d].Cells[1].Value.ToString();
+            dt = bus.listBaiHatTheoAlbum(ma);
+            dgv_AlbumBaihat.DataSource = dt;
+        }
+
+        private void bt_dong_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

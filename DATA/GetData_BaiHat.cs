@@ -91,5 +91,12 @@ namespace DATA
             String sql = "Delete BaiHat Where ma_BaiHat='" + maBaiHat + "'";
             conDB.ExecuteNonQuery(sql);
         }
+        public DataTable listBaiHatTheoAlbum(String maAlbum)
+        {
+            String sql = "SELECT ten_baihat, ten_casi, ten_theloai, loi_baihat FROM BAIHAT INNER JOIN CASI ON BAIHAT.ma_casi = CASI.ma_casi INNER JOIN THELOAI ON BAIHAT.ma_theloai = THELOAI.ma_theloai WHERE ma_album='" + maAlbum + "'";
+            DataTable dt = new DataTable();
+            dt = conDB.GetTable(sql);
+            return dt;
+        }
     }
 }
