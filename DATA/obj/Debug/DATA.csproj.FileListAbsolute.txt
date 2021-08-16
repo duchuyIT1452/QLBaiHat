@@ -52,3 +52,12 @@ C:\Users\tuoip\Downloads\New folder\QLBaiHat\DATA\obj\Debug\DATA.csproj.Generate
 C:\Users\tuoip\Downloads\New folder\QLBaiHat\DATA\obj\Debug\DATA.csproj.CoreCompileInputs.cache
 C:\Users\tuoip\Downloads\New folder\QLBaiHat\DATA\obj\Debug\DATA.exe
 C:\Users\tuoip\Downloads\New folder\QLBaiHat\DATA\obj\Debug\DATA.pdb
+C:\Users\Admin\Desktop\New folder\QLBaiHat\DATA\bin\Debug\DATA.exe.config
+C:\Users\Admin\Desktop\New folder\QLBaiHat\DATA\bin\Debug\DATA.exe
+C:\Users\Admin\Desktop\New folder\QLBaiHat\DATA\bin\Debug\DATA.pdb
+C:\Users\Admin\Desktop\New folder\QLBaiHat\DATA\obj\Debug\DATA.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\New folder\QLBaiHat\DATA\obj\Debug\DATA.Properties.Resources.resources
+C:\Users\Admin\Desktop\New folder\QLBaiHat\DATA\obj\Debug\DATA.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\New folder\QLBaiHat\DATA\obj\Debug\DATA.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\New folder\QLBaiHat\DATA\obj\Debug\DATA.exe
+C:\Users\Admin\Desktop\New folder\QLBaiHat\DATA\obj\Debug\DATA.pdb

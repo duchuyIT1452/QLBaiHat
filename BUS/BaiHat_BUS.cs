@@ -106,5 +106,9 @@ namespace BUS
         {
             return BaiHat.listBaiHatTheoAlbum(maAlbum);
         }
+        public DataTable listBaiHatTheoTheLoai(String maTheLoai)
+        {
+            return BaiHat.listBaiHatTheoTheLoai(maTheLoai);
+        }
     }
 }

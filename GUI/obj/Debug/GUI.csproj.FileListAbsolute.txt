@@ -99,3 +99,23 @@ C:\Users\tuoip\Downloads\New folder\QLBaiHat\GUI\obj\Debug\GUI.exe
 C:\Users\tuoip\Downloads\New folder\QLBaiHat\GUI\obj\Debug\GUI.pdb
 C:\Users\Admin\Desktop\New folder (2)\QLBaiHat\GUI\obj\Debug\GUI.fThem_HangSX.resources
 C:\Users\Admin\Desktop\New folder (2)\QLBaiHat\GUI\obj\Debug\GUI.fThem_Album.resources
+C:\Users\Admin\Desktop\New folder\QLBaiHat\GUI\bin\Debug\GUI.exe.config
+C:\Users\Admin\Desktop\New folder\QLBaiHat\GUI\bin\Debug\GUI.exe
+C:\Users\Admin\Desktop\New folder\QLBaiHat\GUI\bin\Debug\GUI.pdb
+C:\Users\Admin\Desktop\New folder\QLBaiHat\GUI\bin\Debug\BUS.exe
+C:\Users\Admin\Desktop\New folder\QLBaiHat\GUI\bin\Debug\DATA.exe
+C:\Users\Admin\Desktop\New folder\QLBaiHat\GUI\bin\Debug\BUS.pdb
+C:\Users\Admin\Desktop\New folder\QLBaiHat\GUI\bin\Debug\BUS.exe.config
+C:\Users\Admin\Desktop\New folder\QLBaiHat\GUI\bin\Debug\DATA.pdb
+C:\Users\Admin\Desktop\New folder\QLBaiHat\GUI\bin\Debug\DATA.exe.config
+C:\Users\Admin\Desktop\New folder\QLBaiHat\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\New folder\QLBaiHat\GUI\obj\Debug\GUI.Form1.resources
+C:\Users\Admin\Desktop\New folder\QLBaiHat\GUI\obj\Debug\GUI.fThem_Album.resources
+C:\Users\Admin\Desktop\New folder\QLBaiHat\GUI\obj\Debug\GUI.fThem_HangSX.resources
+C:\Users\Admin\Desktop\New folder\QLBaiHat\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\Admin\Desktop\New folder\QLBaiHat\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\New folder\QLBaiHat\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\New folder\QLBaiHat\GUI\obj\Debug\GUI.csproj.CopyComplete
+C:\Users\Admin\Desktop\New folder\QLBaiHat\GUI\obj\Debug\GUI.exe
+C:\Users\Admin\Desktop\New folder\QLBaiHat\GUI\obj\Debug\GUI.pdb
+C:\Users\Admin\Desktop\New folder\QLBaiHat\GUI\obj\Debug\GUI.fThem_TheLoai.resources

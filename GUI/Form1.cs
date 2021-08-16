@@ -101,8 +101,16 @@ namespace GUI
 
         private void load_TheLoai()
         {
-            DataTable dtTheLoai = new TheLoai_BUS().getTheLoai();
-            dgv_theloai.DataSource = dtTheLoai;
+            TheLoai_BUS bus = new TheLoai_BUS();
+            DataTable dt = new DataTable();
+            dt = bus.getTheLoai();
+            dgv_theloai.DataSource = dt;
+            int dem = 0;
+            foreach (DataRow row in dt.Rows)
+            {
+                dgv_theloai.Rows[dem].Cells[0].Value = (dem + 1);
+                dem++;
+            }
 
         }
 
@@ -133,6 +141,7 @@ namespace GUI
         private void tabControl_formChinh_MouseClick(object sender, MouseEventArgs e)
         {
             load_Album();
+            load_TheLoai();
         }
 
         private void bt_them_Click(object sender, EventArgs e)
@@ -180,6 +189,48 @@ namespace GUI
         private void bt_dong_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dgv_theloai_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int d = e.RowIndex;
+            BaiHat_BUS bus = new BaiHat_BUS();
+            DataTable dt = new DataTable();
+            String ma = dgv_theloai.Rows[d].Cells[1].Value.ToString();
+            dt = bus.listBaiHatTheoTheLoai(ma);
+            dgv_TheloaiBaihat.DataSource = dt;
+        }
+
+        private void bt_xoaTheLoai_Click(object sender, EventArgs e)
+        {
+            TheLoai_BUS bus = new TheLoai_BUS();
+            string ma = dgv_theloai.Rows[dgv_theloai.CurrentCell.RowIndex].Cells[1].Value.ToString();
+            try
+            {
+                DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Xác nhận", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    bus.xoaTheLoai(ma);
+                    load_TheLoai();
+                }
+
+                else if (dialogResult == DialogResult.No)
+                    load_TheLoai();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void bt_themTheLoai_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            fThem_TheLoai f = new fThem_TheLoai();
+            f.ShowDialog();
+            this.Visible = true;
+            load_TheLoai();
         }
     }
 }

@@ -71,5 +71,13 @@ namespace BUS
         {
             return newTheLoai.getTheLoai();
         }
+        public void themTheLoai()
+        {
+            newTheLoai.themTheLoai(maTheLoai, tenTheLoai);
+        }
+        public void xoaTheLoai(string maTheLoai)
+        {
+            newTheLoai.xoaTheLoai(maTheLoai);
+        }
     }
 }

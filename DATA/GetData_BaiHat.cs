@@ -98,5 +98,12 @@ namespace DATA
             dt = conDB.GetTable(sql);
             return dt;
         }
+        public DataTable listBaiHatTheoTheLoai(String maTheLoai)
+        {
+            String sql = "SELECT ten_baihat,ten_album, ten_casi, loi_baihat FROM BAIHAT INNER JOIN ALBUM ON BAIHAT.ma_album = ALBUM.ma_album INNER JOIN CASI ON BAIHAT.ma_casi = CASI.ma_casi WHERE ma_TheLoai='" + maTheLoai + "'";
+            DataTable dt = new DataTable();
+            dt = conDB.GetTable(sql);
+            return dt;
+        }
     }
 }

@@ -25,12 +25,12 @@ namespace DATA
         }
         public void suaTheLoai(string ma_theloai, string ten_theloai)
         {
-            String sql = "UPDATE THELOAI SET ma_theloai = '" + ma_theloai + "',N'" + ten_theloai + "')";
+            String sql = "UPDATE THELOAI SET ma_theloai = '" + ma_theloai + "',N'" + ten_theloai + "'";
             conn.ExecuteNonQuery(sql);
         }
         public void xoaTheLoai(string ma_theloai)
         {
-            String sql = "DELETE THELOAI WHERE ma_theloai = '" + ma_theloai + "')";
+            String sql = "DELETE THELOAI WHERE ma_theloai = '" + ma_theloai + "'";
             conn.ExecuteNonQuery(sql);
         }
         public DataTable timkiemTheLoaiTheoMa(string ma_theloai)
