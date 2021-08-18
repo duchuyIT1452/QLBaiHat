@@ -62,7 +62,6 @@ namespace GUI
             this.MaAlbum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenAlbum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NamPhatHanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label2 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -115,6 +114,29 @@ namespace GUI
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.tabPage11 = new System.Windows.Forms.TabPage();
+            this.tabPage12 = new System.Windows.Forms.TabPage();
+            this.tabPage13 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgv_searchTenBaiHat = new System.Windows.Forms.DataGridView();
+            this.STT_TC6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ma_baihat_tc6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ten_baihat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loi_baihat_tc6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_timkiem = new System.Windows.Forms.TextBox();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.btn_close = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_timkiem = new System.Windows.Forms.Button();
             this.chứcNăngChínhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýAlbumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýTHỂLOẠIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -127,27 +149,19 @@ namespace GUI
             this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinSinhViênThựcHiệnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinĐềTàiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
-            this.tabPage10 = new System.Windows.Forms.TabPage();
-            this.tabPage11 = new System.Windows.Forms.TabPage();
-            this.tabPage12 = new System.Windows.Forms.TabPage();
-            this.tabPage13 = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.STT_TC6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ma_baihat_tc6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ten_baihat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loi_baihat_tc6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txt_timkiem = new System.Windows.Forms.TextBox();
-            this.btn_timkiem = new System.Windows.Forms.Button();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.btn_close = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.dgv_searchTenCaSi = new System.Windows.Forms.DataGridView();
+            this.dgv_searchTenAlbum = new System.Windows.Forms.DataGridView();
+            this.dgv_searchLoiBaiHat = new System.Windows.Forms.DataGridView();
+            this.dgv_searchHangSanXuat = new System.Windows.Forms.DataGridView();
+            this.STT_tc6_tc2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tencasi_tc6_tc2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenbaihat_tc6_tc2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loibaihat_tc6_tc2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mabaihat_tc6_tc2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.tabControl_formChinh.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -173,12 +187,26 @@ namespace GUI
             this.menuStrip1.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage9.SuspendLayout();
+            this.tabPage10.SuspendLayout();
+            this.tabPage11.SuspendLayout();
+            this.tabPage12.SuspendLayout();
+            this.tabPage13.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_searchTenBaiHat)).BeginInit();
             this.panel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_searchTenCaSi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_searchTenAlbum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_searchLoiBaiHat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_searchHangSanXuat)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -246,6 +274,7 @@ namespace GUI
             // 
             this.dgv_baihat_home.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_baihat_home.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgv_baihat_home.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_baihat_home.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT_TC1,
@@ -340,7 +369,7 @@ namespace GUI
             this.tabPage2.Location = new System.Drawing.Point(4, 44);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1190, 533);
+            this.tabPage2.Size = new System.Drawing.Size(1187, 410);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "ALBUM";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -355,7 +384,7 @@ namespace GUI
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1184, 527);
+            this.panel3.Size = new System.Drawing.Size(1181, 404);
             this.panel3.TabIndex = 0;
             // 
             // bt_dong
@@ -382,6 +411,7 @@ namespace GUI
             // 
             // dgv_AlbumBaihat
             // 
+            this.dgv_AlbumBaihat.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgv_AlbumBaihat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_AlbumBaihat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TenBaiHat_TC2,
@@ -477,6 +507,7 @@ namespace GUI
             // 
             // dgv_Album
             // 
+            this.dgv_Album.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgv_Album.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Album.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT_TC2,
@@ -524,20 +555,6 @@ namespace GUI
             this.NamPhatHanh.Name = "NamPhatHanh";
             this.NamPhatHanh.Width = 150;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.label2.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Image = global::GUI.Properties.Resources.checklist;
-            this.label2.Location = new System.Drawing.Point(9, 6);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(165, 23);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Danh sách Album";
-            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.panel6);
@@ -545,7 +562,7 @@ namespace GUI
             this.tabPage3.Location = new System.Drawing.Point(4, 44);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1190, 533);
+            this.tabPage3.Size = new System.Drawing.Size(1187, 410);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "THỂ LOẠI";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -724,7 +741,7 @@ namespace GUI
             this.tabPage4.Location = new System.Drawing.Point(4, 44);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1190, 533);
+            this.tabPage4.Size = new System.Drawing.Size(1187, 410);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "CA SĨ";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -748,7 +765,7 @@ namespace GUI
             this.tabPage5.Location = new System.Drawing.Point(4, 44);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1190, 533);
+            this.tabPage5.Size = new System.Drawing.Size(1187, 410);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "TÁC GIẢ";
             // 
@@ -889,7 +906,7 @@ namespace GUI
             this.tabPage6.Location = new System.Drawing.Point(4, 44);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1190, 533);
+            this.tabPage6.Size = new System.Drawing.Size(1187, 410);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "HÃNG SẢN XUẤT";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -1050,7 +1067,7 @@ namespace GUI
             this.tabPage7.Location = new System.Drawing.Point(4, 44);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(1190, 533);
+            this.tabPage7.Size = new System.Drawing.Size(1187, 410);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "TRA CỨU - TÌM KIẾM";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -1061,7 +1078,7 @@ namespace GUI
             this.tabPage8.Location = new System.Drawing.Point(4, 44);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(1190, 533);
+            this.tabPage8.Size = new System.Drawing.Size(1187, 410);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "BÀI HÁT";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -1096,126 +1113,6 @@ namespace GUI
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // chứcNăngChínhToolStripMenuItem
-            // 
-            this.chứcNăngChínhToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.quảnLýAlbumToolStripMenuItem,
-            this.quảnLýTHỂLOẠIToolStripMenuItem,
-            this.quảnLýCASĨToolStripMenuItem,
-            this.quảnLýTÁCGIẢToolStripMenuItem,
-            this.quảnLýBÀIHÁTToolStripMenuItem,
-            this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem,
-            this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem,
-            this.đóngỨngDụngToolStripMenuItem});
-            this.chứcNăngChínhToolStripMenuItem.Image = global::GUI.Properties.Resources.settings;
-            this.chứcNăngChínhToolStripMenuItem.Name = "chứcNăngChínhToolStripMenuItem";
-            this.chứcNăngChínhToolStripMenuItem.Size = new System.Drawing.Size(130, 24);
-            this.chứcNăngChínhToolStripMenuItem.Text = "Chức năng chính";
-            // 
-            // quảnLýAlbumToolStripMenuItem
-            // 
-            this.quảnLýAlbumToolStripMenuItem.Image = global::GUI.Properties.Resources.music_album;
-            this.quảnLýAlbumToolStripMenuItem.Name = "quảnLýAlbumToolStripMenuItem";
-            this.quảnLýAlbumToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.A)));
-            this.quảnLýAlbumToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
-            this.quảnLýAlbumToolStripMenuItem.Text = "Quản lý ALBUM";
-            this.quảnLýAlbumToolStripMenuItem.Click += new System.EventHandler(this.quảnLýAlbumToolStripMenuItem_Click);
-            // 
-            // quảnLýTHỂLOẠIToolStripMenuItem
-            // 
-            this.quảnLýTHỂLOẠIToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("quảnLýTHỂLOẠIToolStripMenuItem.Image")));
-            this.quảnLýTHỂLOẠIToolStripMenuItem.Name = "quảnLýTHỂLOẠIToolStripMenuItem";
-            this.quảnLýTHỂLOẠIToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.T)));
-            this.quảnLýTHỂLOẠIToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
-            this.quảnLýTHỂLOẠIToolStripMenuItem.Text = "Quản lý THỂ LOẠI";
-            this.quảnLýTHỂLOẠIToolStripMenuItem.Click += new System.EventHandler(this.quảnLýTHỂLOẠIToolStripMenuItem_Click);
-            // 
-            // quảnLýCASĨToolStripMenuItem
-            // 
-            this.quảnLýCASĨToolStripMenuItem.Image = global::GUI.Properties.Resources.singer;
-            this.quảnLýCASĨToolStripMenuItem.Name = "quảnLýCASĨToolStripMenuItem";
-            this.quảnLýCASĨToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.C)));
-            this.quảnLýCASĨToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
-            this.quảnLýCASĨToolStripMenuItem.Text = "Quản lý CA SĨ";
-            this.quảnLýCASĨToolStripMenuItem.Click += new System.EventHandler(this.quảnLýCASĨToolStripMenuItem_Click);
-            // 
-            // quảnLýTÁCGIẢToolStripMenuItem
-            // 
-            this.quảnLýTÁCGIẢToolStripMenuItem.Image = global::GUI.Properties.Resources.writer;
-            this.quảnLýTÁCGIẢToolStripMenuItem.Name = "quảnLýTÁCGIẢToolStripMenuItem";
-            this.quảnLýTÁCGIẢToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.G)));
-            this.quảnLýTÁCGIẢToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
-            this.quảnLýTÁCGIẢToolStripMenuItem.Text = "Quản lý TÁC GIẢ";
-            this.quảnLýTÁCGIẢToolStripMenuItem.Click += new System.EventHandler(this.quảnLýTÁCGIẢToolStripMenuItem_Click);
-            // 
-            // quảnLýBÀIHÁTToolStripMenuItem
-            // 
-            this.quảnLýBÀIHÁTToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("quảnLýBÀIHÁTToolStripMenuItem.Image")));
-            this.quảnLýBÀIHÁTToolStripMenuItem.Name = "quảnLýBÀIHÁTToolStripMenuItem";
-            this.quảnLýBÀIHÁTToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.B)));
-            this.quảnLýBÀIHÁTToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
-            this.quảnLýBÀIHÁTToolStripMenuItem.Text = "Quản lý BÀI HÁT";
-            this.quảnLýBÀIHÁTToolStripMenuItem.Click += new System.EventHandler(this.quảnLýBÀIHÁTToolStripMenuItem_Click);
-            // 
-            // quảnLýHÃNGSẢNXUẤTToolStripMenuItem
-            // 
-            this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("quảnLýHÃNGSẢNXUẤTToolStripMenuItem.Image")));
-            this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem.Name = "quảnLýHÃNGSẢNXUẤTToolStripMenuItem";
-            this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.H)));
-            this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
-            this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem.Text = "Quản lý HÃNG SẢN XUẤT";
-            this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem.Click += new System.EventHandler(this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem_Click);
-            // 
-            // quảnLýTRACỨUTÌMKIẾMToolStripMenuItem
-            // 
-            this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("quảnLýTRACỨUTÌMKIẾMToolStripMenuItem.Image")));
-            this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem.Name = "quảnLýTRACỨUTÌMKIẾMToolStripMenuItem";
-            this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.S)));
-            this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
-            this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem.Text = "Quản lý TRA CỨU - TÌM KIẾM";
-            this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem.Click += new System.EventHandler(this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem_Click);
-            // 
-            // đóngỨngDụngToolStripMenuItem
-            // 
-            this.đóngỨngDụngToolStripMenuItem.Image = global::GUI.Properties.Resources.close;
-            this.đóngỨngDụngToolStripMenuItem.Name = "đóngỨngDụngToolStripMenuItem";
-            this.đóngỨngDụngToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.D)));
-            this.đóngỨngDụngToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
-            this.đóngỨngDụngToolStripMenuItem.Text = "Đóng ứng dụng";
-            this.đóngỨngDụngToolStripMenuItem.Click += new System.EventHandler(this.đóngỨngDụngToolStripMenuItem_Click);
-            // 
-            // trợGiúpToolStripMenuItem
-            // 
-            this.trợGiúpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.thôngTinSinhViênThựcHiệnToolStripMenuItem,
-            this.thôngTinĐềTàiToolStripMenuItem});
-            this.trợGiúpToolStripMenuItem.Image = global::GUI.Properties.Resources.help;
-            this.trợGiúpToolStripMenuItem.Name = "trợGiúpToolStripMenuItem";
-            this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
-            this.trợGiúpToolStripMenuItem.Text = "Trợ giúp";
-            // 
-            // thôngTinSinhViênThựcHiệnToolStripMenuItem
-            // 
-            this.thôngTinSinhViênThựcHiệnToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("thôngTinSinhViênThựcHiệnToolStripMenuItem.Image")));
-            this.thôngTinSinhViênThựcHiệnToolStripMenuItem.Name = "thôngTinSinhViênThựcHiệnToolStripMenuItem";
-            this.thôngTinSinhViênThựcHiệnToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
-            this.thôngTinSinhViênThựcHiệnToolStripMenuItem.Text = "Thông tin sinh viên thực hiện";
-            // 
-            // thôngTinĐềTàiToolStripMenuItem
-            // 
-            this.thôngTinĐềTàiToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("thôngTinĐềTàiToolStripMenuItem.Image")));
-            this.thôngTinĐềTàiToolStripMenuItem.Name = "thôngTinĐềTàiToolStripMenuItem";
-            this.thôngTinĐềTàiToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
-            this.thôngTinĐềTàiToolStripMenuItem.Text = "Thông tin đề tài";
-            // 
             // panel9
             // 
             this.panel9.Controls.Add(this.panel11);
@@ -1223,7 +1120,7 @@ namespace GUI
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(3, 3);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1184, 527);
+            this.panel9.Size = new System.Drawing.Size(1181, 404);
             this.panel9.TabIndex = 0;
             // 
             // panel10
@@ -1237,9 +1134,10 @@ namespace GUI
             // 
             // panel11
             // 
-            this.panel11.Location = new System.Drawing.Point(781, 3);
+            this.panel11.Controls.Add(this.pictureBox1);
+            this.panel11.Location = new System.Drawing.Point(781, 5);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(406, 474);
+            this.panel11.Size = new System.Drawing.Size(395, 396);
             this.panel11.TabIndex = 1;
             // 
             // panel12
@@ -1263,97 +1161,102 @@ namespace GUI
             this.tabControl1.Controls.Add(this.tabPage12);
             this.tabControl1.Controls.Add(this.tabPage13);
             this.tabControl1.ImageList = this.imageList1;
-            this.tabControl1.Location = new System.Drawing.Point(25, 119);
+            this.tabControl1.Location = new System.Drawing.Point(26, 94);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.Padding = new System.Drawing.Point(19, 10);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(726, 343);
+            this.tabControl1.Size = new System.Drawing.Size(722, 304);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage9
             // 
-            this.tabPage9.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.tabPage9.BackColor = System.Drawing.Color.DarkCyan;
             this.tabPage9.Controls.Add(this.groupBox1);
             this.tabPage9.ImageIndex = 2;
             this.tabPage9.Location = new System.Drawing.Point(4, 41);
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(718, 298);
+            this.tabPage9.Size = new System.Drawing.Size(714, 259);
             this.tabPage9.TabIndex = 0;
             this.tabPage9.Text = "TÊN BÀI HÁT";
             // 
             // tabPage10
             // 
+            this.tabPage10.BackColor = System.Drawing.Color.DarkCyan;
+            this.tabPage10.Controls.Add(this.groupBox2);
             this.tabPage10.ImageIndex = 5;
             this.tabPage10.Location = new System.Drawing.Point(4, 41);
             this.tabPage10.Name = "tabPage10";
             this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage10.Size = new System.Drawing.Size(718, 298);
+            this.tabPage10.Size = new System.Drawing.Size(714, 259);
             this.tabPage10.TabIndex = 1;
             this.tabPage10.Text = "TÊN CA SĨ";
-            this.tabPage10.UseVisualStyleBackColor = true;
             // 
             // tabPage11
             // 
+            this.tabPage11.BackColor = System.Drawing.Color.DarkCyan;
+            this.tabPage11.Controls.Add(this.groupBox3);
             this.tabPage11.ImageIndex = 7;
             this.tabPage11.Location = new System.Drawing.Point(4, 41);
             this.tabPage11.Name = "tabPage11";
             this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage11.Size = new System.Drawing.Size(718, 298);
+            this.tabPage11.Size = new System.Drawing.Size(714, 259);
             this.tabPage11.TabIndex = 2;
             this.tabPage11.Text = "TÊN ALBUM";
-            this.tabPage11.UseVisualStyleBackColor = true;
             // 
             // tabPage12
             // 
+            this.tabPage12.BackColor = System.Drawing.Color.DarkCyan;
+            this.tabPage12.Controls.Add(this.groupBox4);
             this.tabPage12.ImageIndex = 2;
             this.tabPage12.Location = new System.Drawing.Point(4, 41);
             this.tabPage12.Name = "tabPage12";
             this.tabPage12.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage12.Size = new System.Drawing.Size(718, 298);
+            this.tabPage12.Size = new System.Drawing.Size(714, 259);
             this.tabPage12.TabIndex = 3;
             this.tabPage12.Text = "LỜI BÀI HÁT";
-            this.tabPage12.UseVisualStyleBackColor = true;
             // 
             // tabPage13
             // 
+            this.tabPage13.BackColor = System.Drawing.Color.DarkCyan;
+            this.tabPage13.Controls.Add(this.groupBox5);
             this.tabPage13.ImageIndex = 1;
             this.tabPage13.Location = new System.Drawing.Point(4, 41);
             this.tabPage13.Name = "tabPage13";
             this.tabPage13.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage13.Size = new System.Drawing.Size(718, 298);
+            this.tabPage13.Size = new System.Drawing.Size(714, 259);
             this.tabPage13.TabIndex = 4;
             this.tabPage13.Text = "HÃNG SẢN XUẤT";
-            this.tabPage13.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.BackColor = System.Drawing.Color.DarkCyan;
+            this.groupBox1.Controls.Add(this.dgv_searchTenBaiHat);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(712, 292);
+            this.groupBox1.Size = new System.Drawing.Size(708, 253);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kết quả tìm kiếm theo TÊN BÀI HÁT";
             // 
-            // dataGridView1
+            // dgv_searchTenBaiHat
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_searchTenBaiHat.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgv_searchTenBaiHat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_searchTenBaiHat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT_TC6,
             this.ma_baihat_tc6,
             this.ten_baihat,
             this.loi_baihat_tc6});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 16);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(706, 273);
-            this.dataGridView1.TabIndex = 0;
+            this.dgv_searchTenBaiHat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_searchTenBaiHat.EnableHeadersVisualStyles = false;
+            this.dgv_searchTenBaiHat.Location = new System.Drawing.Point(3, 16);
+            this.dgv_searchTenBaiHat.Name = "dgv_searchTenBaiHat";
+            this.dgv_searchTenBaiHat.RowHeadersVisible = false;
+            this.dgv_searchTenBaiHat.Size = new System.Drawing.Size(702, 234);
+            this.dgv_searchTenBaiHat.TabIndex = 0;
             // 
             // STT_TC6
             // 
@@ -1382,26 +1285,15 @@ namespace GUI
             // 
             this.txt_timkiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_timkiem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_timkiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_timkiem.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.txt_timkiem.Location = new System.Drawing.Point(3, 3);
             this.txt_timkiem.Multiline = true;
             this.txt_timkiem.Name = "txt_timkiem";
             this.txt_timkiem.Size = new System.Drawing.Size(483, 39);
             this.txt_timkiem.TabIndex = 0;
-            this.txt_timkiem.Text = "(Gõ nội dung cần tìm kiếm)";
-            // 
-            // btn_timkiem
-            // 
-            this.btn_timkiem.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_timkiem.ForeColor = System.Drawing.Color.Navy;
-            this.btn_timkiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_timkiem.ImageIndex = 3;
-            this.btn_timkiem.ImageList = this.imageList1;
-            this.btn_timkiem.Location = new System.Drawing.Point(492, 3);
-            this.btn_timkiem.Name = "btn_timkiem";
-            this.btn_timkiem.Size = new System.Drawing.Size(123, 39);
-            this.btn_timkiem.TabIndex = 1;
-            this.btn_timkiem.Text = "Tìm";
-            this.btn_timkiem.UseVisualStyleBackColor = true;
+            this.txt_timkiem.Text = "(Gõ nội dung cần tìm kiếm...)";
             // 
             // panel13
             // 
@@ -1439,6 +1331,277 @@ namespace GUI
             this.btn_close.Text = "ĐÓNG ỨNG DỤNG";
             this.btn_close.UseVisualStyleBackColor = false;
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.label2.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label2.Image = global::GUI.Properties.Resources.checklist;
+            this.label2.Location = new System.Drawing.Point(9, 6);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(165, 23);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Danh sách Album";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::GUI.Properties.Resources.icons8_search_240;
+            this.pictureBox1.Location = new System.Drawing.Point(30, 23);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(337, 348);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btn_timkiem
+            // 
+            this.btn_timkiem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_timkiem.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_timkiem.ForeColor = System.Drawing.Color.Navy;
+            this.btn_timkiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_timkiem.ImageIndex = 3;
+            this.btn_timkiem.ImageList = this.imageList1;
+            this.btn_timkiem.Location = new System.Drawing.Point(492, 3);
+            this.btn_timkiem.Name = "btn_timkiem";
+            this.btn_timkiem.Size = new System.Drawing.Size(123, 39);
+            this.btn_timkiem.TabIndex = 1;
+            this.btn_timkiem.Text = "Tìm";
+            this.btn_timkiem.UseVisualStyleBackColor = true;
+            // 
+            // chứcNăngChínhToolStripMenuItem
+            // 
+            this.chứcNăngChínhToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.quảnLýAlbumToolStripMenuItem,
+            this.quảnLýTHỂLOẠIToolStripMenuItem,
+            this.quảnLýCASĨToolStripMenuItem,
+            this.quảnLýTÁCGIẢToolStripMenuItem,
+            this.quảnLýBÀIHÁTToolStripMenuItem,
+            this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem,
+            this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem,
+            this.đóngỨngDụngToolStripMenuItem});
+            this.chứcNăngChínhToolStripMenuItem.Image = global::GUI.Properties.Resources.settings;
+            this.chứcNăngChínhToolStripMenuItem.Name = "chứcNăngChínhToolStripMenuItem";
+            this.chứcNăngChínhToolStripMenuItem.Size = new System.Drawing.Size(130, 24);
+            this.chứcNăngChínhToolStripMenuItem.Text = "Chức năng chính";
+            // 
+            // quảnLýAlbumToolStripMenuItem
+            // 
+            this.quảnLýAlbumToolStripMenuItem.Image = global::GUI.Properties.Resources.music_album;
+            this.quảnLýAlbumToolStripMenuItem.Name = "quảnLýAlbumToolStripMenuItem";
+            this.quảnLýAlbumToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.A)));
+            this.quảnLýAlbumToolStripMenuItem.Size = new System.Drawing.Size(303, 26);
+            this.quảnLýAlbumToolStripMenuItem.Text = "Quản lý ALBUM";
+            this.quảnLýAlbumToolStripMenuItem.Click += new System.EventHandler(this.quảnLýAlbumToolStripMenuItem_Click);
+            // 
+            // quảnLýTHỂLOẠIToolStripMenuItem
+            // 
+            this.quảnLýTHỂLOẠIToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("quảnLýTHỂLOẠIToolStripMenuItem.Image")));
+            this.quảnLýTHỂLOẠIToolStripMenuItem.Name = "quảnLýTHỂLOẠIToolStripMenuItem";
+            this.quảnLýTHỂLOẠIToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.T)));
+            this.quảnLýTHỂLOẠIToolStripMenuItem.Size = new System.Drawing.Size(303, 26);
+            this.quảnLýTHỂLOẠIToolStripMenuItem.Text = "Quản lý THỂ LOẠI";
+            this.quảnLýTHỂLOẠIToolStripMenuItem.Click += new System.EventHandler(this.quảnLýTHỂLOẠIToolStripMenuItem_Click);
+            // 
+            // quảnLýCASĨToolStripMenuItem
+            // 
+            this.quảnLýCASĨToolStripMenuItem.Image = global::GUI.Properties.Resources.singer;
+            this.quảnLýCASĨToolStripMenuItem.Name = "quảnLýCASĨToolStripMenuItem";
+            this.quảnLýCASĨToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.C)));
+            this.quảnLýCASĨToolStripMenuItem.Size = new System.Drawing.Size(303, 26);
+            this.quảnLýCASĨToolStripMenuItem.Text = "Quản lý CA SĨ";
+            this.quảnLýCASĨToolStripMenuItem.Click += new System.EventHandler(this.quảnLýCASĨToolStripMenuItem_Click);
+            // 
+            // quảnLýTÁCGIẢToolStripMenuItem
+            // 
+            this.quảnLýTÁCGIẢToolStripMenuItem.Image = global::GUI.Properties.Resources.writer;
+            this.quảnLýTÁCGIẢToolStripMenuItem.Name = "quảnLýTÁCGIẢToolStripMenuItem";
+            this.quảnLýTÁCGIẢToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.G)));
+            this.quảnLýTÁCGIẢToolStripMenuItem.Size = new System.Drawing.Size(303, 26);
+            this.quảnLýTÁCGIẢToolStripMenuItem.Text = "Quản lý TÁC GIẢ";
+            this.quảnLýTÁCGIẢToolStripMenuItem.Click += new System.EventHandler(this.quảnLýTÁCGIẢToolStripMenuItem_Click);
+            // 
+            // quảnLýBÀIHÁTToolStripMenuItem
+            // 
+            this.quảnLýBÀIHÁTToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("quảnLýBÀIHÁTToolStripMenuItem.Image")));
+            this.quảnLýBÀIHÁTToolStripMenuItem.Name = "quảnLýBÀIHÁTToolStripMenuItem";
+            this.quảnLýBÀIHÁTToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.B)));
+            this.quảnLýBÀIHÁTToolStripMenuItem.Size = new System.Drawing.Size(303, 26);
+            this.quảnLýBÀIHÁTToolStripMenuItem.Text = "Quản lý BÀI HÁT";
+            this.quảnLýBÀIHÁTToolStripMenuItem.Click += new System.EventHandler(this.quảnLýBÀIHÁTToolStripMenuItem_Click);
+            // 
+            // quảnLýHÃNGSẢNXUẤTToolStripMenuItem
+            // 
+            this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("quảnLýHÃNGSẢNXUẤTToolStripMenuItem.Image")));
+            this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem.Name = "quảnLýHÃNGSẢNXUẤTToolStripMenuItem";
+            this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.H)));
+            this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem.Size = new System.Drawing.Size(303, 26);
+            this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem.Text = "Quản lý HÃNG SẢN XUẤT";
+            this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem.Click += new System.EventHandler(this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem_Click);
+            // 
+            // quảnLýTRACỨUTÌMKIẾMToolStripMenuItem
+            // 
+            this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("quảnLýTRACỨUTÌMKIẾMToolStripMenuItem.Image")));
+            this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem.Name = "quảnLýTRACỨUTÌMKIẾMToolStripMenuItem";
+            this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.S)));
+            this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem.Size = new System.Drawing.Size(303, 26);
+            this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem.Text = "Quản lý TRA CỨU - TÌM KIẾM";
+            this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem.Click += new System.EventHandler(this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem_Click);
+            // 
+            // đóngỨngDụngToolStripMenuItem
+            // 
+            this.đóngỨngDụngToolStripMenuItem.Image = global::GUI.Properties.Resources.close;
+            this.đóngỨngDụngToolStripMenuItem.Name = "đóngỨngDụngToolStripMenuItem";
+            this.đóngỨngDụngToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.D)));
+            this.đóngỨngDụngToolStripMenuItem.Size = new System.Drawing.Size(303, 26);
+            this.đóngỨngDụngToolStripMenuItem.Text = "Đóng ứng dụng";
+            this.đóngỨngDụngToolStripMenuItem.Click += new System.EventHandler(this.đóngỨngDụngToolStripMenuItem_Click);
+            // 
+            // trợGiúpToolStripMenuItem
+            // 
+            this.trợGiúpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.thôngTinSinhViênThựcHiệnToolStripMenuItem,
+            this.thôngTinĐềTàiToolStripMenuItem});
+            this.trợGiúpToolStripMenuItem.Image = global::GUI.Properties.Resources.help;
+            this.trợGiúpToolStripMenuItem.Name = "trợGiúpToolStripMenuItem";
+            this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
+            this.trợGiúpToolStripMenuItem.Text = "Trợ giúp";
+            // 
+            // thôngTinSinhViênThựcHiệnToolStripMenuItem
+            // 
+            this.thôngTinSinhViênThựcHiệnToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("thôngTinSinhViênThựcHiệnToolStripMenuItem.Image")));
+            this.thôngTinSinhViênThựcHiệnToolStripMenuItem.Name = "thôngTinSinhViênThựcHiệnToolStripMenuItem";
+            this.thôngTinSinhViênThựcHiệnToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
+            this.thôngTinSinhViênThựcHiệnToolStripMenuItem.Text = "Thông tin sinh viên thực hiện";
+            // 
+            // thôngTinĐềTàiToolStripMenuItem
+            // 
+            this.thôngTinĐềTàiToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("thôngTinĐềTàiToolStripMenuItem.Image")));
+            this.thôngTinĐềTàiToolStripMenuItem.Name = "thôngTinĐềTàiToolStripMenuItem";
+            this.thôngTinĐềTàiToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
+            this.thôngTinĐềTàiToolStripMenuItem.Text = "Thông tin đề tài";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dgv_searchTenCaSi);
+            this.groupBox2.Location = new System.Drawing.Point(3, 6);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(705, 250);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Kết quả tìm kiếm theo TÊN CA SĨ";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.dgv_searchTenAlbum);
+            this.groupBox3.Location = new System.Drawing.Point(6, 6);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(702, 247);
+            this.groupBox3.TabIndex = 0;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Kết quả tìm kiếm theo TÊN ALBUM";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.dgv_searchLoiBaiHat);
+            this.groupBox4.Location = new System.Drawing.Point(3, 3);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(705, 250);
+            this.groupBox4.TabIndex = 0;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Kết quả tìm kiếm theo LỜI BÀI HÁT";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.dgv_searchHangSanXuat);
+            this.groupBox5.Location = new System.Drawing.Point(6, 6);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(702, 247);
+            this.groupBox5.TabIndex = 0;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Kết quả tìm kiếm theo HÃNG SẢN XUẤT";
+            // 
+            // dgv_searchTenCaSi
+            // 
+            this.dgv_searchTenCaSi.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgv_searchTenCaSi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_searchTenCaSi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.STT_tc6_tc2,
+            this.tencasi_tc6_tc2,
+            this.tenbaihat_tc6_tc2,
+            this.loibaihat_tc6_tc2,
+            this.mabaihat_tc6_tc2});
+            this.dgv_searchTenCaSi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_searchTenCaSi.Location = new System.Drawing.Point(3, 16);
+            this.dgv_searchTenCaSi.Name = "dgv_searchTenCaSi";
+            this.dgv_searchTenCaSi.RowHeadersVisible = false;
+            this.dgv_searchTenCaSi.Size = new System.Drawing.Size(699, 231);
+            this.dgv_searchTenCaSi.TabIndex = 0;
+            // 
+            // dgv_searchTenAlbum
+            // 
+            this.dgv_searchTenAlbum.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgv_searchTenAlbum.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_searchTenAlbum.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_searchTenAlbum.Location = new System.Drawing.Point(3, 16);
+            this.dgv_searchTenAlbum.Name = "dgv_searchTenAlbum";
+            this.dgv_searchTenAlbum.Size = new System.Drawing.Size(696, 228);
+            this.dgv_searchTenAlbum.TabIndex = 0;
+            // 
+            // dgv_searchLoiBaiHat
+            // 
+            this.dgv_searchLoiBaiHat.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgv_searchLoiBaiHat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_searchLoiBaiHat.Location = new System.Drawing.Point(6, 19);
+            this.dgv_searchLoiBaiHat.Name = "dgv_searchLoiBaiHat";
+            this.dgv_searchLoiBaiHat.Size = new System.Drawing.Size(693, 225);
+            this.dgv_searchLoiBaiHat.TabIndex = 0;
+            // 
+            // dgv_searchHangSanXuat
+            // 
+            this.dgv_searchHangSanXuat.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgv_searchHangSanXuat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_searchHangSanXuat.Location = new System.Drawing.Point(6, 19);
+            this.dgv_searchHangSanXuat.Name = "dgv_searchHangSanXuat";
+            this.dgv_searchHangSanXuat.Size = new System.Drawing.Size(690, 217);
+            this.dgv_searchHangSanXuat.TabIndex = 0;
+            // 
+            // STT_tc6_tc2
+            // 
+            this.STT_tc6_tc2.HeaderText = "STT";
+            this.STT_tc6_tc2.Name = "STT_tc6_tc2";
+            // 
+            // tencasi_tc6_tc2
+            // 
+            this.tencasi_tc6_tc2.HeaderText = "Tên ca sĩ";
+            this.tencasi_tc6_tc2.Name = "tencasi_tc6_tc2";
+            // 
+            // tenbaihat_tc6_tc2
+            // 
+            this.tenbaihat_tc6_tc2.HeaderText = "Tên bài hát";
+            this.tenbaihat_tc6_tc2.Name = "tenbaihat_tc6_tc2";
+            // 
+            // loibaihat_tc6_tc2
+            // 
+            this.loibaihat_tc6_tc2.HeaderText = "Lời bài hát";
+            this.loibaihat_tc6_tc2.Name = "loibaihat_tc6_tc2";
+            // 
+            // mabaihat_tc6_tc2
+            // 
+            this.mabaihat_tc6_tc2.HeaderText = "Mã bài hát";
+            this.mabaihat_tc6_tc2.Name = "mabaihat_tc6_tc2";
             // 
             // Form1
             // 
@@ -1487,14 +1650,28 @@ namespace GUI
             this.menuStrip1.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage9.ResumeLayout(false);
+            this.tabPage10.ResumeLayout(false);
+            this.tabPage11.ResumeLayout(false);
+            this.tabPage12.ResumeLayout(false);
+            this.tabPage13.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_searchTenBaiHat)).EndInit();
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_searchTenCaSi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_searchTenAlbum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_searchLoiBaiHat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_searchHangSanXuat)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1608,7 +1785,7 @@ namespace GUI
         private System.Windows.Forms.TabPage tabPage13;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_searchTenBaiHat;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT_TC6;
         private System.Windows.Forms.DataGridViewTextBoxColumn ma_baihat_tc6;
         private System.Windows.Forms.DataGridViewTextBoxColumn ten_baihat;
@@ -1618,6 +1795,20 @@ namespace GUI
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btn_timkiem;
         private System.Windows.Forms.TextBox txt_timkiem;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.DataGridView dgv_searchTenCaSi;
+        private System.Windows.Forms.DataGridView dgv_searchTenAlbum;
+        private System.Windows.Forms.DataGridView dgv_searchLoiBaiHat;
+        private System.Windows.Forms.DataGridView dgv_searchHangSanXuat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT_tc6_tc2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tencasi_tc6_tc2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenbaihat_tc6_tc2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn loibaihat_tc6_tc2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mabaihat_tc6_tc2;
     }
 }
 

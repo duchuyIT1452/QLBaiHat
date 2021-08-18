@@ -133,6 +133,7 @@
     <Content Include="ICON\settings.png" />
     <Content Include="ICON\singer.png" />
     <Content Include="ICON\writer.png" />
+    <None Include="Resources\icons8-search-240.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
