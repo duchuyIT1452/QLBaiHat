@@ -29,6 +29,7 @@ namespace DATA
         public void InsertBaiHat(String maBaiHat, String tenBaiHat, String maTheLoai, String maAlbum, String maCaSi, String maTacGia, String maHSX, String loiBaiHat)
         {
             String sql = "Insert Into BaiHat Values('" + maBaiHat + "', '" + tenBaiHat + "', '" + maTheLoai + "','" + maAlbum + "','" + maCaSi + "','" + maTacGia + "','" + maHSX + "','" + loiBaiHat + "')";
+            String sql1 = "Insert Into BaiHat_CaSi Values('" + maBaiHat + "', '" + maCaSi + "')";
             conDB.ExecuteNonQuery(sql);
         }
 

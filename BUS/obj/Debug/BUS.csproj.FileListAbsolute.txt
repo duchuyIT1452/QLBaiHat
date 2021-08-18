@@ -92,3 +92,16 @@ C:\Users\Admin\Desktop\New folder\QLBaiHat\BUS\obj\Debug\BUS.csproj.CoreCompileI
 C:\Users\Admin\Desktop\New folder\QLBaiHat\BUS\obj\Debug\BUS.csproj.CopyComplete
 C:\Users\Admin\Desktop\New folder\QLBaiHat\BUS\obj\Debug\BUS.exe
 C:\Users\Admin\Desktop\New folder\QLBaiHat\BUS\obj\Debug\BUS.pdb
+C:\Users\duchu\OneDrive\Máy tính\nhom1-qlbh\QLBaiHat\BUS\bin\Debug\BUS.exe.config
+C:\Users\duchu\OneDrive\Máy tính\nhom1-qlbh\QLBaiHat\BUS\bin\Debug\BUS.exe
+C:\Users\duchu\OneDrive\Máy tính\nhom1-qlbh\QLBaiHat\BUS\bin\Debug\BUS.pdb
+C:\Users\duchu\OneDrive\Máy tính\nhom1-qlbh\QLBaiHat\BUS\bin\Debug\DATA.exe
+C:\Users\duchu\OneDrive\Máy tính\nhom1-qlbh\QLBaiHat\BUS\bin\Debug\DATA.pdb
+C:\Users\duchu\OneDrive\Máy tính\nhom1-qlbh\QLBaiHat\BUS\bin\Debug\DATA.exe.config
+C:\Users\duchu\OneDrive\Máy tính\nhom1-qlbh\QLBaiHat\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+C:\Users\duchu\OneDrive\Máy tính\nhom1-qlbh\QLBaiHat\BUS\obj\Debug\BUS.Properties.Resources.resources
+C:\Users\duchu\OneDrive\Máy tính\nhom1-qlbh\QLBaiHat\BUS\obj\Debug\BUS.csproj.GenerateResource.cache
+C:\Users\duchu\OneDrive\Máy tính\nhom1-qlbh\QLBaiHat\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\duchu\OneDrive\Máy tính\nhom1-qlbh\QLBaiHat\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\duchu\OneDrive\Máy tính\nhom1-qlbh\QLBaiHat\BUS\obj\Debug\BUS.exe
+C:\Users\duchu\OneDrive\Máy tính\nhom1-qlbh\QLBaiHat\BUS\obj\Debug\BUS.pdb

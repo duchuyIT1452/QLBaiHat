@@ -79,6 +79,8 @@ namespace GUI
             foreach (DataRow row in dt.Rows)
             {
                 dgv_baihat_home.Rows[dem].Cells[0].Value = "Bài hát "+(dem+1);
+                if (dem % 2 == 0)
+                    dgv_baihat_home.Rows[dem].DefaultCellStyle.BackColor = Color.PaleTurquoise;
                 dem++;
             }
         }
@@ -231,6 +233,22 @@ namespace GUI
             f.ShowDialog();
             this.Visible = true;
             load_TheLoai();
+        }
+
+        private void dgv_baihat_home_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            int dem = 1;
+            
+        }
+
+        private void dgv_baihat_home_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

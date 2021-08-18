@@ -121,7 +121,10 @@
     <Content Include="ICON\close.png" />
     <Content Include="ICON\delete.png" />
     <Content Include="ICON\help.png" />
+    <Content Include="ICON\icons8-app-store-50.png" />
     <Content Include="ICON\icons8-documentary-80.png" />
+    <Content Include="ICON\icons8-search-32.png" />
+    <Content Include="ICON\icons8-shutdown-48.png" />
     <Content Include="ICON\info %281%29.png" />
     <Content Include="ICON\info.png" />
     <Content Include="ICON\Music-Library-icon.png" />

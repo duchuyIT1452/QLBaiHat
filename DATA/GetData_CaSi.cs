@@ -9,9 +9,8 @@ namespace DATA
 {
     public class GetData_CaSi
     {
-        #region Lấy toàn bộ ca sĩ
         ConnectDB conDB = new ConnectDB();
-        #endregion
+        #region Lấy toàn bộ ca sĩ
         public DataTable getAllCaSi()
         {
             String sql = "Select * from CaSi";
@@ -19,11 +18,15 @@ namespace DATA
             dt = conDB.GetTable(sql);
             return dt;
         }
+        #endregion
+        #region Thêm ca sĩ
         public void InsertCaSi(String maCaSi, String tenCaSi, String thongTinCaSi)
         {
             String sql = "Insert Into CaSi Values('" + maCaSi + "', N'" + tenCaSi + "', N'" + thongTinCaSi + "')";
             conDB.ExecuteNonQuery(sql);
         }
+        #endregion
+
 
         public DataTable SearchByMa(String maCaSi)
         {

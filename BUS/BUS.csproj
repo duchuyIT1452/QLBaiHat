@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Album_BUS.cs" />
     <Compile Include="BaiHat_BUS.cs" />
+    <Compile Include="BaiHat_CaSi_BUS.cs" />
     <Compile Include="CaSi_BUS.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
