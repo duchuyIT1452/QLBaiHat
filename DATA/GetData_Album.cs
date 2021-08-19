@@ -54,5 +54,12 @@ namespace DATA
             dt = conn.GetTable(sql);
             return dt;
         }
+        public DataTable findAlbum(string ten_album)
+        {
+            String sql = "SELECT ma_album, ten_album, year(namphathanh) AS namphathanh FROM ALBUM WHERE ten_album like N'%" + ten_album + "%'";
+            DataTable dt = new DataTable();
+            dt = conn.GetTable(sql);
+            return dt;
+        }
     }
 }

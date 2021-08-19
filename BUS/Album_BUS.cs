@@ -101,5 +101,9 @@ namespace BUS
         {
             return newAlbum.getAlbum();
         }
+        public DataTable findAlbum(string tenAlbum)
+        {
+            return newAlbum.findAlbum(tenAlbum);
+        }
     }
 }

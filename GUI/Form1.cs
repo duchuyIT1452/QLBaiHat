@@ -144,6 +144,7 @@ namespace GUI
         {
             load_Album();
             load_TheLoai();
+
         }
 
         private void bt_them_Click(object sender, EventArgs e)
@@ -249,6 +250,24 @@ namespace GUI
         private void btn_close_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btn_timkiem_Click(object sender, EventArgs e)
+        {
+            Album_BUS bus = new Album_BUS();
+            DataTable dt = new DataTable();
+            dt = bus.findAlbum(txt_timkiem.Text);
+            dgv_searchTenAlbum.DataSource = bus.findAlbum(txt_timkiem.Text);
+            int dem = 0;
+            foreach (DataRow row in dt.Rows)
+            {
+                dgv_searchTenAlbum.Rows[dem].Cells[0].Value = (dem + 1);
+                dem++;
+            }
+            if (dem == 0)
+            {
+                DialogResult dialogResult = MessageBox.Show("Không có tên album trong danh sách!", "Xác nhận", MessageBoxButtons.OK);
+            }
         }
     }
 }
