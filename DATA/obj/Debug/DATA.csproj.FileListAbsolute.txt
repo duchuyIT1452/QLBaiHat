@@ -70,3 +70,12 @@ C:\Users\duchu\OneDrive\Máy tính\nhom1-qlbh\QLBaiHat\DATA\obj\Debug\DATA.cspro
 C:\Users\duchu\OneDrive\Máy tính\nhom1-qlbh\QLBaiHat\DATA\obj\Debug\DATA.csproj.CoreCompileInputs.cache
 C:\Users\duchu\OneDrive\Máy tính\nhom1-qlbh\QLBaiHat\DATA\obj\Debug\DATA.exe
 C:\Users\duchu\OneDrive\Máy tính\nhom1-qlbh\QLBaiHat\DATA\obj\Debug\DATA.pdb
+C:\Users\duchu\OneDrive\Máy tính\New folder\QLBaiHat\DATA\bin\Debug\DATA.exe.config
+C:\Users\duchu\OneDrive\Máy tính\New folder\QLBaiHat\DATA\bin\Debug\DATA.exe
+C:\Users\duchu\OneDrive\Máy tính\New folder\QLBaiHat\DATA\bin\Debug\DATA.pdb
+C:\Users\duchu\OneDrive\Máy tính\New folder\QLBaiHat\DATA\obj\Debug\DATA.csprojAssemblyReference.cache
+C:\Users\duchu\OneDrive\Máy tính\New folder\QLBaiHat\DATA\obj\Debug\DATA.Properties.Resources.resources
+C:\Users\duchu\OneDrive\Máy tính\New folder\QLBaiHat\DATA\obj\Debug\DATA.csproj.GenerateResource.cache
+C:\Users\duchu\OneDrive\Máy tính\New folder\QLBaiHat\DATA\obj\Debug\DATA.csproj.CoreCompileInputs.cache
+C:\Users\duchu\OneDrive\Máy tính\New folder\QLBaiHat\DATA\obj\Debug\DATA.exe
+C:\Users\duchu\OneDrive\Máy tính\New folder\QLBaiHat\DATA\obj\Debug\DATA.pdb
