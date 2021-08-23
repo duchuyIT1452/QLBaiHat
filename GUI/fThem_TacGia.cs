@@ -11,59 +11,60 @@ using BUS;
 
 namespace GUI
 {
-    public partial class fThem_HangSX : Form
+    public partial class fThem_TacGia : Form
     {
-        public fThem_HangSX()
+        public fThem_TacGia()
         {
             InitializeComponent();
         }
 
         private void btn_them_Click(object sender, EventArgs e)
         {
-            HangSanXuat_BUS hangsx;
+            TacGia_BUS tacgia;
             try
             {
-                hangsx = new HangSanXuat_BUS(txt_mahangsx.Text, txt_tenhangsx.Text, txt_thongtinhangsanxuat.Text);
-                if (txt_mahangsx.Text == "")
+                tacgia = new TacGia_BUS(txt_matacgia.Text, txt_tentacgia.Text, txt_thongtintacgia.Text);
+                if (txt_matacgia.Text == "")
                 {
-                    MessageBox.Show("Mã hãng sản xuất không được bỏ trống", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Mã tác giả không được bỏ trống", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                if (txt_tenhangsx.Text == "")
+                if (txt_tentacgia.Text == "")
                 {
-                    MessageBox.Show("Tên hãng sản xuất không được bỏ trống", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Tên tác giả không được bỏ trống", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                if (txt_thongtinhangsanxuat.Text == "")
+                if (txt_thongtintacgia.Text == "")
                 {
-                    MessageBox.Show("Thông tin hãng sản xuất không được bỏ trống", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Thông tin tác giả không được bỏ trống", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                hangsx.Insert_HangSX();
+                tacgia.Insert_TacGia();
                 MessageBox.Show("Thêm thành công");
             }
             catch (Exception ex)
             {
-                if (txt_mahangsx.Text.Contains("trung ma"))
+                if (txt_matacgia.Text.Contains("trung ma"))
                 {
                     MessageBox.Show("Trùng mã. Vui lòng nhập lại", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 else
+                {
                     MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
         private void btn_nhaplai_Click(object sender, EventArgs e)
         {
-            txt_mahangsx.Text = txt_tenhangsx.Text = txt_thongtinhangsanxuat.Text = "";
-            txt_mahangsx.Focus();
+            txt_matacgia.Text = txt_tentacgia.Text = txt_thongtintacgia.Text = "";
+            txt_matacgia.Focus();
         }
 
-        private void btn_thoat_Click(object sender, EventArgs e)
+        private void btn_huy_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
         }
-
     }
 }

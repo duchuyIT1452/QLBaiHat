@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,7 @@ namespace GUI
 {
     public partial class Form1 : Form
     {
+        string connString = @"Data Source=DESKTOP-B0JGHPP;Initial Catalog=DBBaiHat;Integrated Security=True";
         public Form1()
         {
             InitializeComponent();
@@ -84,8 +86,7 @@ namespace GUI
                 dem++;
             }
         }
-
-        private DataTable dtAlbum;
+        
         private void load_Album()
         {
             Album_BUS bus = new Album_BUS();
@@ -121,30 +122,41 @@ namespace GUI
         {
 
         }
+        private void dgv_dsHangsx_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        private void dgv_dsNhacSi_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
 
         #endregion
 
-        private DataTable dtTacGia;
+        #region Load 
         private void load_Tacgia()
         {
-            dtTacGia = new TacGia_BUS().getAllTacGia();
-            lst_dsnhacsi.DataSource = dtTacGia;
-            lst_dsnhacsi.DisplayMember = "ten_tacgia";
-            lst_dsnhacsi.ValueMember = "ma_tacgia";
+            TacGia_BUS dtTacGia = new TacGia_BUS();
+            DataTable dt = new DataTable();
+            dt = dtTacGia.getAllTacGia();
+            dgv_dsNhacSi.DataSource = dt;
         }
-
-        private DataTable dtHangsx;
+        
         private void load_Hangsx()
         {
-            dtHangsx = new HangSanXuat_BUS().getAllHangSX();
-            dgv_dsHangsx.DataSource = dtHangsx;
+            HangSanXuat_BUS dtHangsx = new HangSanXuat_BUS();
+            DataTable dt = new DataTable();
+            dt = dtHangsx.getAllHangSX();
+            dgv_dsHangsx.DataSource = dt;
         }
+        #endregion
 
         private void tabControl_formChinh_MouseClick(object sender, MouseEventArgs e)
         {
             load_Album();
             load_TheLoai();
-
+            load_Tacgia();
+            load_Hangsx();
         }
 
         private void bt_them_Click(object sender, EventArgs e)
@@ -238,7 +250,7 @@ namespace GUI
 
         private void dgv_baihat_home_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            int dem = 1;
+            //int dem = 1;
             
         }
 
@@ -249,7 +261,8 @@ namespace GUI
 
         private void btn_close_Click(object sender, EventArgs e)
         {
-            Close();
+            if (MessageBox.Show("BẠN CHẮC CHẮN MUỐN ĐÓNG ỨNG DỤNG ?", "THOÁT CHƯƠNG TRÌNH", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                this.Close();
         }
 
         private void btn_timkiem_Click(object sender, EventArgs e)
@@ -269,5 +282,147 @@ namespace GUI
                 DialogResult dialogResult = MessageBox.Show("Không có tên album trong danh sách!", "Xác nhận", MessageBoxButtons.OK);
             }
         }
+
+        #region Phong - Xử lý thêm sửa xóa
+        // HSX
+        private void btn_themhsx_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            fThem_HangSX f = new fThem_HangSX();
+            f.ShowDialog();
+            this.Visible = true;
+            load_Hangsx();
+        }
+
+        private void btn_xoahsx_Click(object sender, EventArgs e)
+        {
+            HangSanXuat_BUS hangsx = new HangSanXuat_BUS();
+            string del = dgv_dsHangsx.Rows[dgv_dsHangsx.CurrentCell.RowIndex].Cells[0].Value.ToString();
+            try
+            {
+                DialogResult dialog = MessageBox.Show("Bạn có chắc muốn xóa dữ liệu không?", "XÁC NHẬN XÓA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialog == DialogResult.Yes)
+                {
+                    hangsx.Delete_HangSX(del);
+                    load_Hangsx();
+                }
+                else
+                {
+                    if (dialog == DialogResult.No)
+                    {
+                        load_Hangsx();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn_suahsx_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // Tác giả
+        private void btn_them_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            fThem_TacGia f = new fThem_TacGia();
+            f.ShowDialog();
+            this.Visible = true;
+            load_Tacgia();
+        }
+
+        private void btn_xoa_Click(object sender, EventArgs e)
+        {
+            TacGia_BUS tg = new TacGia_BUS();
+            string del = dgv_dsNhacSi.Rows[dgv_dsNhacSi.CurrentCell.RowIndex].Cells[0].Value.ToString();
+            try
+            {
+                DialogResult dialog = MessageBox.Show("Bạn có chắc muốn xóa không?", "XÁC NHẬN XÓA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialog == DialogResult.Yes)
+                {
+                    tg.Delete_TacGia(del);
+                    load_Tacgia();
+                }
+                else
+                {
+                    if (dialog == DialogResult.No)
+                    {
+                        load_Tacgia();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn_sua_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+
+        private void dgv_dsNhacSi_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //Luu lai dong du lieu vua kich chon
+            DataGridViewRow row = this.dgv_dsNhacSi.Rows[e.RowIndex];
+            //Dua du lieu vao textbox
+            txt_tentacgia.Text = row.Cells[1].Value.ToString();
+            txt_thongtintacgia.Text = row.Cells[2].Value.ToString();
+
+            //Đưa dữ liệu lên dgv_baihat_nhacsi
+            String maTG = row.Cells[0].Value.ToString();
+            themBangBH(e.RowIndex, maTG);
+        }
+
+        private void dgv_dsHangsx_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                //Luu lai dong du lieu vua kich chon
+                DataGridViewRow row = this.dgv_dsHangsx.Rows[e.RowIndex];
+                //Dua du lieu vao textbox
+                txt_tenhangsanxuat.Text = row.Cells[1].Value.ToString();
+                txt_thongtinhangsanxuat.Text = row.Cells[2].Value.ToString();
+                string maHangsx = row.Cells[0].Value.ToString();
+                themBangHSX(e.RowIndex, maHangsx);
+            }
+        }
+
+
+        private void themBangBH(int select, string maTG)
+        {
+            SqlConnection conn = new SqlConnection(connString);
+            conn.Open();
+
+            String sql = "select BAIHAT.ten_baihat, CASI.ten_casi,HANGSANXUAT.ten_hangsanxuat, BAIHAT.loi_baihat from BAIHAT INNER JOIN HANGSANXUAT ON BAIHAT.ma_hangsanxuat=HANGSANXUAT.ma_hangsanxuat INNER JOIN TACGIA ON BAIHAT.ma_tacgia=TACGIA.ma_tacgia INNER JOIN CASI ON CASI.ma_casi=BAIHAT.ma_casi WHERE TACGIA.ma_tacgia=@matg";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("@matg", maTG);
+            SqlDataReader red = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(red);
+            dgv_Baihat_nhacsi.DataSource = dt;
+        }
+        private void themBangHSX(int select, string maHangsx)
+        {
+            SqlConnection conn = new SqlConnection(connString);
+            conn.Open();
+
+            String sql = "select BAIHAT.ten_baihat, CASI.ten_casi,TACGIA.ten_tacgia, BAIHAT.loi_baihat from BAIHAT INNER JOIN TACGIA ON BAIHAT.ma_tacgia = TACGIA.ma_tacgia INNER JOIN HANGSANXUAT ON BAIHAT.ma_hangsanxuat = HANGSANXUAT.ma_hangsanxuat INNER JOIN CASI ON CASI.ma_casi=BAIHAT.ma_casi WHERE HANGSANXUAT.ma_hangsanxuat=@maHangSX";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("@maHangSX", maHangsx);
+            SqlDataReader red = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(red);
+            dgv_Baihat_phathanh.DataSource = dt;
+        }
+
+        
     }
 }
