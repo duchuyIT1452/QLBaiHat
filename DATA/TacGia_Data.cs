@@ -22,35 +22,32 @@ namespace DATA
         #endregion
 
         #region Hàm xử lý 
-        public void Insert_TacGia(string ma_tacgia, string ten_tacgia, string thongtin_tacgia)
+        public int Insert_TacGia(string matacgia, string tentacgia, string thongtintacgia)
         {
-            string sql = "Insert into TACGIA values('" + ma_tacgia + "',N'" + ten_tacgia + "',N'" + thongtin_tacgia + "')";
-            conDB.ExecuteNonQuery(sql);
+            return conDB.executeNonQuery("insert into TacGia values('" + matacgia + "', '" + tentacgia + "','" + thongtintacgia + "')");
         }
 
-        public void Delete_TacGia(string ma_tacgia)
+        public int Delete_TacGia(string matacgia)
         {
-            string sql = "delete TACGIA where ma_tacgia = '" + ma_tacgia + "' ";
-            conDB.ExecuteNonQuery(sql);
+            return conDB.executeNonQuery("delete TacGia where ma_tacgia = '" + matacgia + "' ");
         }
 
-        public void Update_TacGia(string ma_tacgia, string ten_tacgia, string thongtin_tacgia)
+        public int Update_TacGia(string matacgia, string tentacgia, string thongtintacgia)
         {
-            string sql = "update TACGIA set ma_tacgia = '" + ma_tacgia + "', ten_tacgia = N'" + ten_tacgia + "', thongtin_tacgia = N'" + thongtin_tacgia + "' ";
-            conDB.ExecuteNonQuery(sql);
+            return conDB.executeNonQuery("update TacGia set ma_tacgia = '" + matacgia + "', ten_tacgia = '" + tentacgia + "', thongtin_tacgia = '" + thongtintacgia + "' ");
         }
 
-        public DataTable SearchByCode_TacGia(string ma_tacgia)
+        public DataTable SearchByCode_TacGia(string matacgia)
         {
-            string sql = "select *from TACGIA where ma_tacgia = '" + ma_tacgia + "' ";
+            string sql = "select *from TacGia where ma_tacgia = '" + matacgia + "' ";
             DataTable dt = new DataTable();
             dt = conDB.GetTable(sql);
             return dt;
         }
 
-        public DataTable SearchByName_TacGia(string ten_tacgia)
+        public DataTable SearchByName_TacGia(string tentacgia)
         {
-            string sql = "select *from TACGIA where ten_tacgia = '" + ten_tacgia + "' ";
+            string sql = "select *from TacGia where ten_tacgia = '" + tentacgia + "' ";
             DataTable dt = new DataTable();
             dt = conDB.GetTable(sql);
             return dt;

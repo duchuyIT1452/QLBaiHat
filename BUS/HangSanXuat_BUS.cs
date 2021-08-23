@@ -20,7 +20,10 @@ namespace BUS
         private string thongtinhangsanxuat;
 
         public HangSanXuat_BUS() { }
-
+        public HangSanXuat_BUS(string ma)
+        {
+            this.mahangsanxuat = ma;
+        }
         public HangSanXuat_BUS(string ma, string ten, string thongtin)
         {
             this.MAHANGSANXUAT = ma;
@@ -38,7 +41,6 @@ namespace BUS
                     if (value.Trim().Equals(""))
                     {
                         MessageBox.Show("Mã hãng sản xuất không được bỏ trống", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
                     }
                     else
                     {
@@ -69,7 +71,6 @@ namespace BUS
                     if (value.Trim().Equals(""))
                     {
                         MessageBox.Show("Ten hang san xuat khong duoc bo trong", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
                     }
                     else
                     {
@@ -92,8 +93,7 @@ namespace BUS
                 {
                     if (value.Trim().Equals(""))
                     {
-                        MessageBox.Show("Thông tin hãng sx không được bỏ trống", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
+                        throw new Exception("Nhap thong tin hang san xuat");
                     }
                     else
                     {
@@ -113,18 +113,18 @@ namespace BUS
         {
             return hangsx.getAllHangSX();
         }
-        public void Insert_HangSX()
+        public int Insert_HangSX()
         {
-            hangsx.Insert_HangSX(mahangsanxuat, tenhangsanxuat, thongtinhangsanxuat);
+            return hangsx.Insert_HangSX(mahangsanxuat, tenhangsanxuat, thongtinhangsanxuat);
         }
-        public void Delete_HangSX(string mahangsanxuat)
+        public int Delete_HangSX()
         {
-            hangsx.Delete_HangSX(mahangsanxuat);
-
+            return hangsx.Delete_HangSX(mahangsanxuat);
+            
         }
-        public void Update_HangSX()
+        public int Update_HangSX()
         {
-            hangsx.Update_HangSX(mahangsanxuat, tenhangsanxuat, thongtinhangsanxuat);
+            return hangsx.Update_HangSX(mahangsanxuat, tenhangsanxuat, thongtinhangsanxuat);
         }
         #endregion
 

@@ -86,48 +86,34 @@ namespace GUI
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.btn_sua = new System.Windows.Forms.Button();
-            this.btn_xoa = new System.Windows.Forms.Button();
-            this.btn_them = new System.Windows.Forms.Button();
-            this.txt_thongtintacgia = new System.Windows.Forms.TextBox();
-            this.txt_tentacgia = new System.Windows.Forms.TextBox();
-            this.dgv_Baihat_nhacsi = new System.Windows.Forms.DataGridView();
-            this.tenbaihat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tencasi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenhangsanxuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loibaihat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_dsNhacSi = new System.Windows.Forms.DataGridView();
-            this.matacgia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenTacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.thongtintacgia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_exit = new System.Windows.Forms.Button();
             this.btn_suanhacsi = new System.Windows.Forms.Button();
             this.btn_xoanhacsi = new System.Windows.Forms.Button();
             this.btn_themnhacsi = new System.Windows.Forms.Button();
+            this.lsv_BaiHat_NhacSi = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.txt_thongtinnhacsi = new System.Windows.Forms.RichTextBox();
+            this.lst_dsnhacsi = new System.Windows.Forms.ListBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.lbltennhacsi = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.btn_suahsx = new System.Windows.Forms.Button();
-            this.btn_xoahsx = new System.Windows.Forms.Button();
-            this.btn_themhsx = new System.Windows.Forms.Button();
-            this.txt_thongtinhangsanxuat = new System.Windows.Forms.TextBox();
-            this.txt_tenhangsanxuat = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.dgv_Baihat_phathanh = new System.Windows.Forms.DataGridView();
-            this.Ten_Bai_hat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ten_casi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ten_tacgia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Loi_baihat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lsv_BaiHat_Hangsx = new System.Windows.Forms.ListView();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.txt_thongtinhangsanxuat = new System.Windows.Forms.RichTextBox();
             this.dgv_dsHangsx = new System.Windows.Forms.DataGridView();
             this.MaHangsx = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenHangsx = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.thongtinhsx = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_dong = new System.Windows.Forms.Button();
             this.btn_suahangsx = new System.Windows.Forms.Button();
             this.btn_xoahangsx = new System.Windows.Forms.Button();
             this.btn_themhangsx = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
+            this.lbl_tenhangsx = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -200,10 +186,7 @@ namespace GUI
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_theloai)).BeginInit();
             this.tabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Baihat_nhacsi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_dsNhacSi)).BeginInit();
             this.tabPage6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Baihat_phathanh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_dsHangsx)).BeginInit();
             this.tabPage7.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -238,14 +221,14 @@ namespace GUI
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1117, 563);
+            this.panel1.Size = new System.Drawing.Size(1191, 552);
             this.panel1.TabIndex = 0;
             // 
             // panel13
             // 
             this.panel13.Controls.Add(this.btn_close);
             this.panel13.Controls.Add(this.label12);
-            this.panel13.Location = new System.Drawing.Point(7, 495);
+            this.panel13.Location = new System.Drawing.Point(7, 491);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(1187, 58);
             this.panel13.TabIndex = 2;
@@ -306,13 +289,14 @@ namespace GUI
             this.tabControl_formChinh.Controls.Add(this.tabPage6);
             this.tabControl_formChinh.Controls.Add(this.tabPage7);
             this.tabControl_formChinh.Controls.Add(this.tabPage8);
+            this.tabControl_formChinh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tabControl_formChinh.ImageList = this.imageList1;
             this.tabControl_formChinh.ItemSize = new System.Drawing.Size(300, 40);
             this.tabControl_formChinh.Location = new System.Drawing.Point(3, 31);
             this.tabControl_formChinh.Name = "tabControl_formChinh";
             this.tabControl_formChinh.Padding = new System.Drawing.Point(23, 6);
             this.tabControl_formChinh.SelectedIndex = 0;
-            this.tabControl_formChinh.Size = new System.Drawing.Size(1114, 458);
+            this.tabControl_formChinh.Size = new System.Drawing.Size(1188, 458);
             this.tabControl_formChinh.TabIndex = 1;
             this.tabControl_formChinh.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tabControl_formChinh_MouseClick);
             // 
@@ -322,8 +306,8 @@ namespace GUI
             this.tabPage1.ImageIndex = 0;
             this.tabPage1.Location = new System.Drawing.Point(4, 44);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1106, 410);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Size = new System.Drawing.Size(1180, 410);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "BÀI HÁT - HOME";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -341,7 +325,7 @@ namespace GUI
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 69F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1100, 404);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1174, 404);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // dgv_baihat_home
@@ -357,6 +341,7 @@ namespace GUI
             this.CaSi_TC1,
             this.TheLoai_TC1,
             this.LoiBaiHat_TC1});
+            this.dgv_baihat_home.Cursor = System.Windows.Forms.Cursors.Default;
             this.dgv_baihat_home.Location = new System.Drawing.Point(3, 72);
             this.dgv_baihat_home.Name = "dgv_baihat_home";
             this.dgv_baihat_home.RowHeadersVisible = false;
@@ -417,6 +402,7 @@ namespace GUI
             // 
             this.panel2.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.panel2.Controls.Add(this.label1);
+            this.panel2.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
@@ -442,8 +428,8 @@ namespace GUI
             this.tabPage2.ImageIndex = 7;
             this.tabPage2.Location = new System.Drawing.Point(4, 44);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1106, 410);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Size = new System.Drawing.Size(1180, 410);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "ALBUM";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -456,15 +442,15 @@ namespace GUI
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 3);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1100, 404);
+            this.panel3.Size = new System.Drawing.Size(1174, 404);
             this.panel3.TabIndex = 0;
             // 
             // bt_dong
             // 
             this.bt_dong.Location = new System.Drawing.Point(442, 498);
-            this.bt_dong.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_dong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bt_dong.Name = "bt_dong";
             this.bt_dong.Size = new System.Drawing.Size(56, 19);
             this.bt_dong.TabIndex = 2;
@@ -477,8 +463,9 @@ namespace GUI
             this.panel5.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel5.Controls.Add(this.dgv_AlbumBaihat);
             this.panel5.Controls.Add(this.label3);
+            this.panel5.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel5.Location = new System.Drawing.Point(458, 2);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(678, 417);
             this.panel5.TabIndex = 1;
@@ -492,8 +479,9 @@ namespace GUI
             this.CaSi_TC2,
             this.TheLoai_TC2,
             this.LoiBaiHat_TC2});
+            this.dgv_AlbumBaihat.Cursor = System.Windows.Forms.Cursors.Default;
             this.dgv_AlbumBaihat.Location = new System.Drawing.Point(8, 31);
-            this.dgv_AlbumBaihat.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_AlbumBaihat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgv_AlbumBaihat.Name = "dgv_AlbumBaihat";
             this.dgv_AlbumBaihat.RowHeadersVisible = false;
             this.dgv_AlbumBaihat.RowHeadersWidth = 51;
@@ -536,6 +524,7 @@ namespace GUI
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Default;
             this.label3.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(4, 6);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -551,8 +540,9 @@ namespace GUI
             this.panel4.Controls.Add(this.bt_them);
             this.panel4.Controls.Add(this.dgv_Album);
             this.panel4.Controls.Add(this.label2);
+            this.panel4.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel4.Location = new System.Drawing.Point(3, 2);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(451, 417);
             this.panel4.TabIndex = 0;
@@ -560,7 +550,7 @@ namespace GUI
             // bt_xoa
             // 
             this.bt_xoa.Location = new System.Drawing.Point(302, 375);
-            this.bt_xoa.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_xoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bt_xoa.Name = "bt_xoa";
             this.bt_xoa.Size = new System.Drawing.Size(56, 19);
             this.bt_xoa.TabIndex = 3;
@@ -571,7 +561,7 @@ namespace GUI
             // bt_them
             // 
             this.bt_them.Location = new System.Drawing.Point(86, 375);
-            this.bt_them.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_them.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bt_them.Name = "bt_them";
             this.bt_them.Size = new System.Drawing.Size(56, 19);
             this.bt_them.TabIndex = 2;
@@ -588,8 +578,9 @@ namespace GUI
             this.MaAlbum,
             this.TenAlbum,
             this.NamPhatHanh});
+            this.dgv_Album.Cursor = System.Windows.Forms.Cursors.Default;
             this.dgv_Album.Location = new System.Drawing.Point(6, 31);
-            this.dgv_Album.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_Album.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgv_Album.Name = "dgv_Album";
             this.dgv_Album.RowHeadersVisible = false;
             this.dgv_Album.RowHeadersWidth = 51;
@@ -633,6 +624,7 @@ namespace GUI
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Default;
             this.label2.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label2.Image = global::GUI.Properties.Resources.checklist;
@@ -649,8 +641,8 @@ namespace GUI
             this.tabPage3.ImageIndex = 4;
             this.tabPage3.Location = new System.Drawing.Point(4, 44);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1106, 410);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage3.Size = new System.Drawing.Size(1180, 410);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "THỂ LOẠI";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -661,7 +653,7 @@ namespace GUI
             this.panel6.Controls.Add(this.panel8);
             this.panel6.Controls.Add(this.panel7);
             this.panel6.Location = new System.Drawing.Point(6, 6);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1290, 548);
             this.panel6.TabIndex = 0;
@@ -671,8 +663,9 @@ namespace GUI
             this.panel8.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel8.Controls.Add(this.dgv_TheloaiBaihat);
             this.panel8.Controls.Add(this.label9);
+            this.panel8.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel8.Location = new System.Drawing.Point(297, 2);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(844, 416);
             this.panel8.TabIndex = 1;
@@ -686,7 +679,7 @@ namespace GUI
             this.CaSi_TC3,
             this.LoiBaiHat_TC3});
             this.dgv_TheloaiBaihat.Location = new System.Drawing.Point(6, 44);
-            this.dgv_TheloaiBaihat.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_TheloaiBaihat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgv_TheloaiBaihat.Name = "dgv_TheloaiBaihat";
             this.dgv_TheloaiBaihat.RowHeadersVisible = false;
             this.dgv_TheloaiBaihat.RowHeadersWidth = 51;
@@ -729,6 +722,7 @@ namespace GUI
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.Cursor = System.Windows.Forms.Cursors.Default;
             this.label9.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(2, 8);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -744,16 +738,18 @@ namespace GUI
             this.panel7.Controls.Add(this.bt_themTheLoai);
             this.panel7.Controls.Add(this.dgv_theloai);
             this.panel7.Controls.Add(this.label4);
+            this.panel7.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel7.Location = new System.Drawing.Point(2, 2);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(290, 417);
             this.panel7.TabIndex = 0;
             // 
             // bt_xoaTheLoai
             // 
+            this.bt_xoaTheLoai.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_xoaTheLoai.Location = new System.Drawing.Point(182, 364);
-            this.bt_xoaTheLoai.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_xoaTheLoai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bt_xoaTheLoai.Name = "bt_xoaTheLoai";
             this.bt_xoaTheLoai.Size = new System.Drawing.Size(56, 19);
             this.bt_xoaTheLoai.TabIndex = 2;
@@ -763,8 +759,9 @@ namespace GUI
             // 
             // bt_themTheLoai
             // 
+            this.bt_themTheLoai.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_themTheLoai.Location = new System.Drawing.Point(23, 364);
-            this.bt_themTheLoai.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_themTheLoai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bt_themTheLoai.Name = "bt_themTheLoai";
             this.bt_themTheLoai.Size = new System.Drawing.Size(56, 19);
             this.bt_themTheLoai.TabIndex = 2;
@@ -780,7 +777,7 @@ namespace GUI
             this.ma_theloai,
             this.ten_theloai});
             this.dgv_theloai.Location = new System.Drawing.Point(2, 45);
-            this.dgv_theloai.Margin = new System.Windows.Forms.Padding(2);
+            this.dgv_theloai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgv_theloai.Name = "dgv_theloai";
             this.dgv_theloai.RowHeadersVisible = false;
             this.dgv_theloai.RowHeadersWidth = 51;
@@ -815,6 +812,7 @@ namespace GUI
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Cursor = System.Windows.Forms.Cursors.Default;
             this.label4.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(2, 9);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -825,11 +823,12 @@ namespace GUI
             // 
             // tabPage4
             // 
+            this.tabPage4.Cursor = System.Windows.Forms.Cursors.Default;
             this.tabPage4.ImageIndex = 5;
             this.tabPage4.Location = new System.Drawing.Point(4, 44);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1106, 410);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage4.Size = new System.Drawing.Size(1180, 410);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "CA SĨ";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -837,159 +836,26 @@ namespace GUI
             // tabPage5
             // 
             this.tabPage5.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.tabPage5.Controls.Add(this.btn_sua);
-            this.tabPage5.Controls.Add(this.btn_xoa);
-            this.tabPage5.Controls.Add(this.btn_them);
-            this.tabPage5.Controls.Add(this.txt_thongtintacgia);
-            this.tabPage5.Controls.Add(this.txt_tentacgia);
-            this.tabPage5.Controls.Add(this.dgv_Baihat_nhacsi);
-            this.tabPage5.Controls.Add(this.dgv_dsNhacSi);
             this.tabPage5.Controls.Add(this.btn_exit);
             this.tabPage5.Controls.Add(this.btn_suanhacsi);
             this.tabPage5.Controls.Add(this.btn_xoanhacsi);
             this.tabPage5.Controls.Add(this.btn_themnhacsi);
+            this.tabPage5.Controls.Add(this.lsv_BaiHat_NhacSi);
+            this.tabPage5.Controls.Add(this.txt_thongtinnhacsi);
+            this.tabPage5.Controls.Add(this.lst_dsnhacsi);
             this.tabPage5.Controls.Add(this.label8);
             this.tabPage5.Controls.Add(this.label7);
+            this.tabPage5.Controls.Add(this.lbltennhacsi);
             this.tabPage5.Controls.Add(this.label5);
+            this.tabPage5.Cursor = System.Windows.Forms.Cursors.Default;
             this.tabPage5.ForeColor = System.Drawing.SystemColors.Desktop;
             this.tabPage5.ImageIndex = 6;
             this.tabPage5.Location = new System.Drawing.Point(4, 44);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1106, 410);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage5.Size = new System.Drawing.Size(1180, 410);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "TÁC GIẢ";
-            // 
-            // btn_sua
-            // 
-            this.btn_sua.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_sua.Location = new System.Drawing.Point(766, 355);
-            this.btn_sua.Name = "btn_sua";
-            this.btn_sua.Size = new System.Drawing.Size(282, 40);
-            this.btn_sua.TabIndex = 7;
-            this.btn_sua.Text = "Sửa thông tin nhạc sĩ";
-            this.btn_sua.UseVisualStyleBackColor = true;
-            this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
-            // 
-            // btn_xoa
-            // 
-            this.btn_xoa.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_xoa.Location = new System.Drawing.Point(413, 355);
-            this.btn_xoa.Name = "btn_xoa";
-            this.btn_xoa.Size = new System.Drawing.Size(216, 40);
-            this.btn_xoa.TabIndex = 7;
-            this.btn_xoa.Text = "Xóa nhạc sĩ";
-            this.btn_xoa.UseVisualStyleBackColor = true;
-            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
-            // 
-            // btn_them
-            // 
-            this.btn_them.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_them.Location = new System.Drawing.Point(65, 355);
-            this.btn_them.Name = "btn_them";
-            this.btn_them.Size = new System.Drawing.Size(216, 40);
-            this.btn_them.TabIndex = 7;
-            this.btn_them.Text = "Thêm nhạc sĩ mới";
-            this.btn_them.UseVisualStyleBackColor = true;
-            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
-            // 
-            // txt_thongtintacgia
-            // 
-            this.txt_thongtintacgia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_thongtintacgia.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_thongtintacgia.Location = new System.Drawing.Point(372, 97);
-            this.txt_thongtintacgia.Multiline = true;
-            this.txt_thongtintacgia.Name = "txt_thongtintacgia";
-            this.txt_thongtintacgia.Size = new System.Drawing.Size(284, 252);
-            this.txt_thongtintacgia.TabIndex = 6;
-            this.txt_thongtintacgia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txt_tentacgia
-            // 
-            this.txt_tentacgia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_tentacgia.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_tentacgia.Location = new System.Drawing.Point(405, 19);
-            this.txt_tentacgia.Multiline = true;
-            this.txt_tentacgia.Name = "txt_tentacgia";
-            this.txt_tentacgia.Size = new System.Drawing.Size(209, 41);
-            this.txt_tentacgia.TabIndex = 6;
-            this.txt_tentacgia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // dgv_Baihat_nhacsi
-            // 
-            this.dgv_Baihat_nhacsi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Baihat_nhacsi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.tenbaihat,
-            this.tencasi,
-            this.tenhangsanxuat,
-            this.loibaihat});
-            this.dgv_Baihat_nhacsi.Location = new System.Drawing.Point(696, 76);
-            this.dgv_Baihat_nhacsi.Name = "dgv_Baihat_nhacsi";
-            this.dgv_Baihat_nhacsi.RowHeadersVisible = false;
-            this.dgv_Baihat_nhacsi.Size = new System.Drawing.Size(389, 273);
-            this.dgv_Baihat_nhacsi.TabIndex = 5;
-            // 
-            // tenbaihat
-            // 
-            this.tenbaihat.DataPropertyName = "ten_baihat";
-            this.tenbaihat.HeaderText = "Tên bài hát";
-            this.tenbaihat.Name = "tenbaihat";
-            // 
-            // tencasi
-            // 
-            this.tencasi.DataPropertyName = "ten_casi";
-            this.tencasi.HeaderText = "Tên ca sĩ";
-            this.tencasi.Name = "tencasi";
-            // 
-            // tenhangsanxuat
-            // 
-            this.tenhangsanxuat.DataPropertyName = "ten_hangsanxuat";
-            this.tenhangsanxuat.HeaderText = "Tên hãng sản xuất";
-            this.tenhangsanxuat.Name = "tenhangsanxuat";
-            // 
-            // loibaihat
-            // 
-            this.loibaihat.DataPropertyName = "loi_baihat";
-            this.loibaihat.HeaderText = "Lời bài hát";
-            this.loibaihat.Name = "loibaihat";
-            // 
-            // dgv_dsNhacSi
-            // 
-            this.dgv_dsNhacSi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_dsNhacSi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.matacgia,
-            this.TenTacGia,
-            this.thongtintacgia});
-            this.dgv_dsNhacSi.Location = new System.Drawing.Point(32, 76);
-            this.dgv_dsNhacSi.Name = "dgv_dsNhacSi";
-            this.dgv_dsNhacSi.RowHeadersVisible = false;
-            this.dgv_dsNhacSi.Size = new System.Drawing.Size(301, 273);
-            this.dgv_dsNhacSi.TabIndex = 5;
-            this.dgv_dsNhacSi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_dsNhacSi_CellClick);
-            this.dgv_dsNhacSi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_dsNhacSi_CellContentClick);
-            // 
-            // matacgia
-            // 
-            this.matacgia.DataPropertyName = "ma_tacgia";
-            this.matacgia.Frozen = true;
-            this.matacgia.HeaderText = "Mã tác giả";
-            this.matacgia.Name = "matacgia";
-            // 
-            // TenTacGia
-            // 
-            this.TenTacGia.DataPropertyName = "ten_tacgia";
-            this.TenTacGia.Frozen = true;
-            this.TenTacGia.HeaderText = "Tên tác giả";
-            this.TenTacGia.Name = "TenTacGia";
-            this.TenTacGia.Width = 200;
-            // 
-            // thongtintacgia
-            // 
-            this.thongtintacgia.DataPropertyName = "thongtin_tacgia";
-            this.thongtintacgia.Frozen = true;
-            this.thongtintacgia.HeaderText = "Thông tin tác giả";
-            this.thongtintacgia.Name = "thongtintacgia";
-            this.thongtintacgia.Visible = false;
             // 
             // btn_exit
             // 
@@ -1031,11 +897,52 @@ namespace GUI
             this.btn_themnhacsi.Text = "Thêm nhạc sĩ";
             this.btn_themnhacsi.UseVisualStyleBackColor = true;
             // 
+            // lsv_BaiHat_NhacSi
+            // 
+            this.lsv_BaiHat_NhacSi.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
+            this.lsv_BaiHat_NhacSi.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lsv_BaiHat_NhacSi.HideSelection = false;
+            this.lsv_BaiHat_NhacSi.Location = new System.Drawing.Point(841, 79);
+            this.lsv_BaiHat_NhacSi.Name = "lsv_BaiHat_NhacSi";
+            this.lsv_BaiHat_NhacSi.Size = new System.Drawing.Size(401, 316);
+            this.lsv_BaiHat_NhacSi.TabIndex = 3;
+            this.lsv_BaiHat_NhacSi.UseCompatibleStateImageBehavior = false;
+            this.lsv_BaiHat_NhacSi.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "STT";
+            this.columnHeader1.Width = 80;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Tên bài hát";
+            this.columnHeader2.Width = 250;
+            // 
+            // txt_thongtinnhacsi
+            // 
+            this.txt_thongtinnhacsi.Location = new System.Drawing.Point(416, 114);
+            this.txt_thongtinnhacsi.Name = "txt_thongtinnhacsi";
+            this.txt_thongtinnhacsi.Size = new System.Drawing.Size(372, 281);
+            this.txt_thongtinnhacsi.TabIndex = 2;
+            this.txt_thongtinnhacsi.Text = "";
+            // 
+            // lst_dsnhacsi
+            // 
+            this.lst_dsnhacsi.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lst_dsnhacsi.FormattingEnabled = true;
+            this.lst_dsnhacsi.Location = new System.Drawing.Point(8, 79);
+            this.lst_dsnhacsi.Name = "lst_dsnhacsi";
+            this.lst_dsnhacsi.Size = new System.Drawing.Size(355, 316);
+            this.lst_dsnhacsi.TabIndex = 1;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(449, 76);
+            this.label8.Location = new System.Drawing.Point(538, 93);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(122, 18);
             this.label8.TabIndex = 0;
@@ -1044,173 +951,116 @@ namespace GUI
             // label7
             // 
             this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label7.Cursor = System.Windows.Forms.Cursors.Default;
             this.label7.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(766, 19);
+            this.label7.Location = new System.Drawing.Point(924, 19);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(250, 41);
             this.label7.TabIndex = 0;
             this.label7.Text = "Các Bài hát sáng tác";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lbltennhacsi
+            // 
+            this.lbltennhacsi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbltennhacsi.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lbltennhacsi.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltennhacsi.Location = new System.Drawing.Point(442, 19);
+            this.lbltennhacsi.Name = "lbltennhacsi";
+            this.lbltennhacsi.Size = new System.Drawing.Size(317, 41);
+            this.lbltennhacsi.TabIndex = 0;
+            // 
             // label5
             // 
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label5.Cursor = System.Windows.Forms.Cursors.Default;
             this.label5.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(90, 19);
+            this.label5.Location = new System.Drawing.Point(55, 19);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(191, 41);
+            this.label5.Size = new System.Drawing.Size(252, 41);
             this.label5.TabIndex = 0;
             this.label5.Text = "Danh Sách Nhạc Sĩ";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tabPage6
             // 
-            this.tabPage6.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.tabPage6.Controls.Add(this.btn_suahsx);
-            this.tabPage6.Controls.Add(this.btn_xoahsx);
-            this.tabPage6.Controls.Add(this.btn_themhsx);
-            this.tabPage6.Controls.Add(this.txt_thongtinhangsanxuat);
-            this.tabPage6.Controls.Add(this.txt_tenhangsanxuat);
             this.tabPage6.Controls.Add(this.label11);
-            this.tabPage6.Controls.Add(this.dgv_Baihat_phathanh);
+            this.tabPage6.Controls.Add(this.lsv_BaiHat_Hangsx);
+            this.tabPage6.Controls.Add(this.txt_thongtinhangsanxuat);
             this.tabPage6.Controls.Add(this.dgv_dsHangsx);
             this.tabPage6.Controls.Add(this.btn_dong);
             this.tabPage6.Controls.Add(this.btn_suahangsx);
             this.tabPage6.Controls.Add(this.btn_xoahangsx);
             this.tabPage6.Controls.Add(this.btn_themhangsx);
             this.tabPage6.Controls.Add(this.label10);
+            this.tabPage6.Controls.Add(this.lbl_tenhangsx);
             this.tabPage6.Controls.Add(this.label6);
+            this.tabPage6.Cursor = System.Windows.Forms.Cursors.Default;
             this.tabPage6.ImageIndex = 1;
             this.tabPage6.Location = new System.Drawing.Point(4, 44);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1106, 410);
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage6.Size = new System.Drawing.Size(1180, 410);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "HÃNG SẢN XUẤT";
-            // 
-            // btn_suahsx
-            // 
-            this.btn_suahsx.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_suahsx.Location = new System.Drawing.Point(782, 359);
-            this.btn_suahsx.Name = "btn_suahsx";
-            this.btn_suahsx.Size = new System.Drawing.Size(262, 43);
-            this.btn_suahsx.TabIndex = 7;
-            this.btn_suahsx.Text = "Sửa thông tin HSX";
-            this.btn_suahsx.UseVisualStyleBackColor = true;
-            this.btn_suahsx.Click += new System.EventHandler(this.btn_suahsx_Click);
-            // 
-            // btn_xoahsx
-            // 
-            this.btn_xoahsx.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_xoahsx.Location = new System.Drawing.Point(414, 359);
-            this.btn_xoahsx.Name = "btn_xoahsx";
-            this.btn_xoahsx.Size = new System.Drawing.Size(232, 43);
-            this.btn_xoahsx.TabIndex = 7;
-            this.btn_xoahsx.Text = "Xóa hãng sản xuất";
-            this.btn_xoahsx.UseVisualStyleBackColor = true;
-            this.btn_xoahsx.Click += new System.EventHandler(this.btn_xoahsx_Click);
-            // 
-            // btn_themhsx
-            // 
-            this.btn_themhsx.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_themhsx.Location = new System.Drawing.Point(57, 359);
-            this.btn_themhsx.Name = "btn_themhsx";
-            this.btn_themhsx.Size = new System.Drawing.Size(212, 43);
-            this.btn_themhsx.TabIndex = 7;
-            this.btn_themhsx.Text = "Thêm HSX mới";
-            this.btn_themhsx.UseVisualStyleBackColor = true;
-            this.btn_themhsx.Click += new System.EventHandler(this.btn_themhsx_Click);
-            // 
-            // txt_thongtinhangsanxuat
-            // 
-            this.txt_thongtinhangsanxuat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_thongtinhangsanxuat.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_thongtinhangsanxuat.Location = new System.Drawing.Point(383, 113);
-            this.txt_thongtinhangsanxuat.Multiline = true;
-            this.txt_thongtinhangsanxuat.Name = "txt_thongtinhangsanxuat";
-            this.txt_thongtinhangsanxuat.Size = new System.Drawing.Size(308, 240);
-            this.txt_thongtinhangsanxuat.TabIndex = 6;
-            this.txt_thongtinhangsanxuat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txt_tenhangsanxuat
-            // 
-            this.txt_tenhangsanxuat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_tenhangsanxuat.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_tenhangsanxuat.Location = new System.Drawing.Point(440, 30);
-            this.txt_tenhangsanxuat.Multiline = true;
-            this.txt_tenhangsanxuat.Name = "txt_tenhangsanxuat";
-            this.txt_tenhangsanxuat.Size = new System.Drawing.Size(195, 34);
-            this.txt_tenhangsanxuat.TabIndex = 6;
-            this.txt_tenhangsanxuat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(456, 79);
+            this.label11.Location = new System.Drawing.Point(516, 103);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(170, 18);
             this.label11.TabIndex = 5;
             this.label11.Text = "Thông tin hãng sản xuất";
             // 
-            // dgv_Baihat_phathanh
+            // lsv_BaiHat_Hangsx
             // 
-            this.dgv_Baihat_phathanh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Baihat_phathanh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Ten_Bai_hat,
-            this.Ten_casi,
-            this.Ten_tacgia,
-            this.Loi_baihat});
-            this.dgv_Baihat_phathanh.Location = new System.Drawing.Point(716, 79);
-            this.dgv_Baihat_phathanh.Name = "dgv_Baihat_phathanh";
-            this.dgv_Baihat_phathanh.RowHeadersVisible = false;
-            this.dgv_Baihat_phathanh.RowHeadersWidth = 51;
-            this.dgv_Baihat_phathanh.Size = new System.Drawing.Size(369, 274);
-            this.dgv_Baihat_phathanh.TabIndex = 2;
+            this.lsv_BaiHat_Hangsx.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader3,
+            this.columnHeader4});
+            this.lsv_BaiHat_Hangsx.HideSelection = false;
+            this.lsv_BaiHat_Hangsx.Location = new System.Drawing.Point(856, 79);
+            this.lsv_BaiHat_Hangsx.Name = "lsv_BaiHat_Hangsx";
+            this.lsv_BaiHat_Hangsx.Size = new System.Drawing.Size(399, 312);
+            this.lsv_BaiHat_Hangsx.TabIndex = 4;
+            this.lsv_BaiHat_Hangsx.UseCompatibleStateImageBehavior = false;
+            this.lsv_BaiHat_Hangsx.View = System.Windows.Forms.View.Details;
             // 
-            // Ten_Bai_hat
+            // columnHeader3
             // 
-            this.Ten_Bai_hat.DataPropertyName = "ten_baihat";
-            this.Ten_Bai_hat.HeaderText = "Tên bài hát";
-            this.Ten_Bai_hat.Name = "Ten_Bai_hat";
+            this.columnHeader3.Text = "STT";
+            this.columnHeader3.Width = 80;
             // 
-            // Ten_casi
+            // columnHeader4
             // 
-            this.Ten_casi.DataPropertyName = "ten_casi";
-            this.Ten_casi.HeaderText = "Tên ca sĩ";
-            this.Ten_casi.Name = "Ten_casi";
+            this.columnHeader4.Text = "Tên bài hát";
+            this.columnHeader4.Width = 200;
             // 
-            // Ten_tacgia
+            // txt_thongtinhangsanxuat
             // 
-            this.Ten_tacgia.DataPropertyName = "ten_tacgia";
-            this.Ten_tacgia.HeaderText = "Tên tác giả";
-            this.Ten_tacgia.Name = "Ten_tacgia";
-            // 
-            // Loi_baihat
-            // 
-            this.Loi_baihat.DataPropertyName = "loi_baihat";
-            this.Loi_baihat.HeaderText = "Lời bài hát";
-            this.Loi_baihat.Name = "Loi_baihat";
+            this.txt_thongtinhangsanxuat.Location = new System.Drawing.Point(409, 133);
+            this.txt_thongtinhangsanxuat.Name = "txt_thongtinhangsanxuat";
+            this.txt_thongtinhangsanxuat.Size = new System.Drawing.Size(378, 258);
+            this.txt_thongtinhangsanxuat.TabIndex = 3;
+            this.txt_thongtinhangsanxuat.Text = "";
             // 
             // dgv_dsHangsx
             // 
             this.dgv_dsHangsx.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_dsHangsx.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaHangsx,
-            this.TenHangsx,
-            this.thongtinhsx});
+            this.TenHangsx});
             this.dgv_dsHangsx.Location = new System.Drawing.Point(8, 79);
             this.dgv_dsHangsx.Name = "dgv_dsHangsx";
-            this.dgv_dsHangsx.RowHeadersVisible = false;
             this.dgv_dsHangsx.RowHeadersWidth = 51;
-            this.dgv_dsHangsx.Size = new System.Drawing.Size(347, 274);
+            this.dgv_dsHangsx.Size = new System.Drawing.Size(347, 312);
             this.dgv_dsHangsx.TabIndex = 2;
-            this.dgv_dsHangsx.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_dsHangsx_CellClick);
             // 
             // MaHangsx
             // 
             this.MaHangsx.DataPropertyName = "ma_hangsanxuat";
-            this.MaHangsx.Frozen = true;
             this.MaHangsx.HeaderText = "Mã hãng sản xuất";
             this.MaHangsx.MinimumWidth = 6;
             this.MaHangsx.Name = "MaHangsx";
@@ -1219,19 +1069,10 @@ namespace GUI
             // TenHangsx
             // 
             this.TenHangsx.DataPropertyName = "ten_hangsanxuat";
-            this.TenHangsx.Frozen = true;
             this.TenHangsx.HeaderText = "Tên hãng sản xuất";
             this.TenHangsx.MinimumWidth = 6;
             this.TenHangsx.Name = "TenHangsx";
-            this.TenHangsx.Width = 220;
-            // 
-            // thongtinhsx
-            // 
-            this.thongtinhsx.DataPropertyName = "thongtin_hangsanxuat";
-            this.thongtinhsx.Frozen = true;
-            this.thongtinhsx.HeaderText = "Thông tin hãng sản xuất";
-            this.thongtinhsx.Name = "thongtinhsx";
-            this.thongtinhsx.Visible = false;
+            this.TenHangsx.Width = 200;
             // 
             // btn_dong
             // 
@@ -1285,12 +1126,22 @@ namespace GUI
             // 
             this.label10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label10.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(794, 30);
+            this.label10.Location = new System.Drawing.Point(928, 30);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(241, 34);
             this.label10.TabIndex = 0;
             this.label10.Text = "Các bài hát phát hành";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_tenhangsx
+            // 
+            this.lbl_tenhangsx.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_tenhangsx.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tenhangsx.Location = new System.Drawing.Point(477, 30);
+            this.lbl_tenhangsx.Name = "lbl_tenhangsx";
+            this.lbl_tenhangsx.Size = new System.Drawing.Size(241, 34);
+            this.lbl_tenhangsx.TabIndex = 0;
+            this.lbl_tenhangsx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
@@ -1309,8 +1160,8 @@ namespace GUI
             this.tabPage7.ImageIndex = 3;
             this.tabPage7.Location = new System.Drawing.Point(4, 44);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(1106, 410);
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage7.Size = new System.Drawing.Size(1180, 410);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "TRA CỨU - TÌM KIẾM";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -1322,12 +1173,13 @@ namespace GUI
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(3, 3);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1100, 404);
+            this.panel9.Size = new System.Drawing.Size(1174, 404);
             this.panel9.TabIndex = 0;
             // 
             // panel11
             // 
             this.panel11.Controls.Add(this.pictureBox1);
+            this.panel11.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel11.Location = new System.Drawing.Point(781, 5);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(395, 396);
@@ -1349,6 +1201,7 @@ namespace GUI
             // 
             this.panel10.Controls.Add(this.tabControl1);
             this.panel10.Controls.Add(this.panel12);
+            this.panel10.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel10.Location = new System.Drawing.Point(0, 3);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(775, 474);
@@ -1361,6 +1214,7 @@ namespace GUI
             this.tabControl1.Controls.Add(this.tabPage11);
             this.tabControl1.Controls.Add(this.tabPage12);
             this.tabControl1.Controls.Add(this.tabPage13);
+            this.tabControl1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tabControl1.ImageList = this.imageList1;
             this.tabControl1.Location = new System.Drawing.Point(26, 94);
             this.tabControl1.Name = "tabControl1";
@@ -1376,7 +1230,7 @@ namespace GUI
             this.tabPage9.ImageIndex = 2;
             this.tabPage9.Location = new System.Drawing.Point(4, 41);
             this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tabPage9.Size = new System.Drawing.Size(714, 259);
             this.tabPage9.TabIndex = 0;
             this.tabPage9.Text = "TÊN BÀI HÁT";
@@ -1403,6 +1257,7 @@ namespace GUI
             this.ma_baihat_tc6,
             this.ten_baihat,
             this.loi_baihat_tc6});
+            this.dgv_searchTenBaiHat.Cursor = System.Windows.Forms.Cursors.Default;
             this.dgv_searchTenBaiHat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_searchTenBaiHat.EnableHeadersVisualStyles = false;
             this.dgv_searchTenBaiHat.Location = new System.Drawing.Point(3, 16);
@@ -1447,7 +1302,7 @@ namespace GUI
             this.tabPage10.ImageIndex = 5;
             this.tabPage10.Location = new System.Drawing.Point(4, 41);
             this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage10.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tabPage10.Size = new System.Drawing.Size(714, 259);
             this.tabPage10.TabIndex = 1;
             this.tabPage10.Text = "TÊN CA SĨ";
@@ -1472,6 +1327,7 @@ namespace GUI
             this.tenbaihat_tc6_tc2,
             this.loibaihat_tc6_tc2,
             this.mabaihat_tc6_tc2});
+            this.dgv_searchTenCaSi.Cursor = System.Windows.Forms.Cursors.Default;
             this.dgv_searchTenCaSi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_searchTenCaSi.Location = new System.Drawing.Point(3, 16);
             this.dgv_searchTenCaSi.Name = "dgv_searchTenCaSi";
@@ -1522,7 +1378,7 @@ namespace GUI
             this.tabPage11.ImageIndex = 7;
             this.tabPage11.Location = new System.Drawing.Point(4, 41);
             this.tabPage11.Name = "tabPage11";
-            this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage11.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tabPage11.Size = new System.Drawing.Size(714, 259);
             this.tabPage11.TabIndex = 2;
             this.tabPage11.Text = "TÊN ALBUM";
@@ -1546,6 +1402,7 @@ namespace GUI
             this.MaAlbum_TC7,
             this.TenAlbum_TC7,
             this.NamPhatHanh_TC7});
+            this.dgv_searchTenAlbum.Cursor = System.Windows.Forms.Cursors.Default;
             this.dgv_searchTenAlbum.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_searchTenAlbum.Location = new System.Drawing.Point(3, 16);
             this.dgv_searchTenAlbum.Name = "dgv_searchTenAlbum";
@@ -1592,7 +1449,7 @@ namespace GUI
             this.tabPage12.ImageIndex = 2;
             this.tabPage12.Location = new System.Drawing.Point(4, 41);
             this.tabPage12.Name = "tabPage12";
-            this.tabPage12.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage12.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tabPage12.Size = new System.Drawing.Size(714, 259);
             this.tabPage12.TabIndex = 3;
             this.tabPage12.Text = "LỜI BÀI HÁT";
@@ -1611,6 +1468,7 @@ namespace GUI
             // 
             this.dgv_searchLoiBaiHat.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgv_searchLoiBaiHat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_searchLoiBaiHat.Cursor = System.Windows.Forms.Cursors.Default;
             this.dgv_searchLoiBaiHat.Location = new System.Drawing.Point(6, 19);
             this.dgv_searchLoiBaiHat.Name = "dgv_searchLoiBaiHat";
             this.dgv_searchLoiBaiHat.RowHeadersWidth = 51;
@@ -1624,7 +1482,7 @@ namespace GUI
             this.tabPage13.ImageIndex = 1;
             this.tabPage13.Location = new System.Drawing.Point(4, 41);
             this.tabPage13.Name = "tabPage13";
-            this.tabPage13.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage13.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tabPage13.Size = new System.Drawing.Size(714, 259);
             this.tabPage13.TabIndex = 4;
             this.tabPage13.Text = "HÃNG SẢN XUẤT";
@@ -1643,6 +1501,7 @@ namespace GUI
             // 
             this.dgv_searchHangSanXuat.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgv_searchHangSanXuat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_searchHangSanXuat.Cursor = System.Windows.Forms.Cursors.Default;
             this.dgv_searchHangSanXuat.Location = new System.Drawing.Point(6, 19);
             this.dgv_searchHangSanXuat.Name = "dgv_searchHangSanXuat";
             this.dgv_searchHangSanXuat.RowHeadersWidth = 51;
@@ -1694,11 +1553,12 @@ namespace GUI
             // 
             // tabPage8
             // 
+            this.tabPage8.Cursor = System.Windows.Forms.Cursors.Default;
             this.tabPage8.ImageIndex = 2;
             this.tabPage8.Location = new System.Drawing.Point(4, 44);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(1106, 410);
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage8.Size = new System.Drawing.Size(1180, 410);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "BÀI HÁT";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -1713,7 +1573,7 @@ namespace GUI
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1117, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1191, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1842,7 +1702,7 @@ namespace GUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1117, 563);
+            this.ClientSize = new System.Drawing.Size(1191, 552);
             this.Controls.Add(this.panel1);
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
@@ -1878,11 +1738,8 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.dgv_theloai)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Baihat_nhacsi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_dsNhacSi)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Baihat_phathanh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_dsHangsx)).EndInit();
             this.tabPage7.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
@@ -1968,17 +1825,30 @@ namespace GUI
         private System.Windows.Forms.Button btn_suanhacsi;
         private System.Windows.Forms.Button btn_xoanhacsi;
         private System.Windows.Forms.Button btn_themnhacsi;
+        private System.Windows.Forms.ListView lsv_BaiHat_NhacSi;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.RichTextBox txt_thongtinnhacsi;
+        private System.Windows.Forms.ListBox lst_dsnhacsi;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbltennhacsi;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ListView lsv_BaiHat_Hangsx;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.RichTextBox txt_thongtinhangsanxuat;
         private System.Windows.Forms.DataGridView dgv_dsHangsx;
         private System.Windows.Forms.Button btn_dong;
         private System.Windows.Forms.Button btn_suahangsx;
         private System.Windows.Forms.Button btn_xoahangsx;
         private System.Windows.Forms.Button btn_themhangsx;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lbl_tenhangsx;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaHangsx;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenHangsx;
         private System.Windows.Forms.DataGridView dgv_AlbumBaihat;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT_TC2;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaAlbum;
@@ -2037,33 +1907,6 @@ namespace GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn MaAlbum_TC7;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenAlbum_TC7;
         private System.Windows.Forms.DataGridViewTextBoxColumn NamPhatHanh_TC7;
-        private System.Windows.Forms.DataGridView dgv_Baihat_nhacsi;
-        private System.Windows.Forms.DataGridView dgv_dsNhacSi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn matacgia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenTacGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn thongtintacgia;
-        private System.Windows.Forms.Button btn_sua;
-        private System.Windows.Forms.Button btn_xoa;
-        private System.Windows.Forms.Button btn_them;
-        private System.Windows.Forms.TextBox txt_thongtintacgia;
-        private System.Windows.Forms.TextBox txt_tentacgia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenbaihat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tencasi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenhangsanxuat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn loibaihat;
-        private System.Windows.Forms.Button btn_suahsx;
-        private System.Windows.Forms.Button btn_xoahsx;
-        private System.Windows.Forms.Button btn_themhsx;
-        private System.Windows.Forms.TextBox txt_thongtinhangsanxuat;
-        private System.Windows.Forms.TextBox txt_tenhangsanxuat;
-        private System.Windows.Forms.DataGridView dgv_Baihat_phathanh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaHangsx;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenHangsx;
-        private System.Windows.Forms.DataGridViewTextBoxColumn thongtinhsx;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ten_Bai_hat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ten_casi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ten_tacgia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Loi_baihat;
     }
 }
 
