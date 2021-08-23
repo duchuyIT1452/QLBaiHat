@@ -12,7 +12,7 @@ namespace BUS
 {
     public class TacGia_BUS
     {
-        TacGia_Data tacgia = new TacGia_Data();
+        GetData_TacGia tacgia = new GetData_TacGia();
 
         #region khai bao va truy xuat du lieu
         private string matacgia;
@@ -20,10 +20,7 @@ namespace BUS
         private string thongtintacgia;
 
         public TacGia_BUS() { }
-        public TacGia_BUS(string ma)
-        {
-            this.matacgia = ma;
-        }
+        
         public TacGia_BUS(string ma, string ten, string thongtin)
         {
             this.MATACGIA = ma;
@@ -40,6 +37,7 @@ namespace BUS
                     if (value.Trim().Equals(""))
                     {
                         MessageBox.Show("Ma tac gia khong duoc de trong", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
                     }
                     else
                     {
@@ -67,11 +65,12 @@ namespace BUS
                     if (value.Trim().Equals(""))
                     {
                         MessageBox.Show("Ten tac gia khong duoc bo trong", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message); 
+                    MessageBox.Show(ex.Message);
                 }
             }
         }
@@ -85,6 +84,7 @@ namespace BUS
                     if (value.Trim().Equals(""))
                     {
                         MessageBox.Show("Thong tin tac gia khong duoc de trong", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
                     }
                     else
                     {
@@ -100,17 +100,17 @@ namespace BUS
         #endregion
 
         #region Lay du lieu tu DATA
-        public int Insert_TacGia()
+        public void Insert_TacGia()
         {
-            return tacgia.Insert_TacGia(matacgia, tentacgia, thongtintacgia);
+            tacgia.Insert_TacGia(matacgia, tentacgia, thongtintacgia);
         }
-        public int Delete_TacGia()
+        public void Delete_TacGia(string matacgia)
         {
-            return tacgia.Delete_TacGia(matacgia);
+            tacgia.Delete_TacGia(matacgia);
         }
-        public int Update_TacGia()
+        public void Update_TacGia()
         {
-            return tacgia.Update_TacGia(matacgia, tentacgia, thongtintacgia);
+            tacgia.Update_TacGia(matacgia, tentacgia, thongtintacgia);
         }
         public DataTable getAllTacGia()
         {
@@ -119,3 +119,4 @@ namespace BUS
         #endregion
     }
 }
+

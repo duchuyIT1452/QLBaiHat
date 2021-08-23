@@ -11,14 +11,19 @@ using BUS;
 
 namespace GUI
 {
-    public partial class fThem_TacGia : Form
+    public partial class fThem_Tacgia : Form
     {
-        public fThem_TacGia()
+        public fThem_Tacgia()
         {
             InitializeComponent();
         }
 
-        private void btn_them_Click(object sender, EventArgs e)
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             TacGia_BUS tacgia;
             try
