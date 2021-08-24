@@ -16,9 +16,7 @@ namespace DATA
     public class GetData_BaiHat
     {
         ConnectDB conDB = new ConnectDB();
-        string connString = @"Data Source=DESKTOP-B0JGHPP;Initial Catalog=DBBaiHat;Integrated Security=True";
-
-
+        
         public DataTable getAllBaiHat()
         {
             String sql = "Select * from BaiHat";
@@ -114,17 +112,12 @@ namespace DATA
             dt = conDB.GetTable(sql);
             return dt;
         }
-        public DataTable themBangBH(int select, string maTG)
+        public DataTable themBangBH(string maTG)
         {
-            SqlConnection conn = new SqlConnection(connString);
-            conn.Open();
-
-            String sql = "select BAIHAT.ten_baihat, CASI.ten_casi,HANGSANXUAT.ten_hangsanxuat, BAIHAT.loi_baihat from BAIHAT INNER JOIN HANGSANXUAT ON BAIHAT.ma_hangsanxuat=HANGSANXUAT.ma_hangsanxuat INNER JOIN TACGIA ON BAIHAT.ma_tacgia=TACGIA.ma_tacgia INNER JOIN CASI ON CASI.ma_casi=BAIHAT.ma_casi WHERE TACGIA.ma_tacgia=@matg";
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            cmd.Parameters.AddWithValue("@matg", maTG);
-            SqlDataReader red = cmd.ExecuteReader();
+            string sql = "select ten_baihat, ten_casi, ten_hangsanxuat, loi_baihat from BAIHAT Inner join HANGSANXUAT ON BAIHAT.ma_hangsanxuat = HANGSANXUAT.ma_hangsanxuat INNER JOIN CASI ON BAIHAT.ma_casi = CASI.ma_casi WHERE ma_tacgia = '" + maTG + "'";
+            //String sql = "select BAIHAT.ten_baihat, CASI.ten_casi,HANGSANXUAT.ten_hangsanxuat, BAIHAT.loi_baihat from BAIHAT INNER JOIN HANGSANXUAT ON BAIHAT.ma_hangsanxuat=HANGSANXUAT.ma_hangsanxuat INNER JOIN TACGIA ON BAIHAT.ma_tacgia=TACGIA.ma_tacgia INNER JOIN CASI ON CASI.ma_casi=BAIHAT.ma_casi WHERE TACGIA.ma_tacgia=@matg";
             DataTable dt = new DataTable();
-            dt.Load(red);
+            dt = conDB.GetTable(sql);
             return dt;
         }
 

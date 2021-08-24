@@ -373,10 +373,11 @@ namespace GUI
             txt_thongtintacgia.Text = row.Cells[2].Value.ToString();
 
             //Đưa dữ liệu lên dgv_baihat_nhacsi
+            int d = e.RowIndex;
             BaiHat_BUS baihat = new BaiHat_BUS();
-            String maTG = row.Cells[0].Value.ToString();
-            baihat.themBangBH(e.RowIndex, maTG);
             DataTable dt = new DataTable();
+            String maTG = dgv_dsNhacSi.Rows[d].Cells[0].Value.ToString();
+            baihat.themBangBH(maTG);
             dgv_Baihat_nhacsi.DataSource = dt;
         }
         private void dgv_dsHangsx_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -388,6 +389,7 @@ namespace GUI
                 //Dua du lieu vao textbox
                 txt_tenhangsanxuat.Text = row.Cells[1].Value.ToString();
                 txt_thongtinhangsanxuat.Text = row.Cells[2].Value.ToString();
+
                 string maHangsx = row.Cells[0].Value.ToString();
                 themBangHSX(e.RowIndex, maHangsx);
             }

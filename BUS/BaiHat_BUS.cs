@@ -110,9 +110,9 @@ namespace BUS
         {
             return BaiHat.listBaiHatTheoTheLoai(maTheLoai);
         }
-        public DataTable themBangBH(int select, string maTG)
+        public DataTable themBangBH(string maTG)
         {
-            return BaiHat.themBangBH(select, maTG);
+            return BaiHat.themBangBH(maTG);
         }
     }
 }

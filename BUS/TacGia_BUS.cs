@@ -16,7 +16,7 @@ namespace BUS
 
         #region khai bao va truy xuat du lieu
         private string matacgia;
-        private string tentacgia;
+        private string tentacgia = null;
         private string thongtintacgia;
 
         public TacGia_BUS() { }
