@@ -12,7 +12,7 @@ namespace BUS
 {
     public class HangSanXuat_BUS
     {
-        HangSanXuat_Data hangsx = new HangSanXuat_Data();
+        GetData_HangSanXuat hangsx = new GetData_HangSanXuat();
 
         #region Khai bao va truy van du lieu
         private string mahangsanxuat;
@@ -20,10 +20,7 @@ namespace BUS
         private string thongtinhangsanxuat;
 
         public HangSanXuat_BUS() { }
-        public HangSanXuat_BUS(string ma)
-        {
-            this.mahangsanxuat = ma;
-        }
+
         public HangSanXuat_BUS(string ma, string ten, string thongtin)
         {
             this.MAHANGSANXUAT = ma;
@@ -41,6 +38,7 @@ namespace BUS
                     if (value.Trim().Equals(""))
                     {
                         MessageBox.Show("Mã hãng sản xuất không được bỏ trống", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
                     }
                     else
                     {
@@ -71,6 +69,7 @@ namespace BUS
                     if (value.Trim().Equals(""))
                     {
                         MessageBox.Show("Ten hang san xuat khong duoc bo trong", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
                     }
                     else
                     {
@@ -93,7 +92,8 @@ namespace BUS
                 {
                     if (value.Trim().Equals(""))
                     {
-                        throw new Exception("Nhap thong tin hang san xuat");
+                        MessageBox.Show("Thông tin hãng sx không được bỏ trống", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
                     }
                     else
                     {
@@ -113,18 +113,18 @@ namespace BUS
         {
             return hangsx.getAllHangSX();
         }
-        public int Insert_HangSX()
+        public void Insert_HangSX()
         {
-            return hangsx.Insert_HangSX(mahangsanxuat, tenhangsanxuat, thongtinhangsanxuat);
+            hangsx.Insert_HangSX(mahangsanxuat, tenhangsanxuat, thongtinhangsanxuat);
         }
-        public int Delete_HangSX()
+        public void Delete_HangSX(string mahangsanxuat)
         {
-            return hangsx.Delete_HangSX(mahangsanxuat);
-            
+            hangsx.Delete_HangSX(mahangsanxuat);
+
         }
-        public int Update_HangSX()
+        public void Update_HangSX()
         {
-            return hangsx.Update_HangSX(mahangsanxuat, tenhangsanxuat, thongtinhangsanxuat);
+            hangsx.Update_HangSX(mahangsanxuat, tenhangsanxuat, thongtinhangsanxuat);
         }
         #endregion
 

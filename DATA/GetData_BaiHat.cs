@@ -1,15 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+//using BUS;
+
 
 namespace DATA
 {
     public class GetData_BaiHat
     {
         ConnectDB conDB = new ConnectDB();
+        string connString = @"Data Source=DESKTOP-B0JGHPP;Initial Catalog=DBBaiHat;Integrated Security=True";
+
 
         public DataTable getAllBaiHat()
         {
@@ -106,5 +114,19 @@ namespace DATA
             dt = conDB.GetTable(sql);
             return dt;
         }
+        public DataTable themBangBH(int select, string maTG)
+        {
+            SqlConnection conn = new SqlConnection(connString);
+            conn.Open();
+
+            String sql = "select BAIHAT.ten_baihat, CASI.ten_casi,HANGSANXUAT.ten_hangsanxuat, BAIHAT.loi_baihat from BAIHAT INNER JOIN HANGSANXUAT ON BAIHAT.ma_hangsanxuat=HANGSANXUAT.ma_hangsanxuat INNER JOIN TACGIA ON BAIHAT.ma_tacgia=TACGIA.ma_tacgia INNER JOIN CASI ON CASI.ma_casi=BAIHAT.ma_casi WHERE TACGIA.ma_tacgia=@matg";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("@matg", maTG);
+            SqlDataReader red = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(red);
+            return dt;
+        }
+
     }
 }
