@@ -110,6 +110,10 @@ namespace BUS
         {
             return BaiHat.listBaiHatTheoTheLoai(maTheLoai);
         }
+        public DataTable listBaiHatTheoTacGia(String maTacGia)
+        {
+            return BaiHat.SearchByTacGia(maTacGia);
+        }
         public DataTable themBangBH(string maTG)
         {
             return BaiHat.themBangBH(maTG);

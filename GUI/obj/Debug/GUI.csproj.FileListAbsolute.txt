@@ -222,3 +222,4 @@ D:\tailieuhoctap\LT_Window\Project\Project\New folder (2)\QLBaiHat\GUI\obj\Debug
 D:\tailieuhoctap\LT_Window\Project\Project\New folder (2)\QLBaiHat\GUI\obj\Debug\GUI.csproj.CopyComplete
 D:\tailieuhoctap\LT_Window\Project\Project\New folder (2)\QLBaiHat\GUI\obj\Debug\GUI.exe
 D:\tailieuhoctap\LT_Window\Project\Project\New folder (2)\QLBaiHat\GUI\obj\Debug\GUI.pdb
+C:\Users\duchu\OneDrive\Máy tính\New folder\QLBaiHat\GUI\obj\Debug\GUI.fThem_Tacgia.resources

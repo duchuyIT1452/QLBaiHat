@@ -69,7 +69,7 @@ namespace DATA
         }
         public DataTable SearchByTacGia(String maTacGia)
         {
-            String sql = "Select * from BaiHat Where ma_tacgia='" + maTacGia + "'";
+            String sql = "Select ten_baihat, loi_baihat from baihat where ma_tacgia='" + maTacGia + "'";
             DataTable dt = new DataTable();
             dt = conDB.GetTable(sql);
             return dt;

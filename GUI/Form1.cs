@@ -15,7 +15,7 @@ namespace GUI
 {
     public partial class Form1 : Form
     {
-        string connString = @"Data Source=DESKTOP-B0JGHPP;Initial Catalog=DBBaiHat;Integrated Security=True";
+        string connString = @"Data Source=DESKTOP-CMM6T7Q;Initial Catalog=DBBaiHat;Integrated Security=True";
 
         public Form1()
         {
@@ -119,15 +119,7 @@ namespace GUI
 
         }
 
-        #region Click thừa
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        #endregion
-
-        #region Load
+        #region Load tac giả
         private void load_Tacgia()
         {
             TacGia_BUS dtTacGia = new TacGia_BUS();
@@ -291,7 +283,7 @@ namespace GUI
             this.Visible = true;
             load_Hangsx();
         }
-
+        #region xoá hãng sản xuất
         private void btn_xoaHSX_Click(object sender, EventArgs e)
         {
             HangSanXuat_BUS hangsx = new HangSanXuat_BUS();
@@ -317,7 +309,7 @@ namespace GUI
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        #endregion
         private void btn_suaHSX_Click(object sender, EventArgs e)
         {
 
@@ -332,7 +324,7 @@ namespace GUI
             this.Visible = true;
             load_Tacgia();
         }
-
+        #region xoá nhạc sĩ
         private void btn_xoaNS_Click(object sender, EventArgs e)
         {
             TacGia_BUS tg = new TacGia_BUS();
@@ -358,28 +350,32 @@ namespace GUI
                 MessageBox.Show(ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
 
+        #region sửa nhạc sĩ
         private void btn_suaNS_Click(object sender, EventArgs e)
         {
 
         }
+        #endregion
 
         private void dgv_dsNhacSi_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //Luu lai dong du lieu vua kich chon
-            DataGridViewRow row = this.dgv_dsNhacSi.Rows[e.RowIndex];
-            //Dua du lieu vao textbox
-            txt_tentacgia.Text = row.Cells[1].Value.ToString();
-            txt_thongtintacgia.Text = row.Cells[2].Value.ToString();
-
-            //Đưa dữ liệu lên dgv_baihat_nhacsi
-            int d = e.RowIndex;
-            BaiHat_BUS baihat = new BaiHat_BUS();
-            DataTable dt = new DataTable();
-            String maTG = dgv_dsNhacSi.Rows[d].Cells[0].Value.ToString();
-            baihat.themBangBH(maTG);
-            dgv_Baihat_nhacsi.DataSource = dt;
+            if (e.RowIndex >= 0)
+            {
+                int d = e.RowIndex;
+                BaiHat_BUS bus = new BaiHat_BUS();
+                DataTable dt = new DataTable();
+                String ma = dgv_dsNhacSi.Rows[d].Cells[0].Value.ToString();
+                dt = bus.listBaiHatTheoTacGia(ma);
+                dgv_Baihat_nhacsi.DataSource = dt;
+                txt_tentacgia.Text = dgv_dsNhacSi.Rows[d].Cells[1].Value.ToString();
+                txt_thongtintacgia.Text = dgv_dsNhacSi.Rows[d].Cells[2].Value.ToString();
+            }
+            
         }
+
+        #region dataGridView hãng sản xuất cellclick
         private void dgv_dsHangsx_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -394,6 +390,7 @@ namespace GUI
                 themBangHSX(e.RowIndex, maHangsx);
             }
         }
+        #endregion
 
         /*private void themBangBH(int select, string maTG)
         {
@@ -422,7 +419,5 @@ namespace GUI
             dt.Load(red);
             dgv_Baihat_phathanh.DataSource = dt;
         }
-
-        
     }
 }
