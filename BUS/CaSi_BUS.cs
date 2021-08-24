@@ -8,7 +8,7 @@ using DATA;
 
 namespace BUS
 {
-    class CaSi_BUS
+    public class CaSi_BUS
     {
         GetData_CaSi CaSi = new GetData_CaSi();
 

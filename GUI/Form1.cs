@@ -136,6 +136,17 @@ namespace GUI
             dgv_dsHangsx.DataSource = dt;
         }
         #endregion
+        private void load_CaSi()
+        {
+            CaSi_BUS dtCaSi = new CaSi_BUS();
+            dgv_dsCaSi.DataSource = dtCaSi.getCaSi();
+            int dem = 0;
+            foreach(DataRow row in dtCaSi.getCaSi().Rows)
+            {
+                dgv_dsCaSi.Rows[dem].Cells[0].Value = dem+1;
+                dem++;
+            }
+        }
 
         private void tabControl_formChinh_MouseClick(object sender, MouseEventArgs e)
         {
@@ -143,6 +154,7 @@ namespace GUI
             load_TheLoai();
             load_Tacgia();
             load_Hangsx();
+            load_CaSi();
         }
 
         private void bt_them_Click(object sender, EventArgs e)
@@ -391,5 +403,20 @@ namespace GUI
             }
         }
         #endregion
+
+        private void dgv_dsCaSi_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                int d = e.RowIndex;
+                BaiHat_BUS bus = new BaiHat_BUS();
+                DataTable dt = new DataTable();
+                String ma = dgv_dsCaSi.Rows[d].Cells[1].Value.ToString();
+                dt = bus.listBaiHatTheoCaSi(ma);
+                dgv_BaiHatTheoCaSi.DataSource = dt;
+                txt_tencasi.Text = dgv_dsCaSi.Rows[d].Cells[2].Value.ToString();
+                txt_thongtincasi.Text = dgv_dsCaSi.Rows[d].Cells[3].Value.ToString();
+            }
+        }
     }
 }

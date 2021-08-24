@@ -74,6 +74,13 @@ namespace DATA
             dt = conDB.GetTable(sql);
             return dt;
         }
+        public DataTable SearchByCaSi(String maCaSi)
+        {
+            String sql = "Select ten_baihat,loi_baihat from baihat_casi b INNER JOIN baihat bh ON b.ma_baihat = bh.ma_baihat INNER JOIN casi c ON b.ma_casi=c.ma_casi where c.ma_casi ='"+maCaSi+"' ";
+            DataTable dt = new DataTable();
+            dt = conDB.GetTable(sql);
+            return dt;
+        }
         public DataTable SearchByHSX(String maHSX)
         {
             String sql = "Select ten_baihat, loi_baihat from BaiHat Where ma_hangsanxuat='" + maHSX + "'";

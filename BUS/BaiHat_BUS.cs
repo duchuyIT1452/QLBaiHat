@@ -118,6 +118,10 @@ namespace BUS
         {
             return BaiHat.SearchByHSX(maHSX);
         }
+        public DataTable listBaiHatTheoCaSi(String maCaSi)
+        {
+            return BaiHat.SearchByCaSi(maCaSi);
+        }
 
         public DataTable themBangBH(string maTG)
         {
