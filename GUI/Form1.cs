@@ -194,25 +194,21 @@ namespace GUI
             dt = bus.listBaiHatTheoAlbum(ma);
             dgv_AlbumBaihat.DataSource = dt;
         }
-        #region đóng ứng dụng
+
         private void bt_dong_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("BẠN CHẮC CHẮN MUỐN ĐÓNG ỨNG DỤNG ?", "THOÁT CHƯƠNG TRÌNH", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 this.Close();
         }
-        #endregion
 
         private void dgv_theloai_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int d = e.RowIndex;
             BaiHat_BUS bus = new BaiHat_BUS();
-            if(d >= 0)
-            {
-                DataTable dt = new DataTable();
-                String ma = dgv_theloai.Rows[d].Cells[1].Value.ToString();
-                dt = bus.listBaiHatTheoTheLoai(ma);
-                dgv_TheloaiBaihat.DataSource = dt;
-            }
+            DataTable dt = new DataTable();
+            String ma = dgv_theloai.Rows[d].Cells[1].Value.ToString();
+            dt = bus.listBaiHatTheoTheLoai(ma);
+            dgv_TheloaiBaihat.DataSource = dt;
         }
 
         private void bt_xoaTheLoai_Click(object sender, EventArgs e)

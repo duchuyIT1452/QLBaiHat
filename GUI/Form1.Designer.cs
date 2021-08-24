@@ -173,30 +173,6 @@ namespace GUI
             this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinSinhViênThựcHiệnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinĐềTàiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-<<<<<<< HEAD
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.stt_tc8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenbaihat_tc8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loibaihat_tc8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-=======
             this.TenBH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenCS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -204,7 +180,6 @@ namespace GUI
             this.Mahangsanxuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ten_hangsanxuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Thongtin_hangsanxuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
->>>>>>> 00734fda0a61930aa928714bd85cbef08a756f7a
             this.panel1.SuspendLayout();
             this.panel13.SuspendLayout();
             this.tabControl_formChinh.SuspendLayout();
@@ -252,11 +227,7 @@ namespace GUI
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_searchHangSanXuat)).BeginInit();
             this.panel12.SuspendLayout();
-            this.tabPage8.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.panel14.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -390,10 +361,8 @@ namespace GUI
             this.dgv_baihat_home.Cursor = System.Windows.Forms.Cursors.Default;
             this.dgv_baihat_home.Location = new System.Drawing.Point(3, 72);
             this.dgv_baihat_home.Name = "dgv_baihat_home";
-            this.dgv_baihat_home.ReadOnly = true;
             this.dgv_baihat_home.RowHeadersVisible = false;
             this.dgv_baihat_home.RowHeadersWidth = 51;
-            this.dgv_baihat_home.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_baihat_home.Size = new System.Drawing.Size(1284, 329);
             this.dgv_baihat_home.TabIndex = 2;
             this.dgv_baihat_home.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_baihat_home_CellContentClick);
@@ -404,7 +373,6 @@ namespace GUI
             this.STT_TC1.HeaderText = "STT";
             this.STT_TC1.MinimumWidth = 6;
             this.STT_TC1.Name = "STT_TC1";
-            this.STT_TC1.ReadOnly = true;
             this.STT_TC1.Width = 125;
             // 
             // TenBaiHat_TC1
@@ -413,7 +381,6 @@ namespace GUI
             this.TenBaiHat_TC1.HeaderText = "Tên bài hát";
             this.TenBaiHat_TC1.MinimumWidth = 6;
             this.TenBaiHat_TC1.Name = "TenBaiHat_TC1";
-            this.TenBaiHat_TC1.ReadOnly = true;
             this.TenBaiHat_TC1.Width = 170;
             // 
             // TenAlbum_TC1
@@ -422,7 +389,6 @@ namespace GUI
             this.TenAlbum_TC1.HeaderText = "Tên album";
             this.TenAlbum_TC1.MinimumWidth = 6;
             this.TenAlbum_TC1.Name = "TenAlbum_TC1";
-            this.TenAlbum_TC1.ReadOnly = true;
             this.TenAlbum_TC1.Width = 180;
             // 
             // CaSi_TC1
@@ -431,7 +397,6 @@ namespace GUI
             this.CaSi_TC1.HeaderText = "Ca sĩ";
             this.CaSi_TC1.MinimumWidth = 6;
             this.CaSi_TC1.Name = "CaSi_TC1";
-            this.CaSi_TC1.ReadOnly = true;
             this.CaSi_TC1.Width = 170;
             // 
             // TheLoai_TC1
@@ -440,7 +405,6 @@ namespace GUI
             this.TheLoai_TC1.HeaderText = "Thể loại";
             this.TheLoai_TC1.MinimumWidth = 6;
             this.TheLoai_TC1.Name = "TheLoai_TC1";
-            this.TheLoai_TC1.ReadOnly = true;
             this.TheLoai_TC1.Width = 150;
             // 
             // LoiBaiHat_TC1
@@ -449,7 +413,6 @@ namespace GUI
             this.LoiBaiHat_TC1.HeaderText = "Lời bài hát";
             this.LoiBaiHat_TC1.MinimumWidth = 6;
             this.LoiBaiHat_TC1.Name = "LoiBaiHat_TC1";
-            this.LoiBaiHat_TC1.ReadOnly = true;
             this.LoiBaiHat_TC1.Width = 500;
             // 
             // panel2
@@ -636,11 +599,9 @@ namespace GUI
             this.dgv_Album.Location = new System.Drawing.Point(6, 31);
             this.dgv_Album.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_Album.Name = "dgv_Album";
-            this.dgv_Album.ReadOnly = true;
             this.dgv_Album.RowHeadersVisible = false;
             this.dgv_Album.RowHeadersWidth = 51;
             this.dgv_Album.RowTemplate.Height = 24;
-            this.dgv_Album.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Album.Size = new System.Drawing.Size(437, 329);
             this.dgv_Album.TabIndex = 1;
             this.dgv_Album.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Album_CellClick);
@@ -650,7 +611,6 @@ namespace GUI
             this.STT_TC2.HeaderText = "STT";
             this.STT_TC2.MinimumWidth = 6;
             this.STT_TC2.Name = "STT_TC2";
-            this.STT_TC2.ReadOnly = true;
             this.STT_TC2.Width = 50;
             // 
             // MaAlbum
@@ -659,7 +619,6 @@ namespace GUI
             this.MaAlbum.HeaderText = "Mã Album";
             this.MaAlbum.MinimumWidth = 6;
             this.MaAlbum.Name = "MaAlbum";
-            this.MaAlbum.ReadOnly = true;
             this.MaAlbum.Width = 75;
             // 
             // TenAlbum
@@ -668,7 +627,6 @@ namespace GUI
             this.TenAlbum.HeaderText = "Tên Album";
             this.TenAlbum.MinimumWidth = 6;
             this.TenAlbum.Name = "TenAlbum";
-            this.TenAlbum.ReadOnly = true;
             this.TenAlbum.Width = 300;
             // 
             // NamPhatHanh
@@ -677,7 +635,6 @@ namespace GUI
             this.NamPhatHanh.HeaderText = "Năm phát hành";
             this.NamPhatHanh.MinimumWidth = 6;
             this.NamPhatHanh.Name = "NamPhatHanh";
-            this.NamPhatHanh.ReadOnly = true;
             this.NamPhatHanh.Width = 150;
             // 
             // label2
@@ -839,11 +796,9 @@ namespace GUI
             this.dgv_theloai.Location = new System.Drawing.Point(2, 45);
             this.dgv_theloai.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_theloai.Name = "dgv_theloai";
-            this.dgv_theloai.ReadOnly = true;
             this.dgv_theloai.RowHeadersVisible = false;
             this.dgv_theloai.RowHeadersWidth = 51;
             this.dgv_theloai.RowTemplate.Height = 24;
-            this.dgv_theloai.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_theloai.Size = new System.Drawing.Size(284, 295);
             this.dgv_theloai.TabIndex = 1;
             this.dgv_theloai.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_theloai_CellClick);
@@ -853,7 +808,6 @@ namespace GUI
             this.STT.HeaderText = "STT";
             this.STT.MinimumWidth = 6;
             this.STT.Name = "STT";
-            this.STT.ReadOnly = true;
             this.STT.Width = 50;
             // 
             // ma_theloai
@@ -862,7 +816,6 @@ namespace GUI
             this.ma_theloai.HeaderText = "Mã thể loại";
             this.ma_theloai.MinimumWidth = 6;
             this.ma_theloai.Name = "ma_theloai";
-            this.ma_theloai.ReadOnly = true;
             this.ma_theloai.Width = 75;
             // 
             // ten_theloai
@@ -871,7 +824,6 @@ namespace GUI
             this.ten_theloai.HeaderText = "Tên thể loại";
             this.ten_theloai.MinimumWidth = 6;
             this.ten_theloai.Name = "ten_theloai";
-            this.ten_theloai.ReadOnly = true;
             this.ten_theloai.Width = 250;
             // 
             // label4
@@ -1719,7 +1671,6 @@ namespace GUI
             // 
             // tabPage8
             // 
-            this.tabPage8.Controls.Add(this.panel14);
             this.tabPage8.Cursor = System.Windows.Forms.Cursors.Default;
             this.tabPage8.ImageIndex = 2;
             this.tabPage8.Location = new System.Drawing.Point(4, 44);
@@ -1766,7 +1717,7 @@ namespace GUI
             this.quảnLýAlbumToolStripMenuItem.Name = "quảnLýAlbumToolStripMenuItem";
             this.quảnLýAlbumToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.A)));
-            this.quảnLýAlbumToolStripMenuItem.Size = new System.Drawing.Size(303, 26);
+            this.quảnLýAlbumToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
             this.quảnLýAlbumToolStripMenuItem.Text = "Quản lý ALBUM";
             this.quảnLýAlbumToolStripMenuItem.Click += new System.EventHandler(this.quảnLýAlbumToolStripMenuItem_Click);
             // 
@@ -1776,7 +1727,7 @@ namespace GUI
             this.quảnLýTHỂLOẠIToolStripMenuItem.Name = "quảnLýTHỂLOẠIToolStripMenuItem";
             this.quảnLýTHỂLOẠIToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.T)));
-            this.quảnLýTHỂLOẠIToolStripMenuItem.Size = new System.Drawing.Size(303, 26);
+            this.quảnLýTHỂLOẠIToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
             this.quảnLýTHỂLOẠIToolStripMenuItem.Text = "Quản lý THỂ LOẠI";
             this.quảnLýTHỂLOẠIToolStripMenuItem.Click += new System.EventHandler(this.quảnLýTHỂLOẠIToolStripMenuItem_Click);
             // 
@@ -1786,7 +1737,7 @@ namespace GUI
             this.quảnLýCASĨToolStripMenuItem.Name = "quảnLýCASĨToolStripMenuItem";
             this.quảnLýCASĨToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.C)));
-            this.quảnLýCASĨToolStripMenuItem.Size = new System.Drawing.Size(303, 26);
+            this.quảnLýCASĨToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
             this.quảnLýCASĨToolStripMenuItem.Text = "Quản lý CA SĨ";
             this.quảnLýCASĨToolStripMenuItem.Click += new System.EventHandler(this.quảnLýCASĨToolStripMenuItem_Click);
             // 
@@ -1796,7 +1747,7 @@ namespace GUI
             this.quảnLýTÁCGIẢToolStripMenuItem.Name = "quảnLýTÁCGIẢToolStripMenuItem";
             this.quảnLýTÁCGIẢToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.G)));
-            this.quảnLýTÁCGIẢToolStripMenuItem.Size = new System.Drawing.Size(303, 26);
+            this.quảnLýTÁCGIẢToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
             this.quảnLýTÁCGIẢToolStripMenuItem.Text = "Quản lý TÁC GIẢ";
             this.quảnLýTÁCGIẢToolStripMenuItem.Click += new System.EventHandler(this.quảnLýTÁCGIẢToolStripMenuItem_Click);
             // 
@@ -1806,7 +1757,7 @@ namespace GUI
             this.quảnLýBÀIHÁTToolStripMenuItem.Name = "quảnLýBÀIHÁTToolStripMenuItem";
             this.quảnLýBÀIHÁTToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.B)));
-            this.quảnLýBÀIHÁTToolStripMenuItem.Size = new System.Drawing.Size(303, 26);
+            this.quảnLýBÀIHÁTToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
             this.quảnLýBÀIHÁTToolStripMenuItem.Text = "Quản lý BÀI HÁT";
             this.quảnLýBÀIHÁTToolStripMenuItem.Click += new System.EventHandler(this.quảnLýBÀIHÁTToolStripMenuItem_Click);
             // 
@@ -1816,7 +1767,7 @@ namespace GUI
             this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem.Name = "quảnLýHÃNGSẢNXUẤTToolStripMenuItem";
             this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.H)));
-            this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem.Size = new System.Drawing.Size(303, 26);
+            this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
             this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem.Text = "Quản lý HÃNG SẢN XUẤT";
             this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem.Click += new System.EventHandler(this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem_Click);
             // 
@@ -1826,7 +1777,7 @@ namespace GUI
             this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem.Name = "quảnLýTRACỨUTÌMKIẾMToolStripMenuItem";
             this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.S)));
-            this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem.Size = new System.Drawing.Size(303, 26);
+            this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
             this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem.Text = "Quản lý TRA CỨU - TÌM KIẾM";
             this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem.Click += new System.EventHandler(this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem_Click);
             // 
@@ -1836,7 +1787,7 @@ namespace GUI
             this.đóngỨngDụngToolStripMenuItem.Name = "đóngỨngDụngToolStripMenuItem";
             this.đóngỨngDụngToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.D)));
-            this.đóngỨngDụngToolStripMenuItem.Size = new System.Drawing.Size(303, 26);
+            this.đóngỨngDụngToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
             this.đóngỨngDụngToolStripMenuItem.Text = "Đóng ứng dụng";
             this.đóngỨngDụngToolStripMenuItem.Click += new System.EventHandler(this.đóngỨngDụngToolStripMenuItem_Click);
             // 
@@ -1864,236 +1815,6 @@ namespace GUI
             this.thôngTinĐềTàiToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.thôngTinĐềTàiToolStripMenuItem.Text = "Thông tin đề tài";
             // 
-<<<<<<< HEAD
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.Color.DarkCyan;
-            this.panel14.Controls.Add(this.dataGridView1);
-            this.panel14.Controls.Add(this.groupBox6);
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel14.Location = new System.Drawing.Point(3, 3);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(1174, 404);
-            this.panel14.TabIndex = 0;
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.button1);
-            this.groupBox6.Controls.Add(this.comboBox5);
-            this.groupBox6.Controls.Add(this.comboBox4);
-            this.groupBox6.Controls.Add(this.comboBox3);
-            this.groupBox6.Controls.Add(this.comboBox2);
-            this.groupBox6.Controls.Add(this.comboBox1);
-            this.groupBox6.Controls.Add(this.label22);
-            this.groupBox6.Controls.Add(this.label20);
-            this.groupBox6.Controls.Add(this.label18);
-            this.groupBox6.Controls.Add(this.label16);
-            this.groupBox6.Controls.Add(this.label21);
-            this.groupBox6.Controls.Add(this.label19);
-            this.groupBox6.Controls.Add(this.label17);
-            this.groupBox6.Controls.Add(this.label15);
-            this.groupBox6.Controls.Add(this.label14);
-            this.groupBox6.Controls.Add(this.label13);
-            this.groupBox6.Location = new System.Drawing.Point(12, 3);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(298, 391);
-            this.groupBox6.TabIndex = 0;
-            this.groupBox6.TabStop = false;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(29, 16);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(65, 16);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Thể loại";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(100, 16);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(91, 16);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "(chọn thể loại)";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(27, 88);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(51, 16);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Album";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(84, 88);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(85, 16);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "(chọn album)";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(27, 162);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(45, 16);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "Ca sĩ";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(78, 162);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(78, 16);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "(chọn ca sĩ)";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(24, 231);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(61, 16);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "Tác giả";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(91, 231);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(88, 16);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "(chọn tác giả)";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(27, 302);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(106, 16);
-            this.label21.TabIndex = 0;
-            this.label21.Text = "Hãng sản xuất";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(139, 302);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(130, 16);
-            this.label22.TabIndex = 0;
-            this.label22.Text = "(chọn hãng sản xuất)";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.ItemHeight = 21;
-            this.comboBox1.Location = new System.Drawing.Point(27, 36);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(239, 27);
-            this.comboBox1.TabIndex = 1;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.comboBox2.ItemHeight = 21;
-            this.comboBox2.Location = new System.Drawing.Point(27, 107);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(239, 27);
-            this.comboBox2.TabIndex = 1;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.ItemHeight = 21;
-            this.comboBox3.Location = new System.Drawing.Point(27, 181);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(239, 27);
-            this.comboBox3.TabIndex = 1;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.ItemHeight = 21;
-            this.comboBox4.Location = new System.Drawing.Point(27, 250);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(239, 27);
-            this.comboBox4.TabIndex = 1;
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.ItemHeight = 21;
-            this.comboBox5.Location = new System.Drawing.Point(27, 321);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(239, 27);
-            this.comboBox5.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(27, 361);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(239, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Hiển thị toàn bộ bài hát";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.stt_tc8,
-            this.tenbaihat_tc8,
-            this.loibaihat_tc8});
-            this.dataGridView1.Location = new System.Drawing.Point(316, 10);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(853, 378);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // stt_tc8
-            // 
-            this.stt_tc8.HeaderText = "STT";
-            this.stt_tc8.Name = "stt_tc8";
-            // 
-            // tenbaihat_tc8
-            // 
-            this.tenbaihat_tc8.DataPropertyName = "ten_baihat";
-            this.tenbaihat_tc8.HeaderText = "Tên bài hát";
-            this.tenbaihat_tc8.Name = "tenbaihat_tc8";
-            this.tenbaihat_tc8.Width = 200;
-            // 
-            // loibaihat_tc8
-            // 
-            this.loibaihat_tc8.DataPropertyName = "loi_baihat";
-            this.loibaihat_tc8.HeaderText = "Lời bài hát";
-            this.loibaihat_tc8.Name = "loibaihat_tc8";
-            this.loibaihat_tc8.Width = 530;
-=======
             // TenBH
             // 
             this.TenBH.DataPropertyName = "ten_baihat";
@@ -2142,7 +1863,6 @@ namespace GUI
             this.Thongtin_hangsanxuat.HeaderText = "Thông tin hãng sản xuất";
             this.Thongtin_hangsanxuat.Name = "Thongtin_hangsanxuat";
             this.Thongtin_hangsanxuat.Visible = false;
->>>>>>> 00734fda0a61930aa928714bd85cbef08a756f7a
             // 
             // Form1
             // 
@@ -2214,13 +1934,8 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.dgv_searchHangSanXuat)).EndInit();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
-            this.tabPage8.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.panel14.ResumeLayout(false);
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2349,30 +2064,6 @@ namespace GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn MaAlbum_TC7;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenAlbum_TC7;
         private System.Windows.Forms.DataGridViewTextBoxColumn NamPhatHanh_TC7;
-<<<<<<< HEAD
-        private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stt_tc8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenbaihat_tc8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn loibaihat_tc8;
-=======
         private System.Windows.Forms.TextBox txt_thongtintacgia;
         private System.Windows.Forms.TextBox txt_tentacgia;
         private System.Windows.Forms.DataGridView dgv_Baihat_nhacsi;
@@ -2400,7 +2091,6 @@ namespace GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn Mahangsanxuat;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ten_hangsanxuat;
         private System.Windows.Forms.DataGridViewTextBoxColumn Thongtin_hangsanxuat;
->>>>>>> 00734fda0a61930aa928714bd85cbef08a756f7a
     }
 }
 
