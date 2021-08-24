@@ -380,44 +380,16 @@ namespace GUI
         {
             if (e.RowIndex >= 0)
             {
-                //Luu lai dong du lieu vua kich chon
-                DataGridViewRow row = this.dgv_dsHangsx.Rows[e.RowIndex];
-                //Dua du lieu vao textbox
-                txt_tenhangsanxuat.Text = row.Cells[1].Value.ToString();
-                txt_thongtinhangsanxuat.Text = row.Cells[2].Value.ToString();
-
-                string maHangsx = row.Cells[0].Value.ToString();
-                themBangHSX(e.RowIndex, maHangsx);
+                int d = e.RowIndex;
+                BaiHat_BUS bus = new BaiHat_BUS();
+                DataTable dt = new DataTable();
+                String ma = dgv_dsHangsx.Rows[d].Cells[0].Value.ToString();
+                dt = bus.listBaiHatTheoHSX(ma);
+                dgv_Baihat_phathanh.DataSource = dt;
+                txt_tenhangsanxuat.Text = dgv_dsNhacSi.Rows[d].Cells[1].Value.ToString();
+                txt_thongtinhangsanxuat.Text = dgv_dsNhacSi.Rows[d].Cells[2].Value.ToString();
             }
         }
         #endregion
-
-        /*private void themBangBH(int select, string maTG)
-        {
-            SqlConnection conn = new SqlConnection(connString);
-            conn.Open();
-
-            String sql = "select BAIHAT.ten_baihat, CASI.ten_casi,HANGSANXUAT.ten_hangsanxuat, BAIHAT.loi_baihat from BAIHAT INNER JOIN HANGSANXUAT ON BAIHAT.ma_hangsanxuat=HANGSANXUAT.ma_hangsanxuat INNER JOIN TACGIA ON BAIHAT.ma_tacgia=TACGIA.ma_tacgia INNER JOIN CASI ON CASI.ma_casi=BAIHAT.ma_casi WHERE TACGIA.ma_tacgia=@matg";
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            cmd.Parameters.AddWithValue("@matg", maTG);
-            SqlDataReader red = cmd.ExecuteReader();
-            DataTable dt = new DataTable();
-            dt.Load(red);
-            dgv_Baihat_nhacsi.DataSource = dt;
-        }*/
-
-        private void themBangHSX(int select, string maHangsx)
-        {
-            SqlConnection conn = new SqlConnection(connString);
-            conn.Open();
-
-            String sql = "select BAIHAT.ten_baihat, CASI.ten_casi,TACGIA.ten_tacgia, BAIHAT.loi_baihat from BAIHAT INNER JOIN TACGIA ON BAIHAT.ma_tacgia = TACGIA.ma_tacgia INNER JOIN HANGSANXUAT ON BAIHAT.ma_hangsanxuat = HANGSANXUAT.ma_hangsanxuat INNER JOIN CASI ON CASI.ma_casi=BAIHAT.ma_casi WHERE HANGSANXUAT.ma_hangsanxuat=@maHangSX";
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            cmd.Parameters.AddWithValue("@maHangSX", maHangsx);
-            SqlDataReader red = cmd.ExecuteReader();
-            DataTable dt = new DataTable();
-            dt.Load(red);
-            dgv_Baihat_phathanh.DataSource = dt;
-        }
     }
 }

@@ -122,10 +122,6 @@ namespace GUI
             this.txt_thongtinhangsanxuat = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.dgv_Baihat_phathanh = new System.Windows.Forms.DataGridView();
-            this.TenBH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenCS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LoiBH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv_dsHangsx = new System.Windows.Forms.DataGridView();
             this.Mahangsanxuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ten_hangsanxuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -217,6 +213,8 @@ namespace GUI
             this.Thongtintacgia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tenbaihat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Loibaihat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenBH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoiBH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel13.SuspendLayout();
             this.tabControl_formChinh.SuspendLayout();
@@ -1318,8 +1316,6 @@ namespace GUI
             this.dgv_Baihat_phathanh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Baihat_phathanh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TenBH,
-            this.TenCS,
-            this.TenTG,
             this.LoiBH});
             this.dgv_Baihat_phathanh.Location = new System.Drawing.Point(710, 79);
             this.dgv_Baihat_phathanh.Name = "dgv_Baihat_phathanh";
@@ -1330,31 +1326,6 @@ namespace GUI
             this.dgv_Baihat_phathanh.Size = new System.Drawing.Size(451, 270);
             this.dgv_Baihat_phathanh.TabIndex = 2;
             this.dgv_Baihat_phathanh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
-            // 
-            // TenBH
-            // 
-            this.TenBH.DataPropertyName = "ten_baihat";
-            this.TenBH.HeaderText = "Tên bài hát";
-            this.TenBH.Name = "TenBH";
-            // 
-            // TenCS
-            // 
-            this.TenCS.DataPropertyName = "ten_casi";
-            this.TenCS.HeaderText = "Tên ca sĩ";
-            this.TenCS.Name = "TenCS";
-            // 
-            // TenTG
-            // 
-            this.TenTG.DataPropertyName = "ten_tacgia";
-            this.TenTG.HeaderText = "Tên tác giả";
-            this.TenTG.Name = "TenTG";
-            // 
-            // LoiBH
-            // 
-            this.LoiBH.DataPropertyName = "loi_baihat";
-            this.LoiBH.HeaderText = "Lời bài hát";
-            this.LoiBH.Name = "LoiBH";
-            this.LoiBH.Width = 150;
             // 
             // dgv_dsHangsx
             // 
@@ -2302,6 +2273,21 @@ namespace GUI
             this.Loibaihat.Name = "Loibaihat";
             this.Loibaihat.Width = 300;
             // 
+            // TenBH
+            // 
+            this.TenBH.DataPropertyName = "ten_baihat";
+            this.TenBH.HeaderText = "Tên bài hát";
+            this.TenBH.Name = "TenBH";
+            this.TenBH.ReadOnly = true;
+            // 
+            // LoiBH
+            // 
+            this.LoiBH.DataPropertyName = "loi_baihat";
+            this.LoiBH.HeaderText = "Lời bài hát";
+            this.LoiBH.Name = "LoiBH";
+            this.LoiBH.ReadOnly = true;
+            this.LoiBH.Width = 300;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2524,10 +2510,6 @@ namespace GUI
         private System.Windows.Forms.TextBox txt_tenhangsanxuat;
         private System.Windows.Forms.TextBox txt_thongtinhangsanxuat;
         private System.Windows.Forms.DataGridView dgv_Baihat_phathanh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenBH;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenCS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenTG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LoiBH;
         private System.Windows.Forms.DataGridViewTextBoxColumn Mahangsanxuat;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ten_hangsanxuat;
         private System.Windows.Forms.DataGridViewTextBoxColumn Thongtin_hangsanxuat;
@@ -2575,6 +2557,8 @@ namespace GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn Thongtintacgia;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tenbaihat;
         private System.Windows.Forms.DataGridViewTextBoxColumn Loibaihat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenBH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LoiBH;
     }
 }
 

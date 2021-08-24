@@ -114,6 +114,11 @@ namespace BUS
         {
             return BaiHat.SearchByTacGia(maTacGia);
         }
+        public DataTable listBaiHatTheoHSX(String maHSX)
+        {
+            return BaiHat.SearchByHSX(maHSX);
+        }
+
         public DataTable themBangBH(string maTG)
         {
             return BaiHat.themBangBH(maTG);

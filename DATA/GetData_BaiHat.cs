@@ -76,7 +76,7 @@ namespace DATA
         }
         public DataTable SearchByHSX(String maHSX)
         {
-            String sql = "Select * from BaiHat Where ma_hangsanxuat='" + maHSX + "'";
+            String sql = "Select ten_baihat, loi_baihat from BaiHat Where ma_hangsanxuat='" + maHSX + "'";
             DataTable dt = new DataTable();
             dt = conDB.GetTable(sql);
             return dt;
