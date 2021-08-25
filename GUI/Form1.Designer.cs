@@ -183,9 +183,6 @@ namespace GUI
             this.btn_xoabaihat = new System.Windows.Forms.Button();
             this.btn_thembaihat = new System.Windows.Forms.Button();
             this.dgv_baihat = new System.Windows.Forms.DataGridView();
-            this.ma_baihat_tc8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenbaihat_tc8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loibaihta_tc8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.btn_hienthitoanbobaihat = new System.Windows.Forms.Button();
             this.cb_hangsanxuat_formchinh = new System.Windows.Forms.ComboBox();
@@ -216,6 +213,14 @@ namespace GUI
             this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinSinhViênThựcHiệnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinĐềTàiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ma_baihat_tc8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenbaihat_tc8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loibaihta_tc8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.matheloai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maalbum1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Macasi1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Matg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mahsx = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel13.SuspendLayout();
             this.tabControl_formChinh.SuspendLayout();
@@ -1981,6 +1986,7 @@ namespace GUI
             this.btn_suabaihat.TabIndex = 2;
             this.btn_suabaihat.Text = "Sửa thông tin bài hát";
             this.btn_suabaihat.UseVisualStyleBackColor = true;
+            this.btn_suabaihat.Click += new System.EventHandler(this.btn_suabaihat_Click);
             // 
             // btn_xoabaihat
             // 
@@ -1990,6 +1996,7 @@ namespace GUI
             this.btn_xoabaihat.TabIndex = 2;
             this.btn_xoabaihat.Text = "Xoá bài hát";
             this.btn_xoabaihat.UseVisualStyleBackColor = true;
+            this.btn_xoabaihat.Click += new System.EventHandler(this.btn_xoabaihat_Click);
             // 
             // btn_thembaihat
             // 
@@ -2008,37 +2015,19 @@ namespace GUI
             this.dgv_baihat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ma_baihat_tc8,
             this.tenbaihat_tc8,
-            this.loibaihta_tc8});
+            this.loibaihta_tc8,
+            this.matheloai,
+            this.maalbum1,
+            this.Macasi1,
+            this.Matg,
+            this.mahsx});
             this.dgv_baihat.Location = new System.Drawing.Point(316, 5);
             this.dgv_baihat.Name = "dgv_baihat";
             this.dgv_baihat.ReadOnly = true;
             this.dgv_baihat.RowHeadersVisible = false;
             this.dgv_baihat.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_baihat.Size = new System.Drawing.Size(683, 343);
+            this.dgv_baihat.Size = new System.Drawing.Size(810, 343);
             this.dgv_baihat.TabIndex = 1;
-            // 
-            // ma_baihat_tc8
-            // 
-            this.ma_baihat_tc8.DataPropertyName = "ma_baihat";
-            this.ma_baihat_tc8.HeaderText = "Mã bài hát";
-            this.ma_baihat_tc8.Name = "ma_baihat_tc8";
-            this.ma_baihat_tc8.ReadOnly = true;
-            // 
-            // tenbaihat_tc8
-            // 
-            this.tenbaihat_tc8.DataPropertyName = "ten_baihat";
-            this.tenbaihat_tc8.HeaderText = "Tên bài hát";
-            this.tenbaihat_tc8.Name = "tenbaihat_tc8";
-            this.tenbaihat_tc8.ReadOnly = true;
-            this.tenbaihat_tc8.Width = 300;
-            // 
-            // loibaihta_tc8
-            // 
-            this.loibaihta_tc8.DataPropertyName = "loi_baihat";
-            this.loibaihta_tc8.HeaderText = "Lời bài hát";
-            this.loibaihta_tc8.Name = "loibaihta_tc8";
-            this.loibaihta_tc8.ReadOnly = true;
-            this.loibaihta_tc8.Width = 410;
             // 
             // groupBox6
             // 
@@ -2363,6 +2352,69 @@ namespace GUI
             this.thôngTinĐềTàiToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.thôngTinĐềTàiToolStripMenuItem.Text = "Thông tin đề tài";
             // 
+            // ma_baihat_tc8
+            // 
+            this.ma_baihat_tc8.DataPropertyName = "ma_baihat";
+            this.ma_baihat_tc8.HeaderText = "Mã bài hát";
+            this.ma_baihat_tc8.Name = "ma_baihat_tc8";
+            this.ma_baihat_tc8.ReadOnly = true;
+            // 
+            // tenbaihat_tc8
+            // 
+            this.tenbaihat_tc8.DataPropertyName = "ten_baihat";
+            this.tenbaihat_tc8.HeaderText = "Tên bài hát";
+            this.tenbaihat_tc8.Name = "tenbaihat_tc8";
+            this.tenbaihat_tc8.ReadOnly = true;
+            this.tenbaihat_tc8.Width = 300;
+            // 
+            // loibaihta_tc8
+            // 
+            this.loibaihta_tc8.DataPropertyName = "loi_baihat";
+            this.loibaihta_tc8.HeaderText = "Lời bài hát";
+            this.loibaihta_tc8.Name = "loibaihta_tc8";
+            this.loibaihta_tc8.ReadOnly = true;
+            this.loibaihta_tc8.Width = 410;
+            // 
+            // matheloai
+            // 
+            this.matheloai.DataPropertyName = "ma_theloai";
+            this.matheloai.HeaderText = "Mã thể loại";
+            this.matheloai.Name = "matheloai";
+            this.matheloai.ReadOnly = true;
+            this.matheloai.Visible = false;
+            // 
+            // maalbum1
+            // 
+            this.maalbum1.DataPropertyName = "ma_album";
+            this.maalbum1.HeaderText = "Mã album";
+            this.maalbum1.Name = "maalbum1";
+            this.maalbum1.ReadOnly = true;
+            this.maalbum1.Visible = false;
+            // 
+            // Macasi1
+            // 
+            this.Macasi1.DataPropertyName = "ma_casi";
+            this.Macasi1.HeaderText = "Mã ca sĩ";
+            this.Macasi1.Name = "Macasi1";
+            this.Macasi1.ReadOnly = true;
+            this.Macasi1.Visible = false;
+            // 
+            // Matg
+            // 
+            this.Matg.DataPropertyName = "ma_tacgia";
+            this.Matg.HeaderText = "Mã tác giả";
+            this.Matg.Name = "Matg";
+            this.Matg.ReadOnly = true;
+            this.Matg.Visible = false;
+            // 
+            // mahsx
+            // 
+            this.mahsx.DataPropertyName = "ma_hangsanxuat";
+            this.mahsx.HeaderText = "Mã hãng sản xuất";
+            this.mahsx.Name = "mahsx";
+            this.mahsx.ReadOnly = true;
+            this.mahsx.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2623,9 +2675,6 @@ namespace GUI
         private System.Windows.Forms.TextBox txt_tencasi;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenbaihat1_tc3;
         private System.Windows.Forms.DataGridViewTextBoxColumn loibaihat_tc4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ma_baihat_tc8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenbaihat_tc8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn loibaihta_tc8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Mabaihat;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenBaiHat_TC1;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenAlbum_TC1;
@@ -2635,6 +2684,14 @@ namespace GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn macasi;
         private System.Windows.Forms.DataGridViewTextBoxColumn tencasi_tc3;
         private System.Windows.Forms.DataGridViewTextBoxColumn thongtin_casi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ma_baihat_tc8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenbaihat_tc8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn loibaihta_tc8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn matheloai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maalbum1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Macasi1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Matg;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mahsx;
     }
 }
 

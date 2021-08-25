@@ -651,5 +651,40 @@ namespace GUI
             cb_tacgia_formchinh.SelectedIndex = -1;
         }
         #endregion
+
+        private void btn_xoabaihat_Click(object sender, EventArgs e)
+        {
+            BaiHat_BUS bus = new BaiHat_BUS();
+            string ma = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[0].Value.ToString();
+            try
+            {
+                DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Xác nhận", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    bus.xoaBaiHat(ma);
+                    load_BaiHat();
+                }
+
+                else if (dialogResult == DialogResult.No)
+                    load_BaiHat();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn_suabaihat_Click(object sender, EventArgs e)
+        {
+            //string maBaiHat = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[0].Value.ToString();
+            //string maTheLoai = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[3].Value.ToString();
+            //string maAlbum = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[4].Value.ToString();
+            //string maCaSi = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[5].Value.ToString();
+            //string maTacGia = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[6].Value.ToString();
+            //string maHangSanXuat = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[7].Value.ToString();
+
+            //fCapNhat_BaiHat.
+        }
     }
 }

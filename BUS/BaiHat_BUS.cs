@@ -102,9 +102,9 @@ namespace BUS
         {
             return BaiHat.SearchByAllKey(maTheLoai, maAlbum, maCaSi, maTacGia, maHangSanXuat);
         }
-        public void xoaBaiHat()
+        public void xoaBaiHat(string maBaiHat)
         {
-            BaiHat.DeleteBaiHat(MaBaiHat);
+            BaiHat.DeleteBaiHat(maBaiHat);
         }
         public void capNhatBaiHat()
         {

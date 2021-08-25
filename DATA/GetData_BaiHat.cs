@@ -116,6 +116,8 @@ namespace DATA
         public void DeleteBaiHat(String maBaiHat)
         {
             String sql = "Delete BaiHat Where ma_BaiHat='" + maBaiHat + "'";
+            String sql1 = "Delete BaiHat_CaSi Where ma_BaiHat='" + maBaiHat + "'";
+            conDB.ExecuteNonQuery(sql1);
             conDB.ExecuteNonQuery(sql);
         }
         public DataTable listBaiHatTheoAlbum(String maAlbum)
