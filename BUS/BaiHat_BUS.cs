@@ -94,6 +94,10 @@ namespace BUS
         {
             BaiHat.InsertBaiHat(maBaiHat,tenBaiHat, maTheLoai, maAlbum, maCaSi,  maTacGia, maHangSanXuat, loiBaiHat);
         }
+        public DataTable getBaiHatByAllKey(string maTheLoai, string maAlbum, string maCaSi, string maTacGia, string maHangSanXuat)
+        {
+            return BaiHat.SearchByAllKey(maTheLoai, maAlbum, maCaSi, maTacGia, maHangSanXuat);
+        }
         public void xoaBaiHat()
         {
             BaiHat.DeleteBaiHat(MaBaiHat);

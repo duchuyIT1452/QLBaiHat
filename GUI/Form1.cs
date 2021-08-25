@@ -68,7 +68,9 @@ namespace GUI
         private void Form1_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            LoadBaiHat_Home();        
+            LoadBaiHat_Home();
+            load_BaiHat();
+            
         }
         #endregion
 
@@ -90,6 +92,47 @@ namespace GUI
         #region load bài hát
         private void load_BaiHat()
         {
+            //load combobox thể loại
+            TheLoai_BUS tlBus = new TheLoai_BUS();
+            cb_theloai_formchinh.DataSource = tlBus.getTheLoai();
+            cb_theloai_formchinh.DisplayMember = "ten_theloai";
+            cb_theloai_formchinh.ValueMember = "ma_theloai";
+            
+
+            //load combobox album
+            Album_BUS abBus = new Album_BUS();
+            cb_album_formchinh.DataSource = abBus.getAlbum();
+            cb_album_formchinh.DisplayMember = "ten_album";
+            cb_album_formchinh.ValueMember = "ma_album";
+            
+
+            //load combobox ca sĩ
+            CaSi_BUS csBus = new CaSi_BUS();
+            cb_casi_formchinh.DataSource = csBus.getCaSi();
+            cb_casi_formchinh.DisplayMember = "ten_casi";
+            cb_casi_formchinh.ValueMember = "ma_casi";
+            
+
+            //load combobox tác giả
+            TacGia_BUS tgBus = new TacGia_BUS();
+            cb_tacgia_formchinh.DataSource = tgBus.getAllTacGia();
+            cb_tacgia_formchinh.DisplayMember = "ten_tacgia";
+            cb_tacgia_formchinh.ValueMember = "ma_tacgia";
+            
+
+            //load combobox hãng sản xuất
+            HangSanXuat_BUS hsxBus = new HangSanXuat_BUS();
+            cb_hangsanxuat_formchinh.DataSource = hsxBus.getAllHangSX();
+            cb_hangsanxuat_formchinh.DisplayMember = "ten_hangsanxuat";
+            cb_hangsanxuat_formchinh.ValueMember = "ma_hangsanxuat";
+
+            cb_hangsanxuat_formchinh.SelectedIndex = -1;
+            cb_album_formchinh.SelectedIndex = -1;
+            cb_casi_formchinh.SelectedIndex = -1;
+            cb_theloai_formchinh.SelectedIndex = -1;
+            cb_tacgia_formchinh.SelectedIndex = -1;
+
+            //load bài hát
             BaiHat_BUS bus = new BaiHat_BUS();
             dgv_baihat.DataSource = bus.getBaiHat();
             int dem = 0;
@@ -168,8 +211,6 @@ namespace GUI
         }
         #endregion
 
-        
-
         #region tabcontrol form chính mouse click
         private void tabControl_formChinh_MouseClick(object sender, MouseEventArgs e)
         {
@@ -179,42 +220,6 @@ namespace GUI
             load_Hangsx();
             load_CaSi();
             load_BaiHat();
-        }
-        #endregion
-
-        #region button thêm album click
-        private void bt_them_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            fThem_Album f = new fThem_Album();
-            f.ShowDialog();
-            this.Visible = true;
-            load_Album();
-        }
-        #endregion
-
-        #region button xoá album click
-        private void bt_xoa_Click(object sender, EventArgs e)
-        {
-            Album_BUS bus = new Album_BUS();
-            string ma = dgv_Album.Rows[dgv_Album.CurrentCell.RowIndex].Cells[1].Value.ToString();
-            try
-            {
-                DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Xác nhận", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    bus.xoaAlbum(ma);
-                    load_Album();
-                }
-
-                else if (dialogResult == DialogResult.No)
-                    load_Album();
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
         #endregion
 
@@ -297,6 +302,42 @@ namespace GUI
         #endregion
 
         //button click
+        #region button thêm album click
+        private void bt_them_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            fThem_Album f = new fThem_Album();
+            f.ShowDialog();
+            this.Visible = true;
+            load_Album();
+        }
+        #endregion
+
+        #region button xoá album click
+        private void bt_xoa_Click(object sender, EventArgs e)
+        {
+            Album_BUS bus = new Album_BUS();
+            string ma = dgv_Album.Rows[dgv_Album.CurrentCell.RowIndex].Cells[1].Value.ToString();
+            try
+            {
+                DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Xác nhận", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    bus.xoaAlbum(ma);
+                    load_Album();
+                }
+
+                else if (dialogResult == DialogResult.No)
+                    load_Album();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        #endregion
+
         #region Thoát
         private void bt_dong_Click(object sender, EventArgs e)
         {
@@ -368,7 +409,6 @@ namespace GUI
         }
         #endregion
 
-        // HSX
         #region Thêm HSX
         private void button1_Click(object sender, EventArgs e)
         {
@@ -432,7 +472,6 @@ namespace GUI
         }
         #endregion  
 
-
         #region button thêm tác giả click
         private void btn_themNS_Click(object sender, EventArgs e)
         {
@@ -493,8 +532,124 @@ namespace GUI
             }
             this.Visible = true;
         }
+
         #endregion
 
-        
+        #region set string sql
+        string theLoai = "";
+        string album = "";
+        string caSi = "";
+        string tacGia = "";
+        string hangSanXuat = "";
+        private void setStringToFill()
+        {
+            if (cb_theloai_formchinh.SelectedIndex == -1)
+                theLoai = "";
+            else 
+            {
+                theLoai = "ma_theloai = " + "'" + cb_theloai_formchinh.SelectedValue.ToString() + "'";
+            }
+            if (cb_album_formchinh.SelectedIndex == -1)
+                album = "";
+            else
+            {
+                if (theLoai == "")
+                    album = " ma_album = " + "'" + cb_album_formchinh.SelectedValue.ToString() + "'";
+                else
+                    album = " AND ma_album = " + "'" + cb_album_formchinh.SelectedValue.ToString() + "'";
+            }
+            if (cb_casi_formchinh.SelectedIndex == -1)
+                caSi = "";
+            else
+            {
+                if (theLoai == "" && album == "")
+                    caSi = " ma_casi = " + "'" + cb_casi_formchinh.SelectedValue.ToString() + "'";
+                else
+                    caSi = " AND ma_casi = " + "'" + cb_casi_formchinh.SelectedValue.ToString() + "'";
+            }
+            if (cb_tacgia_formchinh.SelectedIndex == -1)
+                tacGia = "";
+            else
+            {
+                if (theLoai == "" && album == "" && caSi == "")
+                    tacGia = " ma_tacgia = " + "'" + cb_tacgia_formchinh.SelectedValue.ToString() + "'";
+                else
+                    tacGia = " AND ma_tacgia = " + "'" + cb_tacgia_formchinh.SelectedValue.ToString() + "'";
+            }
+            if (cb_hangsanxuat_formchinh.SelectedIndex == -1)
+                hangSanXuat = "";
+            else
+            {
+                if (theLoai == "" && album == "" && caSi == "" && tacGia == "")
+                    hangSanXuat = " ma_hangsanxuat = " + "'" + cb_hangsanxuat_formchinh.SelectedValue.ToString() + "'";
+                else
+                    hangSanXuat = " AND ma_hangsanxuat = " + "'" + cb_hangsanxuat_formchinh.SelectedValue.ToString() + "'";
+            }
+        }
+        #endregion
+
+        #region hàm lọc bài hát
+        private void fill()
+        {
+            setStringToFill();
+            BaiHat_BUS bus = new BaiHat_BUS();
+            dgv_baihat.DataSource = bus.getBaiHatByAllKey(theLoai, album, caSi, tacGia, hangSanXuat);
+        }
+        #endregion
+
+        #region hàm lọc khi thay đổi giá trị các thuộc tính
+        private void cb_theloai_formchinh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cb_theloai_formchinh.SelectedIndex != -1)
+                fill();
+        }
+
+        private void cb_album_formchinh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cb_album_formchinh.SelectedIndex != -1)
+                fill();
+        }
+
+        private void cb_casi_formchinh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cb_casi_formchinh.SelectedIndex != -1)
+                fill();
+        }
+
+        private void cb_tacgia_formchinh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cb_tacgia_formchinh.SelectedIndex != -1)
+                fill();
+        }
+
+        private void cb_hangsanxuat_formchinh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cb_hangsanxuat_formchinh.SelectedIndex != -1)
+                fill();
+        }
+        #endregion
+
+        #region button thêm bài hát
+        private void btn_thembaihat_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            fThem_BaiHat f = new fThem_BaiHat();
+            f.ShowDialog();
+            this.Visible = true;
+            load_BaiHat();
+        }
+        #endregion
+         
+        #region butotn hiển thị bài hát click
+        private void btn_hienthitoanbobaihat_Click(object sender, EventArgs e)
+        {
+            load_BaiHat();
+            cb_hangsanxuat_formchinh.SelectedIndex = -1;
+            cb_album_formchinh.SelectedIndex = -1;
+            cb_casi_formchinh.SelectedIndex = -1;
+            cb_theloai_formchinh.SelectedIndex = -1;
+            cb_tacgia_formchinh.SelectedIndex = -1;
+        }
+        #endregion
     }
 }

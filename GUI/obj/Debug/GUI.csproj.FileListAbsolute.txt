@@ -254,3 +254,9 @@ D:\tailieuhoctap\LT_Window\Project\Project\New folder (4)\QLBaiHat\GUI\obj\Debug
 D:\tailieuhoctap\LT_Window\Project\Project\New folder (4)\QLBaiHat\GUI\obj\Debug\GUI.pdb
 D:\tailieuhoctap\LT_Window\Project\Project\New folder (4)\QLBaiHat\GUI\obj\Debug\GUI.fCapnhat_HangSX.resources
 D:\tailieuhoctap\LT_Window\Project\Project\New folder (4)\QLBaiHat\GUI\obj\Debug\GUI.fCapnhat_Tacgia.resources
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\GUI\obj\Debug\GUI.fCapNhat_BaiHat.resources
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\GUI\obj\Debug\GUI.fCapNhat_CaSi.resources
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\GUI\obj\Debug\GUI.fCapnhat_HangSX.resources
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\GUI\obj\Debug\GUI.fCapnhat_Tacgia.resources
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\GUI\obj\Debug\GUI.fThem_BaiHat.resources
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\GUI\obj\Debug\GUI.fThem_CaSi.resources

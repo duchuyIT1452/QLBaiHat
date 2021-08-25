@@ -188,11 +188,11 @@ namespace GUI
             this.loibaihta_tc8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.btn_hienthitoanbobaihat = new System.Windows.Forms.Button();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cb_hangsanxuat_formchinh = new System.Windows.Forms.ComboBox();
+            this.cb_tacgia_formchinh = new System.Windows.Forms.ComboBox();
+            this.cb_casi_formchinh = new System.Windows.Forms.ComboBox();
+            this.cb_album_formchinh = new System.Windows.Forms.ComboBox();
+            this.cb_theloai_formchinh = new System.Windows.Forms.ComboBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -367,7 +367,7 @@ namespace GUI
             this.tabPage1.Location = new System.Drawing.Point(4, 44);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1152, 410);
+            this.tabPage1.Size = new System.Drawing.Size(1137, 410);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "BÀI HÁT - HOME";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -385,7 +385,7 @@ namespace GUI
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 69F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1146, 404);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1131, 404);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // dgv_baihat_home
@@ -496,7 +496,7 @@ namespace GUI
             this.tabPage2.Location = new System.Drawing.Point(4, 44);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1010, 410);
+            this.tabPage2.Size = new System.Drawing.Size(1137, 410);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "ALBUM";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -511,7 +511,7 @@ namespace GUI
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1004, 404);
+            this.panel3.Size = new System.Drawing.Size(1131, 404);
             this.panel3.TabIndex = 0;
             // 
             // bt_dong
@@ -721,7 +721,7 @@ namespace GUI
             this.tabPage3.Location = new System.Drawing.Point(4, 44);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1010, 410);
+            this.tabPage3.Size = new System.Drawing.Size(1137, 410);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "THỂ LOẠI";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -931,7 +931,7 @@ namespace GUI
             this.tabPage4.Location = new System.Drawing.Point(4, 44);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1010, 410);
+            this.tabPage4.Size = new System.Drawing.Size(1137, 410);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "CA SĨ";
             // 
@@ -1556,7 +1556,7 @@ namespace GUI
             this.tabPage7.Location = new System.Drawing.Point(4, 44);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(1010, 410);
+            this.tabPage7.Size = new System.Drawing.Size(1137, 410);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "TRA CỨU - TÌM KIẾM";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -1568,7 +1568,7 @@ namespace GUI
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(3, 3);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1004, 404);
+            this.panel9.Size = new System.Drawing.Size(1131, 404);
             this.panel9.TabIndex = 0;
             // 
             // panel11
@@ -1954,7 +1954,7 @@ namespace GUI
             this.tabPage8.Location = new System.Drawing.Point(4, 44);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(1010, 410);
+            this.tabPage8.Size = new System.Drawing.Size(1137, 410);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "BÀI HÁT";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -1970,7 +1970,7 @@ namespace GUI
             this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel14.Location = new System.Drawing.Point(3, 3);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(1004, 404);
+            this.panel14.Size = new System.Drawing.Size(1131, 404);
             this.panel14.TabIndex = 0;
             // 
             // btn_suabaihat
@@ -1999,6 +1999,7 @@ namespace GUI
             this.btn_thembaihat.TabIndex = 2;
             this.btn_thembaihat.Text = "Thêm bài hát mới";
             this.btn_thembaihat.UseVisualStyleBackColor = true;
+            this.btn_thembaihat.Click += new System.EventHandler(this.btn_thembaihat_Click);
             // 
             // dgv_baihat
             // 
@@ -2042,11 +2043,11 @@ namespace GUI
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.btn_hienthitoanbobaihat);
-            this.groupBox6.Controls.Add(this.comboBox5);
-            this.groupBox6.Controls.Add(this.comboBox4);
-            this.groupBox6.Controls.Add(this.comboBox3);
-            this.groupBox6.Controls.Add(this.comboBox2);
-            this.groupBox6.Controls.Add(this.comboBox1);
+            this.groupBox6.Controls.Add(this.cb_hangsanxuat_formchinh);
+            this.groupBox6.Controls.Add(this.cb_tacgia_formchinh);
+            this.groupBox6.Controls.Add(this.cb_casi_formchinh);
+            this.groupBox6.Controls.Add(this.cb_album_formchinh);
+            this.groupBox6.Controls.Add(this.cb_theloai_formchinh);
             this.groupBox6.Controls.Add(this.label22);
             this.groupBox6.Controls.Add(this.label20);
             this.groupBox6.Controls.Add(this.label18);
@@ -2071,56 +2072,62 @@ namespace GUI
             this.btn_hienthitoanbobaihat.TabIndex = 2;
             this.btn_hienthitoanbobaihat.Text = "Hiển thị toàn bộ bài hát";
             this.btn_hienthitoanbobaihat.UseVisualStyleBackColor = true;
+            this.btn_hienthitoanbobaihat.Click += new System.EventHandler(this.btn_hienthitoanbobaihat_Click);
             // 
-            // comboBox5
+            // cb_hangsanxuat_formchinh
             // 
-            this.comboBox5.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.ItemHeight = 21;
-            this.comboBox5.Location = new System.Drawing.Point(27, 293);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(238, 27);
-            this.comboBox5.TabIndex = 1;
+            this.cb_hangsanxuat_formchinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_hangsanxuat_formchinh.FormattingEnabled = true;
+            this.cb_hangsanxuat_formchinh.ItemHeight = 16;
+            this.cb_hangsanxuat_formchinh.Location = new System.Drawing.Point(30, 293);
+            this.cb_hangsanxuat_formchinh.Name = "cb_hangsanxuat_formchinh";
+            this.cb_hangsanxuat_formchinh.Size = new System.Drawing.Size(238, 24);
+            this.cb_hangsanxuat_formchinh.TabIndex = 1;
+            this.cb_hangsanxuat_formchinh.SelectedIndexChanged += new System.EventHandler(this.cb_hangsanxuat_formchinh_SelectedIndexChanged);
             // 
-            // comboBox4
+            // cb_tacgia_formchinh
             // 
-            this.comboBox4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.ItemHeight = 21;
-            this.comboBox4.Location = new System.Drawing.Point(27, 227);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(238, 27);
-            this.comboBox4.TabIndex = 1;
+            this.cb_tacgia_formchinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_tacgia_formchinh.FormattingEnabled = true;
+            this.cb_tacgia_formchinh.ItemHeight = 16;
+            this.cb_tacgia_formchinh.Location = new System.Drawing.Point(30, 227);
+            this.cb_tacgia_formchinh.Name = "cb_tacgia_formchinh";
+            this.cb_tacgia_formchinh.Size = new System.Drawing.Size(238, 24);
+            this.cb_tacgia_formchinh.TabIndex = 1;
+            this.cb_tacgia_formchinh.SelectedIndexChanged += new System.EventHandler(this.cb_tacgia_formchinh_SelectedIndexChanged);
             // 
-            // comboBox3
+            // cb_casi_formchinh
             // 
-            this.comboBox3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.ItemHeight = 21;
-            this.comboBox3.Location = new System.Drawing.Point(30, 163);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(238, 27);
-            this.comboBox3.TabIndex = 1;
+            this.cb_casi_formchinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_casi_formchinh.FormattingEnabled = true;
+            this.cb_casi_formchinh.ItemHeight = 16;
+            this.cb_casi_formchinh.Location = new System.Drawing.Point(30, 163);
+            this.cb_casi_formchinh.Name = "cb_casi_formchinh";
+            this.cb_casi_formchinh.Size = new System.Drawing.Size(238, 24);
+            this.cb_casi_formchinh.TabIndex = 1;
+            this.cb_casi_formchinh.SelectedIndexChanged += new System.EventHandler(this.cb_casi_formchinh_SelectedIndexChanged);
             // 
-            // comboBox2
+            // cb_album_formchinh
             // 
-            this.comboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.ItemHeight = 21;
-            this.comboBox2.Location = new System.Drawing.Point(30, 102);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(238, 27);
-            this.comboBox2.TabIndex = 1;
+            this.cb_album_formchinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_album_formchinh.FormattingEnabled = true;
+            this.cb_album_formchinh.ItemHeight = 16;
+            this.cb_album_formchinh.Location = new System.Drawing.Point(30, 102);
+            this.cb_album_formchinh.Name = "cb_album_formchinh";
+            this.cb_album_formchinh.Size = new System.Drawing.Size(238, 24);
+            this.cb_album_formchinh.TabIndex = 1;
+            this.cb_album_formchinh.SelectedIndexChanged += new System.EventHandler(this.cb_album_formchinh_SelectedIndexChanged);
             // 
-            // comboBox1
+            // cb_theloai_formchinh
             // 
-            this.comboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.ItemHeight = 21;
-            this.comboBox1.Location = new System.Drawing.Point(30, 45);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(238, 27);
-            this.comboBox1.TabIndex = 1;
+            this.cb_theloai_formchinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_theloai_formchinh.FormattingEnabled = true;
+            this.cb_theloai_formchinh.ItemHeight = 16;
+            this.cb_theloai_formchinh.Location = new System.Drawing.Point(30, 45);
+            this.cb_theloai_formchinh.Name = "cb_theloai_formchinh";
+            this.cb_theloai_formchinh.Size = new System.Drawing.Size(238, 24);
+            this.cb_theloai_formchinh.TabIndex = 1;
+            this.cb_theloai_formchinh.SelectedIndexChanged += new System.EventHandler(this.cb_theloai_formchinh_SelectedIndexChanged);
             // 
             // label22
             // 
@@ -2136,7 +2143,7 @@ namespace GUI
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(141, 274);
+            this.label20.Location = new System.Drawing.Point(144, 274);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(130, 16);
             this.label20.TabIndex = 0;
@@ -2176,7 +2183,7 @@ namespace GUI
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(24, 274);
+            this.label19.Location = new System.Drawing.Point(27, 274);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(106, 16);
             this.label19.TabIndex = 0;
@@ -2591,11 +2598,11 @@ namespace GUI
         private System.Windows.Forms.DataGridView dgv_baihat;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Button btn_hienthitoanbobaihat;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cb_hangsanxuat_formchinh;
+        private System.Windows.Forms.ComboBox cb_tacgia_formchinh;
+        private System.Windows.Forms.ComboBox cb_casi_formchinh;
+        private System.Windows.Forms.ComboBox cb_album_formchinh;
+        private System.Windows.Forms.ComboBox cb_theloai_formchinh;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label18;

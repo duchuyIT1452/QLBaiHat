@@ -30,19 +30,19 @@ namespace GUI
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_tenbaihat = new System.Windows.Forms.TextBox();
+            this.txt_mabaihat = new System.Windows.Forms.TextBox();
+            this.btn_huy = new System.Windows.Forms.Button();
+            this.btn_nhaplai = new System.Windows.Forms.Button();
+            this.btn_them = new System.Windows.Forms.Button();
+            this.txt_loibaihat = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cb_hsx = new System.Windows.Forms.ComboBox();
+            this.cb_tacgia = new System.Windows.Forms.ComboBox();
+            this.cb_casi = new System.Windows.Forms.ComboBox();
+            this.cb_album = new System.Windows.Forms.ComboBox();
+            this.cb_theloai = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -63,12 +63,12 @@ namespace GUI
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txt_tenbaihat);
+            this.panel1.Controls.Add(this.txt_mabaihat);
+            this.panel1.Controls.Add(this.btn_huy);
+            this.panel1.Controls.Add(this.btn_nhaplai);
+            this.panel1.Controls.Add(this.btn_them);
+            this.panel1.Controls.Add(this.txt_loibaihat);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.label3);
@@ -80,59 +80,60 @@ namespace GUI
             this.panel1.Size = new System.Drawing.Size(800, 450);
             this.panel1.TabIndex = 0;
             // 
-            // textBox3
+            // txt_tenbaihat
             // 
-            this.textBox3.Location = new System.Drawing.Point(156, 112);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(308, 27);
-            this.textBox3.TabIndex = 4;
+            this.txt_tenbaihat.Location = new System.Drawing.Point(156, 112);
+            this.txt_tenbaihat.Multiline = true;
+            this.txt_tenbaihat.Name = "txt_tenbaihat";
+            this.txt_tenbaihat.Size = new System.Drawing.Size(308, 27);
+            this.txt_tenbaihat.TabIndex = 4;
             // 
-            // textBox2
+            // txt_mabaihat
             // 
-            this.textBox2.Location = new System.Drawing.Point(156, 61);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(308, 27);
-            this.textBox2.TabIndex = 4;
+            this.txt_mabaihat.Location = new System.Drawing.Point(156, 61);
+            this.txt_mabaihat.Multiline = true;
+            this.txt_mabaihat.Name = "txt_mabaihat";
+            this.txt_mabaihat.Size = new System.Drawing.Size(308, 27);
+            this.txt_mabaihat.TabIndex = 4;
             // 
-            // button3
+            // btn_huy
             // 
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Location = new System.Drawing.Point(333, 380);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(108, 40);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Huỷ thao tác";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_huy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_huy.Location = new System.Drawing.Point(333, 380);
+            this.btn_huy.Name = "btn_huy";
+            this.btn_huy.Size = new System.Drawing.Size(108, 40);
+            this.btn_huy.TabIndex = 3;
+            this.btn_huy.Text = "Huỷ thao tác";
+            this.btn_huy.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btn_nhaplai
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Location = new System.Drawing.Point(195, 380);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(101, 40);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Nhập lại";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_nhaplai.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_nhaplai.Location = new System.Drawing.Point(195, 380);
+            this.btn_nhaplai.Name = "btn_nhaplai";
+            this.btn_nhaplai.Size = new System.Drawing.Size(101, 40);
+            this.btn_nhaplai.TabIndex = 3;
+            this.btn_nhaplai.Text = "Nhập lại";
+            this.btn_nhaplai.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btn_them
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(55, 380);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 40);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Thêm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_them.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_them.Location = new System.Drawing.Point(55, 380);
+            this.btn_them.Name = "btn_them";
+            this.btn_them.Size = new System.Drawing.Size(103, 40);
+            this.btn_them.TabIndex = 3;
+            this.btn_them.Text = "Thêm";
+            this.btn_them.UseVisualStyleBackColor = true;
+            this.btn_them.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // txt_loibaihat
             // 
-            this.textBox1.Location = new System.Drawing.Point(45, 193);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(419, 176);
-            this.textBox1.TabIndex = 2;
+            this.txt_loibaihat.Location = new System.Drawing.Point(45, 193);
+            this.txt_loibaihat.Multiline = true;
+            this.txt_loibaihat.Name = "txt_loibaihat";
+            this.txt_loibaihat.Size = new System.Drawing.Size(419, 176);
+            this.txt_loibaihat.TabIndex = 2;
             // 
             // label4
             // 
@@ -146,11 +147,11 @@ namespace GUI
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox5);
-            this.groupBox1.Controls.Add(this.comboBox4);
-            this.groupBox1.Controls.Add(this.comboBox3);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cb_hsx);
+            this.groupBox1.Controls.Add(this.cb_tacgia);
+            this.groupBox1.Controls.Add(this.cb_casi);
+            this.groupBox1.Controls.Add(this.cb_album);
+            this.groupBox1.Controls.Add(this.cb_theloai);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label12);
@@ -167,55 +168,55 @@ namespace GUI
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
-            // comboBox5
+            // cb_hsx
             // 
-            this.comboBox5.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.ItemHeight = 21;
-            this.comboBox5.Location = new System.Drawing.Point(36, 344);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(221, 27);
-            this.comboBox5.TabIndex = 1;
+            this.cb_hsx.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_hsx.FormattingEnabled = true;
+            this.cb_hsx.ItemHeight = 16;
+            this.cb_hsx.Location = new System.Drawing.Point(36, 344);
+            this.cb_hsx.Name = "cb_hsx";
+            this.cb_hsx.Size = new System.Drawing.Size(221, 24);
+            this.cb_hsx.TabIndex = 1;
             // 
-            // comboBox4
+            // cb_tacgia
             // 
-            this.comboBox4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.ItemHeight = 21;
-            this.comboBox4.Location = new System.Drawing.Point(36, 277);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(221, 27);
-            this.comboBox4.TabIndex = 1;
+            this.cb_tacgia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_tacgia.FormattingEnabled = true;
+            this.cb_tacgia.ItemHeight = 16;
+            this.cb_tacgia.Location = new System.Drawing.Point(36, 277);
+            this.cb_tacgia.Name = "cb_tacgia";
+            this.cb_tacgia.Size = new System.Drawing.Size(221, 24);
+            this.cb_tacgia.TabIndex = 1;
             // 
-            // comboBox3
+            // cb_casi
             // 
-            this.comboBox3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.ItemHeight = 21;
-            this.comboBox3.Location = new System.Drawing.Point(36, 211);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(221, 27);
-            this.comboBox3.TabIndex = 1;
+            this.cb_casi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_casi.FormattingEnabled = true;
+            this.cb_casi.ItemHeight = 16;
+            this.cb_casi.Location = new System.Drawing.Point(36, 211);
+            this.cb_casi.Name = "cb_casi";
+            this.cb_casi.Size = new System.Drawing.Size(221, 24);
+            this.cb_casi.TabIndex = 1;
             // 
-            // comboBox2
+            // cb_album
             // 
-            this.comboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.ItemHeight = 21;
-            this.comboBox2.Location = new System.Drawing.Point(36, 149);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(221, 27);
-            this.comboBox2.TabIndex = 1;
+            this.cb_album.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_album.FormattingEnabled = true;
+            this.cb_album.ItemHeight = 16;
+            this.cb_album.Location = new System.Drawing.Point(36, 149);
+            this.cb_album.Name = "cb_album";
+            this.cb_album.Size = new System.Drawing.Size(221, 24);
+            this.cb_album.TabIndex = 1;
             // 
-            // comboBox1
+            // cb_theloai
             // 
-            this.comboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.ItemHeight = 21;
-            this.comboBox1.Location = new System.Drawing.Point(36, 79);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(221, 27);
-            this.comboBox1.TabIndex = 1;
+            this.cb_theloai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_theloai.FormattingEnabled = true;
+            this.cb_theloai.ItemHeight = 16;
+            this.cb_theloai.Location = new System.Drawing.Point(36, 79);
+            this.cb_theloai.Name = "cb_theloai";
+            this.cb_theloai.Size = new System.Drawing.Size(221, 24);
+            this.cb_theloai.TabIndex = 1;
             // 
             // label14
             // 
@@ -356,6 +357,7 @@ namespace GUI
             this.Controls.Add(this.panel1);
             this.Name = "fThem_BaiHat";
             this.Text = "Thêm bài hát";
+            this.Load += new System.EventHandler(this.fThem_BaiHat_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -372,16 +374,16 @@ namespace GUI
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btn_huy;
+        private System.Windows.Forms.Button btn_nhaplai;
+        private System.Windows.Forms.Button btn_them;
+        private System.Windows.Forms.TextBox txt_loibaihat;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cb_hsx;
+        private System.Windows.Forms.ComboBox cb_tacgia;
+        private System.Windows.Forms.ComboBox cb_casi;
+        private System.Windows.Forms.ComboBox cb_album;
+        private System.Windows.Forms.ComboBox cb_theloai;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
@@ -391,7 +393,7 @@ namespace GUI
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_tenbaihat;
+        private System.Windows.Forms.TextBox txt_mabaihat;
     }
 }

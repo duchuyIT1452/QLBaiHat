@@ -101,6 +101,13 @@ namespace DATA
             dt = conDB.GetTable(sql);
             return dt;
         }
+        public DataTable SearchByAllKey(String maTheLoai, String maAlbum, String maCaSi, String maTacGia, String maHangSanXuat)
+        {
+            String sql = "Select * from BaiHat Where " + maTheLoai + maAlbum + maCaSi + maTacGia + maHangSanXuat;
+            DataTable dt = new DataTable();
+            dt = conDB.GetTable(sql);
+            return dt;
+        }
         public void UpdateBaiHat(String maBaiHat, String tenBaiHat, String maTheLoai, String maAlbum, String maCaSi, String maTacGia, String maHSX, String loiBaiHat)
         {
             String sql = "Update BaiHat Set ma_BaiHat='" + maBaiHat + "',ten_BaiHat='" + tenBaiHat + "', ma_theloai='" + maTheLoai + "',ma_album='" + maAlbum + "',ma_casi='" + maCaSi + "',ma_tacgia='" + maTacGia + "',ma_hangsanxuat='" + maHSX + "',loi_BaiHat='" + loiBaiHat + "'";
