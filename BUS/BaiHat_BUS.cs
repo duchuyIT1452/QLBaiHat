@@ -106,9 +106,9 @@ namespace BUS
         {
             BaiHat.DeleteBaiHat(maBaiHat);
         }
-        public void capNhatBaiHat()
+        public void capNhatBaiHat(String maBaiHat, String tenBaiHat, String maTheLoai, String maAlbum, String maCaSi, String maTacGia, String maHSX, String loiBaiHat)
         {
-            BaiHat.UpdateBaiHat(maBaiHat, tenBaiHat, maTheLoai, maAlbum, maCaSi, maTacGia, maHangSanXuat, loiBaiHat);
+            BaiHat.UpdateBaiHat(maBaiHat, tenBaiHat, maTheLoai, maAlbum, maCaSi, maTacGia, maHSX, loiBaiHat);
         }
         public DataTable listBaiHatTheoAlbum(String maAlbum)
         {

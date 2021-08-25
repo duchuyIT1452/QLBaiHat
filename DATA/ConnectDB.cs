@@ -26,7 +26,6 @@ namespace DATA
         }
         public void ExecuteNonQuery(String sql)
         {
-            DataTable dt = new DataTable();
             SqlConnection conn = getConnect();
             conn.Open();
             SqlCommand cmd = new SqlCommand(sql, conn);

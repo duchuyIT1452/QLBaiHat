@@ -47,7 +47,7 @@ namespace GUI
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_loibaihat = new System.Windows.Forms.TextBox();
-            this.btn_them = new System.Windows.Forms.Button();
+            this.btn_sua = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_nhaplai = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -247,18 +247,20 @@ namespace GUI
             this.txt_loibaihat.Location = new System.Drawing.Point(46, 195);
             this.txt_loibaihat.Multiline = true;
             this.txt_loibaihat.Name = "txt_loibaihat";
+            this.txt_loibaihat.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txt_loibaihat.Size = new System.Drawing.Size(405, 194);
             this.txt_loibaihat.TabIndex = 2;
             // 
-            // btn_them
+            // btn_sua
             // 
-            this.btn_them.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_them.Location = new System.Drawing.Point(46, 401);
-            this.btn_them.Name = "btn_them";
-            this.btn_them.Size = new System.Drawing.Size(112, 37);
-            this.btn_them.TabIndex = 3;
-            this.btn_them.Text = "Thêm";
-            this.btn_them.UseVisualStyleBackColor = true;
+            this.btn_sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_sua.Location = new System.Drawing.Point(46, 401);
+            this.btn_sua.Name = "btn_sua";
+            this.btn_sua.Size = new System.Drawing.Size(112, 37);
+            this.btn_sua.TabIndex = 3;
+            this.btn_sua.Text = "Sửa";
+            this.btn_sua.UseVisualStyleBackColor = true;
+            this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
             // 
             // label2
             // 
@@ -328,7 +330,6 @@ namespace GUI
             this.btn_huy.TabIndex = 3;
             this.btn_huy.Text = "Huỷ thao tác";
             this.btn_huy.UseVisualStyleBackColor = true;
-            this.btn_huy.Click += new System.EventHandler(this.button2_Click);
             // 
             // fCapNhat_BaiHat
             // 
@@ -338,7 +339,7 @@ namespace GUI
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btn_huy);
             this.Controls.Add(this.btn_nhaplai);
-            this.Controls.Add(this.btn_them);
+            this.Controls.Add(this.btn_sua);
             this.Controls.Add(this.txt_mabaihat);
             this.Controls.Add(this.txt_tenbaihat);
             this.Controls.Add(this.txt_loibaihat);
@@ -362,7 +363,7 @@ namespace GUI
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox cb_theloai;
         private System.Windows.Forms.TextBox txt_loibaihat;
-        private System.Windows.Forms.Button btn_them;
+        private System.Windows.Forms.Button btn_sua;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_nhaplai;
         private System.Windows.Forms.Label label3;

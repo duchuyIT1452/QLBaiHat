@@ -17,7 +17,7 @@ namespace GUI
     {
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent();     
         }
 
         #region menu
@@ -86,6 +86,7 @@ namespace GUI
                     dgv_baihat_home.Rows[dem].DefaultCellStyle.BackColor = Color.PaleTurquoise;
                 dem++;
             }
+            dgv_baihat_home.ClearSelection();
         }
         #endregion
 
@@ -142,6 +143,7 @@ namespace GUI
                     dgv_baihat.Rows[dem].DefaultCellStyle.BackColor = Color.PaleTurquoise;
                 dem++;
             }
+            dgv_baihat.ClearSelection();
         }
         #endregion
 
@@ -155,9 +157,11 @@ namespace GUI
             int dem = 0;
             foreach (DataRow row in dt.Rows)
             {
-                dgv_Album.Rows[dem].Cells[0].Value = (dem + 1);
+                if (dem % 2 == 0)
+                    dgv_Album.Rows[dem].DefaultCellStyle.BackColor = Color.PaleTurquoise;
                 dem++;
             }
+            dgv_Album.ClearSelection();
         }
         #endregion
 
@@ -165,16 +169,15 @@ namespace GUI
         private void load_TheLoai()
         {
             TheLoai_BUS bus = new TheLoai_BUS();
-            DataTable dt = new DataTable();
-            dt = bus.getTheLoai();
-            dgv_theloai.DataSource = dt;
+            dgv_theloai.DataSource = bus.getTheLoai();
             int dem = 0;
-            foreach (DataRow row in dt.Rows)
+            foreach (DataRow row in bus.getTheLoai().Rows)
             {
-                dgv_theloai.Rows[dem].Cells[0].Value = (dem + 1);
+                if (dem % 2 == 0)
+                    dgv_theloai.Rows[dem].DefaultCellStyle.BackColor = Color.PaleTurquoise;
                 dem++;
             }
-
+            dgv_theloai.ClearSelection();
         }
         #endregion
 
@@ -182,17 +185,31 @@ namespace GUI
         private void load_Tacgia()
         {
             TacGia_BUS dtTacGia = new TacGia_BUS();
-            DataTable dt = new DataTable();
-            dt = dtTacGia.getAllTacGia();
-            dgv_dsNhacSi.DataSource = dt;
+            dgv_dsNhacSi.DataSource = dtTacGia.getAllTacGia();
+            int dem = 0;
+            foreach (DataRow row in dtTacGia.getAllTacGia().Rows)
+            {
+                if (dem % 2 == 0)
+                    dgv_dsNhacSi.Rows[dem].DefaultCellStyle.BackColor = Color.PaleTurquoise;
+                dem++;
+            }
+            dgv_dsNhacSi.ClearSelection();
         }
-        
+        #endregion
+
+        #region load hsx
         private void load_Hangsx()
         {
             HangSanXuat_BUS dtHangsx = new HangSanXuat_BUS();
-            DataTable dt = new DataTable();
-            dt = dtHangsx.getAllHangSX();
-            dgv_dsHangsx.DataSource = dt;
+            dgv_dsHangsx.DataSource = dtHangsx.getAllHangSX();
+            int dem = 0;
+            foreach (DataRow row in dtHangsx.getAllHangSX().Rows)
+            {
+                if (dem % 2 == 0)
+                    dgv_dsHangsx.Rows[dem].DefaultCellStyle.BackColor = Color.PaleTurquoise;
+                dem++;
+            }
+            dgv_dsHangsx.ClearSelection();
         }
         #endregion
 
@@ -208,6 +225,7 @@ namespace GUI
                     dgv_dsCaSi.Rows[dem].DefaultCellStyle.BackColor = Color.PaleTurquoise;
                 dem++;
             }
+            dgv_dsCaSi.ClearSelection();
         }
         #endregion
 
@@ -230,10 +248,9 @@ namespace GUI
         {
             int d = e.RowIndex;
             BaiHat_BUS bus = new BaiHat_BUS();
-            DataTable dt = new DataTable();
-            String ma = dgv_Album.Rows[d].Cells[1].Value.ToString();
-            dt = bus.listBaiHatTheoAlbum(ma);
-            dgv_AlbumBaihat.DataSource = dt;
+            String ma = dgv_Album.Rows[d].Cells[0].Value.ToString();
+            dgv_AlbumBaihat.DataSource = bus.listBaiHatTheoAlbum(ma);
+            dgv_AlbumBaihat.ClearSelection();
         }
         #endregion
 
@@ -242,10 +259,9 @@ namespace GUI
         {
             int d = e.RowIndex;
             BaiHat_BUS bus = new BaiHat_BUS();
-            DataTable dt = new DataTable();
-            String ma = dgv_theloai.Rows[d].Cells[1].Value.ToString();
-            dt = bus.listBaiHatTheoTheLoai(ma);
-            dgv_TheloaiBaihat.DataSource = dt;
+            String ma = dgv_theloai.Rows[d].Cells[0].Value.ToString();
+            dgv_TheloaiBaihat.DataSource = bus.listBaiHatTheoTheLoai(ma);
+            dgv_TheloaiBaihat.ClearSelection();
         }
         #endregion
 
@@ -262,6 +278,7 @@ namespace GUI
                 dgv_Baihat_nhacsi.DataSource = dt;
                 txt_tentacgia.Text = dgv_dsNhacSi.Rows[d].Cells[1].Value.ToString();
                 txt_thongtintacgia.Text = dgv_dsNhacSi.Rows[d].Cells[2].Value.ToString();
+                dgv_Baihat_nhacsi.ClearSelection();
             }
 
         }
@@ -280,6 +297,7 @@ namespace GUI
                 dgv_Baihat_phathanh.DataSource = dt;
                 txt_tenhangsanxuat.Text = dgv_dsNhacSi.Rows[d].Cells[1].Value.ToString();
                 txt_thongtinhangsanxuat.Text = dgv_dsNhacSi.Rows[d].Cells[2].Value.ToString();
+                dgv_Baihat_phathanh.ClearSelection();
             }
         }
         #endregion
@@ -297,6 +315,7 @@ namespace GUI
                 dgv_BaiHatTheoCaSi.DataSource = dt;
                 txt_tencasi.Text = dgv_dsCaSi.Rows[d].Cells[1].Value.ToString();
                 txt_thongtincasi.Text = dgv_dsCaSi.Rows[d].Cells[2].Value.ToString();
+                dgv_BaiHatTheoCaSi.ClearSelection();
             }
         }
         #endregion
@@ -652,6 +671,7 @@ namespace GUI
         }
         #endregion
 
+        #region button xoá bài hát click
         private void btn_xoabaihat_Click(object sender, EventArgs e)
         {
             BaiHat_BUS bus = new BaiHat_BUS();
@@ -670,21 +690,41 @@ namespace GUI
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
 
         private void btn_suabaihat_Click(object sender, EventArgs e)
         {
-            //string maBaiHat = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[0].Value.ToString();
-            //string maTheLoai = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[3].Value.ToString();
-            //string maAlbum = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[4].Value.ToString();
-            //string maCaSi = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[5].Value.ToString();
-            //string maTacGia = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[6].Value.ToString();
-            //string maHangSanXuat = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[7].Value.ToString();
+            string maBaiHat = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[0].Value.ToString();
+            string tenBaiHat = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[1].Value.ToString();
+            string loiBaiHat = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[7].Value.ToString();
+            string maTheLoai = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[2].Value.ToString();
+            string maAlbum = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[3].Value.ToString();
+            string maCaSi = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[4].Value.ToString();
+            string maTacGia = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[5].Value.ToString();
+            string maHangSanXuat = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[6].Value.ToString();
 
-            //fCapNhat_BaiHat.
+            fCapNhat_BaiHat.maBaiHat = maBaiHat;
+            fCapNhat_BaiHat.tenBaiHat = tenBaiHat;
+            fCapNhat_BaiHat.loiBaiHat = loiBaiHat;
+            fCapNhat_BaiHat.maTheLoai = maTheLoai;
+            fCapNhat_BaiHat.maAlbum = maAlbum;
+            fCapNhat_BaiHat.maCaSi = maCaSi;
+            fCapNhat_BaiHat.maTacGia = maTacGia;
+            fCapNhat_BaiHat.maHangSanXuat = maHangSanXuat;
+
+            this.Visible = false;
+            fCapNhat_BaiHat f = new fCapNhat_BaiHat();
+            f.ShowDialog();
+            this.Visible = true;
+            load_BaiHat();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
