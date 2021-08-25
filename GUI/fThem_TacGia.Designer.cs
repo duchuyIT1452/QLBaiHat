@@ -54,15 +54,16 @@
             // txt_matacgia
             // 
             this.txt_matacgia.Location = new System.Drawing.Point(121, 62);
+            this.txt_matacgia.Multiline = true;
             this.txt_matacgia.Name = "txt_matacgia";
-            this.txt_matacgia.Size = new System.Drawing.Size(179, 20);
+            this.txt_matacgia.Size = new System.Drawing.Size(243, 27);
             this.txt_matacgia.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(24, 69);
+            this.label2.Location = new System.Drawing.Point(24, 62);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 16);
             this.label2.TabIndex = 1;
@@ -79,8 +80,9 @@
             // txt_tentacgia
             // 
             this.txt_tentacgia.Location = new System.Drawing.Point(121, 110);
+            this.txt_tentacgia.Multiline = true;
             this.txt_tentacgia.Name = "txt_tentacgia";
-            this.txt_tentacgia.Size = new System.Drawing.Size(179, 20);
+            this.txt_tentacgia.Size = new System.Drawing.Size(243, 27);
             this.txt_tentacgia.TabIndex = 2;
             // 
             // txt_thongtintacgia
@@ -88,7 +90,7 @@
             this.txt_thongtintacgia.Location = new System.Drawing.Point(27, 187);
             this.txt_thongtintacgia.Multiline = true;
             this.txt_thongtintacgia.Name = "txt_thongtintacgia";
-            this.txt_thongtintacgia.Size = new System.Drawing.Size(327, 132);
+            this.txt_thongtintacgia.Size = new System.Drawing.Size(337, 132);
             this.txt_thongtintacgia.TabIndex = 3;
             this.txt_thongtintacgia.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
@@ -96,7 +98,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(118, 157);
+            this.label4.Location = new System.Drawing.Point(27, 168);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(104, 16);
             this.label4.TabIndex = 1;
@@ -106,7 +108,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(24, 114);
+            this.label5.Location = new System.Drawing.Point(24, 108);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 16);
             this.label5.TabIndex = 1;
@@ -149,6 +151,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(400, 381);
             this.Controls.Add(this.btn_huy);
             this.Controls.Add(this.btn_nhaplai);
@@ -162,7 +165,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_them);
             this.Name = "fThem_Tacgia";
-            this.Text = "fThem_Tacgia";
+            this.Text = "Thêm tác giả";
             this.ResumeLayout(false);
             this.PerformLayout();
 

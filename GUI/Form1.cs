@@ -15,8 +15,6 @@ namespace GUI
 {
     public partial class Form1 : Form
     {
-        string connString = @"Data Source=DESKTOP-CMM6T7Q;Initial Catalog=DBBaiHat;Integrated Security=True";
-
         public Form1()
         {
             InitializeComponent();
@@ -63,6 +61,8 @@ namespace GUI
             Close();
         }
         #endregion
+
+        #region form1 load
         private void Form1_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -72,7 +72,9 @@ namespace GUI
             load_Tacgia();
             load_Hangsx();
         }
+        #endregion
 
+        #region load bài hát home
         private void LoadBaiHat_Home()
         {
             BaiHat_BUS bus = new BaiHat_BUS();
@@ -88,7 +90,9 @@ namespace GUI
                 dem++;
             }
         }
-        
+        #endregion
+
+        #region load album
         private void load_Album()
         {
             Album_BUS bus = new Album_BUS();
@@ -102,8 +106,9 @@ namespace GUI
                 dem++;
             }
         }
+        #endregion
 
-
+        #region load thể loại
         private void load_TheLoai()
         {
             TheLoai_BUS bus = new TheLoai_BUS();
@@ -118,6 +123,7 @@ namespace GUI
             }
 
         }
+        #endregion
 
         #region Load tac giả
         private void load_Tacgia()
@@ -136,6 +142,8 @@ namespace GUI
             dgv_dsHangsx.DataSource = dt;
         }
         #endregion
+
+        #region load ca sĩ
         private void load_CaSi()
         {
             CaSi_BUS dtCaSi = new CaSi_BUS();
@@ -147,6 +155,7 @@ namespace GUI
                 dem++;
             }
         }
+        #endregion
 
         private void tabControl_formChinh_MouseClick(object sender, MouseEventArgs e)
         {
@@ -189,6 +198,7 @@ namespace GUI
             }
         }
 
+        #region dgv album cellclick
         private void dgv_Album_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int d = e.RowIndex;
@@ -198,6 +208,7 @@ namespace GUI
             dt = bus.listBaiHatTheoAlbum(ma);
             dgv_AlbumBaihat.DataSource = dt;
         }
+        #endregion
 
         private void bt_dong_Click(object sender, EventArgs e)
         {
@@ -205,6 +216,7 @@ namespace GUI
                 this.Close();
         }
 
+        #region dgv thể loại cellclick
         private void dgv_theloai_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int d = e.RowIndex;
@@ -214,7 +226,9 @@ namespace GUI
             dt = bus.listBaiHatTheoTheLoai(ma);
             dgv_TheloaiBaihat.DataSource = dt;
         }
+        #endregion
 
+        #region button xoá thể loại click
         private void bt_xoaTheLoai_Click(object sender, EventArgs e)
         {
             TheLoai_BUS bus = new TheLoai_BUS();
@@ -237,7 +251,9 @@ namespace GUI
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
 
+        #region button thêm thể loại
         private void bt_themTheLoai_Click(object sender, EventArgs e)
         {
             this.Visible = false;
@@ -246,6 +262,7 @@ namespace GUI
             this.Visible = true;
             load_TheLoai();
         }
+        #endregion
 
         private void dgv_baihat_home_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
@@ -263,6 +280,7 @@ namespace GUI
             Close();
         }
 
+        #region button tìm kiếm click
         private void btn_timkiem_Click(object sender, EventArgs e)
         {
             Album_BUS bus = new Album_BUS();
@@ -280,6 +298,7 @@ namespace GUI
                 DialogResult dialogResult = MessageBox.Show("Không có tên album trong danh sách!", "Xác nhận", MessageBoxButtons.OK);
             }
         }
+        #endregion
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
@@ -326,8 +345,8 @@ namespace GUI
         {
 
         }
-        
-        // Tác giả
+
+        #region button thêm tác giả click
         private void btn_themNS_Click(object sender, EventArgs e)
         {
             this.Visible = false;
@@ -336,6 +355,8 @@ namespace GUI
             this.Visible = true;
             load_Tacgia();
         }
+        #endregion
+
         #region xoá nhạc sĩ
         private void btn_xoaNS_Click(object sender, EventArgs e)
         {
@@ -371,6 +392,7 @@ namespace GUI
         }
         #endregion
 
+        #region nhạc sĩ cellclick
         private void dgv_dsNhacSi_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -386,6 +408,7 @@ namespace GUI
             }
             
         }
+        #endregion
 
         #region dataGridView hãng sản xuất cellclick
         private void dgv_dsHangsx_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -404,6 +427,7 @@ namespace GUI
         }
         #endregion
 
+        #region ca sĩ cellclick
         private void dgv_dsCaSi_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -418,5 +442,6 @@ namespace GUI
                 txt_thongtincasi.Text = dgv_dsCaSi.Rows[d].Cells[3].Value.ToString();
             }
         }
+        #endregion
     }
 }

@@ -43,10 +43,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(157, 9);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(138, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(227, 19);
+            this.label1.Size = new System.Drawing.Size(245, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "THÊM HÃNG SẢN XUẤT MỚI";
             // 
@@ -73,24 +73,26 @@
             // txt_mahangsx
             // 
             this.txt_mahangsx.Location = new System.Drawing.Point(184, 55);
+            this.txt_mahangsx.Multiline = true;
             this.txt_mahangsx.Name = "txt_mahangsx";
-            this.txt_mahangsx.Size = new System.Drawing.Size(273, 20);
+            this.txt_mahangsx.Size = new System.Drawing.Size(250, 27);
             this.txt_mahangsx.TabIndex = 2;
             // 
             // txt_tenhangsx
             // 
             this.txt_tenhangsx.Location = new System.Drawing.Point(184, 98);
+            this.txt_tenhangsx.Multiline = true;
             this.txt_tenhangsx.Name = "txt_tenhangsx";
-            this.txt_tenhangsx.Size = new System.Drawing.Size(273, 20);
+            this.txt_tenhangsx.Size = new System.Drawing.Size(250, 27);
             this.txt_tenhangsx.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(158, 153);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(29, 174);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(184, 18);
+            this.label4.Size = new System.Drawing.Size(155, 16);
             this.label4.TabIndex = 1;
             this.label4.Text = "Thông tin Hãng Sản Xuất";
             // 
@@ -98,7 +100,7 @@
             // 
             this.txt_thongtin.Location = new System.Drawing.Point(32, 195);
             this.txt_thongtin.Name = "txt_thongtin";
-            this.txt_thongtin.Size = new System.Drawing.Size(425, 189);
+            this.txt_thongtin.Size = new System.Drawing.Size(402, 189);
             this.txt_thongtin.TabIndex = 3;
             this.txt_thongtin.Text = "";
             // 
@@ -116,7 +118,7 @@
             // btn_nhaplai
             // 
             this.btn_nhaplai.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_nhaplai.Location = new System.Drawing.Point(205, 418);
+            this.btn_nhaplai.Location = new System.Drawing.Point(184, 418);
             this.btn_nhaplai.Name = "btn_nhaplai";
             this.btn_nhaplai.Size = new System.Drawing.Size(95, 34);
             this.btn_nhaplai.TabIndex = 4;
@@ -127,7 +129,7 @@
             // btn_thoat
             // 
             this.btn_thoat.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_thoat.Location = new System.Drawing.Point(363, 418);
+            this.btn_thoat.Location = new System.Drawing.Point(340, 418);
             this.btn_thoat.Name = "btn_thoat";
             this.btn_thoat.Size = new System.Drawing.Size(94, 34);
             this.btn_thoat.TabIndex = 4;
@@ -139,7 +141,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(488, 468);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(468, 468);
             this.Controls.Add(this.btn_thoat);
             this.Controls.Add(this.btn_nhaplai);
             this.Controls.Add(this.btn_them);
