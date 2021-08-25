@@ -297,12 +297,13 @@ namespace GUI
         #endregion
 
         //button click
-
+        #region Thoát
         private void bt_dong_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("BẠN CHẮC CHẮN MUỐN ĐÓNG ỨNG DỤNG ?", "THOÁT CHƯƠNG TRÌNH", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 this.Close();
         }
+        #endregion
 
         #region button xoá thể loại click
         private void bt_xoaTheLoai_Click(object sender, EventArgs e)
@@ -368,6 +369,7 @@ namespace GUI
         #endregion
 
         // HSX
+        #region Thêm HSX
         private void button1_Click(object sender, EventArgs e)
         {
             this.Visible = false;
@@ -376,6 +378,8 @@ namespace GUI
             this.Visible = true;
             load_Hangsx();
         }
+        #endregion
+
         #region xoá hãng sản xuất
         private void btn_xoaHSX_Click(object sender, EventArgs e)
         {
@@ -403,10 +407,31 @@ namespace GUI
             }
         }
         #endregion
+
+        #region Sửa HSX
         private void btn_suaHSX_Click(object sender, EventArgs e)
         {
-
+            this.Visible = false;
+            fCapnhat_HangSX f = new fCapnhat_HangSX();
+            //f.maH = dgv_dsHangsx.SelectedColumns.ToString();
+            f.maH = dgv_dsHangsx.Rows[0].Cells[1].Value.ToString();
+            f.tenH = txt_tenhangsanxuat.Text;
+            if (txt_thongtinhangsanxuat.Text.Contains("Chưa có thông tin hãng sản xuất"))
+            {
+                f.thongtinH = "";
+            }
+            else
+                f.thongtinH = txt_thongtinhangsanxuat.Text;
+            f.ShowDialog();
+            if (f.DialogResult == DialogResult.OK)
+            {
+                dgv_dsHangsx.DataSource = null;
+                load_Hangsx();
+            }
+            this.Visible = true;
         }
+        #endregion  
+
 
         #region button thêm tác giả click
         private void btn_themNS_Click(object sender, EventArgs e)
@@ -450,7 +475,23 @@ namespace GUI
         #region sửa nhạc sĩ
         private void btn_suaNS_Click(object sender, EventArgs e)
         {
-
+            this.Visible = false;
+            fCapnhat_Tacgia capnhat = new fCapnhat_Tacgia();
+            capnhat.ma = dgv_dsNhacSi.SelectedRows.ToString();
+            capnhat.ten = txt_tentacgia.Text;
+            if (txt_thongtintacgia.Text.Contains("Chưa có thông tin tác giả"))
+            {
+                capnhat.thongtin = "";
+            }
+            else
+                capnhat.thongtin = txt_thongtintacgia.Text;
+            capnhat.ShowDialog();
+            if (capnhat.DialogResult == DialogResult.OK)
+            {
+                dgv_dsNhacSi.DataSource = null;
+                load_Tacgia();
+            }
+            this.Visible = true;
         }
         #endregion
 

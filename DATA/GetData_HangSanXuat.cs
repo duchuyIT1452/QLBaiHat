@@ -34,10 +34,11 @@ namespace DATA
             conDB.ExecuteNonQuery(sql);
         }
 
-        public void Update_HangSX(string ma_hangsanxuat, string ten_hangsanxuat, string thongtin_hangsanxuat)
+        public int Update_HangSX(string ma_hangsanxuat, string ten_hangsanxuat, string thongtin_hangsanxuat)
         {
-            string sql = "update HANGSANXUAT set ma_hangsanxuat = '" + ma_hangsanxuat + "', ten_hangsanxuat = N'" + ten_hangsanxuat + "', thongtin_hangsanxuat = N'" + thongtin_hangsanxuat + "' ";
-            conDB.ExecuteNonQuery(sql);
+            //string sql = "update HANGSANXUAT set ma_hangsanxuat = '" + ma_hangsanxuat + "', ten_hangsanxuat = N'" + ten_hangsanxuat + "', thongtin_hangsanxuat = N'" + thongtin_hangsanxuat + "' ";
+            //conDB.ExecuteNonQuery(sql);
+            return conDB.executeNonQuery("update HANGSANXUAT set ma_hangsanxuat = '" + ma_hangsanxuat + "', ten_hangsanxuat = N'" + ten_hangsanxuat + "', thongtin_hangsanxuat = N'" + thongtin_hangsanxuat + "' ");
         }
 
         public DataTable SearchByCode_HangSX(string ma_hangsanxuat)

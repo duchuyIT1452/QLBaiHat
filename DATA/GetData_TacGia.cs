@@ -34,10 +34,10 @@ namespace DATA
             conDB.ExecuteNonQuery(sql);
         }
 
-        public void Update_TacGia(string ma_tacgia, string ten_tacgia, string thongtin_tacgia)
+        public int Update_TacGia(string ma_tacgia, string ten_tacgia, string thongtin_tacgia)
         {
-            string sql = "update TACGIA set ma_tacgia = '" + ma_tacgia + "', ten_tacgia = N'" + ten_tacgia + "', thongtin_tacgia = N'" + thongtin_tacgia + "' ";
-            conDB.ExecuteNonQuery(sql);
+            
+            return conDB.executeNonQuery("update TACGIA set ma_tacgia = '" + ma_tacgia + "', ten_tacgia = N'" + ten_tacgia + "', thongtin_tacgia = N'" + thongtin_tacgia + "' ");
         }
 
         public DataTable SearchByCode_TacGia(string ma_tacgia)

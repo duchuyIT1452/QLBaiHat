@@ -76,7 +76,7 @@
             this.txt_mahangsx.Multiline = true;
             this.txt_mahangsx.Name = "txt_mahangsx";
             this.txt_mahangsx.Size = new System.Drawing.Size(250, 27);
-            this.txt_mahangsx.TabIndex = 2;
+            this.txt_mahangsx.TabIndex = 1;
             // 
             // txt_tenhangsx
             // 
@@ -121,7 +121,7 @@
             this.btn_nhaplai.Location = new System.Drawing.Point(184, 418);
             this.btn_nhaplai.Name = "btn_nhaplai";
             this.btn_nhaplai.Size = new System.Drawing.Size(95, 34);
-            this.btn_nhaplai.TabIndex = 4;
+            this.btn_nhaplai.TabIndex = 5;
             this.btn_nhaplai.Text = "Nhập lại";
             this.btn_nhaplai.UseVisualStyleBackColor = true;
             this.btn_nhaplai.Click += new System.EventHandler(this.btn_nhaplai_Click);
@@ -132,7 +132,7 @@
             this.btn_thoat.Location = new System.Drawing.Point(340, 418);
             this.btn_thoat.Name = "btn_thoat";
             this.btn_thoat.Size = new System.Drawing.Size(94, 34);
-            this.btn_thoat.TabIndex = 4;
+            this.btn_thoat.TabIndex = 6;
             this.btn_thoat.Text = "Hủy thêm";
             this.btn_thoat.UseVisualStyleBackColor = true;
             this.btn_thoat.Click += new System.EventHandler(this.btn_thoat_Click);

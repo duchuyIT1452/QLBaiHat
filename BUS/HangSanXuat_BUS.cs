@@ -122,9 +122,9 @@ namespace BUS
             hangsx.Delete_HangSX(mahangsanxuat);
 
         }
-        public void Update_HangSX()
+        public int Update_HangSX()
         {
-            hangsx.Update_HangSX(mahangsanxuat, tenhangsanxuat, thongtinhangsanxuat);
+            return hangsx.Update_HangSX(mahangsanxuat, tenhangsanxuat, thongtinhangsanxuat);
         }
         #endregion
 

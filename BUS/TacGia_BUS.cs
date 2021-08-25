@@ -108,9 +108,9 @@ namespace BUS
         {
             tacgia.Delete_TacGia(matacgia);
         }
-        public void Update_TacGia()
+        public int Update_TacGia()
         {
-            tacgia.Update_TacGia(matacgia, tentacgia, thongtintacgia);
+            return tacgia.Update_TacGia(matacgia, tentacgia, thongtintacgia);
         }
         public DataTable getAllTacGia()
         {
