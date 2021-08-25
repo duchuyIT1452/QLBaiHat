@@ -55,20 +55,67 @@ namespace GUI
             cb_hsx.DisplayMember = "ten_hangsanxuat";
             cb_hsx.ValueMember = "ma_hangsanxuat";
             cb_hsx.SelectedIndex = -1;
+
+            txt_loibaihat.Text = "";
+            txt_mabaihat.Text = "";
+            txt_tenbaihat.Text = "";
         }
         #endregion
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_them_Click(object sender, EventArgs e)
         {
             String maBaiHat, tenBaiHat, maTheLoai, maAlbum, maCaSi, maTacGia, maHSX, loiBaiHat;
-            maBaiHat = txt_mabaihat.Text;
-            tenBaiHat = txt_tenbaihat.Text;
-            loiBaiHat = txt_loibaihat.Text;
-            maTheLoai = cb_theloai.SelectedValue.ToString();
-            maAlbum = cb_album.SelectedValue.ToString();
-            maCaSi = cb_casi.SelectedValue.ToString();
-            maTacGia = cb_tacgia.SelectedValue.ToString();
-            maHSX = cb_hsx.SelectedValue.ToString();
+            
+
+            BaiHat_BUS bus = new BaiHat_BUS();
+            try
+            {
+                //Kiểm tra xem thông tin đã đẩy đủ chưa
+                if (txt_mabaihat.Text == "" || txt_tenbaihat.Text == "" || txt_loibaihat.Text == "" || cb_theloai.SelectedIndex == -1 || cb_tacgia.SelectedIndex == -1 || cb_casi.SelectedIndex == -1 || cb_tacgia.SelectedIndex == -1 || cb_hsx.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Chưa cung cấp đầy đủ thông tin!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                maBaiHat = txt_mabaihat.Text;
+                tenBaiHat = txt_tenbaihat.Text;
+                loiBaiHat = txt_loibaihat.Text;
+                maTheLoai = cb_theloai.SelectedValue.ToString();
+                maAlbum = cb_album.SelectedValue.ToString();
+                maCaSi = cb_casi.SelectedValue.ToString();
+                maTacGia = cb_tacgia.SelectedValue.ToString();
+                maHSX = cb_hsx.SelectedValue.ToString();
+
+                //Kiểm tra mã nhập vào có bị trùng hay không
+                int dem = 0;
+                foreach (DataRow row in bus.getBaiHatByMaBaiHat(maBaiHat).Rows)
+                {
+                    dem++;
+                }
+                if (dem > 0)
+                {
+                    MessageBox.Show("Trùng mã!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                bus.themBaiHat(maBaiHat, tenBaiHat, maTheLoai, maAlbum, maCaSi, maTacGia, maHSX, loiBaiHat);
+                MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                fThem_BaiHat_Load(sender, e);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn_nhaplai_Click(object sender, EventArgs e)
+        {
+            fThem_BaiHat_Load(sender, e);
+        }
+
+        private void btn_huy_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

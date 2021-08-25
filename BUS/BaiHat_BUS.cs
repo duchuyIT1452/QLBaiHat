@@ -90,7 +90,11 @@ namespace BUS
             return BaiHat.getAllBaiHatFormChinh();
         }
 
-        public void themBaiHat()
+        public DataTable getBaiHatByMaBaiHat(string maBaiHat)
+        {
+            return BaiHat.SearchByMa(maBaiHat);
+        }
+        public void themBaiHat(String maBaiHat, String tenBaiHat,String maTheLoai, String maAlbum,String maCaSi,String maTacGia,String maHangSanXuat,String loiBaiHat )
         {
             BaiHat.InsertBaiHat(maBaiHat,tenBaiHat, maTheLoai, maAlbum, maCaSi,  maTacGia, maHangSanXuat, loiBaiHat);
         }

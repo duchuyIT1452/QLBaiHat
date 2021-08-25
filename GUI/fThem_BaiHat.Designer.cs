@@ -82,6 +82,7 @@ namespace GUI
             // 
             // txt_tenbaihat
             // 
+            this.txt_tenbaihat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_tenbaihat.Location = new System.Drawing.Point(156, 112);
             this.txt_tenbaihat.Multiline = true;
             this.txt_tenbaihat.Name = "txt_tenbaihat";
@@ -90,6 +91,7 @@ namespace GUI
             // 
             // txt_mabaihat
             // 
+            this.txt_mabaihat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_mabaihat.Location = new System.Drawing.Point(156, 61);
             this.txt_mabaihat.Multiline = true;
             this.txt_mabaihat.Name = "txt_mabaihat";
@@ -99,36 +101,42 @@ namespace GUI
             // btn_huy
             // 
             this.btn_huy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_huy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_huy.Location = new System.Drawing.Point(333, 380);
             this.btn_huy.Name = "btn_huy";
             this.btn_huy.Size = new System.Drawing.Size(108, 40);
             this.btn_huy.TabIndex = 3;
             this.btn_huy.Text = "Huỷ thao tác";
             this.btn_huy.UseVisualStyleBackColor = true;
+            this.btn_huy.Click += new System.EventHandler(this.btn_huy_Click);
             // 
             // btn_nhaplai
             // 
             this.btn_nhaplai.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_nhaplai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_nhaplai.Location = new System.Drawing.Point(195, 380);
             this.btn_nhaplai.Name = "btn_nhaplai";
             this.btn_nhaplai.Size = new System.Drawing.Size(101, 40);
             this.btn_nhaplai.TabIndex = 3;
             this.btn_nhaplai.Text = "Nhập lại";
             this.btn_nhaplai.UseVisualStyleBackColor = true;
+            this.btn_nhaplai.Click += new System.EventHandler(this.btn_nhaplai_Click);
             // 
             // btn_them
             // 
             this.btn_them.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_them.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_them.Location = new System.Drawing.Point(55, 380);
             this.btn_them.Name = "btn_them";
             this.btn_them.Size = new System.Drawing.Size(103, 40);
             this.btn_them.TabIndex = 3;
             this.btn_them.Text = "Thêm";
             this.btn_them.UseVisualStyleBackColor = true;
-            this.btn_them.Click += new System.EventHandler(this.button1_Click);
+            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
             // txt_loibaihat
             // 
+            this.txt_loibaihat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_loibaihat.Location = new System.Drawing.Point(45, 193);
             this.txt_loibaihat.Multiline = true;
             this.txt_loibaihat.Name = "txt_loibaihat";
