@@ -62,15 +62,13 @@ namespace GUI
         }
         #endregion
 
+        // load dữ liệu
+
         #region form1 load
         private void Form1_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            load_Album();
-            load_TheLoai();
-            LoadBaiHat_Home();
-            load_Tacgia();
-            load_Hangsx();
+            LoadBaiHat_Home();        
         }
         #endregion
 
@@ -78,15 +76,27 @@ namespace GUI
         private void LoadBaiHat_Home()
         {
             BaiHat_BUS bus = new BaiHat_BUS();
-            DataTable dt = new DataTable();
-            dt = bus.getBaiHatHome();
-            dgv_baihat_home.DataSource = dt;
+            dgv_baihat_home.DataSource = bus.getBaiHatHome();
             int dem = 0;
-            foreach (DataRow row in dt.Rows)
+            foreach (DataRow row in bus.getBaiHatHome().Rows)
             {
-                dgv_baihat_home.Rows[dem].Cells[0].Value = "Bài hát "+(dem+1);
                 if (dem % 2 == 0)
                     dgv_baihat_home.Rows[dem].DefaultCellStyle.BackColor = Color.PaleTurquoise;
+                dem++;
+            }
+        }
+        #endregion
+
+        #region load bài hát
+        private void load_BaiHat()
+        {
+            BaiHat_BUS bus = new BaiHat_BUS();
+            dgv_baihat.DataSource = bus.getBaiHat();
+            int dem = 0;
+            foreach (DataRow row in bus.getBaiHat().Rows)
+            {
+                if (dem % 2 == 0)
+                    dgv_baihat.Rows[dem].DefaultCellStyle.BackColor = Color.PaleTurquoise;
                 dem++;
             }
         }
@@ -146,17 +156,21 @@ namespace GUI
         #region load ca sĩ
         private void load_CaSi()
         {
-            CaSi_BUS dtCaSi = new CaSi_BUS();
-            dgv_dsCaSi.DataSource = dtCaSi.getCaSi();
+            CaSi_BUS bus = new CaSi_BUS();
+            dgv_dsCaSi.DataSource = bus.getCaSi();
             int dem = 0;
-            foreach(DataRow row in dtCaSi.getCaSi().Rows)
+            foreach(DataRow row in bus.getCaSi().Rows)
             {
-                dgv_dsCaSi.Rows[dem].Cells[0].Value = dem+1;
+                if (dem % 2 == 0)
+                    dgv_dsCaSi.Rows[dem].DefaultCellStyle.BackColor = Color.PaleTurquoise;
                 dem++;
             }
         }
         #endregion
 
+        
+
+        #region tabcontrol form chính mouse click
         private void tabControl_formChinh_MouseClick(object sender, MouseEventArgs e)
         {
             load_Album();
@@ -164,8 +178,11 @@ namespace GUI
             load_Tacgia();
             load_Hangsx();
             load_CaSi();
+            load_BaiHat();
         }
+        #endregion
 
+        #region button thêm album click
         private void bt_them_Click(object sender, EventArgs e)
         {
             this.Visible = false;
@@ -174,7 +191,9 @@ namespace GUI
             this.Visible = true;
             load_Album();
         }
+        #endregion
 
+        #region button xoá album click
         private void bt_xoa_Click(object sender, EventArgs e)
         {
             Album_BUS bus = new Album_BUS();
@@ -197,6 +216,9 @@ namespace GUI
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
+
+        //dataGridView cell click
 
         #region dgv album cellclick
         private void dgv_Album_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -210,12 +232,6 @@ namespace GUI
         }
         #endregion
 
-        private void bt_dong_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("BẠN CHẮC CHẮN MUỐN ĐÓNG ỨNG DỤNG ?", "THOÁT CHƯƠNG TRÌNH", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                this.Close();
-        }
-
         #region dgv thể loại cellclick
         private void dgv_theloai_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -227,6 +243,66 @@ namespace GUI
             dgv_TheloaiBaihat.DataSource = dt;
         }
         #endregion
+
+        #region dgv nhạc sĩ cellclick
+        private void dgv_dsNhacSi_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                int d = e.RowIndex;
+                BaiHat_BUS bus = new BaiHat_BUS();
+                DataTable dt = new DataTable();
+                String ma = dgv_dsNhacSi.Rows[d].Cells[0].Value.ToString();
+                dt = bus.listBaiHatTheoTacGia(ma);
+                dgv_Baihat_nhacsi.DataSource = dt;
+                txt_tentacgia.Text = dgv_dsNhacSi.Rows[d].Cells[1].Value.ToString();
+                txt_thongtintacgia.Text = dgv_dsNhacSi.Rows[d].Cells[2].Value.ToString();
+            }
+
+        }
+        #endregion
+
+        #region dataGridView hãng sản xuất cellclick
+        private void dgv_dsHangsx_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                int d = e.RowIndex;
+                BaiHat_BUS bus = new BaiHat_BUS();
+                DataTable dt = new DataTable();
+                String ma = dgv_dsHangsx.Rows[d].Cells[0].Value.ToString();
+                dt = bus.listBaiHatTheoHSX(ma);
+                dgv_Baihat_phathanh.DataSource = dt;
+                txt_tenhangsanxuat.Text = dgv_dsNhacSi.Rows[d].Cells[1].Value.ToString();
+                txt_thongtinhangsanxuat.Text = dgv_dsNhacSi.Rows[d].Cells[2].Value.ToString();
+            }
+        }
+        #endregion
+
+        #region ca sĩ cellclick
+        private void dgv_dsCaSi_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                int d = e.RowIndex;
+                BaiHat_BUS bus = new BaiHat_BUS();
+                DataTable dt = new DataTable();
+                String ma = dgv_dsCaSi.Rows[d].Cells[0].Value.ToString();
+                dt = bus.listBaiHatTheoCaSi(ma);
+                dgv_BaiHatTheoCaSi.DataSource = dt;
+                txt_tencasi.Text = dgv_dsCaSi.Rows[d].Cells[1].Value.ToString();
+                txt_thongtincasi.Text = dgv_dsCaSi.Rows[d].Cells[2].Value.ToString();
+            }
+        }
+        #endregion
+
+        //button click
+
+        private void bt_dong_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("BẠN CHẮC CHẮN MUỐN ĐÓNG ỨNG DỤNG ?", "THOÁT CHƯƠNG TRÌNH", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                this.Close();
+        }
 
         #region button xoá thể loại click
         private void bt_xoaTheLoai_Click(object sender, EventArgs e)
@@ -264,21 +340,12 @@ namespace GUI
         }
         #endregion
 
-        private void dgv_baihat_home_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
-        {
-            //int dem = 1;
-            
-        }
-
-        private void dgv_baihat_home_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
+        #region button đóng click
         private void btn_close_Click(object sender, EventArgs e)
         {
             Close();
         }
+        #endregion
 
         #region button tìm kiếm click
         private void btn_timkiem_Click(object sender, EventArgs e)
@@ -299,11 +366,6 @@ namespace GUI
             }
         }
         #endregion
-
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         // HSX
         private void button1_Click(object sender, EventArgs e)
@@ -392,56 +454,6 @@ namespace GUI
         }
         #endregion
 
-        #region nhạc sĩ cellclick
-        private void dgv_dsNhacSi_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                int d = e.RowIndex;
-                BaiHat_BUS bus = new BaiHat_BUS();
-                DataTable dt = new DataTable();
-                String ma = dgv_dsNhacSi.Rows[d].Cells[0].Value.ToString();
-                dt = bus.listBaiHatTheoTacGia(ma);
-                dgv_Baihat_nhacsi.DataSource = dt;
-                txt_tentacgia.Text = dgv_dsNhacSi.Rows[d].Cells[1].Value.ToString();
-                txt_thongtintacgia.Text = dgv_dsNhacSi.Rows[d].Cells[2].Value.ToString();
-            }
-            
-        }
-        #endregion
-
-        #region dataGridView hãng sản xuất cellclick
-        private void dgv_dsHangsx_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                int d = e.RowIndex;
-                BaiHat_BUS bus = new BaiHat_BUS();
-                DataTable dt = new DataTable();
-                String ma = dgv_dsHangsx.Rows[d].Cells[0].Value.ToString();
-                dt = bus.listBaiHatTheoHSX(ma);
-                dgv_Baihat_phathanh.DataSource = dt;
-                txt_tenhangsanxuat.Text = dgv_dsNhacSi.Rows[d].Cells[1].Value.ToString();
-                txt_thongtinhangsanxuat.Text = dgv_dsNhacSi.Rows[d].Cells[2].Value.ToString();
-            }
-        }
-        #endregion
-
-        #region ca sĩ cellclick
-        private void dgv_dsCaSi_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                int d = e.RowIndex;
-                BaiHat_BUS bus = new BaiHat_BUS();
-                DataTable dt = new DataTable();
-                String ma = dgv_dsCaSi.Rows[d].Cells[1].Value.ToString();
-                dt = bus.listBaiHatTheoCaSi(ma);
-                dgv_BaiHatTheoCaSi.DataSource = dt;
-                txt_tencasi.Text = dgv_dsCaSi.Rows[d].Cells[2].Value.ToString();
-                txt_thongtincasi.Text = dgv_dsCaSi.Rows[d].Cells[3].Value.ToString();
-            }
-        }
-        #endregion
+        
     }
 }

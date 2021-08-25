@@ -16,26 +16,32 @@ namespace DATA
     public class GetData_BaiHat
     {
         ConnectDB conDB = new ConnectDB();
-        
+
+        #region lấy tất cả bài hát
         public DataTable getAllBaiHat()
         {
-            String sql = "Select * from BaiHat";
+            String sql = "Select ma_baihat,ten_baihat,loi_baihat from BaiHat";
             DataTable dt = new DataTable();
             dt = conDB.GetTable(sql);
             return dt;
         }
+        #endregion
+
+        #region lấy bài hát ra form chính
         public DataTable getAllBaiHatFormChinh()
         {
-            String sql = "Select ten_baihat, ten_album, ten_casi, ten_theloai, loi_baihat from BaiHat b INNER JOIN album a ON b.ma_album = a.ma_album INNER JOIN CaSi c ON b.ma_casi = c.ma_casi INNER JOIN TheLoai t ON b.ma_theloai = t.ma_theloai";
+            String sql = "Select ma_baihat, ten_baihat, ten_album, ten_casi, ten_theloai, loi_baihat from BaiHat b INNER JOIN album a ON b.ma_album = a.ma_album INNER JOIN CaSi c ON b.ma_casi = c.ma_casi INNER JOIN TheLoai t ON b.ma_theloai = t.ma_theloai";
             DataTable dt = new DataTable();
             dt = conDB.GetTable(sql);
             return dt;
         }
+        #endregion
 
         public void InsertBaiHat(String maBaiHat, String tenBaiHat, String maTheLoai, String maAlbum, String maCaSi, String maTacGia, String maHSX, String loiBaiHat)
         {
             String sql = "Insert Into BaiHat Values('" + maBaiHat + "', '" + tenBaiHat + "', '" + maTheLoai + "','" + maAlbum + "','" + maCaSi + "','" + maTacGia + "','" + maHSX + "','" + loiBaiHat + "')";
             String sql1 = "Insert Into BaiHat_CaSi Values('" + maBaiHat + "', '" + maCaSi + "')";
+            conDB.ExecuteNonQuery(sql1);
             conDB.ExecuteNonQuery(sql);
         }
 
