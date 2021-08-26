@@ -774,5 +774,35 @@ namespace GUI
             load_CaSi();
         }
         #endregion
+
+        #region thông báo khi formclosing
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            string msg = "Bạn có chắc chắn đóng không?";
+            DialogResult result = MessageBox.Show(msg, "Huỷ",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+                e.Cancel = false;
+            else if (result == DialogResult.No)
+                e.Cancel = true;
+        }
+        #endregion
+
+        private void btn_editcasi_Click(object sender, EventArgs e)
+        {
+            string maCaSi = dgv_dsCaSi.Rows[dgv_dsCaSi.CurrentCell.RowIndex].Cells[0].Value.ToString();
+            string tenCaSi = dgv_dsCaSi.Rows[dgv_dsCaSi.CurrentCell.RowIndex].Cells[1].Value.ToString();
+            string thongTinCaSi = dgv_dsCaSi.Rows[dgv_dsCaSi.CurrentCell.RowIndex].Cells[2].Value.ToString();
+
+            fCapNhat_CaSi.maCaSi = maCaSi;
+            fCapNhat_CaSi.tenCaSi = tenCaSi;
+            fCapNhat_CaSi.thongTinCaSi = thongTinCaSi;
+
+            this.Visible = false;
+            fCapNhat_CaSi f = new fCapNhat_CaSi();
+            f.ShowDialog();
+            this.Visible = true;
+            load_CaSi();
+        }
     }
 }

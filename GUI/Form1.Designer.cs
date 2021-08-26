@@ -1053,6 +1053,7 @@ namespace GUI
             this.btn_editcasi.TabIndex = 4;
             this.btn_editcasi.Text = "Chỉnh sửa thông tin ca sĩ";
             this.btn_editcasi.UseVisualStyleBackColor = false;
+            this.btn_editcasi.Click += new System.EventHandler(this.btn_editcasi_Click);
             // 
             // btn_xoacasi
             // 
@@ -2377,7 +2378,7 @@ namespace GUI
             this.quảnLýAlbumToolStripMenuItem.Name = "quảnLýAlbumToolStripMenuItem";
             this.quảnLýAlbumToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.A)));
-            this.quảnLýAlbumToolStripMenuItem.Size = new System.Drawing.Size(303, 26);
+            this.quảnLýAlbumToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
             this.quảnLýAlbumToolStripMenuItem.Text = "Quản lý ALBUM";
             this.quảnLýAlbumToolStripMenuItem.Click += new System.EventHandler(this.quảnLýAlbumToolStripMenuItem_Click);
             // 
@@ -2387,7 +2388,7 @@ namespace GUI
             this.quảnLýTHỂLOẠIToolStripMenuItem.Name = "quảnLýTHỂLOẠIToolStripMenuItem";
             this.quảnLýTHỂLOẠIToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.T)));
-            this.quảnLýTHỂLOẠIToolStripMenuItem.Size = new System.Drawing.Size(303, 26);
+            this.quảnLýTHỂLOẠIToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
             this.quảnLýTHỂLOẠIToolStripMenuItem.Text = "Quản lý THỂ LOẠI";
             this.quảnLýTHỂLOẠIToolStripMenuItem.Click += new System.EventHandler(this.quảnLýTHỂLOẠIToolStripMenuItem_Click);
             // 
@@ -2397,7 +2398,7 @@ namespace GUI
             this.quảnLýCASĨToolStripMenuItem.Name = "quảnLýCASĨToolStripMenuItem";
             this.quảnLýCASĨToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.C)));
-            this.quảnLýCASĨToolStripMenuItem.Size = new System.Drawing.Size(303, 26);
+            this.quảnLýCASĨToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
             this.quảnLýCASĨToolStripMenuItem.Text = "Quản lý CA SĨ";
             this.quảnLýCASĨToolStripMenuItem.Click += new System.EventHandler(this.quảnLýCASĨToolStripMenuItem_Click);
             // 
@@ -2407,7 +2408,7 @@ namespace GUI
             this.quảnLýTÁCGIẢToolStripMenuItem.Name = "quảnLýTÁCGIẢToolStripMenuItem";
             this.quảnLýTÁCGIẢToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.G)));
-            this.quảnLýTÁCGIẢToolStripMenuItem.Size = new System.Drawing.Size(303, 26);
+            this.quảnLýTÁCGIẢToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
             this.quảnLýTÁCGIẢToolStripMenuItem.Text = "Quản lý TÁC GIẢ";
             this.quảnLýTÁCGIẢToolStripMenuItem.Click += new System.EventHandler(this.quảnLýTÁCGIẢToolStripMenuItem_Click);
             // 
@@ -2417,7 +2418,7 @@ namespace GUI
             this.quảnLýBÀIHÁTToolStripMenuItem.Name = "quảnLýBÀIHÁTToolStripMenuItem";
             this.quảnLýBÀIHÁTToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.B)));
-            this.quảnLýBÀIHÁTToolStripMenuItem.Size = new System.Drawing.Size(303, 26);
+            this.quảnLýBÀIHÁTToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
             this.quảnLýBÀIHÁTToolStripMenuItem.Text = "Quản lý BÀI HÁT";
             this.quảnLýBÀIHÁTToolStripMenuItem.Click += new System.EventHandler(this.quảnLýBÀIHÁTToolStripMenuItem_Click);
             // 
@@ -2427,7 +2428,7 @@ namespace GUI
             this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem.Name = "quảnLýHÃNGSẢNXUẤTToolStripMenuItem";
             this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.H)));
-            this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem.Size = new System.Drawing.Size(303, 26);
+            this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
             this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem.Text = "Quản lý HÃNG SẢN XUẤT";
             this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem.Click += new System.EventHandler(this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem_Click);
             // 
@@ -2437,7 +2438,7 @@ namespace GUI
             this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem.Name = "quảnLýTRACỨUTÌMKIẾMToolStripMenuItem";
             this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.S)));
-            this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem.Size = new System.Drawing.Size(303, 26);
+            this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
             this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem.Text = "Quản lý TRA CỨU - TÌM KIẾM";
             this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem.Click += new System.EventHandler(this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem_Click);
             // 
@@ -2447,7 +2448,7 @@ namespace GUI
             this.đóngỨngDụngToolStripMenuItem.Name = "đóngỨngDụngToolStripMenuItem";
             this.đóngỨngDụngToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.D)));
-            this.đóngỨngDụngToolStripMenuItem.Size = new System.Drawing.Size(303, 26);
+            this.đóngỨngDụngToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
             this.đóngỨngDụngToolStripMenuItem.Text = "Đóng ứng dụng";
             this.đóngỨngDụngToolStripMenuItem.Click += new System.EventHandler(this.đóngỨngDụngToolStripMenuItem_Click);
             // 
@@ -2490,6 +2491,7 @@ namespace GUI
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Chương trình tra cứu - tìm kiếm bài hát";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

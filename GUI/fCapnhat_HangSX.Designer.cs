@@ -183,6 +183,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "fCapnhat_HangSX";
             this.Text = "Cập nhật thông tin HSX";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fCapnhat_HangSX_FormClosing);
             this.Load += new System.EventHandler(this.fCapnhat_HangSX_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

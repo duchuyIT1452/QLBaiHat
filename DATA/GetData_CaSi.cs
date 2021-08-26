@@ -27,7 +27,7 @@ namespace DATA
         }
         #endregion
 
-
+        #region tìm ca sĩ bằng mã ca sĩ
         public DataTable SearchByMa(String maCaSi)
         {
             String sql = "Select * from CaSi Where ma_casi='" + maCaSi + "'";
@@ -35,6 +35,8 @@ namespace DATA
             dt = conDB.GetTable(sql);
             return dt;
         }
+        #endregion
+
         public DataTable SearchByTen(String tenCaSi)
         {
             String sql = "Select * from CaSi Where ten_casi='" + tenCaSi + "'";
@@ -44,7 +46,7 @@ namespace DATA
         }
         public void UpdateCaSi(String maCaSi, String tenCaSi, String thongTinCaSi)
         {
-            String sql = "Update CaSi Set ma_casi='" + maCaSi + "',ten_casi='" + tenCaSi + "', thongtin_casi='"+ thongTinCaSi +"'";
+            String sql = "Update CaSi Set ten_casi=N'" + tenCaSi + "', thongtin_casi=N'"+ thongTinCaSi + "' where ma_casi='" + maCaSi + "'";
             conDB.ExecuteNonQuery(sql);
         }
         public void DeleteCaSi(String maCaSi)

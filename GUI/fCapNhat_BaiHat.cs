@@ -24,6 +24,55 @@ namespace GUI
         public fCapNhat_BaiHat()
         {
             InitializeComponent();
+            
+
+            //txt_loibaihat.Text = "";
+            //txt_mabaihat.Text = "";
+            //txt_tenbaihat.Text = "";
+        }
+
+        private void btn_sua_Click(object sender, EventArgs e)
+        {
+            BaiHat_BUS bus = new BaiHat_BUS();
+
+            if(txt_loibaihat.Text == "" || txt_tenbaihat.Text == "")
+            {
+                MessageBox.Show("Chưa cung cấp đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            maBaiHat = txt_mabaihat.Text.ToString();
+            tenBaiHat = txt_tenbaihat.Text.ToString();
+            loiBaiHat = txt_loibaihat.Text.ToString();
+            maAlbum = cb_album.SelectedValue.ToString();
+            maCaSi = cb_casi.SelectedValue.ToString();
+            maHangSanXuat = cb_hsx.SelectedValue.ToString();
+            maTheLoai = cb_theloai.SelectedValue.ToString();
+            maTacGia = cb_tacgia.SelectedValue.ToString();
+
+
+            bus.capNhatBaiHat(maBaiHat, tenBaiHat, maTheLoai, maAlbum, maCaSi, maTacGia, maHangSanXuat, loiBaiHat);
+            MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void fCapNhat_BaiHat_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            string msg = "Bạn có chắc chắn huỷ không?";
+            DialogResult result = MessageBox.Show(msg, "Huỷ",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+                e.Cancel = false;
+            else if (result == DialogResult.No)
+                e.Cancel = true;
+        }
+
+        private void btn_nhaplai_Click(object sender, EventArgs e)
+        {
+            fCapNhat_BaiHat_Load(sender, e);
+        }
+
+        private void fCapNhat_BaiHat_Load(object sender, EventArgs e)
+        {
             this.ActiveControl = label1;
             txt_loibaihat.Text = loiBaiHat.ToString();
             txt_mabaihat.Text = maBaiHat.ToString();
@@ -63,34 +112,6 @@ namespace GUI
             cb_hsx.DisplayMember = "ten_hangsanxuat";
             cb_hsx.ValueMember = "ma_hangsanxuat";
             cb_hsx.SelectedValue = maHangSanXuat;
-
-            //txt_loibaihat.Text = "";
-            //txt_mabaihat.Text = "";
-            //txt_tenbaihat.Text = "";
-        }
-
-        private void btn_sua_Click(object sender, EventArgs e)
-        {
-            BaiHat_BUS bus = new BaiHat_BUS();
-
-            if(txt_loibaihat.Text == "" || txt_tenbaihat.Text == "")
-            {
-                MessageBox.Show("Chưa cung cấp đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-
-            maBaiHat = txt_mabaihat.Text.ToString();
-            tenBaiHat = txt_tenbaihat.Text.ToString();
-            loiBaiHat = txt_loibaihat.Text.ToString();
-            maAlbum = cb_album.SelectedValue.ToString();
-            maCaSi = cb_casi.SelectedValue.ToString();
-            maHangSanXuat = cb_hsx.SelectedValue.ToString();
-            maTheLoai = cb_theloai.SelectedValue.ToString();
-            maTacGia = cb_tacgia.SelectedValue.ToString();
-
-
-            bus.capNhatBaiHat(maBaiHat, tenBaiHat, maTheLoai, maAlbum, maCaSi, maTacGia, maHangSanXuat, loiBaiHat);
-            MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

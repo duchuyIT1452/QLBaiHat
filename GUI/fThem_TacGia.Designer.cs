@@ -192,6 +192,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fThem_Tacgia";
             this.Text = "Thêm tác giả";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fThem_Tacgia_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

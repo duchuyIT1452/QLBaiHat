@@ -302,6 +302,7 @@ namespace GUI
             this.btn_nhaplai.TabIndex = 3;
             this.btn_nhaplai.Text = "Nhập lại";
             this.btn_nhaplai.UseVisualStyleBackColor = false;
+            this.btn_nhaplai.Click += new System.EventHandler(this.btn_nhaplai_Click);
             // 
             // label3
             // 
@@ -376,6 +377,8 @@ namespace GUI
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fCapNhat_BaiHat";
             this.Text = "fCapNhat_BaiHat";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fCapNhat_BaiHat_FormClosing);
+            this.Load += new System.EventHandler(this.fCapNhat_BaiHat_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

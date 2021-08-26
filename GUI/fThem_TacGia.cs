@@ -71,5 +71,16 @@ namespace GUI
         {
             this.DialogResult = DialogResult.Cancel;
         }
+
+        private void fThem_Tacgia_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            string msg = "Bạn có chắc chắn huỷ không?";
+            DialogResult result = MessageBox.Show(msg, "Huỷ",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+                e.Cancel = false;
+            else if (result == DialogResult.No)
+                e.Cancel = true;
+        }
     }
 }

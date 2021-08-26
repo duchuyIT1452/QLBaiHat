@@ -35,13 +35,13 @@ namespace GUI
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txt_thongtincasi = new System.Windows.Forms.TextBox();
+            this.btn_them = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.txt_macasi = new System.Windows.Forms.TextBox();
+            this.txt_tencasi = new System.Windows.Forms.TextBox();
+            this.btn_nhaplai = new System.Windows.Forms.Button();
+            this.btn_huythaotac = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -84,27 +84,28 @@ namespace GUI
             this.label4.TabIndex = 0;
             this.label4.Text = "Tên ca sĩ";
             // 
-            // textBox1
+            // txt_thongtincasi
             // 
-            this.textBox1.Location = new System.Drawing.Point(33, 220);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(407, 165);
-            this.textBox1.TabIndex = 1;
+            this.txt_thongtincasi.Location = new System.Drawing.Point(33, 220);
+            this.txt_thongtincasi.Multiline = true;
+            this.txt_thongtincasi.Name = "txt_thongtincasi";
+            this.txt_thongtincasi.Size = new System.Drawing.Size(407, 165);
+            this.txt_thongtincasi.TabIndex = 1;
             // 
-            // button1
+            // btn_them
             // 
-            this.button1.BackColor = System.Drawing.Color.CadetBlue;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.ImageIndex = 4;
-            this.button1.ImageList = this.imageList1;
-            this.button1.Location = new System.Drawing.Point(33, 391);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 44);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Thêm";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_them.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_them.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_them.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_them.ImageIndex = 4;
+            this.btn_them.ImageList = this.imageList1;
+            this.btn_them.Location = new System.Drawing.Point(33, 391);
+            this.btn_them.Name = "btn_them";
+            this.btn_them.Size = new System.Drawing.Size(124, 44);
+            this.btn_them.TabIndex = 2;
+            this.btn_them.Text = "Thêm";
+            this.btn_them.UseVisualStyleBackColor = false;
+            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
             // imageList1
             // 
@@ -116,49 +117,51 @@ namespace GUI
             this.imageList1.Images.SetKeyName(3, "icons8-delete-64.png");
             this.imageList1.Images.SetKeyName(4, "icons8-add-40.png");
             // 
-            // textBox2
+            // txt_macasi
             // 
-            this.textBox2.Location = new System.Drawing.Point(134, 67);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(306, 27);
-            this.textBox2.TabIndex = 3;
+            this.txt_macasi.Location = new System.Drawing.Point(134, 67);
+            this.txt_macasi.Multiline = true;
+            this.txt_macasi.Name = "txt_macasi";
+            this.txt_macasi.Size = new System.Drawing.Size(306, 27);
+            this.txt_macasi.TabIndex = 3;
             // 
-            // textBox3
+            // txt_tencasi
             // 
-            this.textBox3.Location = new System.Drawing.Point(134, 125);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(306, 27);
-            this.textBox3.TabIndex = 3;
+            this.txt_tencasi.Location = new System.Drawing.Point(134, 125);
+            this.txt_tencasi.Multiline = true;
+            this.txt_tencasi.Name = "txt_tencasi";
+            this.txt_tencasi.Size = new System.Drawing.Size(306, 27);
+            this.txt_tencasi.TabIndex = 3;
             // 
-            // button2
+            // btn_nhaplai
             // 
-            this.button2.BackColor = System.Drawing.Color.CadetBlue;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.ImageIndex = 1;
-            this.button2.ImageList = this.imageList1;
-            this.button2.Location = new System.Drawing.Point(172, 391);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(124, 44);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Nhập lại";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_nhaplai.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_nhaplai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_nhaplai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_nhaplai.ImageIndex = 1;
+            this.btn_nhaplai.ImageList = this.imageList1;
+            this.btn_nhaplai.Location = new System.Drawing.Point(172, 391);
+            this.btn_nhaplai.Name = "btn_nhaplai";
+            this.btn_nhaplai.Size = new System.Drawing.Size(124, 44);
+            this.btn_nhaplai.TabIndex = 2;
+            this.btn_nhaplai.Text = "Nhập lại";
+            this.btn_nhaplai.UseVisualStyleBackColor = false;
+            this.btn_nhaplai.Click += new System.EventHandler(this.btn_nhaplai_Click);
             // 
-            // button3
+            // btn_huythaotac
             // 
-            this.button3.BackColor = System.Drawing.Color.CadetBlue;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.ImageIndex = 0;
-            this.button3.ImageList = this.imageList1;
-            this.button3.Location = new System.Drawing.Point(316, 394);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(124, 44);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Huỷ thao tác";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btn_huythaotac.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_huythaotac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_huythaotac.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_huythaotac.ImageIndex = 0;
+            this.btn_huythaotac.ImageList = this.imageList1;
+            this.btn_huythaotac.Location = new System.Drawing.Point(316, 394);
+            this.btn_huythaotac.Name = "btn_huythaotac";
+            this.btn_huythaotac.Size = new System.Drawing.Size(124, 44);
+            this.btn_huythaotac.TabIndex = 2;
+            this.btn_huythaotac.Text = "Huỷ thao tác";
+            this.btn_huythaotac.UseVisualStyleBackColor = false;
+            this.btn_huythaotac.Click += new System.EventHandler(this.btn_huythaotac_Click);
             // 
             // fThem_CaSi
             // 
@@ -166,12 +169,12 @@ namespace GUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(480, 450);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_tencasi);
+            this.Controls.Add(this.txt_macasi);
+            this.Controls.Add(this.btn_huythaotac);
+            this.Controls.Add(this.btn_nhaplai);
+            this.Controls.Add(this.btn_them);
+            this.Controls.Add(this.txt_thongtincasi);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -179,6 +182,8 @@ namespace GUI
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fThem_CaSi";
             this.Text = "Thêm ca sĩ";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fThem_CaSi_FormClosing);
+            this.Load += new System.EventHandler(this.fThem_CaSi_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,12 +195,12 @@ namespace GUI
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox txt_thongtincasi;
+        private System.Windows.Forms.Button btn_them;
+        private System.Windows.Forms.TextBox txt_macasi;
+        private System.Windows.Forms.TextBox txt_tencasi;
+        private System.Windows.Forms.Button btn_nhaplai;
+        private System.Windows.Forms.Button btn_huythaotac;
         private System.Windows.Forms.ImageList imageList1;
     }
 }

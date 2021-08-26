@@ -62,6 +62,17 @@ namespace GUI
             txt_matacgia.Focus();
         }
 
+        private void fCapnhat_Tacgia_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            string msg = "Bạn có chắc chắn huỷ không?";
+            DialogResult result = MessageBox.Show(msg, "Huỷ",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+                e.Cancel = false;
+            else if (result == DialogResult.No)
+                e.Cancel = true;
+        }
+
         private void btn_huy_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;

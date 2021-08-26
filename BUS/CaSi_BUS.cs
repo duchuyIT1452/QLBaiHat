@@ -81,7 +81,7 @@ namespace BUS
         {
             return CaSi.SearchByMa(macasi);
         }
-        public void themCaSi()
+        public void themCaSi(String maCaSi, String tenCaSi, String thongTinCaSi)
         {
             CaSi.InsertCaSi(maCaSi, tenCaSi, thongTinCaSi);
         }
@@ -89,7 +89,7 @@ namespace BUS
         {
             CaSi.DeleteCaSi(maCaSi);
         }
-        public void capnhapCaSi()
+        public void capNhatCaSi(String maCaSi, String tenCaSi, String thongTinCaSi)
         {
             CaSi.UpdateCaSi(maCaSi, tenCaSi, thongTinCaSi);
         }
