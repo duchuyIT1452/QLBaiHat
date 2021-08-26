@@ -29,6 +29,8 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fThem_TheLoai));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,6 +39,7 @@ namespace GUI
             this.bt_dongY = new System.Windows.Forms.Button();
             this.bt_nhapLai = new System.Windows.Forms.Button();
             this.bt_huyBo = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -75,7 +78,7 @@ namespace GUI
             // txt_maTheLoai
             // 
             this.txt_maTheLoai.Location = new System.Drawing.Point(140, 74);
-            this.txt_maTheLoai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_maTheLoai.Margin = new System.Windows.Forms.Padding(2);
             this.txt_maTheLoai.Multiline = true;
             this.txt_maTheLoai.Name = "txt_maTheLoai";
             this.txt_maTheLoai.Size = new System.Drawing.Size(251, 27);
@@ -84,7 +87,7 @@ namespace GUI
             // txt_tenTheLoai
             // 
             this.txt_tenTheLoai.Location = new System.Drawing.Point(140, 144);
-            this.txt_tenTheLoai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_tenTheLoai.Margin = new System.Windows.Forms.Padding(2);
             this.txt_tenTheLoai.Multiline = true;
             this.txt_tenTheLoai.Name = "txt_tenTheLoai";
             this.txt_tenTheLoai.Size = new System.Drawing.Size(251, 27);
@@ -92,36 +95,61 @@ namespace GUI
             // 
             // bt_dongY
             // 
-            this.bt_dongY.Location = new System.Drawing.Point(63, 227);
-            this.bt_dongY.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_dongY.BackColor = System.Drawing.Color.CadetBlue;
+            this.bt_dongY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_dongY.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bt_dongY.ImageIndex = 4;
+            this.bt_dongY.ImageList = this.imageList1;
+            this.bt_dongY.Location = new System.Drawing.Point(52, 227);
+            this.bt_dongY.Margin = new System.Windows.Forms.Padding(2);
             this.bt_dongY.Name = "bt_dongY";
-            this.bt_dongY.Size = new System.Drawing.Size(87, 44);
+            this.bt_dongY.Size = new System.Drawing.Size(98, 44);
             this.bt_dongY.TabIndex = 2;
             this.bt_dongY.Text = "Đồng ý";
-            this.bt_dongY.UseVisualStyleBackColor = true;
+            this.bt_dongY.UseVisualStyleBackColor = false;
             this.bt_dongY.Click += new System.EventHandler(this.bt_dongY_Click);
             // 
             // bt_nhapLai
             // 
-            this.bt_nhapLai.Location = new System.Drawing.Point(186, 227);
-            this.bt_nhapLai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_nhapLai.BackColor = System.Drawing.Color.CadetBlue;
+            this.bt_nhapLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_nhapLai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bt_nhapLai.ImageIndex = 1;
+            this.bt_nhapLai.ImageList = this.imageList1;
+            this.bt_nhapLai.Location = new System.Drawing.Point(175, 227);
+            this.bt_nhapLai.Margin = new System.Windows.Forms.Padding(2);
             this.bt_nhapLai.Name = "bt_nhapLai";
-            this.bt_nhapLai.Size = new System.Drawing.Size(87, 44);
+            this.bt_nhapLai.Size = new System.Drawing.Size(98, 44);
             this.bt_nhapLai.TabIndex = 2;
             this.bt_nhapLai.Text = "Nhập lại";
-            this.bt_nhapLai.UseVisualStyleBackColor = true;
+            this.bt_nhapLai.UseVisualStyleBackColor = false;
             this.bt_nhapLai.Click += new System.EventHandler(this.bt_nhapLai_Click);
             // 
             // bt_huyBo
             // 
-            this.bt_huyBo.Location = new System.Drawing.Point(306, 227);
-            this.bt_huyBo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_huyBo.BackColor = System.Drawing.Color.CadetBlue;
+            this.bt_huyBo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_huyBo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bt_huyBo.ImageIndex = 0;
+            this.bt_huyBo.ImageList = this.imageList1;
+            this.bt_huyBo.Location = new System.Drawing.Point(295, 227);
+            this.bt_huyBo.Margin = new System.Windows.Forms.Padding(2);
             this.bt_huyBo.Name = "bt_huyBo";
-            this.bt_huyBo.Size = new System.Drawing.Size(87, 44);
+            this.bt_huyBo.Size = new System.Drawing.Size(98, 44);
             this.bt_huyBo.TabIndex = 2;
             this.bt_huyBo.Text = "Hủy bỏ";
-            this.bt_huyBo.UseVisualStyleBackColor = true;
+            this.bt_huyBo.UseVisualStyleBackColor = false;
             this.bt_huyBo.Click += new System.EventHandler(this.bt_huyBo_Click);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "icons8-back-64.png");
+            this.imageList1.Images.SetKeyName(1, "icons8-reset-48.png");
+            this.imageList1.Images.SetKeyName(2, "icons8-edit-48.png");
+            this.imageList1.Images.SetKeyName(3, "icons8-delete-64.png");
+            this.imageList1.Images.SetKeyName(4, "icons8-add-40.png");
             // 
             // fThem_TheLoai
             // 
@@ -137,7 +165,7 @@ namespace GUI
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "fThem_TheLoai";
             this.Text = "Thêm thể loại";
             this.ResumeLayout(false);
@@ -155,5 +183,6 @@ namespace GUI
         private System.Windows.Forms.Button bt_dongY;
         private System.Windows.Forms.Button bt_nhapLai;
         private System.Windows.Forms.Button bt_huyBo;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }

@@ -29,6 +29,8 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fThem_Album));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,6 +41,7 @@ namespace GUI
             this.txt_maAlbum = new System.Windows.Forms.TextBox();
             this.txt_tenAlbum = new System.Windows.Forms.TextBox();
             this.dtp_namphathanh = new System.Windows.Forms.DateTimePicker();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -87,35 +90,50 @@ namespace GUI
             // 
             // bt_dongY
             // 
+            this.bt_dongY.BackColor = System.Drawing.Color.CadetBlue;
+            this.bt_dongY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_dongY.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bt_dongY.ImageIndex = 4;
+            this.bt_dongY.ImageList = this.imageList1;
             this.bt_dongY.Location = new System.Drawing.Point(35, 243);
             this.bt_dongY.Margin = new System.Windows.Forms.Padding(2);
             this.bt_dongY.Name = "bt_dongY";
             this.bt_dongY.Size = new System.Drawing.Size(95, 36);
             this.bt_dongY.TabIndex = 1;
             this.bt_dongY.Text = "Đồng ý";
-            this.bt_dongY.UseVisualStyleBackColor = true;
+            this.bt_dongY.UseVisualStyleBackColor = false;
             this.bt_dongY.Click += new System.EventHandler(this.bt_dongY_Click);
             // 
             // bt_nhapLai
             // 
+            this.bt_nhapLai.BackColor = System.Drawing.Color.CadetBlue;
+            this.bt_nhapLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_nhapLai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bt_nhapLai.ImageIndex = 1;
+            this.bt_nhapLai.ImageList = this.imageList1;
             this.bt_nhapLai.Location = new System.Drawing.Point(177, 243);
             this.bt_nhapLai.Margin = new System.Windows.Forms.Padding(2);
             this.bt_nhapLai.Name = "bt_nhapLai";
             this.bt_nhapLai.Size = new System.Drawing.Size(95, 36);
             this.bt_nhapLai.TabIndex = 1;
             this.bt_nhapLai.Text = "Nhập lại";
-            this.bt_nhapLai.UseVisualStyleBackColor = true;
+            this.bt_nhapLai.UseVisualStyleBackColor = false;
             this.bt_nhapLai.Click += new System.EventHandler(this.bt_nhapLai_Click);
             // 
             // bt_dong
             // 
+            this.bt_dong.BackColor = System.Drawing.Color.CadetBlue;
+            this.bt_dong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_dong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bt_dong.ImageIndex = 0;
+            this.bt_dong.ImageList = this.imageList1;
             this.bt_dong.Location = new System.Drawing.Point(309, 243);
             this.bt_dong.Margin = new System.Windows.Forms.Padding(2);
             this.bt_dong.Name = "bt_dong";
             this.bt_dong.Size = new System.Drawing.Size(95, 36);
             this.bt_dong.TabIndex = 1;
             this.bt_dong.Text = "Đóng";
-            this.bt_dong.UseVisualStyleBackColor = true;
+            this.bt_dong.UseVisualStyleBackColor = false;
             this.bt_dong.Click += new System.EventHandler(this.bt_dong_Click);
             // 
             // txt_maAlbum
@@ -145,6 +163,16 @@ namespace GUI
             this.dtp_namphathanh.Name = "dtp_namphathanh";
             this.dtp_namphathanh.Size = new System.Drawing.Size(200, 20);
             this.dtp_namphathanh.TabIndex = 3;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "icons8-back-64.png");
+            this.imageList1.Images.SetKeyName(1, "icons8-reset-48.png");
+            this.imageList1.Images.SetKeyName(2, "icons8-edit-48.png");
+            this.imageList1.Images.SetKeyName(3, "icons8-delete-64.png");
+            this.imageList1.Images.SetKeyName(4, "icons8-add-40.png");
             // 
             // fThem_Album
             // 
@@ -182,5 +210,6 @@ namespace GUI
         private System.Windows.Forms.TextBox txt_maAlbum;
         private System.Windows.Forms.TextBox txt_tenAlbum;
         private System.Windows.Forms.DateTimePicker dtp_namphathanh;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }

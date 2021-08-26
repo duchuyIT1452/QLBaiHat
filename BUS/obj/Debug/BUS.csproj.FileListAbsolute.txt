@@ -170,16 +170,3 @@ D:\tailieuhoctap\LT_Window\Project\Project\New folder (4)\QLBaiHat\BUS\obj\Debug
 D:\tailieuhoctap\LT_Window\Project\Project\New folder (4)\QLBaiHat\BUS\obj\Debug\BUS.csproj.CopyComplete
 D:\tailieuhoctap\LT_Window\Project\Project\New folder (4)\QLBaiHat\BUS\obj\Debug\BUS.exe
 D:\tailieuhoctap\LT_Window\Project\Project\New folder (4)\QLBaiHat\BUS\obj\Debug\BUS.pdb
-C:\Users\duchu\OneDrive\Documents\LTWindow\QLBaiHat-a04e1ccab054fc46a3b21c0ae6eb001820a5d836\BUS\bin\Debug\BUS.exe.config
-C:\Users\duchu\OneDrive\Documents\LTWindow\QLBaiHat-a04e1ccab054fc46a3b21c0ae6eb001820a5d836\BUS\bin\Debug\BUS.exe
-C:\Users\duchu\OneDrive\Documents\LTWindow\QLBaiHat-a04e1ccab054fc46a3b21c0ae6eb001820a5d836\BUS\bin\Debug\BUS.pdb
-C:\Users\duchu\OneDrive\Documents\LTWindow\QLBaiHat-a04e1ccab054fc46a3b21c0ae6eb001820a5d836\BUS\bin\Debug\DATA.exe
-C:\Users\duchu\OneDrive\Documents\LTWindow\QLBaiHat-a04e1ccab054fc46a3b21c0ae6eb001820a5d836\BUS\bin\Debug\DATA.pdb
-C:\Users\duchu\OneDrive\Documents\LTWindow\QLBaiHat-a04e1ccab054fc46a3b21c0ae6eb001820a5d836\BUS\bin\Debug\DATA.exe.config
-C:\Users\duchu\OneDrive\Documents\LTWindow\QLBaiHat-a04e1ccab054fc46a3b21c0ae6eb001820a5d836\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
-C:\Users\duchu\OneDrive\Documents\LTWindow\QLBaiHat-a04e1ccab054fc46a3b21c0ae6eb001820a5d836\BUS\obj\Debug\BUS.Properties.Resources.resources
-C:\Users\duchu\OneDrive\Documents\LTWindow\QLBaiHat-a04e1ccab054fc46a3b21c0ae6eb001820a5d836\BUS\obj\Debug\BUS.csproj.GenerateResource.cache
-C:\Users\duchu\OneDrive\Documents\LTWindow\QLBaiHat-a04e1ccab054fc46a3b21c0ae6eb001820a5d836\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
-C:\Users\duchu\OneDrive\Documents\LTWindow\QLBaiHat-a04e1ccab054fc46a3b21c0ae6eb001820a5d836\BUS\obj\Debug\BUS.csproj.CopyComplete
-C:\Users\duchu\OneDrive\Documents\LTWindow\QLBaiHat-a04e1ccab054fc46a3b21c0ae6eb001820a5d836\BUS\obj\Debug\BUS.exe
-C:\Users\duchu\OneDrive\Documents\LTWindow\QLBaiHat-a04e1ccab054fc46a3b21c0ae6eb001820a5d836\BUS\obj\Debug\BUS.pdb
