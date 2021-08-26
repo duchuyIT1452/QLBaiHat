@@ -39,9 +39,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btn_them = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.btn_nhaplai = new System.Windows.Forms.Button();
             this.btn_huy = new System.Windows.Forms.Button();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -132,6 +132,16 @@
             this.btn_them.UseVisualStyleBackColor = false;
             this.btn_them.Click += new System.EventHandler(this.button1_Click);
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "icons8-back-64.png");
+            this.imageList1.Images.SetKeyName(1, "icons8-reset-48.png");
+            this.imageList1.Images.SetKeyName(2, "icons8-edit-48.png");
+            this.imageList1.Images.SetKeyName(3, "icons8-delete-64.png");
+            this.imageList1.Images.SetKeyName(4, "icons8-add-40.png");
+            // 
             // btn_nhaplai
             // 
             this.btn_nhaplai.BackColor = System.Drawing.Color.CadetBlue;
@@ -162,16 +172,6 @@
             this.btn_huy.UseVisualStyleBackColor = false;
             this.btn_huy.Click += new System.EventHandler(this.btn_huy_Click);
             // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "icons8-back-64.png");
-            this.imageList1.Images.SetKeyName(1, "icons8-reset-48.png");
-            this.imageList1.Images.SetKeyName(2, "icons8-edit-48.png");
-            this.imageList1.Images.SetKeyName(3, "icons8-delete-64.png");
-            this.imageList1.Images.SetKeyName(4, "icons8-add-40.png");
-            // 
             // fThem_Tacgia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,6 +189,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_them);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fThem_Tacgia";
             this.Text = "Thêm tác giả";
             this.ResumeLayout(false);

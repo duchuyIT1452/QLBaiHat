@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fCapnhat_HangSX));
             this.btn_ok = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,7 +41,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btn_nhaplai = new System.Windows.Forms.Button();
             this.btn_huy = new System.Windows.Forms.Button();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.SuspendLayout();
             // 
             // btn_ok
@@ -57,6 +57,16 @@
             this.btn_ok.Text = "Đồng ý";
             this.btn_ok.UseVisualStyleBackColor = false;
             this.btn_ok.Click += new System.EventHandler(this.btn_ok_Click);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "icons8-back-64.png");
+            this.imageList1.Images.SetKeyName(1, "icons8-reset-48.png");
+            this.imageList1.Images.SetKeyName(2, "icons8-edit-48.png");
+            this.imageList1.Images.SetKeyName(3, "icons8-delete-64.png");
+            this.imageList1.Images.SetKeyName(4, "icons8-add-40.png");
             // 
             // label1
             // 
@@ -152,16 +162,6 @@
             this.btn_huy.UseVisualStyleBackColor = false;
             this.btn_huy.Click += new System.EventHandler(this.btn_huy_Click);
             // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "icons8-back-64.png");
-            this.imageList1.Images.SetKeyName(1, "icons8-reset-48.png");
-            this.imageList1.Images.SetKeyName(2, "icons8-edit-48.png");
-            this.imageList1.Images.SetKeyName(3, "icons8-delete-64.png");
-            this.imageList1.Images.SetKeyName(4, "icons8-add-40.png");
-            // 
             // fCapnhat_HangSX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -179,6 +179,7 @@
             this.Controls.Add(this.btn_nhaplai);
             this.Controls.Add(this.btn_ok);
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "fCapnhat_HangSX";
             this.Text = "Cập nhật thông tin HSX";

@@ -287,3 +287,32 @@ C:\Users\Admin\Desktop\New folder (3)\QLBaiHat\GUI\obj\Debug\GUI.csproj.CoreComp
 C:\Users\Admin\Desktop\New folder (3)\QLBaiHat\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\Admin\Desktop\New folder (3)\QLBaiHat\GUI\obj\Debug\GUI.exe
 C:\Users\Admin\Desktop\New folder (3)\QLBaiHat\GUI\obj\Debug\GUI.pdb
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\QLBaiHat\GUI\bin\Debug\GUI.exe.config
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\QLBaiHat\GUI\bin\Debug\GUI.exe
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\QLBaiHat\GUI\bin\Debug\GUI.pdb
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\QLBaiHat\GUI\bin\Debug\BUS.exe
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\QLBaiHat\GUI\bin\Debug\DATA.exe
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\QLBaiHat\GUI\bin\Debug\BUS.pdb
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\QLBaiHat\GUI\bin\Debug\BUS.exe.config
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\QLBaiHat\GUI\bin\Debug\DATA.pdb
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\QLBaiHat\GUI\bin\Debug\DATA.exe.config
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\QLBaiHat\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\QLBaiHat\GUI\obj\Debug\GUI.fCapNhat_BaiHat.resources
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\QLBaiHat\GUI\obj\Debug\GUI.fCapNhat_CaSi.resources
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\QLBaiHat\GUI\obj\Debug\GUI.fCapnhat_HangSX.resources
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\QLBaiHat\GUI\obj\Debug\GUI.fCapnhat_Tacgia.resources
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\QLBaiHat\GUI\obj\Debug\GUI.Form1.resources
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\QLBaiHat\GUI\obj\Debug\GUI.fThem_Album.resources
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\QLBaiHat\GUI\obj\Debug\GUI.fThem_BaiHat.resources
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\QLBaiHat\GUI\obj\Debug\GUI.fThem_CaSi.resources
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\QLBaiHat\GUI\obj\Debug\GUI.fThem_HangSX.resources
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\QLBaiHat\GUI\obj\Debug\GUI.fThem_Tacgia.resources
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\QLBaiHat\GUI\obj\Debug\GUI.fThem_TheLoai.resources
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\QLBaiHat\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\QLBaiHat\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\QLBaiHat\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\QLBaiHat\GUI\obj\Debug\GUI.csproj.CopyComplete
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\QLBaiHat\GUI\obj\Debug\GUI.exe
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\QLBaiHat\GUI\obj\Debug\GUI.pdb
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\QLBaiHat\GUI\obj\Debug\GUI.fThongTinDeTai.resources
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\QLBaiHat\GUI\obj\Debug\GUI.fThongTinSV.resources

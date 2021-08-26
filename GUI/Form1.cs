@@ -659,7 +659,7 @@ namespace GUI
         }
         #endregion
          
-        #region butotn hiển thị bài hát click
+        #region button hiển thị bài hát click
         private void btn_hienthitoanbobaihat_Click(object sender, EventArgs e)
         {
             load_BaiHat();
@@ -695,6 +695,7 @@ namespace GUI
         }
         #endregion
 
+        #region button sửa bài hát click
         private void btn_suabaihat_Click(object sender, EventArgs e)
         {
             string maBaiHat = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[0].Value.ToString();
@@ -721,12 +722,9 @@ namespace GUI
             this.Visible = true;
             load_BaiHat();
         }
+        #endregion
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        #region click tìm kiếm hidden text
         private void txt_timkiem_Enter(object sender, EventArgs e)
         {
             if (txt_timkiem.Text == "(Gõ nội dung cần tìm kiếm...)")
@@ -735,7 +733,9 @@ namespace GUI
                 txt_timkiem.ForeColor = Color.Black;
             }
         }
+        #endregion
 
+        #region click ngoài ô tìm kiếm thì display text
         private void txt_timkiem_Leave(object sender, EventArgs e)
         {
             if (txt_timkiem.Text == "")
@@ -744,5 +744,35 @@ namespace GUI
                 txt_timkiem.ForeColor = Color.Silver;
             }
         }
+        #endregion
+
+        #region menu tool strip click
+        private void thôngTinSinhViênThựcHiệnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            fThongTinSV f = new fThongTinSV();
+            f.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void thôngTinĐềTàiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            fThongTinDeTai f = new fThongTinDeTai();
+            f.ShowDialog();
+            this.Visible = true;
+        }
+        #endregion
+
+        #region button thêm ca sĩ click
+        private void btn_themcasi_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            fThem_CaSi f = new fThem_CaSi();
+            f.ShowDialog();
+            this.Visible = true;
+            load_CaSi();
+        }
+        #endregion
     }
 }

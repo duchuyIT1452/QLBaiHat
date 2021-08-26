@@ -37,9 +37,9 @@ namespace GUI
             this.txt_maTheLoai = new System.Windows.Forms.TextBox();
             this.txt_tenTheLoai = new System.Windows.Forms.TextBox();
             this.bt_dongY = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.bt_nhapLai = new System.Windows.Forms.Button();
             this.bt_huyBo = new System.Windows.Forms.Button();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -109,6 +109,16 @@ namespace GUI
             this.bt_dongY.UseVisualStyleBackColor = false;
             this.bt_dongY.Click += new System.EventHandler(this.bt_dongY_Click);
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "icons8-back-64.png");
+            this.imageList1.Images.SetKeyName(1, "icons8-reset-48.png");
+            this.imageList1.Images.SetKeyName(2, "icons8-edit-48.png");
+            this.imageList1.Images.SetKeyName(3, "icons8-delete-64.png");
+            this.imageList1.Images.SetKeyName(4, "icons8-add-40.png");
+            // 
             // bt_nhapLai
             // 
             this.bt_nhapLai.BackColor = System.Drawing.Color.CadetBlue;
@@ -141,16 +151,6 @@ namespace GUI
             this.bt_huyBo.UseVisualStyleBackColor = false;
             this.bt_huyBo.Click += new System.EventHandler(this.bt_huyBo_Click);
             // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "icons8-back-64.png");
-            this.imageList1.Images.SetKeyName(1, "icons8-reset-48.png");
-            this.imageList1.Images.SetKeyName(2, "icons8-edit-48.png");
-            this.imageList1.Images.SetKeyName(3, "icons8-delete-64.png");
-            this.imageList1.Images.SetKeyName(4, "icons8-add-40.png");
-            // 
             // fThem_TheLoai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -165,6 +165,7 @@ namespace GUI
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "fThem_TheLoai";
             this.Text = "Thêm thể loại";
