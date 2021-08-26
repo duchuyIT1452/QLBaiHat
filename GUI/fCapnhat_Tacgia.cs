@@ -21,39 +21,19 @@ namespace GUI
 
         private void btn_ok_Click(object sender, EventArgs e)
         {
-            TacGia_BUS tacgia;
-            try
+            TacGia_BUS tacgia = new TacGia_BUS();
+           if(txt_tentacgia.Text == "" || txt_thongtintacgia.Text == "")
             {
-                tacgia = new TacGia_BUS(txt_matacgia.Text, txt_tentacgia.Text, txt_thongtintacgia.Text);
-            }
-            catch (Exception ex)
-            {
-                string err = ex.Message;
-                MessageBox.Show(err, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                if (err.Contains("ma"))
-                {
-                    txt_matacgia.Focus();
-                    return;
-                }
-                else
-                    if (err.Contains("ten"))
-                {
-                    txt_tentacgia.Focus();
-                    return;
-                }
-                else
-                    txt_thongtintacgia.Text = "Chưa có thông tin cho tác giả !! == > bấm[Đồng ý] lần nữa để lưu tác giả này !";
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "XÁC NHẬN LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            TacGia_BUS tg = new TacGia_BUS(txt_matacgia.Text, txt_tentacgia.Text, txt_thongtintacgia.Text);
-            int result = tg.Update_TacGia();
-            if (result == 0)
-            {
-                MessageBox.Show("Cập nhật thành công tác giả [" + txt_tentacgia.Text + "]");
-            }
-            MessageBox.Show("Cập nhật thất bại");
 
-            this.DialogResult = DialogResult.OK;
+            ma = txt_matacgia.Text;
+            ten = txt_tentacgia.Text;
+            thongtin = txt_thongtintacgia.Text;
+
+            tacgia.Update_TacGia(ma, ten, thongtin);
+            MessageBox.Show("Cập nhật thành công", "THÀNH CÔNG", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btn_nhaplai_Click(object sender, EventArgs e)

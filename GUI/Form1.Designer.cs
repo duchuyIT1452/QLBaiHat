@@ -983,6 +983,7 @@ namespace GUI
             this.dgv_dsCaSi.Size = new System.Drawing.Size(350, 311);
             this.dgv_dsCaSi.TabIndex = 1;
             this.dgv_dsCaSi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_dsCaSi_CellClick);
+            this.dgv_dsCaSi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_dsCaSi_CellContentClick);
             // 
             // macasi
             // 

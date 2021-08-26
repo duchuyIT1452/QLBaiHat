@@ -22,36 +22,36 @@ namespace DATA
         #endregion
 
         #region Các phương thức xử lý
-        public void Insert_HangSX(string ma_hangsanxuat, string ten_hangsanxuat, string thongtin_hangsanxuat)
+        public void Insert_HangSX(string mahangsanxuat, string tenhangsanxuat, string thongtinhangsanxuat)
         {
-            string sql = "Insert into HANGSANXUAT values('" + ma_hangsanxuat + "',N'" + ten_hangsanxuat + "',N'" + thongtin_hangsanxuat + "')";
+            string sql = "Insert into HANGSANXUAT values('" + mahangsanxuat + "',N'" + tenhangsanxuat + "',N'" + thongtinhangsanxuat + "')";
             conDB.ExecuteNonQuery(sql);
         }
 
-        public void Delete_HangSX(string ma_hangsanxuat)
+        public void Delete_HangSX(string mahangsanxuat)
         {
-            string sql = "delete HANGSANXUAT where ma_hangsanxuat = '" + ma_hangsanxuat + "' ";
+            string sql = "delete HANGSANXUAT where ma_hangsanxuat = '" + mahangsanxuat + "' ";
             conDB.ExecuteNonQuery(sql);
         }
 
-        public int Update_HangSX(string ma_hangsanxuat, string ten_hangsanxuat, string thongtin_hangsanxuat)
+        public void Update_HangSX(string mahangsanxuat, string tenhangsanxuat, string thongtinhangsanxuat)
         {
-            //string sql = "update HANGSANXUAT set ma_hangsanxuat = '" + ma_hangsanxuat + "', ten_hangsanxuat = N'" + ten_hangsanxuat + "', thongtin_hangsanxuat = N'" + thongtin_hangsanxuat + "' ";
-            //conDB.ExecuteNonQuery(sql);
-            return conDB.executeNonQuery("update HANGSANXUAT set ma_hangsanxuat = '" + ma_hangsanxuat + "', ten_hangsanxuat = N'" + ten_hangsanxuat + "', thongtin_hangsanxuat = N'" + thongtin_hangsanxuat + "' ");
+            string sql = "update HANGSANXUAT set ten_hangsanxuat = N'" + tenhangsanxuat + "', thongtin_hangsanxuat = N'" + thongtinhangsanxuat + "' Where ma_hangsanxuat = '" + mahangsanxuat + "' ";
+            conDB.ExecuteNonQuery(sql);
+            //return conDB.executeNonQuery("update HANGSANXUAT set ma_hangsanxuat = '" + ma_hangsanxuat + "', ten_hangsanxuat = N'" + ten_hangsanxuat + "', thongtin_hangsanxuat = N'" + thongtin_hangsanxuat + "' ");
         }
 
-        public DataTable SearchByCode_HangSX(string ma_hangsanxuat)
+        public DataTable SearchByCode_HangSX(string mahangsanxuat)
         {
-            string sql = "select *from HANGSANXUAT where ma_hangsanxuat = '" + ma_hangsanxuat + "' ";
+            string sql = "select *from HANGSANXUAT where ma_hangsanxuat = '" + mahangsanxuat + "' ";
             DataTable dt = new DataTable();
             dt = conDB.GetTable(sql);
             return dt;
         }
 
-        public DataTable SearchByName_HangSX(string ten_hangsanxuat)
+        public DataTable SearchByName_HangSX(string tenhangsanxuat)
         {
-            string sql = "select *from HANGSANXUAT where ten_hangsanxuat = '" + ten_hangsanxuat + "' ";
+            string sql = "select *from HANGSANXUAT where ten_hangsanxuat = '" + tenhangsanxuat + "' ";
             DataTable dt = new DataTable();
             dt = conDB.GetTable(sql);
             return dt;

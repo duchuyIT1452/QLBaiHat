@@ -31,39 +31,19 @@ namespace GUI
 
         private void btn_ok_Click(object sender, EventArgs e)
         {
-            HangSanXuat_BUS tacgia;
-            try
+            HangSanXuat_BUS bus = new HangSanXuat_BUS();
+            if(txt_tenhangsanxuat.Text == "" || txt_thongtinhangsanxuat.Text == "")
             {
-                tacgia = new HangSanXuat_BUS(txt_mahangsanxuat.Text, txt_tenhangsanxuat.Text, txt_thongtinhangsanxuat.Text);
-            }
-            catch (Exception ex)
-            {
-                string err = ex.Message;
-                MessageBox.Show(err, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                if (err.Contains("maH"))
-                {
-                    txt_mahangsanxuat.Focus();
-                    return;
-                }
-                else
-                    if (err.Contains("tenH"))
-                {
-                    txt_tenhangsanxuat.Focus();
-                    return;
-                }
-                else
-                    txt_thongtinhangsanxuat.Text = "Chưa có thông tin cho Hãng sản xuất !! == > bấm[Đồng ý] lần nữa để lưu Hãng sản xuất này !";
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "XÁC NHẬN LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            HangSanXuat_BUS tg = new HangSanXuat_BUS(txt_mahangsanxuat.Text, txt_tenhangsanxuat.Text, txt_thongtinhangsanxuat.Text);
-            int result = tg.Update_HangSX();
-            if (result == 0)
-            {
-                MessageBox.Show("Cập nhật thành công hãng sản xuất [" + txt_tenhangsanxuat.Text + "]");
-            }
-            MessageBox.Show("Cập nhật thất bại");
 
-            this.DialogResult = DialogResult.OK;
+            maH = txt_mahangsanxuat.Text;
+            tenH = txt_tenhangsanxuat.Text;
+            thongtinH = txt_thongtinhangsanxuat.Text;
+
+            bus.capnhatHSX(maH, tenH, thongtinH);
+            MessageBox.Show("Cập nhật thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void fCapnhat_HangSX_FormClosing(object sender, FormClosingEventArgs e)

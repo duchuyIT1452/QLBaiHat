@@ -21,11 +21,16 @@ namespace BUS
 
         public HangSanXuat_BUS() { }
 
-        public HangSanXuat_BUS(string ma, string ten, string thongtin)
+        public HangSanXuat_BUS(string ma)
         {
-            this.MAHANGSANXUAT = ma;
-            this.TENHANGSANXUAT = ten;
-            this.THONGTINHANGSANXUAT = thongtin;
+            this.mahangsanxuat = ma;
+        }
+
+        public HangSanXuat_BUS(string mahangsanxuat, string tenhangsanxuat, string thongtinhangsanxuat)
+        {
+            this.MAHANGSANXUAT = mahangsanxuat;
+            this.TENHANGSANXUAT = tenhangsanxuat;
+            this.THONGTINHANGSANXUAT = thongtinhangsanxuat;
         }
 
         public string MAHANGSANXUAT
@@ -122,9 +127,9 @@ namespace BUS
             hangsx.Delete_HangSX(mahangsanxuat);
 
         }
-        public int Update_HangSX()
+        public void capnhatHSX(string mahangsanxuat, string tenhangsanxuat, string thongtinhangsanxuat)
         {
-            return hangsx.Update_HangSX(mahangsanxuat, tenhangsanxuat, thongtinhangsanxuat);
+            hangsx.Update_HangSX(mahangsanxuat, tenhangsanxuat, thongtinhangsanxuat);
         }
         #endregion
 

@@ -487,6 +487,7 @@ namespace GUI
                 load_Hangsx();
             }
             this.Visible = true;
+            load_Hangsx();
         }
         #endregion  
 
@@ -549,6 +550,7 @@ namespace GUI
                 load_Tacgia();
             }
             this.Visible = true;
+            load_Tacgia();
         }
 
         #endregion
@@ -802,6 +804,11 @@ namespace GUI
             f.ShowDialog();
             this.Visible = true;
             load_CaSi();
+        }
+
+        private void dgv_dsCaSi_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

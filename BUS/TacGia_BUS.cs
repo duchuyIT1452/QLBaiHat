@@ -20,6 +20,11 @@ namespace BUS
         private string thongtintacgia;
 
         public TacGia_BUS() { }
+
+        public TacGia_BUS(string ma)
+        {
+            this.matacgia = ma;
+        }
         
         public TacGia_BUS(string ma, string ten, string thongtin)
         {
@@ -108,9 +113,9 @@ namespace BUS
         {
             tacgia.Delete_TacGia(matacgia);
         }
-        public int Update_TacGia()
+        public void Update_TacGia(string matacgia, string tentacgia, string thongtintacgia)
         {
-            return tacgia.Update_TacGia(matacgia, tentacgia, thongtintacgia);
+            tacgia.Update_TacGia(matacgia, tentacgia, thongtintacgia);
         }
         public DataTable getAllTacGia()
         {
