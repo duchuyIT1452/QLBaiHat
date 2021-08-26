@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fCapnhat_HangSX));
             this.btn_ok = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,17 +40,22 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btn_nhaplai = new System.Windows.Forms.Button();
             this.btn_huy = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.SuspendLayout();
             // 
             // btn_ok
             // 
+            this.btn_ok.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_ok.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ok.ImageIndex = 2;
+            this.btn_ok.ImageList = this.imageList1;
             this.btn_ok.Location = new System.Drawing.Point(33, 363);
             this.btn_ok.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_ok.Name = "btn_ok";
             this.btn_ok.Size = new System.Drawing.Size(101, 36);
             this.btn_ok.TabIndex = 4;
             this.btn_ok.Text = "Đồng ý";
-            this.btn_ok.UseVisualStyleBackColor = true;
+            this.btn_ok.UseVisualStyleBackColor = false;
             this.btn_ok.Click += new System.EventHandler(this.btn_ok_Click);
             // 
             // label1
@@ -117,25 +124,43 @@
             // 
             // btn_nhaplai
             // 
+            this.btn_nhaplai.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_nhaplai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_nhaplai.ImageIndex = 1;
+            this.btn_nhaplai.ImageList = this.imageList1;
             this.btn_nhaplai.Location = new System.Drawing.Point(165, 363);
             this.btn_nhaplai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_nhaplai.Name = "btn_nhaplai";
             this.btn_nhaplai.Size = new System.Drawing.Size(101, 36);
             this.btn_nhaplai.TabIndex = 5;
             this.btn_nhaplai.Text = "Nhập lại";
-            this.btn_nhaplai.UseVisualStyleBackColor = true;
+            this.btn_nhaplai.UseVisualStyleBackColor = false;
             this.btn_nhaplai.Click += new System.EventHandler(this.btn_nhaplai_Click);
             // 
             // btn_huy
             // 
-            this.btn_huy.Location = new System.Drawing.Point(293, 363);
+            this.btn_huy.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_huy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_huy.ImageIndex = 0;
+            this.btn_huy.ImageList = this.imageList1;
+            this.btn_huy.Location = new System.Drawing.Point(287, 363);
             this.btn_huy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_huy.Name = "btn_huy";
-            this.btn_huy.Size = new System.Drawing.Size(101, 36);
+            this.btn_huy.Size = new System.Drawing.Size(107, 36);
             this.btn_huy.TabIndex = 6;
             this.btn_huy.Text = "Hủy";
-            this.btn_huy.UseVisualStyleBackColor = true;
+            this.btn_huy.UseVisualStyleBackColor = false;
             this.btn_huy.Click += new System.EventHandler(this.btn_huy_Click);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "icons8-back-64.png");
+            this.imageList1.Images.SetKeyName(1, "icons8-reset-48.png");
+            this.imageList1.Images.SetKeyName(2, "icons8-edit-48.png");
+            this.imageList1.Images.SetKeyName(3, "icons8-delete-64.png");
+            this.imageList1.Images.SetKeyName(4, "icons8-add-40.png");
             // 
             // fCapnhat_HangSX
             // 
@@ -175,5 +200,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btn_nhaplai;
         private System.Windows.Forms.Button btn_huy;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
