@@ -115,3 +115,12 @@ D:\tailieuhoctap\LT_Window\Project\Project\New folder (4)\QLBaiHat\DATA\obj\Debu
 D:\tailieuhoctap\LT_Window\Project\Project\New folder (4)\QLBaiHat\DATA\obj\Debug\DATA.csproj.CoreCompileInputs.cache
 D:\tailieuhoctap\LT_Window\Project\Project\New folder (4)\QLBaiHat\DATA\obj\Debug\DATA.exe
 D:\tailieuhoctap\LT_Window\Project\Project\New folder (4)\QLBaiHat\DATA\obj\Debug\DATA.pdb
+C:\Users\Admin\Desktop\New folder (3)\QLBaiHat\DATA\bin\Debug\DATA.exe.config
+C:\Users\Admin\Desktop\New folder (3)\QLBaiHat\DATA\bin\Debug\DATA.exe
+C:\Users\Admin\Desktop\New folder (3)\QLBaiHat\DATA\bin\Debug\DATA.pdb
+C:\Users\Admin\Desktop\New folder (3)\QLBaiHat\DATA\obj\Debug\DATA.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\New folder (3)\QLBaiHat\DATA\obj\Debug\DATA.Properties.Resources.resources
+C:\Users\Admin\Desktop\New folder (3)\QLBaiHat\DATA\obj\Debug\DATA.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\New folder (3)\QLBaiHat\DATA\obj\Debug\DATA.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\New folder (3)\QLBaiHat\DATA\obj\Debug\DATA.exe
+C:\Users\Admin\Desktop\New folder (3)\QLBaiHat\DATA\obj\Debug\DATA.pdb
