@@ -214,6 +214,8 @@ namespace GUI
             this.MaAlbum_TC7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenAlbum_TC7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NamPhatHanh_TC7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage14 = new System.Windows.Forms.TabPage();
+            this.tabPage15 = new System.Windows.Forms.TabPage();
             this.panel1.SuspendLayout();
             this.panel13.SuspendLayout();
             this.tabControl_formChinh.SuspendLayout();
@@ -1602,9 +1604,9 @@ namespace GUI
             // 
             this.panel11.Controls.Add(this.pictureBox1);
             this.panel11.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panel11.Location = new System.Drawing.Point(781, 5);
+            this.panel11.Location = new System.Drawing.Point(904, 8);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(395, 396);
+            this.panel11.Size = new System.Drawing.Size(213, 396);
             this.panel11.TabIndex = 1;
             // 
             // pictureBox1
@@ -1612,9 +1614,9 @@ namespace GUI
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::GUI.Properties.Resources.icons8_search_240;
-            this.pictureBox1.Location = new System.Drawing.Point(30, 23);
+            this.pictureBox1.Location = new System.Drawing.Point(17, 70);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(337, 348);
+            this.pictureBox1.Size = new System.Drawing.Size(178, 238);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -1626,7 +1628,7 @@ namespace GUI
             this.panel10.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel10.Location = new System.Drawing.Point(0, 3);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(775, 474);
+            this.panel10.Size = new System.Drawing.Size(888, 474);
             this.panel10.TabIndex = 0;
             // 
             // tabControl1
@@ -1636,13 +1638,15 @@ namespace GUI
             this.tabControl1.Controls.Add(this.tabPage11);
             this.tabControl1.Controls.Add(this.tabPage12);
             this.tabControl1.Controls.Add(this.tabPage13);
+            this.tabControl1.Controls.Add(this.tabPage14);
+            this.tabControl1.Controls.Add(this.tabPage15);
             this.tabControl1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tabControl1.ImageList = this.imageList1;
-            this.tabControl1.Location = new System.Drawing.Point(26, 94);
+            this.tabControl1.Location = new System.Drawing.Point(16, 94);
             this.tabControl1.Name = "tabControl1";
-            this.tabControl1.Padding = new System.Drawing.Point(19, 10);
+            this.tabControl1.Padding = new System.Drawing.Point(11, 10);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(722, 304);
+            this.tabControl1.Size = new System.Drawing.Size(855, 304);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage9
@@ -1653,7 +1657,7 @@ namespace GUI
             this.tabPage9.Location = new System.Drawing.Point(4, 41);
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(714, 259);
+            this.tabPage9.Size = new System.Drawing.Size(847, 259);
             this.tabPage9.TabIndex = 0;
             this.tabPage9.Text = "TÊN BÀI HÁT";
             // 
@@ -1665,7 +1669,7 @@ namespace GUI
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(708, 253);
+            this.groupBox1.Size = new System.Drawing.Size(841, 253);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kết quả tìm kiếm theo TÊN BÀI HÁT";
@@ -1685,7 +1689,7 @@ namespace GUI
             this.dgv_searchTenBaiHat.Name = "dgv_searchTenBaiHat";
             this.dgv_searchTenBaiHat.RowHeadersVisible = false;
             this.dgv_searchTenBaiHat.RowHeadersWidth = 51;
-            this.dgv_searchTenBaiHat.Size = new System.Drawing.Size(702, 234);
+            this.dgv_searchTenBaiHat.Size = new System.Drawing.Size(835, 234);
             this.dgv_searchTenBaiHat.TabIndex = 0;
             // 
             // tabPage10
@@ -1696,7 +1700,7 @@ namespace GUI
             this.tabPage10.Location = new System.Drawing.Point(4, 41);
             this.tabPage10.Name = "tabPage10";
             this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage10.Size = new System.Drawing.Size(714, 259);
+            this.tabPage10.Size = new System.Drawing.Size(753, 259);
             this.tabPage10.TabIndex = 1;
             this.tabPage10.Text = "TÊN CA SĨ";
             // 
@@ -1736,7 +1740,7 @@ namespace GUI
             this.tabPage11.Location = new System.Drawing.Point(4, 41);
             this.tabPage11.Name = "tabPage11";
             this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage11.Size = new System.Drawing.Size(714, 259);
+            this.tabPage11.Size = new System.Drawing.Size(753, 259);
             this.tabPage11.TabIndex = 2;
             this.tabPage11.Text = "TÊN ALBUM";
             // 
@@ -1775,7 +1779,7 @@ namespace GUI
             this.tabPage12.Location = new System.Drawing.Point(4, 41);
             this.tabPage12.Name = "tabPage12";
             this.tabPage12.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage12.Size = new System.Drawing.Size(714, 259);
+            this.tabPage12.Size = new System.Drawing.Size(753, 259);
             this.tabPage12.TabIndex = 3;
             this.tabPage12.Text = "LỜI BÀI HÁT";
             // 
@@ -1808,7 +1812,7 @@ namespace GUI
             this.tabPage13.Location = new System.Drawing.Point(4, 41);
             this.tabPage13.Name = "tabPage13";
             this.tabPage13.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage13.Size = new System.Drawing.Size(714, 259);
+            this.tabPage13.Size = new System.Drawing.Size(753, 259);
             this.tabPage13.TabIndex = 4;
             this.tabPage13.Text = "HÃNG SẢN XUẤT";
             // 
@@ -1841,9 +1845,9 @@ namespace GUI
             this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel12.Controls.Add(this.btn_timkiem);
             this.panel12.Controls.Add(this.txt_timkiem);
-            this.panel12.Location = new System.Drawing.Point(61, 38);
+            this.panel12.Location = new System.Drawing.Point(137, 38);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(622, 50);
+            this.panel12.Size = new System.Drawing.Size(623, 50);
             this.panel12.TabIndex = 0;
             // 
             // btn_timkiem
@@ -1868,13 +1872,15 @@ namespace GUI
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_timkiem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_timkiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_timkiem.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txt_timkiem.ForeColor = System.Drawing.Color.Silver;
             this.txt_timkiem.Location = new System.Drawing.Point(3, 3);
             this.txt_timkiem.Multiline = true;
             this.txt_timkiem.Name = "txt_timkiem";
-            this.txt_timkiem.Size = new System.Drawing.Size(483, 39);
+            this.txt_timkiem.Size = new System.Drawing.Size(484, 39);
             this.txt_timkiem.TabIndex = 0;
             this.txt_timkiem.Text = "(Gõ nội dung cần tìm kiếm...)";
+            this.txt_timkiem.Enter += new System.EventHandler(this.txt_timkiem_Enter);
+            this.txt_timkiem.Leave += new System.EventHandler(this.txt_timkiem_Leave);
             // 
             // tabPage8
             // 
@@ -2442,6 +2448,28 @@ namespace GUI
             this.NamPhatHanh_TC7.Name = "NamPhatHanh_TC7";
             this.NamPhatHanh_TC7.Width = 125;
             // 
+            // tabPage14
+            // 
+            this.tabPage14.ImageIndex = 6;
+            this.tabPage14.Location = new System.Drawing.Point(4, 41);
+            this.tabPage14.Name = "tabPage14";
+            this.tabPage14.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage14.Size = new System.Drawing.Size(753, 259);
+            this.tabPage14.TabIndex = 5;
+            this.tabPage14.Text = "TÊN NHẠC SĨ";
+            this.tabPage14.UseVisualStyleBackColor = true;
+            // 
+            // tabPage15
+            // 
+            this.tabPage15.ImageIndex = 4;
+            this.tabPage15.Location = new System.Drawing.Point(4, 41);
+            this.tabPage15.Name = "tabPage15";
+            this.tabPage15.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage15.Size = new System.Drawing.Size(753, 259);
+            this.tabPage15.TabIndex = 6;
+            this.tabPage15.Text = "TÊN THỂ LOẠI";
+            this.tabPage15.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2712,6 +2740,8 @@ namespace GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn MaAlbum_TC7;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenAlbum_TC7;
         private System.Windows.Forms.DataGridViewTextBoxColumn NamPhatHanh_TC7;
+        private System.Windows.Forms.TabPage tabPage14;
+        private System.Windows.Forms.TabPage tabPage15;
     }
 }
 
