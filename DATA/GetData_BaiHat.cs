@@ -111,8 +111,10 @@ namespace DATA
         public void UpdateBaiHat(String maBaiHat, String tenBaiHat, String maTheLoai, String maAlbum, String maCaSi, String maTacGia, String maHSX, String loiBaiHat)
         {
             String sql = "Update BaiHat Set ma_album='" + maAlbum + "',ma_theloai='" + maTheLoai + "', ma_tacgia='"
-                + maTacGia + "', ma_hangsanxuat='" + maHSX + "',ma_casi='" + maCaSi + "', ten_baihat='" + tenBaiHat + "',loi_baihat='" + loiBaiHat + "' Where ma_baihat='" + maBaiHat + "'";
+                + maTacGia + "', ma_hangsanxuat='" + maHSX + "',ma_casi='" + maCaSi + "', ten_baihat=N'" + tenBaiHat + "',loi_baihat=N'" + loiBaiHat + "' Where ma_baihat='" + maBaiHat + "'";
+            String sql1 = "Update BaiHat_Casi set ma_casi = '" + maCaSi + "' where ma_baihat = '" + maBaiHat + "'";
             conDB.ExecuteNonQuery(sql);
+            conDB.ExecuteNonQuery(sql1);
         }
         public void DeleteBaiHat(String maBaiHat)
         {

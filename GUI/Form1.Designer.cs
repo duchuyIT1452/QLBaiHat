@@ -33,7 +33,6 @@ namespace GUI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.btn_close = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label12 = new System.Windows.Forms.Label();
             this.tabControl_formChinh = new System.Windows.Forms.TabControl();
@@ -64,7 +63,6 @@ namespace GUI
             this.MaAlbum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenAlbum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NamPhatHanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label2 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -139,7 +137,6 @@ namespace GUI
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage9 = new System.Windows.Forms.TabPage();
@@ -171,7 +168,6 @@ namespace GUI
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dgv_searchHangSanXuat = new System.Windows.Forms.DataGridView();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.btn_timkiem = new System.Windows.Forms.Button();
             this.txt_timkiem = new System.Windows.Forms.TextBox();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.panel14 = new System.Windows.Forms.Panel();
@@ -188,7 +184,6 @@ namespace GUI
             this.Matg = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mahsx = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.btn_hienthitoanbobaihat = new System.Windows.Forms.Button();
             this.cb_hangsanxuat_formchinh = new System.Windows.Forms.ComboBox();
             this.cb_tacgia_formchinh = new System.Windows.Forms.ComboBox();
             this.cb_casi_formchinh = new System.Windows.Forms.ComboBox();
@@ -205,6 +200,11 @@ namespace GUI
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.btn_close = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_timkiem = new System.Windows.Forms.Button();
+            this.btn_hienthitoanbobaihat = new System.Windows.Forms.Button();
             this.chứcNăngChínhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýAlbumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýTHỂLOẠIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -248,7 +248,6 @@ namespace GUI
             this.tabPage7.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel10.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage9.SuspendLayout();
@@ -272,6 +271,7 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.dgv_baihat)).BeginInit();
             this.groupBox6.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -294,23 +294,6 @@ namespace GUI
             this.panel13.Size = new System.Drawing.Size(1187, 58);
             this.panel13.TabIndex = 2;
             // 
-            // btn_close
-            // 
-            this.btn_close.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_close.ForeColor = System.Drawing.Color.Red;
-            this.btn_close.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_close.ImageIndex = 10;
-            this.btn_close.ImageList = this.imageList1;
-            this.btn_close.Location = new System.Drawing.Point(833, 3);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(252, 49);
-            this.btn_close.TabIndex = 1;
-            this.btn_close.Text = "ĐÓNG ỨNG DỤNG";
-            this.btn_close.UseVisualStyleBackColor = false;
-            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
-            // 
             // imageList1
             // 
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
@@ -326,6 +309,11 @@ namespace GUI
             this.imageList1.Images.SetKeyName(8, "icons8-search-32.png");
             this.imageList1.Images.SetKeyName(9, "icons8-power-off-button-64.png");
             this.imageList1.Images.SetKeyName(10, "icons8-shutdown-48.png");
+            this.imageList1.Images.SetKeyName(11, "icons8-back-64.png");
+            this.imageList1.Images.SetKeyName(12, "icons8-reset-48.png");
+            this.imageList1.Images.SetKeyName(13, "icons8-edit-48.png");
+            this.imageList1.Images.SetKeyName(14, "icons8-delete-64.png");
+            this.imageList1.Images.SetKeyName(15, "icons8-add-40.png");
             // 
             // label12
             // 
@@ -468,7 +456,7 @@ namespace GUI
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel2.BackColor = System.Drawing.Color.MediumTurquoise;
             this.panel2.Controls.Add(this.label1);
             this.panel2.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -504,7 +492,7 @@ namespace GUI
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel3.BackColor = System.Drawing.Color.DarkCyan;
             this.panel3.Controls.Add(this.bt_dong);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.panel4);
@@ -528,7 +516,7 @@ namespace GUI
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel5.BackColor = System.Drawing.Color.MediumTurquoise;
             this.panel5.Controls.Add(this.dgv_AlbumBaihat);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Cursor = System.Windows.Forms.Cursors.Default;
@@ -596,7 +584,7 @@ namespace GUI
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel4.BackColor = System.Drawing.Color.MediumTurquoise;
             this.panel4.Controls.Add(this.bt_xoa);
             this.panel4.Controls.Add(this.bt_them);
             this.panel4.Controls.Add(this.dgv_Album);
@@ -610,24 +598,32 @@ namespace GUI
             // 
             // bt_xoa
             // 
-            this.bt_xoa.Location = new System.Drawing.Point(265, 364);
+            this.bt_xoa.BackColor = System.Drawing.Color.CadetBlue;
+            this.bt_xoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bt_xoa.ImageIndex = 14;
+            this.bt_xoa.ImageList = this.imageList1;
+            this.bt_xoa.Location = new System.Drawing.Point(272, 351);
             this.bt_xoa.Margin = new System.Windows.Forms.Padding(2);
             this.bt_xoa.Name = "bt_xoa";
-            this.bt_xoa.Size = new System.Drawing.Size(93, 30);
+            this.bt_xoa.Size = new System.Drawing.Size(102, 43);
             this.bt_xoa.TabIndex = 3;
             this.bt_xoa.Text = "Xóa";
-            this.bt_xoa.UseVisualStyleBackColor = true;
+            this.bt_xoa.UseVisualStyleBackColor = false;
             this.bt_xoa.Click += new System.EventHandler(this.bt_xoa_Click);
             // 
             // bt_them
             // 
-            this.bt_them.Location = new System.Drawing.Point(49, 364);
+            this.bt_them.BackColor = System.Drawing.Color.CadetBlue;
+            this.bt_them.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bt_them.ImageIndex = 15;
+            this.bt_them.ImageList = this.imageList1;
+            this.bt_them.Location = new System.Drawing.Point(56, 351);
             this.bt_them.Margin = new System.Windows.Forms.Padding(2);
             this.bt_them.Name = "bt_them";
-            this.bt_them.Size = new System.Drawing.Size(93, 30);
+            this.bt_them.Size = new System.Drawing.Size(102, 43);
             this.bt_them.TabIndex = 2;
             this.bt_them.Text = "Thêm";
-            this.bt_them.UseVisualStyleBackColor = true;
+            this.bt_them.UseVisualStyleBackColor = false;
             this.bt_them.Click += new System.EventHandler(this.bt_them_Click);
             // 
             // dgv_Album
@@ -647,7 +643,7 @@ namespace GUI
             this.dgv_Album.RowHeadersWidth = 51;
             this.dgv_Album.RowTemplate.Height = 24;
             this.dgv_Album.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Album.Size = new System.Drawing.Size(427, 329);
+            this.dgv_Album.Size = new System.Drawing.Size(427, 316);
             this.dgv_Album.TabIndex = 1;
             this.dgv_Album.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Album_CellClick);
             // 
@@ -677,21 +673,6 @@ namespace GUI
             this.NamPhatHanh.ReadOnly = true;
             this.NamPhatHanh.Width = 150;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.label2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label2.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Image = global::GUI.Properties.Resources.checklist;
-            this.label2.Location = new System.Drawing.Point(9, 6);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(165, 23);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Danh sách Album";
-            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.panel6);
@@ -706,7 +687,7 @@ namespace GUI
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel6.BackColor = System.Drawing.Color.DarkCyan;
             this.panel6.Controls.Add(this.panel8);
             this.panel6.Controls.Add(this.panel7);
             this.panel6.Location = new System.Drawing.Point(6, 6);
@@ -717,14 +698,14 @@ namespace GUI
             // 
             // panel8
             // 
-            this.panel8.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel8.BackColor = System.Drawing.Color.MediumTurquoise;
             this.panel8.Controls.Add(this.dgv_TheloaiBaihat);
             this.panel8.Controls.Add(this.label9);
             this.panel8.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panel8.Location = new System.Drawing.Point(366, 2);
+            this.panel8.Location = new System.Drawing.Point(382, 2);
             this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(775, 416);
+            this.panel8.Size = new System.Drawing.Size(759, 416);
             this.panel8.TabIndex = 1;
             // 
             // dgv_TheloaiBaihat
@@ -785,7 +766,7 @@ namespace GUI
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.panel7.BackColor = System.Drawing.Color.MediumTurquoise;
             this.panel7.Controls.Add(this.bt_xoaTheLoai);
             this.panel7.Controls.Add(this.bt_themTheLoai);
             this.panel7.Controls.Add(this.dgv_theloai);
@@ -799,26 +780,36 @@ namespace GUI
             // 
             // bt_xoaTheLoai
             // 
+            this.bt_xoaTheLoai.BackColor = System.Drawing.Color.CadetBlue;
             this.bt_xoaTheLoai.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_xoaTheLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_xoaTheLoai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bt_xoaTheLoai.ImageIndex = 14;
+            this.bt_xoaTheLoai.ImageList = this.imageList1;
             this.bt_xoaTheLoai.Location = new System.Drawing.Point(205, 344);
             this.bt_xoaTheLoai.Margin = new System.Windows.Forms.Padding(2);
             this.bt_xoaTheLoai.Name = "bt_xoaTheLoai";
-            this.bt_xoaTheLoai.Size = new System.Drawing.Size(85, 39);
+            this.bt_xoaTheLoai.Size = new System.Drawing.Size(112, 39);
             this.bt_xoaTheLoai.TabIndex = 2;
             this.bt_xoaTheLoai.Text = "Xóa";
-            this.bt_xoaTheLoai.UseVisualStyleBackColor = true;
+            this.bt_xoaTheLoai.UseVisualStyleBackColor = false;
             this.bt_xoaTheLoai.Click += new System.EventHandler(this.bt_xoaTheLoai_Click);
             // 
             // bt_themTheLoai
             // 
+            this.bt_themTheLoai.BackColor = System.Drawing.Color.CadetBlue;
             this.bt_themTheLoai.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_themTheLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_themTheLoai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bt_themTheLoai.ImageIndex = 15;
+            this.bt_themTheLoai.ImageList = this.imageList1;
             this.bt_themTheLoai.Location = new System.Drawing.Point(46, 344);
             this.bt_themTheLoai.Margin = new System.Windows.Forms.Padding(2);
             this.bt_themTheLoai.Name = "bt_themTheLoai";
-            this.bt_themTheLoai.Size = new System.Drawing.Size(85, 39);
+            this.bt_themTheLoai.Size = new System.Drawing.Size(112, 39);
             this.bt_themTheLoai.TabIndex = 2;
             this.bt_themTheLoai.Text = "Thêm";
-            this.bt_themTheLoai.UseVisualStyleBackColor = true;
+            this.bt_themTheLoai.UseVisualStyleBackColor = false;
             this.bt_themTheLoai.Click += new System.EventHandler(this.bt_themTheLoai_Click);
             // 
             // dgv_theloai
@@ -871,7 +862,7 @@ namespace GUI
             // 
             // tabPage4
             // 
-            this.tabPage4.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPage4.BackColor = System.Drawing.Color.MediumTurquoise;
             this.tabPage4.Controls.Add(this.txt_tencasi);
             this.tabPage4.Controls.Add(this.button3);
             this.tabPage4.Controls.Add(this.button2);
@@ -903,31 +894,46 @@ namespace GUI
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.CadetBlue;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.ImageIndex = 13;
+            this.button3.ImageList = this.imageList1;
             this.button3.Location = new System.Drawing.Point(767, 359);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(175, 35);
+            this.button3.Size = new System.Drawing.Size(196, 35);
             this.button3.TabIndex = 4;
             this.button3.Text = "Chỉnh sửa thông tin ca sĩ";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(495, 359);
+            this.button2.BackColor = System.Drawing.Color.CadetBlue;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.ImageIndex = 14;
+            this.button2.ImageList = this.imageList1;
+            this.button2.Location = new System.Drawing.Point(444, 359);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(156, 35);
+            this.button2.Size = new System.Drawing.Size(207, 35);
             this.button2.TabIndex = 4;
             this.button2.Text = "Xoá ca sĩ";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(182, 359);
+            this.button1.BackColor = System.Drawing.Color.CadetBlue;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.ImageIndex = 15;
+            this.button1.ImageList = this.imageList1;
+            this.button1.Location = new System.Drawing.Point(135, 359);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 35);
+            this.button1.Size = new System.Drawing.Size(180, 35);
             this.button1.TabIndex = 4;
             this.button1.Text = "Thêm ca sĩ";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // dgv_BaiHatTheoCaSi
             // 
@@ -1040,7 +1046,7 @@ namespace GUI
             // 
             // tabPage5
             // 
-            this.tabPage5.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.tabPage5.BackColor = System.Drawing.Color.MediumTurquoise;
             this.tabPage5.Controls.Add(this.btn_suaNS);
             this.tabPage5.Controls.Add(this.btn_xoaNS);
             this.tabPage5.Controls.Add(this.btn_themNS);
@@ -1067,35 +1073,47 @@ namespace GUI
             // 
             // btn_suaNS
             // 
-            this.btn_suaNS.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_suaNS.Location = new System.Drawing.Point(826, 349);
+            this.btn_suaNS.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_suaNS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_suaNS.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_suaNS.ImageIndex = 13;
+            this.btn_suaNS.ImageList = this.imageList1;
+            this.btn_suaNS.Location = new System.Drawing.Point(817, 349);
             this.btn_suaNS.Name = "btn_suaNS";
-            this.btn_suaNS.Size = new System.Drawing.Size(289, 44);
+            this.btn_suaNS.Size = new System.Drawing.Size(255, 44);
             this.btn_suaNS.TabIndex = 7;
             this.btn_suaNS.Text = "Sửa thông tin nhạc sĩ";
-            this.btn_suaNS.UseVisualStyleBackColor = true;
+            this.btn_suaNS.UseVisualStyleBackColor = false;
             this.btn_suaNS.Click += new System.EventHandler(this.btn_suaNS_Click);
             // 
             // btn_xoaNS
             // 
-            this.btn_xoaNS.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_xoaNS.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_xoaNS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_xoaNS.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_xoaNS.ImageIndex = 14;
+            this.btn_xoaNS.ImageList = this.imageList1;
             this.btn_xoaNS.Location = new System.Drawing.Point(410, 349);
             this.btn_xoaNS.Name = "btn_xoaNS";
             this.btn_xoaNS.Size = new System.Drawing.Size(222, 44);
             this.btn_xoaNS.TabIndex = 7;
             this.btn_xoaNS.Text = "Xóa nhạc sĩ";
-            this.btn_xoaNS.UseVisualStyleBackColor = true;
+            this.btn_xoaNS.UseVisualStyleBackColor = false;
             this.btn_xoaNS.Click += new System.EventHandler(this.btn_xoaNS_Click);
             // 
             // btn_themNS
             // 
-            this.btn_themNS.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_themNS.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_themNS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_themNS.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_themNS.ImageIndex = 15;
+            this.btn_themNS.ImageList = this.imageList1;
             this.btn_themNS.Location = new System.Drawing.Point(55, 349);
             this.btn_themNS.Name = "btn_themNS";
             this.btn_themNS.Size = new System.Drawing.Size(222, 44);
             this.btn_themNS.TabIndex = 7;
             this.btn_themNS.Text = "Thêm nhạc sĩ mới";
-            this.btn_themNS.UseVisualStyleBackColor = true;
+            this.btn_themNS.UseVisualStyleBackColor = false;
             this.btn_themNS.Click += new System.EventHandler(this.btn_themNS_Click);
             // 
             // txt_thongtintacgia
@@ -1269,7 +1287,7 @@ namespace GUI
             // 
             // tabPage6
             // 
-            this.tabPage6.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.tabPage6.BackColor = System.Drawing.Color.MediumTurquoise;
             this.tabPage6.Controls.Add(this.btn_suaHSX);
             this.tabPage6.Controls.Add(this.btn_xoaHSX);
             this.tabPage6.Controls.Add(this.btn_themHSX);
@@ -1295,35 +1313,47 @@ namespace GUI
             // 
             // btn_suaHSX
             // 
-            this.btn_suaHSX.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_suaHSX.Location = new System.Drawing.Point(778, 355);
+            this.btn_suaHSX.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_suaHSX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_suaHSX.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_suaHSX.ImageIndex = 13;
+            this.btn_suaHSX.ImageList = this.imageList1;
+            this.btn_suaHSX.Location = new System.Drawing.Point(833, 355);
             this.btn_suaHSX.Name = "btn_suaHSX";
-            this.btn_suaHSX.Size = new System.Drawing.Size(321, 47);
+            this.btn_suaHSX.Size = new System.Drawing.Size(195, 47);
             this.btn_suaHSX.TabIndex = 8;
             this.btn_suaHSX.Text = "Sửa thông tin HSX";
-            this.btn_suaHSX.UseVisualStyleBackColor = true;
+            this.btn_suaHSX.UseVisualStyleBackColor = false;
             this.btn_suaHSX.Click += new System.EventHandler(this.btn_suaHSX_Click);
             // 
             // btn_xoaHSX
             // 
-            this.btn_xoaHSX.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_xoaHSX.Location = new System.Drawing.Point(422, 355);
+            this.btn_xoaHSX.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_xoaHSX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_xoaHSX.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_xoaHSX.ImageIndex = 14;
+            this.btn_xoaHSX.ImageList = this.imageList1;
+            this.btn_xoaHSX.Location = new System.Drawing.Point(422, 357);
             this.btn_xoaHSX.Name = "btn_xoaHSX";
-            this.btn_xoaHSX.Size = new System.Drawing.Size(241, 47);
+            this.btn_xoaHSX.Size = new System.Drawing.Size(203, 47);
             this.btn_xoaHSX.TabIndex = 8;
             this.btn_xoaHSX.Text = "Xóa hãng sản xuất";
-            this.btn_xoaHSX.UseVisualStyleBackColor = true;
+            this.btn_xoaHSX.UseVisualStyleBackColor = false;
             this.btn_xoaHSX.Click += new System.EventHandler(this.btn_xoaHSX_Click);
             // 
             // btn_themHSX
             // 
-            this.btn_themHSX.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_themHSX.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_themHSX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_themHSX.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_themHSX.ImageIndex = 15;
+            this.btn_themHSX.ImageList = this.imageList1;
             this.btn_themHSX.Location = new System.Drawing.Point(57, 355);
             this.btn_themHSX.Name = "btn_themHSX";
-            this.btn_themHSX.Size = new System.Drawing.Size(241, 47);
+            this.btn_themHSX.Size = new System.Drawing.Size(195, 47);
             this.btn_themHSX.TabIndex = 8;
             this.btn_themHSX.Text = "Thêm HSX mới";
-            this.btn_themHSX.UseVisualStyleBackColor = true;
+            this.btn_themHSX.UseVisualStyleBackColor = false;
             this.btn_themHSX.Click += new System.EventHandler(this.button1_Click);
             // 
             // txt_tenhangsanxuat
@@ -1536,18 +1566,6 @@ namespace GUI
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(395, 396);
             this.panel11.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::GUI.Properties.Resources.icons8_search_240;
-            this.pictureBox1.Location = new System.Drawing.Point(30, 23);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(337, 348);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // panel10
             // 
@@ -1873,22 +1891,6 @@ namespace GUI
             this.panel12.Size = new System.Drawing.Size(622, 50);
             this.panel12.TabIndex = 0;
             // 
-            // btn_timkiem
-            // 
-            this.btn_timkiem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_timkiem.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_timkiem.ForeColor = System.Drawing.Color.Navy;
-            this.btn_timkiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_timkiem.ImageIndex = 3;
-            this.btn_timkiem.ImageList = this.imageList1;
-            this.btn_timkiem.Location = new System.Drawing.Point(492, 3);
-            this.btn_timkiem.Name = "btn_timkiem";
-            this.btn_timkiem.Size = new System.Drawing.Size(123, 39);
-            this.btn_timkiem.TabIndex = 1;
-            this.btn_timkiem.Text = "Tìm";
-            this.btn_timkiem.UseVisualStyleBackColor = true;
-            this.btn_timkiem.Click += new System.EventHandler(this.btn_timkiem_Click);
-            // 
             // txt_timkiem
             // 
             this.txt_timkiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -1932,32 +1934,47 @@ namespace GUI
             // 
             // btn_suabaihat
             // 
-            this.btn_suabaihat.Location = new System.Drawing.Point(817, 354);
+            this.btn_suabaihat.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_suabaihat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_suabaihat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_suabaihat.ImageIndex = 13;
+            this.btn_suabaihat.ImageList = this.imageList1;
+            this.btn_suabaihat.Location = new System.Drawing.Point(864, 353);
             this.btn_suabaihat.Name = "btn_suabaihat";
             this.btn_suabaihat.Size = new System.Drawing.Size(164, 35);
             this.btn_suabaihat.TabIndex = 2;
             this.btn_suabaihat.Text = "Sửa thông tin bài hát";
-            this.btn_suabaihat.UseVisualStyleBackColor = true;
+            this.btn_suabaihat.UseVisualStyleBackColor = false;
             this.btn_suabaihat.Click += new System.EventHandler(this.btn_suabaihat_Click);
             // 
             // btn_xoabaihat
             // 
-            this.btn_xoabaihat.Location = new System.Drawing.Point(588, 355);
+            this.btn_xoabaihat.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_xoabaihat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_xoabaihat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_xoabaihat.ImageIndex = 14;
+            this.btn_xoabaihat.ImageList = this.imageList1;
+            this.btn_xoabaihat.Location = new System.Drawing.Point(635, 354);
             this.btn_xoabaihat.Name = "btn_xoabaihat";
             this.btn_xoabaihat.Size = new System.Drawing.Size(163, 35);
             this.btn_xoabaihat.TabIndex = 2;
             this.btn_xoabaihat.Text = "Xoá bài hát";
-            this.btn_xoabaihat.UseVisualStyleBackColor = true;
+            this.btn_xoabaihat.UseVisualStyleBackColor = false;
             this.btn_xoabaihat.Click += new System.EventHandler(this.btn_xoabaihat_Click);
             // 
             // btn_thembaihat
             // 
-            this.btn_thembaihat.Location = new System.Drawing.Point(359, 355);
+            this.btn_thembaihat.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_thembaihat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_thembaihat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_thembaihat.ImageIndex = 15;
+            this.btn_thembaihat.ImageList = this.imageList1;
+            this.btn_thembaihat.Location = new System.Drawing.Point(389, 354);
             this.btn_thembaihat.Name = "btn_thembaihat";
-            this.btn_thembaihat.Size = new System.Drawing.Size(141, 35);
+            this.btn_thembaihat.Size = new System.Drawing.Size(158, 35);
             this.btn_thembaihat.TabIndex = 2;
             this.btn_thembaihat.Text = "Thêm bài hát mới";
-            this.btn_thembaihat.UseVisualStyleBackColor = true;
+            this.btn_thembaihat.UseVisualStyleBackColor = false;
             this.btn_thembaihat.Click += new System.EventHandler(this.btn_thembaihat_Click);
             // 
             // dgv_baihat
@@ -2072,16 +2089,6 @@ namespace GUI
             this.groupBox6.Size = new System.Drawing.Size(278, 398);
             this.groupBox6.TabIndex = 0;
             this.groupBox6.TabStop = false;
-            // 
-            // btn_hienthitoanbobaihat
-            // 
-            this.btn_hienthitoanbobaihat.Location = new System.Drawing.Point(17, 349);
-            this.btn_hienthitoanbobaihat.Name = "btn_hienthitoanbobaihat";
-            this.btn_hienthitoanbobaihat.Size = new System.Drawing.Size(238, 34);
-            this.btn_hienthitoanbobaihat.TabIndex = 2;
-            this.btn_hienthitoanbobaihat.Text = "Hiển thị toàn bộ bài hát";
-            this.btn_hienthitoanbobaihat.UseVisualStyleBackColor = true;
-            this.btn_hienthitoanbobaihat.Click += new System.EventHandler(this.btn_hienthitoanbobaihat_Click);
             // 
             // cb_hangsanxuat_formchinh
             // 
@@ -2252,6 +2259,81 @@ namespace GUI
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // btn_close
+            // 
+            this.btn_close.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_close.ForeColor = System.Drawing.Color.Red;
+            this.btn_close.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_close.ImageIndex = 10;
+            this.btn_close.ImageList = this.imageList1;
+            this.btn_close.Location = new System.Drawing.Point(833, 3);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(252, 49);
+            this.btn_close.TabIndex = 1;
+            this.btn_close.Text = "ĐÓNG ỨNG DỤNG";
+            this.btn_close.UseVisualStyleBackColor = false;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label2.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label2.Image = global::GUI.Properties.Resources.checklist;
+            this.label2.Location = new System.Drawing.Point(9, 6);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(165, 23);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Danh sách Album";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::GUI.Properties.Resources.icons8_search_240;
+            this.pictureBox1.Location = new System.Drawing.Point(30, 23);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(337, 348);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btn_timkiem
+            // 
+            this.btn_timkiem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_timkiem.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_timkiem.ForeColor = System.Drawing.Color.Navy;
+            this.btn_timkiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_timkiem.ImageIndex = 3;
+            this.btn_timkiem.ImageList = this.imageList1;
+            this.btn_timkiem.Location = new System.Drawing.Point(492, 3);
+            this.btn_timkiem.Name = "btn_timkiem";
+            this.btn_timkiem.Size = new System.Drawing.Size(123, 39);
+            this.btn_timkiem.TabIndex = 1;
+            this.btn_timkiem.Text = "Tìm";
+            this.btn_timkiem.UseVisualStyleBackColor = true;
+            this.btn_timkiem.Click += new System.EventHandler(this.btn_timkiem_Click);
+            // 
+            // btn_hienthitoanbobaihat
+            // 
+            this.btn_hienthitoanbobaihat.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_hienthitoanbobaihat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_hienthitoanbobaihat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_hienthitoanbobaihat.ImageIndex = 12;
+            this.btn_hienthitoanbobaihat.ImageList = this.imageList1;
+            this.btn_hienthitoanbobaihat.Location = new System.Drawing.Point(17, 349);
+            this.btn_hienthitoanbobaihat.Name = "btn_hienthitoanbobaihat";
+            this.btn_hienthitoanbobaihat.Size = new System.Drawing.Size(238, 34);
+            this.btn_hienthitoanbobaihat.TabIndex = 2;
+            this.btn_hienthitoanbobaihat.Text = "Hiển thị toàn bộ bài hát";
+            this.btn_hienthitoanbobaihat.UseVisualStyleBackColor = false;
+            this.btn_hienthitoanbobaihat.Click += new System.EventHandler(this.btn_hienthitoanbobaihat_Click);
+            // 
             // chứcNăngChínhToolStripMenuItem
             // 
             this.chứcNăngChínhToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -2274,7 +2356,7 @@ namespace GUI
             this.quảnLýAlbumToolStripMenuItem.Name = "quảnLýAlbumToolStripMenuItem";
             this.quảnLýAlbumToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.A)));
-            this.quảnLýAlbumToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
+            this.quảnLýAlbumToolStripMenuItem.Size = new System.Drawing.Size(303, 26);
             this.quảnLýAlbumToolStripMenuItem.Text = "Quản lý ALBUM";
             this.quảnLýAlbumToolStripMenuItem.Click += new System.EventHandler(this.quảnLýAlbumToolStripMenuItem_Click);
             // 
@@ -2284,7 +2366,7 @@ namespace GUI
             this.quảnLýTHỂLOẠIToolStripMenuItem.Name = "quảnLýTHỂLOẠIToolStripMenuItem";
             this.quảnLýTHỂLOẠIToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.T)));
-            this.quảnLýTHỂLOẠIToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
+            this.quảnLýTHỂLOẠIToolStripMenuItem.Size = new System.Drawing.Size(303, 26);
             this.quảnLýTHỂLOẠIToolStripMenuItem.Text = "Quản lý THỂ LOẠI";
             this.quảnLýTHỂLOẠIToolStripMenuItem.Click += new System.EventHandler(this.quảnLýTHỂLOẠIToolStripMenuItem_Click);
             // 
@@ -2294,7 +2376,7 @@ namespace GUI
             this.quảnLýCASĨToolStripMenuItem.Name = "quảnLýCASĨToolStripMenuItem";
             this.quảnLýCASĨToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.C)));
-            this.quảnLýCASĨToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
+            this.quảnLýCASĨToolStripMenuItem.Size = new System.Drawing.Size(303, 26);
             this.quảnLýCASĨToolStripMenuItem.Text = "Quản lý CA SĨ";
             this.quảnLýCASĨToolStripMenuItem.Click += new System.EventHandler(this.quảnLýCASĨToolStripMenuItem_Click);
             // 
@@ -2304,7 +2386,7 @@ namespace GUI
             this.quảnLýTÁCGIẢToolStripMenuItem.Name = "quảnLýTÁCGIẢToolStripMenuItem";
             this.quảnLýTÁCGIẢToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.G)));
-            this.quảnLýTÁCGIẢToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
+            this.quảnLýTÁCGIẢToolStripMenuItem.Size = new System.Drawing.Size(303, 26);
             this.quảnLýTÁCGIẢToolStripMenuItem.Text = "Quản lý TÁC GIẢ";
             this.quảnLýTÁCGIẢToolStripMenuItem.Click += new System.EventHandler(this.quảnLýTÁCGIẢToolStripMenuItem_Click);
             // 
@@ -2314,7 +2396,7 @@ namespace GUI
             this.quảnLýBÀIHÁTToolStripMenuItem.Name = "quảnLýBÀIHÁTToolStripMenuItem";
             this.quảnLýBÀIHÁTToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.B)));
-            this.quảnLýBÀIHÁTToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
+            this.quảnLýBÀIHÁTToolStripMenuItem.Size = new System.Drawing.Size(303, 26);
             this.quảnLýBÀIHÁTToolStripMenuItem.Text = "Quản lý BÀI HÁT";
             this.quảnLýBÀIHÁTToolStripMenuItem.Click += new System.EventHandler(this.quảnLýBÀIHÁTToolStripMenuItem_Click);
             // 
@@ -2324,7 +2406,7 @@ namespace GUI
             this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem.Name = "quảnLýHÃNGSẢNXUẤTToolStripMenuItem";
             this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.H)));
-            this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
+            this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem.Size = new System.Drawing.Size(303, 26);
             this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem.Text = "Quản lý HÃNG SẢN XUẤT";
             this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem.Click += new System.EventHandler(this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem_Click);
             // 
@@ -2334,7 +2416,7 @@ namespace GUI
             this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem.Name = "quảnLýTRACỨUTÌMKIẾMToolStripMenuItem";
             this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.S)));
-            this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
+            this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem.Size = new System.Drawing.Size(303, 26);
             this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem.Text = "Quản lý TRA CỨU - TÌM KIẾM";
             this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem.Click += new System.EventHandler(this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem_Click);
             // 
@@ -2344,7 +2426,7 @@ namespace GUI
             this.đóngỨngDụngToolStripMenuItem.Name = "đóngỨngDụngToolStripMenuItem";
             this.đóngỨngDụngToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.D)));
-            this.đóngỨngDụngToolStripMenuItem.Size = new System.Drawing.Size(299, 22);
+            this.đóngỨngDụngToolStripMenuItem.Size = new System.Drawing.Size(303, 26);
             this.đóngỨngDụngToolStripMenuItem.Text = "Đóng ứng dụng";
             this.đóngỨngDụngToolStripMenuItem.Click += new System.EventHandler(this.đóngỨngDụngToolStripMenuItem_Click);
             // 
@@ -2362,14 +2444,14 @@ namespace GUI
             // 
             this.thôngTinSinhViênThựcHiệnToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("thôngTinSinhViênThựcHiệnToolStripMenuItem.Image")));
             this.thôngTinSinhViênThựcHiệnToolStripMenuItem.Name = "thôngTinSinhViênThựcHiệnToolStripMenuItem";
-            this.thôngTinSinhViênThựcHiệnToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
+            this.thôngTinSinhViênThựcHiệnToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
             this.thôngTinSinhViênThựcHiệnToolStripMenuItem.Text = "Thông tin sinh viên thực hiện";
             // 
             // thôngTinĐềTàiToolStripMenuItem
             // 
             this.thôngTinĐềTàiToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("thôngTinĐềTàiToolStripMenuItem.Image")));
             this.thôngTinĐềTàiToolStripMenuItem.Name = "thôngTinĐềTàiToolStripMenuItem";
-            this.thôngTinĐềTàiToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
+            this.thôngTinĐềTàiToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
             this.thôngTinĐềTàiToolStripMenuItem.Text = "Thông tin đề tài";
             // 
             // Form1
@@ -2426,7 +2508,6 @@ namespace GUI
             this.tabPage7.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel10.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage9.ResumeLayout(false);
@@ -2453,6 +2534,7 @@ namespace GUI
             this.groupBox6.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
