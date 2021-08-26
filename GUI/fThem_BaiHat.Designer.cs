@@ -29,13 +29,10 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fThem_BaiHat));
             this.panel1 = new System.Windows.Forms.Panel();
             this.txt_tenbaihat = new System.Windows.Forms.TextBox();
             this.txt_mabaihat = new System.Windows.Forms.TextBox();
             this.btn_huy = new System.Windows.Forms.Button();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.btn_nhaplai = new System.Windows.Forms.Button();
             this.btn_them = new System.Windows.Forms.Button();
             this.txt_loibaihat = new System.Windows.Forms.TextBox();
@@ -103,60 +100,38 @@ namespace GUI
             // 
             // btn_huy
             // 
-            this.btn_huy.BackColor = System.Drawing.Color.CadetBlue;
             this.btn_huy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_huy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_huy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_huy.ImageIndex = 0;
-            this.btn_huy.ImageList = this.imageList1;
             this.btn_huy.Location = new System.Drawing.Point(333, 380);
             this.btn_huy.Name = "btn_huy";
-            this.btn_huy.Size = new System.Drawing.Size(131, 40);
+            this.btn_huy.Size = new System.Drawing.Size(108, 40);
             this.btn_huy.TabIndex = 3;
             this.btn_huy.Text = "Huỷ thao tác";
-            this.btn_huy.UseVisualStyleBackColor = false;
+            this.btn_huy.UseVisualStyleBackColor = true;
             this.btn_huy.Click += new System.EventHandler(this.btn_huy_Click);
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "icons8-back-64.png");
-            this.imageList1.Images.SetKeyName(1, "icons8-reset-48.png");
-            this.imageList1.Images.SetKeyName(2, "icons8-edit-48.png");
-            this.imageList1.Images.SetKeyName(3, "icons8-delete-64.png");
-            this.imageList1.Images.SetKeyName(4, "icons8-add-40.png");
             // 
             // btn_nhaplai
             // 
-            this.btn_nhaplai.BackColor = System.Drawing.Color.CadetBlue;
             this.btn_nhaplai.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_nhaplai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_nhaplai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_nhaplai.ImageIndex = 1;
-            this.btn_nhaplai.ImageList = this.imageList1;
             this.btn_nhaplai.Location = new System.Drawing.Point(195, 380);
             this.btn_nhaplai.Name = "btn_nhaplai";
-            this.btn_nhaplai.Size = new System.Drawing.Size(119, 40);
+            this.btn_nhaplai.Size = new System.Drawing.Size(101, 40);
             this.btn_nhaplai.TabIndex = 3;
             this.btn_nhaplai.Text = "Nhập lại";
-            this.btn_nhaplai.UseVisualStyleBackColor = false;
+            this.btn_nhaplai.UseVisualStyleBackColor = true;
             this.btn_nhaplai.Click += new System.EventHandler(this.btn_nhaplai_Click);
             // 
             // btn_them
             // 
-            this.btn_them.BackColor = System.Drawing.Color.CadetBlue;
             this.btn_them.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_them.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_them.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_them.ImageIndex = 4;
-            this.btn_them.ImageList = this.imageList1;
-            this.btn_them.Location = new System.Drawing.Point(45, 380);
+            this.btn_them.Location = new System.Drawing.Point(55, 380);
             this.btn_them.Name = "btn_them";
-            this.btn_them.Size = new System.Drawing.Size(124, 40);
+            this.btn_them.Size = new System.Drawing.Size(103, 40);
             this.btn_them.TabIndex = 3;
             this.btn_them.Text = "Thêm";
-            this.btn_them.UseVisualStyleBackColor = false;
+            this.btn_them.UseVisualStyleBackColor = true;
             this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
             // txt_loibaihat
@@ -428,6 +403,5 @@ namespace GUI
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txt_tenbaihat;
         private System.Windows.Forms.TextBox txt_mabaihat;
-        private System.Windows.Forms.ImageList imageList1;
     }
 }

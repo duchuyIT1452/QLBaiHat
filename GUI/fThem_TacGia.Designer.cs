@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fThem_Tacgia));
             this.label1 = new System.Windows.Forms.Label();
             this.txt_matacgia = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,14 +39,13 @@
             this.btn_them = new System.Windows.Forms.Button();
             this.btn_nhaplai = new System.Windows.Forms.Button();
             this.btn_huy = new System.Windows.Forms.Button();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(146, 20);
+            this.label1.Location = new System.Drawing.Point(127, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(160, 19);
             this.label1.TabIndex = 1;
@@ -59,7 +56,7 @@
             this.txt_matacgia.Location = new System.Drawing.Point(121, 62);
             this.txt_matacgia.Multiline = true;
             this.txt_matacgia.Name = "txt_matacgia";
-            this.txt_matacgia.Size = new System.Drawing.Size(288, 27);
+            this.txt_matacgia.Size = new System.Drawing.Size(243, 27);
             this.txt_matacgia.TabIndex = 1;
             // 
             // label2
@@ -85,7 +82,7 @@
             this.txt_tentacgia.Location = new System.Drawing.Point(121, 110);
             this.txt_tentacgia.Multiline = true;
             this.txt_tentacgia.Name = "txt_tentacgia";
-            this.txt_tentacgia.Size = new System.Drawing.Size(288, 27);
+            this.txt_tentacgia.Size = new System.Drawing.Size(243, 27);
             this.txt_tentacgia.TabIndex = 2;
             // 
             // txt_thongtintacgia
@@ -93,7 +90,7 @@
             this.txt_thongtintacgia.Location = new System.Drawing.Point(27, 187);
             this.txt_thongtintacgia.Multiline = true;
             this.txt_thongtintacgia.Name = "txt_thongtintacgia";
-            this.txt_thongtintacgia.Size = new System.Drawing.Size(382, 132);
+            this.txt_thongtintacgia.Size = new System.Drawing.Size(337, 132);
             this.txt_thongtintacgia.TabIndex = 3;
             this.txt_thongtintacgia.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
@@ -119,65 +116,43 @@
             // 
             // btn_them
             // 
-            this.btn_them.BackColor = System.Drawing.Color.CadetBlue;
-            this.btn_them.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_them.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_them.ImageIndex = 4;
-            this.btn_them.ImageList = this.imageList1;
+            this.btn_them.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_them.Location = new System.Drawing.Point(27, 335);
             this.btn_them.Name = "btn_them";
-            this.btn_them.Size = new System.Drawing.Size(111, 32);
+            this.btn_them.Size = new System.Drawing.Size(104, 32);
             this.btn_them.TabIndex = 4;
             this.btn_them.Text = "Thêm mới";
-            this.btn_them.UseVisualStyleBackColor = false;
+            this.btn_them.UseVisualStyleBackColor = true;
             this.btn_them.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_nhaplai
             // 
-            this.btn_nhaplai.BackColor = System.Drawing.Color.CadetBlue;
-            this.btn_nhaplai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_nhaplai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_nhaplai.ImageIndex = 1;
-            this.btn_nhaplai.ImageList = this.imageList1;
-            this.btn_nhaplai.Location = new System.Drawing.Point(167, 335);
+            this.btn_nhaplai.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_nhaplai.Location = new System.Drawing.Point(147, 335);
             this.btn_nhaplai.Name = "btn_nhaplai";
-            this.btn_nhaplai.Size = new System.Drawing.Size(114, 32);
+            this.btn_nhaplai.Size = new System.Drawing.Size(104, 32);
             this.btn_nhaplai.TabIndex = 5;
             this.btn_nhaplai.Text = "Nhập lại";
-            this.btn_nhaplai.UseVisualStyleBackColor = false;
+            this.btn_nhaplai.UseVisualStyleBackColor = true;
             this.btn_nhaplai.Click += new System.EventHandler(this.btn_nhaplai_Click);
             // 
             // btn_huy
             // 
-            this.btn_huy.BackColor = System.Drawing.Color.CadetBlue;
-            this.btn_huy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_huy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_huy.ImageIndex = 0;
-            this.btn_huy.ImageList = this.imageList1;
-            this.btn_huy.Location = new System.Drawing.Point(300, 335);
+            this.btn_huy.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_huy.Location = new System.Drawing.Point(267, 335);
             this.btn_huy.Name = "btn_huy";
-            this.btn_huy.Size = new System.Drawing.Size(109, 32);
+            this.btn_huy.Size = new System.Drawing.Size(87, 32);
             this.btn_huy.TabIndex = 6;
             this.btn_huy.Text = "Hủy thêm";
-            this.btn_huy.UseVisualStyleBackColor = false;
+            this.btn_huy.UseVisualStyleBackColor = true;
             this.btn_huy.Click += new System.EventHandler(this.btn_huy_Click);
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "icons8-back-64.png");
-            this.imageList1.Images.SetKeyName(1, "icons8-reset-48.png");
-            this.imageList1.Images.SetKeyName(2, "icons8-edit-48.png");
-            this.imageList1.Images.SetKeyName(3, "icons8-delete-64.png");
-            this.imageList1.Images.SetKeyName(4, "icons8-add-40.png");
             // 
             // fThem_Tacgia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(438, 381);
+            this.ClientSize = new System.Drawing.Size(400, 381);
             this.Controls.Add(this.btn_huy);
             this.Controls.Add(this.btn_nhaplai);
             this.Controls.Add(this.txt_thongtintacgia);
@@ -208,6 +183,5 @@
         private System.Windows.Forms.Button btn_them;
         private System.Windows.Forms.Button btn_nhaplai;
         private System.Windows.Forms.Button btn_huy;
-        private System.Windows.Forms.ImageList imageList1;
     }
 }

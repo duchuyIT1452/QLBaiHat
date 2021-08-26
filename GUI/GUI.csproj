@@ -184,13 +184,8 @@
     <Content Include="ICON\close.png" />
     <Content Include="ICON\delete.png" />
     <Content Include="ICON\help.png" />
-    <Content Include="ICON\icons8-add-40.png" />
     <Content Include="ICON\icons8-app-store-50.png" />
-    <Content Include="ICON\icons8-back-64.png" />
-    <Content Include="ICON\icons8-delete-64.png" />
     <Content Include="ICON\icons8-documentary-80.png" />
-    <Content Include="ICON\icons8-edit-48.png" />
-    <Content Include="ICON\icons8-reset-48.png" />
     <Content Include="ICON\icons8-search-32.png" />
     <Content Include="ICON\icons8-shutdown-48.png" />
     <Content Include="ICON\info %281%29.png" />
@@ -201,11 +196,6 @@
     <Content Include="ICON\settings.png" />
     <Content Include="ICON\singer.png" />
     <Content Include="ICON\writer.png" />
-    <None Include="Resources\icons8-add-40.png" />
-    <None Include="Resources\icons8-delete-64.png" />
-    <None Include="Resources\icons8-edit-48.png" />
-    <None Include="Resources\icons8-reset-48.png" />
-    <None Include="Resources\icons8-back-64.png" />
     <None Include="Resources\icons8-search-240.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

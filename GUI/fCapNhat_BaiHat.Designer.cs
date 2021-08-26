@@ -29,8 +29,6 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fCapNhat_BaiHat));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cb_hsx = new System.Windows.Forms.ComboBox();
@@ -57,7 +55,6 @@ namespace GUI
             this.txt_tenbaihat = new System.Windows.Forms.TextBox();
             this.txt_mabaihat = new System.Windows.Forms.TextBox();
             this.btn_huy = new System.Windows.Forms.Button();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -256,17 +253,13 @@ namespace GUI
             // 
             // btn_sua
             // 
-            this.btn_sua.BackColor = System.Drawing.Color.CadetBlue;
             this.btn_sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_sua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_sua.ImageIndex = 2;
-            this.btn_sua.ImageList = this.imageList1;
-            this.btn_sua.Location = new System.Drawing.Point(40, 401);
+            this.btn_sua.Location = new System.Drawing.Point(46, 401);
             this.btn_sua.Name = "btn_sua";
-            this.btn_sua.Size = new System.Drawing.Size(128, 37);
+            this.btn_sua.Size = new System.Drawing.Size(112, 37);
             this.btn_sua.TabIndex = 3;
             this.btn_sua.Text = "Sửa";
-            this.btn_sua.UseVisualStyleBackColor = false;
+            this.btn_sua.UseVisualStyleBackColor = true;
             this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
             // 
             // label2
@@ -281,17 +274,13 @@ namespace GUI
             // 
             // btn_nhaplai
             // 
-            this.btn_nhaplai.BackColor = System.Drawing.Color.CadetBlue;
             this.btn_nhaplai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_nhaplai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_nhaplai.ImageIndex = 1;
-            this.btn_nhaplai.ImageList = this.imageList1;
-            this.btn_nhaplai.Location = new System.Drawing.Point(188, 401);
+            this.btn_nhaplai.Location = new System.Drawing.Point(200, 401);
             this.btn_nhaplai.Name = "btn_nhaplai";
-            this.btn_nhaplai.Size = new System.Drawing.Size(128, 37);
+            this.btn_nhaplai.Size = new System.Drawing.Size(112, 37);
             this.btn_nhaplai.TabIndex = 3;
             this.btn_nhaplai.Text = "Nhập lại";
-            this.btn_nhaplai.UseVisualStyleBackColor = false;
+            this.btn_nhaplai.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -334,27 +323,13 @@ namespace GUI
             // 
             // btn_huy
             // 
-            this.btn_huy.BackColor = System.Drawing.Color.CadetBlue;
             this.btn_huy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_huy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_huy.ImageIndex = 0;
-            this.btn_huy.ImageList = this.imageList1;
-            this.btn_huy.Location = new System.Drawing.Point(333, 401);
+            this.btn_huy.Location = new System.Drawing.Point(339, 401);
             this.btn_huy.Name = "btn_huy";
-            this.btn_huy.Size = new System.Drawing.Size(128, 37);
+            this.btn_huy.Size = new System.Drawing.Size(112, 37);
             this.btn_huy.TabIndex = 3;
             this.btn_huy.Text = "Huỷ thao tác";
-            this.btn_huy.UseVisualStyleBackColor = false;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "icons8-back-64.png");
-            this.imageList1.Images.SetKeyName(1, "icons8-reset-48.png");
-            this.imageList1.Images.SetKeyName(2, "icons8-edit-48.png");
-            this.imageList1.Images.SetKeyName(3, "icons8-delete-64.png");
-            this.imageList1.Images.SetKeyName(4, "icons8-add-40.png");
+            this.btn_huy.UseVisualStyleBackColor = true;
             // 
             // fCapNhat_BaiHat
             // 
@@ -410,6 +385,5 @@ namespace GUI
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btn_huy;
-        private System.Windows.Forms.ImageList imageList1;
     }
 }

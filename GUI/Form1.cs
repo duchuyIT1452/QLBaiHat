@@ -726,23 +726,5 @@ namespace GUI
         {
 
         }
-
-        private void txt_timkiem_Enter(object sender, EventArgs e)
-        {
-            if (txt_timkiem.Text == "(Gõ nội dung cần tìm kiếm...)")
-            {
-                txt_timkiem.Text = "";
-                txt_timkiem.ForeColor = Color.Black;
-            }
-        }
-
-        private void txt_timkiem_Leave(object sender, EventArgs e)
-        {
-            if (txt_timkiem.Text == "")
-            {
-                txt_timkiem.Text = "(Gõ nội dung cần tìm kiếm...)";
-                txt_timkiem.ForeColor = Color.Silver;
-            }
-        }
     }
 }

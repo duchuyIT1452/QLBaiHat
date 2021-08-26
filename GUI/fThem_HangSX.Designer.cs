@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fThem_HangSX));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,7 +38,6 @@
             this.btn_them = new System.Windows.Forms.Button();
             this.btn_nhaplai = new System.Windows.Forms.Button();
             this.btn_thoat = new System.Windows.Forms.Button();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -109,58 +106,36 @@
             // 
             // btn_them
             // 
-            this.btn_them.BackColor = System.Drawing.Color.CadetBlue;
-            this.btn_them.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_them.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_them.ImageIndex = 4;
-            this.btn_them.ImageList = this.imageList1;
-            this.btn_them.Location = new System.Drawing.Point(24, 408);
+            this.btn_them.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_them.Location = new System.Drawing.Point(32, 418);
             this.btn_them.Name = "btn_them";
-            this.btn_them.Size = new System.Drawing.Size(122, 39);
+            this.btn_them.Size = new System.Drawing.Size(105, 34);
             this.btn_them.TabIndex = 4;
             this.btn_them.Text = "Thêm mới";
-            this.btn_them.UseVisualStyleBackColor = false;
+            this.btn_them.UseVisualStyleBackColor = true;
             this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
             // 
             // btn_nhaplai
             // 
-            this.btn_nhaplai.BackColor = System.Drawing.Color.CadetBlue;
-            this.btn_nhaplai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_nhaplai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_nhaplai.ImageIndex = 1;
-            this.btn_nhaplai.ImageList = this.imageList1;
-            this.btn_nhaplai.Location = new System.Drawing.Point(176, 408);
+            this.btn_nhaplai.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_nhaplai.Location = new System.Drawing.Point(184, 418);
             this.btn_nhaplai.Name = "btn_nhaplai";
-            this.btn_nhaplai.Size = new System.Drawing.Size(112, 39);
+            this.btn_nhaplai.Size = new System.Drawing.Size(95, 34);
             this.btn_nhaplai.TabIndex = 5;
             this.btn_nhaplai.Text = "Nhập lại";
-            this.btn_nhaplai.UseVisualStyleBackColor = false;
+            this.btn_nhaplai.UseVisualStyleBackColor = true;
             this.btn_nhaplai.Click += new System.EventHandler(this.btn_nhaplai_Click);
             // 
             // btn_thoat
             // 
-            this.btn_thoat.BackColor = System.Drawing.Color.CadetBlue;
-            this.btn_thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_thoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_thoat.ImageIndex = 0;
-            this.btn_thoat.ImageList = this.imageList1;
-            this.btn_thoat.Location = new System.Drawing.Point(332, 408);
+            this.btn_thoat.Font = new System.Drawing.Font("MV Boli", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_thoat.Location = new System.Drawing.Point(340, 418);
             this.btn_thoat.Name = "btn_thoat";
-            this.btn_thoat.Size = new System.Drawing.Size(111, 39);
+            this.btn_thoat.Size = new System.Drawing.Size(94, 34);
             this.btn_thoat.TabIndex = 6;
             this.btn_thoat.Text = "Hủy thêm";
-            this.btn_thoat.UseVisualStyleBackColor = false;
+            this.btn_thoat.UseVisualStyleBackColor = true;
             this.btn_thoat.Click += new System.EventHandler(this.btn_thoat_Click);
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "icons8-back-64.png");
-            this.imageList1.Images.SetKeyName(1, "icons8-reset-48.png");
-            this.imageList1.Images.SetKeyName(2, "icons8-edit-48.png");
-            this.imageList1.Images.SetKeyName(3, "icons8-delete-64.png");
-            this.imageList1.Images.SetKeyName(4, "icons8-add-40.png");
             // 
             // fThem_HangSX
             // 
@@ -197,6 +172,5 @@
         private System.Windows.Forms.Button btn_them;
         private System.Windows.Forms.Button btn_nhaplai;
         private System.Windows.Forms.Button btn_thoat;
-        private System.Windows.Forms.ImageList imageList1;
     }
 }
