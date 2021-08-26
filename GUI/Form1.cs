@@ -295,8 +295,8 @@ namespace GUI
                 String ma = dgv_dsHangsx.Rows[d].Cells[0].Value.ToString();
                 dt = bus.listBaiHatTheoHSX(ma);
                 dgv_Baihat_phathanh.DataSource = dt;
-                txt_tenhangsanxuat.Text = dgv_dsNhacSi.Rows[d].Cells[1].Value.ToString();
-                txt_thongtinhangsanxuat.Text = dgv_dsNhacSi.Rows[d].Cells[2].Value.ToString();
+                txt_tenhangsanxuat.Text = dgv_dsHangsx.Rows[d].Cells[1].Value.ToString();
+                txt_thongtinhangsanxuat.Text = dgv_dsHangsx.Rows[d].Cells[2].Value.ToString();
                 dgv_Baihat_phathanh.ClearSelection();
             }
         }
@@ -472,8 +472,7 @@ namespace GUI
         {
             this.Visible = false;
             fCapnhat_HangSX f = new fCapnhat_HangSX();
-            //f.maH = dgv_dsHangsx.SelectedColumns.ToString();
-            f.maH = dgv_dsHangsx.Rows[0].Cells[1].Value.ToString();
+            f.maH = dgv_dsHangsx.Rows[dgv_dsHangsx.CurrentCell.RowIndex].Cells[0].Value.ToString();
             f.tenH = txt_tenhangsanxuat.Text;
             if (txt_thongtinhangsanxuat.Text.Contains("Chưa có thông tin hãng sản xuất"))
             {
@@ -535,7 +534,7 @@ namespace GUI
         {
             this.Visible = false;
             fCapnhat_Tacgia capnhat = new fCapnhat_Tacgia();
-            capnhat.ma = dgv_dsNhacSi.SelectedRows.ToString();
+            capnhat.ma = dgv_dsNhacSi.Rows[dgv_dsNhacSi.CurrentCell.RowIndex].Cells[0].Value.ToString();
             capnhat.ten = txt_tentacgia.Text;
             if (txt_thongtintacgia.Text.Contains("Chưa có thông tin tác giả"))
             {

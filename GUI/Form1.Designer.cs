@@ -1168,6 +1168,7 @@ namespace GUI
             this.txt_thongtintacgia.Multiline = true;
             this.txt_thongtintacgia.Name = "txt_thongtintacgia";
             this.txt_thongtintacgia.ReadOnly = true;
+            this.txt_thongtintacgia.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txt_thongtintacgia.Size = new System.Drawing.Size(307, 249);
             this.txt_thongtintacgia.TabIndex = 6;
             this.txt_thongtintacgia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1424,6 +1425,7 @@ namespace GUI
             this.txt_thongtinhangsanxuat.Multiline = true;
             this.txt_thongtinhangsanxuat.Name = "txt_thongtinhangsanxuat";
             this.txt_thongtinhangsanxuat.ReadOnly = true;
+            this.txt_thongtinhangsanxuat.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txt_thongtinhangsanxuat.Size = new System.Drawing.Size(319, 249);
             this.txt_thongtinhangsanxuat.TabIndex = 6;
             this.txt_thongtinhangsanxuat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
