@@ -12,19 +12,19 @@ namespace DATA
         ConnectDB conn = new ConnectDB();
         public DataTable getAlbum()
         {
-            String sql = "SELECT ma_album, ten_album, year(namphathanh) AS namphathanh FROM ALBUM";
+            String sql = "SELECT * FROM ALBUM";
             DataTable dt = new DataTable();
             dt = conn.GetTable(sql);
             return dt;
         }
         public void themAlbum(string ma_album, string ten_album, DateTime namphathanh)
         {
-            String sql = "INSERT INTO ALBUM VALUES('" + ma_album + "',N'" + ten_album + "',N'" + namphathanh + "')";
+            String sql = "INSERT INTO ALBUM VALUES('" + ma_album + "',N'" + ten_album + "','" + namphathanh + "')";
             conn.ExecuteNonQuery(sql);
         }
         public void suaAlbum(string ma_album, string ten_album, DateTime namphathanh)
         {
-            String sql = "UPDATE ALBUM SET ma_album = '" + ma_album + "',N'" + ten_album + "',N'" + namphathanh + "'";
+            String sql = "UPDATE ALBUM SET ten_album=N'" + ten_album + "',namphathanh='" + namphathanh + "'WHERE ma_album='" + ma_album + "'";
             conn.ExecuteNonQuery(sql);
         }
         public void xoaAlbum(string ma_album)
@@ -56,7 +56,7 @@ namespace DATA
         }
         public DataTable findAlbum(string ten_album)
         {
-            String sql = "SELECT ma_album, ten_album, year(namphathanh) AS namphathanh FROM ALBUM WHERE ten_album like N'%" + ten_album + "%'";
+            String sql = "SELECT ma_album, ten_album, namphathanh FROM ALBUM WHERE ten_album like N'%" + ten_album + "%'";
             DataTable dt = new DataTable();
             dt = conn.GetTable(sql);
             return dt;

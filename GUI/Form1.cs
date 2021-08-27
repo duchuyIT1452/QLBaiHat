@@ -248,8 +248,12 @@ namespace GUI
         {
             int d = e.RowIndex;
             BaiHat_BUS bus = new BaiHat_BUS();
-            String ma = dgv_Album.Rows[d].Cells[0].Value.ToString();
-            dgv_AlbumBaihat.DataSource = bus.listBaiHatTheoAlbum(ma);
+            if (d>=0)
+            {
+                String ma = dgv_Album.Rows[d].Cells[0].Value.ToString();
+                dgv_AlbumBaihat.DataSource = bus.listBaiHatTheoAlbum(ma);
+            }    
+            
             dgv_AlbumBaihat.ClearSelection();
         }
         #endregion
@@ -259,8 +263,12 @@ namespace GUI
         {
             int d = e.RowIndex;
             BaiHat_BUS bus = new BaiHat_BUS();
-            String ma = dgv_theloai.Rows[d].Cells[0].Value.ToString();
-            dgv_TheloaiBaihat.DataSource = bus.listBaiHatTheoTheLoai(ma);
+            if (d>=0)
+            {
+                String ma = dgv_theloai.Rows[d].Cells[0].Value.ToString();
+                dgv_TheloaiBaihat.DataSource = bus.listBaiHatTheoTheLoai(ma);
+            }    
+
             dgv_TheloaiBaihat.ClearSelection();
         }
         #endregion
@@ -411,19 +419,43 @@ namespace GUI
         #region button tìm kiếm click
         private void btn_timkiem_Click(object sender, EventArgs e)
         {
-            Album_BUS bus = new Album_BUS();
-            DataTable dt = new DataTable();
-            dt = bus.findAlbum(txt_timkiem.Text);
-            dgv_searchTenAlbum.DataSource = bus.findAlbum(txt_timkiem.Text);
-            int dem = 0;
-            foreach (DataRow row in dt.Rows)
+            //Tìm kiếm Album
+            if (tabControl_TimKiem.SelectedIndex == 2)
             {
-                dgv_searchTenAlbum.Rows[dem].Cells[0].Value = (dem + 1);
-                dem++;
+                Album_BUS bus = new Album_BUS();
+                DataTable dt = new DataTable();
+                dt = bus.findAlbum(txt_timkiem.Text);
+                dgv_searchTenAlbum.DataSource = bus.findAlbum(txt_timkiem.Text);
+                int dem = 0;
+                foreach (DataRow row in dt.Rows)
+                {
+                    dgv_searchTenAlbum.Rows[dem].Cells[0].Value = (dem + 1);
+                    dem++;
+                }
+                if (dem == 0)
+                {
+                    DialogResult dialogResult = MessageBox.Show("Không có tên album trong danh sách!", "Xác nhận", MessageBoxButtons.OK);
+                }
             }
-            if (dem == 0)
+
+
+            //Tìm kiếm Thể Loại
+            if (tabControl_TimKiem.SelectedIndex == 6)
             {
-                DialogResult dialogResult = MessageBox.Show("Không có tên album trong danh sách!", "Xác nhận", MessageBoxButtons.OK);
+                TheLoai_BUS bus = new TheLoai_BUS();
+                DataTable dt = new DataTable();
+                dt = bus.searchTheLoai(txt_timkiem.Text);
+                dgv_searchTenTheLoai.DataSource = bus.searchTheLoai(txt_timkiem.Text);
+                int dem = 0;
+                foreach (DataRow row in dt.Rows)
+                {
+                    dgv_searchTenTheLoai.Rows[dem].Cells[0].Value = (dem + 1);
+                    dem++;
+                }
+                if (dem == 0)
+                {
+                    DialogResult dialogResult = MessageBox.Show("Không có tên thể loại trong danh sách!", "Xác nhận", MessageBoxButtons.OK);
+                }
             }
         }
         #endregion
@@ -809,6 +841,38 @@ namespace GUI
         private void dgv_dsCaSi_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btn_chinhSuaAlbum_Click(object sender, EventArgs e)
+        {
+            fCapNhat_Album.maAlbum = dgv_Album.Rows[dgv_Album.CurrentCell.RowIndex].Cells[0].Value.ToString();
+            fCapNhat_Album.tenAlbum = dgv_Album.Rows[dgv_Album.CurrentCell.RowIndex].Cells[1].Value.ToString();
+            fCapNhat_Album.namPhatHanh = dgv_Album.Rows[dgv_Album.CurrentCell.RowIndex].Cells[2].Value.ToString();
+
+
+
+            this.Visible = false;
+            fCapNhat_Album f = new fCapNhat_Album();
+            f.ShowDialog();
+            this.Visible = true;
+
+            load_Album();
+        }
+
+        private void btn_chinhSuaTheLoai_Click(object sender, EventArgs e)
+        {
+
+            fCapNhat_TheLoai.maTheLoai = dgv_theloai.Rows[dgv_theloai.CurrentCell.RowIndex].Cells[0].Value.ToString();
+            fCapNhat_TheLoai.tenTheLoai = dgv_theloai.Rows[dgv_theloai.CurrentCell.RowIndex].Cells[1].Value.ToString();
+
+            this.Visible = false;
+            fCapNhat_TheLoai f = new fCapNhat_TheLoai();
+            f.ShowDialog();
+            this.Visible = true;
+
+
+
+            load_TheLoai();
         }
     }
 }

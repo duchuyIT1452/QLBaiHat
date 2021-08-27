@@ -25,7 +25,7 @@ namespace DATA
         }
         public void suaTheLoai(string ma_theloai, string ten_theloai)
         {
-            String sql = "UPDATE THELOAI SET ma_theloai = '" + ma_theloai + "',N'" + ten_theloai + "'";
+            String sql = "UPDATE THELOAI SET ten_theloai = N'" + ten_theloai + "' WHERE ma_theloai='" + ma_theloai + "'";
             conn.ExecuteNonQuery(sql);
         }
         public void xoaTheLoai(string ma_theloai)
@@ -44,6 +44,14 @@ namespace DATA
         public DataTable timkiemTheLoaiTheoTen(string ten_theloai)
         {
             String sql = "SELECT * FROM THELOAI WHERE ten_theloai ='" + ten_theloai + "'";
+            DataTable dt = new DataTable();
+            dt = conn.GetTable(sql);
+            return dt;
+        }
+
+        public DataTable searchTheLoai(string ten_theloai)
+        {
+            String sql = "SELECT * FROM THELOAI WHERE ten_theloai like N'%" + ten_theloai + "%'";
             DataTable dt = new DataTable();
             dt = conn.GetTable(sql);
             return dt;

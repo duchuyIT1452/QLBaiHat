@@ -71,9 +71,17 @@ namespace BUS
         {
             return newTheLoai.getTheLoai();
         }
+        public DataTable searchTheLoai(string tenTheLoai)
+        {
+            return newTheLoai.searchTheLoai(tenTheLoai);
+        }
         public void themTheLoai()
         {
             newTheLoai.themTheLoai(maTheLoai, tenTheLoai);
+        }
+        public void suaTheLoai(string maTheLoai, string tenTheLoai)
+        {
+            newTheLoai.suaTheLoai(maTheLoai, tenTheLoai);
         }
         public void xoaTheLoai(string maTheLoai)
         {

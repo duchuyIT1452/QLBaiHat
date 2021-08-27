@@ -347,3 +347,14 @@ D:\tailieuhoctap\LT_Window\Project\Project\New folder(6)\QLBaiHat\GUI\obj\Debug\
 D:\tailieuhoctap\LT_Window\Project\Project\New folder(6)\QLBaiHat\GUI\obj\Debug\GUI.pdb
 C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\GUI\obj\Debug\GUI.fThongTinDeTai.resources
 C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\GUI\obj\Debug\GUI.fThongTinSV.resources
+C:\Users\Admin\Desktop\New folder\QLBaiHat\GUI\obj\Debug\GUI.fCapNhat_BaiHat.resources
+C:\Users\Admin\Desktop\New folder\QLBaiHat\GUI\obj\Debug\GUI.fCapNhat_CaSi.resources
+C:\Users\Admin\Desktop\New folder\QLBaiHat\GUI\obj\Debug\GUI.fCapnhat_HangSX.resources
+C:\Users\Admin\Desktop\New folder\QLBaiHat\GUI\obj\Debug\GUI.fCapnhat_Tacgia.resources
+C:\Users\Admin\Desktop\New folder\QLBaiHat\GUI\obj\Debug\GUI.fThem_BaiHat.resources
+C:\Users\Admin\Desktop\New folder\QLBaiHat\GUI\obj\Debug\GUI.fThem_CaSi.resources
+C:\Users\Admin\Desktop\New folder\QLBaiHat\GUI\obj\Debug\GUI.fThem_Tacgia.resources
+C:\Users\Admin\Desktop\New folder\QLBaiHat\GUI\obj\Debug\GUI.fThongTinDeTai.resources
+C:\Users\Admin\Desktop\New folder\QLBaiHat\GUI\obj\Debug\GUI.fThongTinSV.resources
+C:\Users\Admin\Desktop\New folder\QLBaiHat\GUI\obj\Debug\GUI.fCapNhat_Album.resources
+C:\Users\Admin\Desktop\New folder\QLBaiHat\GUI\obj\Debug\GUI.fCapNhat_TheLoai.resources

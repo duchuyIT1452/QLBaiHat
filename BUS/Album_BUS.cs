@@ -93,6 +93,10 @@ namespace BUS
         {
             newAlbum.themAlbum(maAlbum, tenAlbum, namPhatHanh);
         }
+        public void suaAlbum(string maAlbum, string tenAlbum, DateTime namPhatHanh)
+        {
+            newAlbum.suaAlbum(maAlbum, tenAlbum, namPhatHanh);
+        }
         public void xoaAlbum(string maAlbum)
         {
             newAlbum.xoaAlbum(maAlbum);

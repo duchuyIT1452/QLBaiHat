@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="fCapNhat_Album.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fCapNhat_Album.Designer.cs">
+      <DependentUpon>fCapNhat_Album.cs</DependentUpon>
+    </Compile>
     <Compile Include="fCapNhat_BaiHat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,12 @@
     </Compile>
     <Compile Include="fCapnhat_Tacgia.Designer.cs">
       <DependentUpon>fCapnhat_Tacgia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fCapNhat_TheLoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fCapNhat_TheLoai.Designer.cs">
+      <DependentUpon>fCapNhat_TheLoai.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -127,6 +139,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fCapNhat_Album.resx">
+      <DependentUpon>fCapNhat_Album.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fCapNhat_BaiHat.resx">
       <DependentUpon>fCapNhat_BaiHat.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fCapnhat_Tacgia.resx">
       <DependentUpon>fCapnhat_Tacgia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fCapNhat_TheLoai.resx">
+      <DependentUpon>fCapNhat_TheLoai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
