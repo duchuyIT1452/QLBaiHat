@@ -12,7 +12,7 @@ namespace DATA
     {
         public SqlConnection getConnect()
         {
-            string connString = @"Data Source=DESKTOP-B0JGHPP;Initial Catalog=DBBaiHat;Integrated Security=True";
+            string connString = @"Data Source=DESKTOP-CMM6T7Q;Initial Catalog=DBBaiHat;Integrated Security=True";
             return new SqlConnection(connString);
         }
 

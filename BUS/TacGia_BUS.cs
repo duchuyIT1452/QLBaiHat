@@ -16,21 +16,21 @@ namespace BUS
 
         #region khai bao va truy xuat du lieu
         private string matacgia;
-        private string tentacgia = null;
+        private string tentacgia;
         private string thongtintacgia;
 
         public TacGia_BUS() { }
 
-        public TacGia_BUS(string ma)
+        public TacGia_BUS(string matacgia)
         {
-            this.matacgia = ma;
+            this.matacgia = matacgia;
         }
         
-        public TacGia_BUS(string ma, string ten, string thongtin)
+        public TacGia_BUS(string matacgia, string tentacgia, string thongtintacgia)
         {
-            this.MATACGIA = ma;
-            this.TENTACGIA = ten;
-            this.THONGTINTACGIA = thongtin;
+            this.matacgia = matacgia;
+            this.tentacgia = tentacgia;
+            this.thongtintacgia = thongtintacgia;
         }
         public string MATACGIA
         {
@@ -72,6 +72,7 @@ namespace BUS
                         MessageBox.Show("Ten tac gia khong duoc bo trong", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
+                    tentacgia = value;
                 }
                 catch (Exception ex)
                 {
@@ -107,7 +108,7 @@ namespace BUS
         #region Lay du lieu tu DATA
         public void Insert_TacGia()
         {
-            tacgia.Insert_TacGia(matacgia, tentacgia, thongtintacgia);
+            tacgia.Insert_TacGia(this.matacgia, this.tentacgia, this.thongtintacgia);
         }
         public void Delete_TacGia(string matacgia)
         {

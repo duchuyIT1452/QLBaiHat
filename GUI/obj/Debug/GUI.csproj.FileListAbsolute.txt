@@ -345,3 +345,5 @@ D:\tailieuhoctap\LT_Window\Project\Project\New folder(6)\QLBaiHat\GUI\obj\Debug\
 D:\tailieuhoctap\LT_Window\Project\Project\New folder(6)\QLBaiHat\GUI\obj\Debug\GUI.csproj.CopyComplete
 D:\tailieuhoctap\LT_Window\Project\Project\New folder(6)\QLBaiHat\GUI\obj\Debug\GUI.exe
 D:\tailieuhoctap\LT_Window\Project\Project\New folder(6)\QLBaiHat\GUI\obj\Debug\GUI.pdb
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\GUI\obj\Debug\GUI.fThongTinDeTai.resources
+C:\Users\duchu\OneDrive\Máy tính\New folder (5)\QLBaiHat\GUI\obj\Debug\GUI.fThongTinSV.resources

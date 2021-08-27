@@ -25,10 +25,13 @@ namespace GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TacGia_BUS tacgia;
+            TacGia_BUS tacgia = new TacGia_BUS();
             try
             {
-                tacgia = new TacGia_BUS(txt_matacgia.Text, txt_tentacgia.Text, txt_thongtintacgia.Text);
+                //tacgia = new TacGia_BUS(txt_matacgia.Text, txt_tentacgia.Text, txt_thongtintacgia.Text);
+                tacgia.MATACGIA = txt_matacgia.Text.ToString();
+                tacgia.TENTACGIA = txt_tentacgia.Text.ToString();
+                tacgia.THONGTINTACGIA = txt_thongtintacgia.Text.ToString();
                 if (txt_matacgia.Text == "")
                 {
                     MessageBox.Show("Mã tác giả không được bỏ trống", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
