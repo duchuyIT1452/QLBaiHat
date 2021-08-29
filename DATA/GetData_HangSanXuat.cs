@@ -38,9 +38,9 @@ namespace DATA
         {
             string sql = "update HANGSANXUAT set ten_hangsanxuat = N'" + tenhangsanxuat + "', thongtin_hangsanxuat = N'" + thongtinhangsanxuat + "' Where ma_hangsanxuat = '" + mahangsanxuat + "' ";
             conDB.ExecuteNonQuery(sql);
-            //return conDB.executeNonQuery("update HANGSANXUAT set ma_hangsanxuat = '" + ma_hangsanxuat + "', ten_hangsanxuat = N'" + ten_hangsanxuat + "', thongtin_hangsanxuat = N'" + thongtin_hangsanxuat + "' ");
         }
-
+        #region thừa
+        /*
         public DataTable SearchByCode_HangSX(string mahangsanxuat)
         {
             string sql = "select *from HANGSANXUAT where ma_hangsanxuat = '" + mahangsanxuat + "' ";
@@ -56,6 +56,16 @@ namespace DATA
             dt = conDB.GetTable(sql);
             return dt;
         }
+        */
+        #endregion
+        public DataTable timkiem_HSX(string tenhangsanxuat)
+        {
+            string sql = "select ma_hangsanxuat, ten_hangsanxuat, thongtin_hangsanxuat from HANGSANXUAT where ten_hangsanxuat like N'%" + tenhangsanxuat + "%' ";
+            DataTable dt = new DataTable();
+            dt = conDB.GetTable(sql);
+            return dt;
+        }
+
         #endregion
     }
 }

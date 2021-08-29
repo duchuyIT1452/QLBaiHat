@@ -18,10 +18,19 @@ namespace GUI
         {
             InitializeComponent();
         }
+        private void fCapnhat_Tacgia_Load(object sender, EventArgs e)
+        {
+            txt_matacgia.Text = ma;
+            txt_tentacgia.Text = ten;
+            txt_thongtintacgia.Text = thongtin;
+            this.Text = "Cập nhật Tác Giả [" + ten + "]";
+            txt_tentacgia.SelectAll();
+            txt_tentacgia.Focus();
+        }
 
         private void btn_ok_Click(object sender, EventArgs e)
         {
-            TacGia_BUS tacgia = new TacGia_BUS();
+            TacGia_BUS bus = new TacGia_BUS();
            if(txt_tentacgia.Text == "" || txt_thongtintacgia.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "XÁC NHẬN LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -32,7 +41,7 @@ namespace GUI
             ten = txt_tentacgia.Text;
             thongtin = txt_thongtintacgia.Text;
 
-            tacgia.Update_TacGia(ma, ten, thongtin);
+            bus.CapNhat_TG(ma, ten, thongtin);
             MessageBox.Show("Cập nhật thành công", "THÀNH CÔNG", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -56,16 +65,6 @@ namespace GUI
         private void btn_huy_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
-        }
-
-        private void fCapnhat_Tacgia_Load(object sender, EventArgs e)
-        {
-            txt_matacgia.Text = ma;
-            txt_tentacgia.Text = ten;
-            txt_thongtintacgia.Text = thongtin;
-            this.Text = "Cập nhật Tác Giả [" + ten + "]";
-            txt_tentacgia.SelectAll();
-            txt_tentacgia.Focus();
         }
     }
 }

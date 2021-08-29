@@ -21,16 +21,19 @@ namespace BUS
 
         public TacGia_BUS() { }
 
-        public TacGia_BUS(string matacgia)
+        public TacGia_BUS(string ma)
         {
-            this.matacgia = matacgia;
+            this.matacgia = ma;
         }
         
         public TacGia_BUS(string matacgia, string tentacgia, string thongtintacgia)
         {
-            this.matacgia = matacgia;
-            this.tentacgia = tentacgia;
-            this.thongtintacgia = thongtintacgia;
+            //this.matacgia = matacgia;
+            //this.tentacgia = tentacgia;
+            //this.thongtintacgia = thongtintacgia;
+            this.MATACGIA = matacgia;
+            this.TENTACGIA = tentacgia;
+            this.THONGTINTACGIA = thongtintacgia;
         }
         public string MATACGIA
         {
@@ -108,19 +111,29 @@ namespace BUS
         #region Lay du lieu tu DATA
         public void Insert_TacGia()
         {
-            tacgia.Insert_TacGia(this.matacgia, this.tentacgia, this.thongtintacgia);
+            //tacgia.Insert_TacGia(this.matacgia, this.tentacgia, this.thongtintacgia);
+            tacgia.Insert_TacGia(matacgia, tentacgia, thongtintacgia);
         }
         public void Delete_TacGia(string matacgia)
         {
             tacgia.Delete_TacGia(matacgia);
         }
-        public void Update_TacGia(string matacgia, string tentacgia, string thongtintacgia)
+        public void CapNhat_TG(string matacgia, string tentacgia, string thongtintacgia)
         {
             tacgia.Update_TacGia(matacgia, tentacgia, thongtintacgia);
         }
         public DataTable getAllTacGia()
         {
             return tacgia.getAllTacGia();
+        }
+        /*
+        public DataTable search_byName_TG(string tentacgia)
+        {
+            return tacgia.SearchByName_TacGia(tentacgia);
+        }*/
+        public DataTable timkiem_tg(string tentacgia)
+        {
+            return tacgia.timkiem_TG(tentacgia);
         }
         #endregion
     }

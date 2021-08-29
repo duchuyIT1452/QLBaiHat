@@ -416,6 +416,39 @@ namespace GUI
         }
         #endregion
 
+        #region các hàm xử lý
+        private static string[] VietNamChar = new string[]
+        {
+           "aAeEoOuUiIdDyY",
+           "áàạảãâấầậẩẫăắằặẳẵ",
+           "ÁÀẠẢÃÂẤẦẬẨẪĂẮẰẶẲẴ",
+           "éèẹẻẽêếềệểễ",
+           "ÉÈẸẺẼÊẾỀỆỂỄ",
+           "óòọỏõôốồộổỗơớờợởỡ",
+           "ÓÒỌỎÕÔỐỒỘỔỖƠỚỜỢỞỠ",
+           "úùụủũưứừựửữ",
+           "ÚÙỤỦŨƯỨỪỰỬỮ",
+           "íìịỉĩ",
+           "ÍÌỊỈĨ",
+           "đ",
+           "Đ",
+           "ýỳỵỷỹ",
+           "ÝỲỴỶỸ"
+        };
+        // ham thay the tieng viet co dau sang k dau
+        public static string ThayThe_Unicode(string strInput)
+        {
+            for (int i = 1; i < VietNamChar.Length; i++)
+            {
+                for (int j = 0; j < VietNamChar[i].Length; j++)
+                {
+                    strInput = strInput.Replace(VietNamChar[i][j], VietNamChar[0][i - 1]);
+                }
+            }
+            return strInput;
+        }
+        #endregion
+
         #region button tìm kiếm click
         private void btn_timkiem_Click(object sender, EventArgs e)
         {
@@ -438,7 +471,6 @@ namespace GUI
                 }
             }
 
-
             //Tìm kiếm Thể Loại
             if (tabControl_TimKiem.SelectedIndex == 6)
             {
@@ -455,6 +487,44 @@ namespace GUI
                 if (dem == 0)
                 {
                     DialogResult dialogResult = MessageBox.Show("Không có tên thể loại trong danh sách!", "Xác nhận", MessageBoxButtons.OK);
+                }
+            }
+
+            //------------- Tìm kiếm Hãng sản xuất -------------//
+            if (tabControl_TimKiem.SelectedIndex == 4)
+            {
+                HangSanXuat_BUS hangsx = new HangSanXuat_BUS();
+                DataTable dt = new DataTable();
+                dt = hangsx.timkiem_hsx(txt_timkiem.Text);
+                dgv_timkiemHSX.DataSource = hangsx.timkiem_hsx(txt_timkiem.Text);
+                int dem = 0;
+                foreach (DataRow row in dt.Rows)
+                {
+                    dgv_timkiemHSX.Rows[dem].Cells[0].Value = (dem + 1);
+                    dem++;
+                }
+                if (dem == 0)
+                {
+                    DialogResult dia = MessageBox.Show("Không có tên hãng sản xuất trong danh sách", "XÁC NHẬN LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            //------------- TÌm kiếm nhạc sĩ -------------------//
+            if (tabControl_TimKiem.SelectedIndex == 5)
+            {
+                TacGia_BUS tacgia = new TacGia_BUS();
+                DataTable dt = new DataTable();
+                dt = tacgia.timkiem_tg(txt_timkiem.Text);
+                dgv_timkiemTacGia.DataSource = tacgia.timkiem_tg(txt_timkiem.Text);
+                int dem = 0;
+                foreach (DataRow row in dt.Rows)
+                {
+                    dgv_timkiemTacGia.Rows[dem].Cells[0].Value = (dem + 1);
+                    dem++;
+                }
+                if (dem == 0)
+                {
+                    DialogResult dia = MessageBox.Show("Không có tên nhạc sĩ trong danh sách", "XÁC NHẬN LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -554,6 +624,7 @@ namespace GUI
                         load_Tacgia();
                     }
                 }
+                load_Tacgia();
             }
             catch (Exception ex)
             {
@@ -584,7 +655,6 @@ namespace GUI
             this.Visible = true;
             load_Tacgia();
         }
-
         #endregion
 
         #region set string sql

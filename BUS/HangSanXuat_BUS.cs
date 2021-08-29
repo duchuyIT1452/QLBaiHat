@@ -131,6 +131,20 @@ namespace BUS
         {
             hangsx.Update_HangSX(mahangsanxuat, tenhangsanxuat, thongtinhangsanxuat);
         }
+        /*
+        public DataTable search_byCode_HSX(string mahangsanxuat)
+        {
+            return hangsx.SearchByCode_HangSX(mahangsanxuat);
+        }
+        public DataTable search_byName_HSX(string tenhangsanxuat)
+        {
+            return hangsx.SearchByName_HangSX(tenhangsanxuat);
+        }
+        */
+        public DataTable timkiem_hsx(string tenhangsanxuat)
+        {
+            return hangsx.timkiem_HSX(tenhangsanxuat);
+        }
         #endregion
 
     }
