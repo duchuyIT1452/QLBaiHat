@@ -45,6 +45,14 @@ namespace DATA
             conDB.ExecuteNonQuery(sql1);
         }
 
+        public DataTable getBaiHatByLoiBaiHat(String loiBaiHat)
+        {
+            String sql = "Select ma_baihat, ten_baihat, loi_baihat from baihat where loi_baihat like '%" + loiBaiHat + "%'";
+            DataTable dt = new DataTable();
+            dt = conDB.GetTable(sql);
+            return dt;
+        }
+
         public DataTable SearchByMa(String maBaiHat)
         {
             String sql = "Select * from BaiHat Where ma_BaiHat='" + maBaiHat + "'";
@@ -54,7 +62,7 @@ namespace DATA
         }
         public DataTable SearchByTen(String tenBaiHat)
         {
-            String sql = "Select * from BaiHat Where ten_BaiHat='" + tenBaiHat + "'";
+            String sql = "Select ma_baihat, ten_baihat, loi_baihat from BaiHat Where ten_BaiHat like '%" + tenBaiHat + "%'";
             DataTable dt = new DataTable();
             dt = conDB.GetTable(sql);
             return dt;

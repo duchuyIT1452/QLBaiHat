@@ -391,7 +391,6 @@ namespace GUI
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fThem_BaiHat";
             this.Text = "Thêm bài hát";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fThem_BaiHat_FormClosing);
             this.Load += new System.EventHandler(this.fThem_BaiHat_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -90,6 +90,16 @@ namespace BUS
             return BaiHat.getAllBaiHatFormChinh();
         }
 
+        public DataTable getBaiHatByLoiBaiHat(String loiBaiHat)
+        {
+            return BaiHat.getBaiHatByLoiBaiHat(loiBaiHat);
+        }
+
+        public DataTable getBaiHatByTenBaiHat(String tenBaiHat)
+        {
+            return BaiHat.SearchByTen(tenBaiHat);
+        }
+
         public DataTable getBaiHatByMaBaiHat(string maBaiHat)
         {
             return BaiHat.SearchByMa(maBaiHat);

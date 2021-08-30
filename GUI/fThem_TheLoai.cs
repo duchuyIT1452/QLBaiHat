@@ -20,7 +20,11 @@ namespace GUI
 
         private void bt_huyBo_Click(object sender, EventArgs e)
         {
-            this.Close();
+            string msg = "Xác nhận đóng!";
+            DialogResult result = MessageBox.Show(msg, "Đóng",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+                Close();
         }
 
         private void bt_nhapLai_Click(object sender, EventArgs e)
@@ -59,17 +63,6 @@ namespace GUI
                 }
                 else MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void fThem_TheLoai_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            string msg = "Bạn có chắc chắn huỷ không?";
-            DialogResult result = MessageBox.Show(msg, "Huỷ",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-                e.Cancel = false;
-            else if (result == DialogResult.No)
-                e.Cancel = true;
         }
     }
 }

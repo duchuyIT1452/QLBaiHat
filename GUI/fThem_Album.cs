@@ -58,18 +58,11 @@ namespace GUI
 
         private void bt_dong_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
-
-        private void fThem_Album_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            string msg = "Bạn có chắc chắn huỷ không?";
-            DialogResult result = MessageBox.Show(msg, "Huỷ",
+            string msg = "Xác nhận đóng!";
+            DialogResult result = MessageBox.Show(msg, "Đóng",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
-                e.Cancel = false;
-            else if (result == DialogResult.No)
-                e.Cancel = true;
+                Close();
         }
     }
 }

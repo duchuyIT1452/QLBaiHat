@@ -10,6 +10,7 @@ namespace DATA
     public class GetData_CaSi
     {
         ConnectDB conDB = new ConnectDB();
+
         #region Lấy toàn bộ ca sĩ
         public DataTable getAllCaSi()
         {
@@ -19,6 +20,7 @@ namespace DATA
             return dt;
         }
         #endregion
+
         #region Thêm ca sĩ
         public void InsertCaSi(String maCaSi, String tenCaSi, String thongTinCaSi)
         {
@@ -39,7 +41,7 @@ namespace DATA
 
         public DataTable SearchByTen(String tenCaSi)
         {
-            String sql = "Select * from CaSi Where ten_casi='" + tenCaSi + "'";
+            String sql = "Select * from CaSi Where ten_casi like '%" + tenCaSi + "%'";
             DataTable dt = new DataTable();
             dt = conDB.GetTable(sql);
             return dt;

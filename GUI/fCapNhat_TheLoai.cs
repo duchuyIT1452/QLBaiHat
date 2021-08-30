@@ -37,6 +37,7 @@ namespace GUI
 
             bus.suaTheLoai(maTheLoai, tenTheLoai);
             MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Close();
         }
 
         private void btn_nhapLai_Click(object sender, EventArgs e)
@@ -47,7 +48,11 @@ namespace GUI
 
         private void btn_dong_Click(object sender, EventArgs e)
         {
-            this.Close();
+            string msg = "Xác nhận đóng!";
+            DialogResult result = MessageBox.Show(msg, "Đóng",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+                Close();
         }
     }
 }

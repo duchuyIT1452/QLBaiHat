@@ -72,18 +72,11 @@ namespace GUI
 
         private void btn_huy_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Cancel;
-        }
-
-        private void fThem_Tacgia_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            string msg = "Bạn có chắc chắn huỷ không?";
-            DialogResult result = MessageBox.Show(msg, "Huỷ",
+            string msg = "Xác nhận đóng!";
+            DialogResult result = MessageBox.Show(msg, "Đóng",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
-                e.Cancel = false;
-            else if (result == DialogResult.No)
-                e.Cancel = true;
+                Close();
         }
     }
 }

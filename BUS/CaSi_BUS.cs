@@ -81,6 +81,11 @@ namespace BUS
         {
             return CaSi.SearchByMa(macasi);
         }
+
+        public DataTable getCaSiByTen(string tenCaSi)
+        {
+            return CaSi.SearchByTen(tenCaSi);
+        }
         public void themCaSi(String maCaSi, String tenCaSi, String thongTinCaSi)
         {
             CaSi.InsertCaSi(maCaSi, tenCaSi, thongTinCaSi);

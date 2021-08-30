@@ -72,8 +72,8 @@ namespace GUI
 
         private void btn_huythaotac_Click(object sender, EventArgs e)
         {
-            string msg = "Bạn có chắc chắn huỷ không?";
-            DialogResult result = MessageBox.Show(msg, "Huỷ",
+            string msg = "Xác nhận đóng!";
+            DialogResult result = MessageBox.Show(msg, "Đóng",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
                 Close();

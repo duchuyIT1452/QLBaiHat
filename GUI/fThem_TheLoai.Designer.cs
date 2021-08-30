@@ -169,7 +169,6 @@ namespace GUI
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "fThem_TheLoai";
             this.Text = "Thêm thể loại";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fThem_TheLoai_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

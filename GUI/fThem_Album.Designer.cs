@@ -194,7 +194,6 @@ namespace GUI
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "fThem_Album";
             this.Text = "Thêm album";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fThem_Album_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

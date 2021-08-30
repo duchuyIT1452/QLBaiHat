@@ -181,6 +181,47 @@ namespace GUI
         }
         #endregion
 
+        #region reset dgv_timkiem
+        public void resetDgvTimKiem()
+        {
+            try
+            {
+                while (dgv_search_LoiBaiHat.Rows.Count > 1)
+                {
+                    dgv_search_LoiBaiHat.Rows.RemoveAt(0);
+                }
+                while (dgv_searchTenTheLoai.Rows.Count > 1)
+                {
+                    dgv_searchTenTheLoai.Rows.RemoveAt(0);
+                }
+                while (dgv_searchTenCaSi.Rows.Count > 1)
+                {
+                    dgv_searchTenCaSi.Rows.RemoveAt(0);
+                }
+                while (dgv_searchTenAlbum.Rows.Count > 1)
+                {
+                    dgv_searchTenAlbum.Rows.RemoveAt(0);
+                }
+                while (dgv_searchHangSanXuat.Rows.Count > 1)
+                {
+                    dgv_searchHangSanXuat.Rows.RemoveAt(0);
+                }
+                while (dgv_searchTenBaiHat.Rows.Count > 1)
+                {
+                    dgv_searchTenBaiHat.Rows.RemoveAt(0);
+                }
+                while (dgv_timkiemTacGia.Rows.Count > 1)
+                {
+                    dgv_timkiemTacGia.Rows.RemoveAt(0);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        #endregion
+
         #region Load tac giả
         private void load_Tacgia()
         {
@@ -276,6 +317,10 @@ namespace GUI
             load_Hangsx();
             load_CaSi();
             load_BaiHat();
+            txt_timkiem.Text = "(Gõ nội dung cần tìm kiếm...)";
+            txt_timkiem.ForeColor = Color.Silver;
+            resetDgvTimKiem();
+            tabControl_TimKiem.SelectedIndex = 0;
         }
         #endregion
 
@@ -505,12 +550,11 @@ namespace GUI
                 int dem = 0;
                 foreach (DataRow row in dt.Rows)
                 {
-                    dgv_searchTenAlbum.Rows[dem].Cells[0].Value = (dem + 1);
                     dem++;
                 }
                 if (dem == 0)
                 {
-                    DialogResult dialogResult = MessageBox.Show("Không có tên album trong danh sách!", "Xác nhận", MessageBoxButtons.OK);
+                    DialogResult dialogResult = MessageBox.Show("Không có tên album trong danh sách!", "Thông báo", MessageBoxButtons.OK,MessageBoxIcon.Information);
                 }
             }
 
@@ -524,12 +568,11 @@ namespace GUI
                 int dem = 0;
                 foreach (DataRow row in dt.Rows)
                 {
-                    dgv_searchTenTheLoai.Rows[dem].Cells[0].Value = (dem + 1);
                     dem++;
                 }
                 if (dem == 0)
                 {
-                    DialogResult dialogResult = MessageBox.Show("Không có tên thể loại trong danh sách!", "Xác nhận", MessageBoxButtons.OK);
+                    DialogResult dialogResult = MessageBox.Show("Không có tên thể loại trong danh sách!", "Thông báo", MessageBoxButtons.OK,MessageBoxIcon.Information);
                 }
             }
 
@@ -543,16 +586,15 @@ namespace GUI
                 int dem = 0;
                 foreach (DataRow row in dt.Rows)
                 {
-                    dgv_timkiemHSX.Rows[dem].Cells[0].Value = (dem + 1);
                     dem++;
                 }
                 if (dem == 0)
                 {
-                    DialogResult dia = MessageBox.Show("Không có tên hãng sản xuất trong danh sách", "XÁC NHẬN LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    DialogResult dia = MessageBox.Show("Không có tên hãng sản xuất trong danh sách", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
 
-            //------------- TÌm kiếm nhạc sĩ -------------------//
+            //------------- Tìm kiếm nhạc sĩ -------------------//
             if (tabControl_TimKiem.SelectedIndex == 5)
             {
                 TacGia_BUS tacgia = new TacGia_BUS();
@@ -562,18 +604,57 @@ namespace GUI
                 int dem = 0;
                 foreach (DataRow row in dt.Rows)
                 {
-                    dgv_timkiemTacGia.Rows[dem].Cells[0].Value = (dem + 1);
                     dem++;
                 }
                 if (dem == 0)
                 {
-                    DialogResult dia = MessageBox.Show("Không có tên nhạc sĩ trong danh sách", "XÁC NHẬN LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    DialogResult dia = MessageBox.Show("Không có tên nhạc sĩ trong danh sách", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            //------------- TÌm kiếm bài hát theo tên bài hát -------------------//
+            //------------- Tìm kiếm bài hát theo lời bài hát -------------------//
+            if(tabControl_TimKiem.SelectedIndex == 3)
+            {
+                BaiHat_BUS bus = new BaiHat_BUS();
+                dgv_search_LoiBaiHat.DataSource = bus.getBaiHatByLoiBaiHat(txt_timkiem.Text.ToString());
+                int dem = 0;
+                foreach(DataRow row in bus.getBaiHatByLoiBaiHat(txt_timkiem.Text.ToString()).Rows)
+                {
+                    dem++;
+                }
+                if(dem == 0)
+                {
+                    MessageBox.Show("Không có bài hát có lời bài hát này!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            //------------- Tìm kiếm bài hát theo tên bài hát -------------------//
             if(tabControl_TimKiem.SelectedIndex == 0)
             {
-
+                BaiHat_BUS bus = new BaiHat_BUS();
+                dgv_searchTenBaiHat.DataSource = bus.getBaiHatByTenBaiHat(txt_timkiem.Text.ToString());
+                int dem = 0;
+                foreach (DataRow row in bus.getBaiHatByTenBaiHat(txt_timkiem.Text.ToString()).Rows)
+                {
+                    dem++;
+                }
+                if (dem == 0)
+                {
+                    MessageBox.Show("Không tồn tại bài hát có tên này!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            //------------- TÌm kiếm ca sĩ theo tên ca sĩ -------------------//
+            if (tabControl_TimKiem.SelectedIndex == 1)
+            {
+                CaSi_BUS bus = new CaSi_BUS();
+                dgv_searchTenCaSi.DataSource = bus.getCaSiByTen(txt_timkiem.Text.ToString());
+                int dem = 0;
+                foreach (DataRow row in bus.getCaSiByTen(txt_timkiem.Text.ToString()).Rows)
+                {
+                    dem++;
+                }
+                if (dem == 0)
+                {
+                    MessageBox.Show("Không tồn tại ca sĩ có tên này!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
         #endregion
@@ -986,6 +1067,15 @@ namespace GUI
             this.Visible = true;
 
             load_TheLoai();
+        }
+        #endregion
+
+        #region tabcontrol tìm kiếm click
+        private void tabControl_TimKiem_MouseClick(object sender, MouseEventArgs e)
+        {
+            txt_timkiem.Text = "(Gõ nội dung cần tìm kiếm...)";
+            txt_timkiem.ForeColor = Color.Silver;
+            resetDgvTimKiem();
         }
         #endregion
     }
