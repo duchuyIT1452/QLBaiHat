@@ -65,12 +65,13 @@ namespace GUI
             // btn_sua
             // 
             this.btn_sua.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_sua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_sua.ImageIndex = 2;
             this.btn_sua.ImageList = this.imageList1;
-            this.btn_sua.Location = new System.Drawing.Point(37, 398);
+            this.btn_sua.Location = new System.Drawing.Point(46, 398);
             this.btn_sua.Name = "btn_sua";
-            this.btn_sua.Size = new System.Drawing.Size(102, 40);
+            this.btn_sua.Size = new System.Drawing.Size(100, 40);
             this.btn_sua.TabIndex = 2;
             this.btn_sua.Text = "Đồng ý";
             this.btn_sua.UseVisualStyleBackColor = false;
@@ -135,12 +136,13 @@ namespace GUI
             // btn_nhaplai
             // 
             this.btn_nhaplai.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_nhaplai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_nhaplai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_nhaplai.ImageIndex = 1;
             this.btn_nhaplai.ImageList = this.imageList1;
-            this.btn_nhaplai.Location = new System.Drawing.Point(170, 398);
+            this.btn_nhaplai.Location = new System.Drawing.Point(185, 398);
             this.btn_nhaplai.Name = "btn_nhaplai";
-            this.btn_nhaplai.Size = new System.Drawing.Size(118, 40);
+            this.btn_nhaplai.Size = new System.Drawing.Size(100, 40);
             this.btn_nhaplai.TabIndex = 2;
             this.btn_nhaplai.Text = "Nhập lại";
             this.btn_nhaplai.UseVisualStyleBackColor = false;
@@ -149,14 +151,15 @@ namespace GUI
             // btn_huy
             // 
             this.btn_huy.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_huy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_huy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_huy.ImageIndex = 0;
             this.btn_huy.ImageList = this.imageList1;
             this.btn_huy.Location = new System.Drawing.Point(314, 398);
             this.btn_huy.Name = "btn_huy";
-            this.btn_huy.Size = new System.Drawing.Size(116, 40);
+            this.btn_huy.Size = new System.Drawing.Size(105, 40);
             this.btn_huy.TabIndex = 2;
-            this.btn_huy.Text = "Huỷ thao tác";
+            this.btn_huy.Text = "Đóng";
             this.btn_huy.UseVisualStyleBackColor = false;
             this.btn_huy.Click += new System.EventHandler(this.btn_huy_Click);
             // 
@@ -179,7 +182,6 @@ namespace GUI
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fCapNhat_CaSi";
             this.Text = "Cập nhật ca sĩ";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fCapNhat_CaSi_FormClosing);
             this.Load += new System.EventHandler(this.fCapNhat_CaSi_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

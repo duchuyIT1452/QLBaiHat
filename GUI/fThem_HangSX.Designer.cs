@@ -180,7 +180,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fThem_HangSX";
-            this.Text = "Thêm Hãng Sản Xuất";
+            this.Text = "Thêm hãng sản xuất";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fThem_HangSX_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();

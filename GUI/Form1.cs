@@ -203,7 +203,7 @@ namespace GUI
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             txt_tentacgia.Text = "";
             txt_thongtintacgia.Text = "";
@@ -232,7 +232,7 @@ namespace GUI
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             txt_tenhangsanxuat.Text = "";
             txt_thongtinhangsanxuat.Text = "";
@@ -260,7 +260,7 @@ namespace GUI
             }
             catch(Exception ex)
             {
-
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }  
             txt_tencasi.Text = "";
             txt_thongtincasi.Text = "";
@@ -490,6 +490,11 @@ namespace GUI
         #region button tìm kiếm click
         private void btn_timkiem_Click(object sender, EventArgs e)
         {
+            if(txt_timkiem.Text == "(Gõ nội dung cần tìm kiếm...)" || txt_timkiem.Text == "")
+            {
+                MessageBox.Show("Thiếu nội dung cần tìm kiếm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             //Tìm kiếm Album
             if (tabControl_TimKiem.SelectedIndex == 2)
             {
@@ -564,6 +569,11 @@ namespace GUI
                 {
                     DialogResult dia = MessageBox.Show("Không có tên nhạc sĩ trong danh sách", "XÁC NHẬN LỖI", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+            //------------- TÌm kiếm bài hát theo tên bài hát -------------------//
+            if(tabControl_TimKiem.SelectedIndex == 0)
+            {
+
             }
         }
         #endregion
@@ -920,7 +930,7 @@ namespace GUI
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             string msg = "Bạn có chắc chắn đóng không?";
-            DialogResult result = MessageBox.Show(msg, "Huỷ",
+            DialogResult result = MessageBox.Show(msg, "Xác nhận đóng",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
                 e.Cancel = false;
@@ -929,6 +939,7 @@ namespace GUI
         }
         #endregion
 
+        #region button sửa ca sĩ click
         private void btn_editcasi_Click(object sender, EventArgs e)
         {
             string maCaSi = dgv_dsCaSi.Rows[dgv_dsCaSi.CurrentCell.RowIndex].Cells[0].Value.ToString();
@@ -945,19 +956,14 @@ namespace GUI
             this.Visible = true;
             load_CaSi();
         }
+        #endregion
 
-        private void dgv_dsCaSi_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
+        #region button sửa ca sĩ click
         private void btn_chinhSuaAlbum_Click(object sender, EventArgs e)
         {
             fCapNhat_Album.maAlbum = dgv_Album.Rows[dgv_Album.CurrentCell.RowIndex].Cells[0].Value.ToString();
             fCapNhat_Album.tenAlbum = dgv_Album.Rows[dgv_Album.CurrentCell.RowIndex].Cells[1].Value.ToString();
             fCapNhat_Album.namPhatHanh = dgv_Album.Rows[dgv_Album.CurrentCell.RowIndex].Cells[2].Value.ToString();
-
-
 
             this.Visible = false;
             fCapNhat_Album f = new fCapNhat_Album();
@@ -966,10 +972,11 @@ namespace GUI
 
             load_Album();
         }
+        #endregion
 
+        #region button sửa thể loại click
         private void btn_chinhSuaTheLoai_Click(object sender, EventArgs e)
         {
-
             fCapNhat_TheLoai.maTheLoai = dgv_theloai.Rows[dgv_theloai.CurrentCell.RowIndex].Cells[0].Value.ToString();
             fCapNhat_TheLoai.tenTheLoai = dgv_theloai.Rows[dgv_theloai.CurrentCell.RowIndex].Cells[1].Value.ToString();
 
@@ -978,9 +985,8 @@ namespace GUI
             f.ShowDialog();
             this.Visible = true;
 
-
-
             load_TheLoai();
         }
+        #endregion
     }
 }

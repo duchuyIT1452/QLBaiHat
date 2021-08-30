@@ -89,7 +89,7 @@ namespace GUI
             this.Controls.Add(this.label4);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fThongTinSV";
-            this.Text = "fThongTinSV";
+            this.Text = "Thông tin sinh viên";
             this.ResumeLayout(false);
             this.PerformLayout();
 

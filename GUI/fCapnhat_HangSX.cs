@@ -44,17 +44,7 @@ namespace GUI
 
             bus.capnhatHSX(maH, tenH, thongtinH);
             MessageBox.Show("Cập nhật thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void fCapnhat_HangSX_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            string msg = "Bạn có chắc chắn huỷ không?";
-            DialogResult result = MessageBox.Show(msg, "Huỷ",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-                e.Cancel = false;
-            else if (result == DialogResult.No)
-                e.Cancel = true;
+            Close();
         }
 
         private void btn_nhaplai_Click(object sender, EventArgs e)
@@ -65,7 +55,11 @@ namespace GUI
 
         private void btn_huy_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Cancel;
+            string msg = "Bạn có chắc chắn huỷ không?";
+            DialogResult result = MessageBox.Show(msg, "Huỷ",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+                Close();
         }
     }
 }

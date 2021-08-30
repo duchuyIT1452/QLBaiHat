@@ -183,8 +183,7 @@
             this.Controls.Add(this.btn_ok);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fCapnhat_Tacgia";
-            this.Text = "fCapnhat_Tacgia";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fCapnhat_Tacgia_FormClosing);
+            this.Text = "Cập nhật tác giả";
             this.Load += new System.EventHandler(this.fCapnhat_Tacgia_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

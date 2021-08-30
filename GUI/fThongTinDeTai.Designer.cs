@@ -100,7 +100,7 @@ namespace GUI
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fThongTinDeTai";
-            this.Text = "fThongTinDeTai";
+            this.Text = "Thông tin đề tài";
             this.ResumeLayout(false);
             this.PerformLayout();
 

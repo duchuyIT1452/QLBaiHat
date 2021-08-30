@@ -43,6 +43,7 @@ namespace GUI
 
             bus.CapNhat_TG(ma, ten, thongtin);
             MessageBox.Show("Cập nhật thành công", "THÀNH CÔNG", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Close();
         }
 
         private void btn_nhaplai_Click(object sender, EventArgs e)
@@ -51,20 +52,13 @@ namespace GUI
             txt_matacgia.Focus();
         }
 
-        private void fCapnhat_Tacgia_FormClosing(object sender, FormClosingEventArgs e)
+        private void btn_huy_Click(object sender, EventArgs e)
         {
             string msg = "Bạn có chắc chắn huỷ không?";
             DialogResult result = MessageBox.Show(msg, "Huỷ",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
-                e.Cancel = false;
-            else if (result == DialogResult.No)
-                e.Cancel = true;
-        }
-
-        private void btn_huy_Click(object sender, EventArgs e)
-        {
-            this.DialogResult = DialogResult.Cancel;
+                Close();
         }
     }
 }

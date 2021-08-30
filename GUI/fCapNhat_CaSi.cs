@@ -21,17 +21,6 @@ namespace GUI
             InitializeComponent();
         }
 
-        private void fCapNhat_CaSi_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            string msg = "Bạn có chắc chắn huỷ không?";
-            DialogResult result = MessageBox.Show(msg, "Huỷ",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-                e.Cancel = false;
-            else if (result == DialogResult.No)
-                e.Cancel = true;
-        }
-
         private void fCapNhat_CaSi_Load(object sender, EventArgs e)
         {
             this.ActiveControl = label1;
@@ -56,6 +45,7 @@ namespace GUI
 
             bus.capNhatCaSi(maCaSi, tenCaSi, thongTinCaSi);
             MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Close();
         }
 
         private void btn_nhaplai_Click(object sender, EventArgs e)
@@ -65,7 +55,11 @@ namespace GUI
 
         private void btn_huy_Click(object sender, EventArgs e)
         {
-            Close();
+            string msg = "Bạn có chắc chắn huỷ không?";
+            DialogResult result = MessageBox.Show(msg, "Huỷ",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+                Close();
         }
     }
 }
