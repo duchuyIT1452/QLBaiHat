@@ -194,6 +194,19 @@ namespace GUI
                 dem++;
             }
             dgv_dsNhacSi.ClearSelection();
+            try
+            {
+                while (dgv_Baihat_nhacsi.Rows.Count > 1)
+                {
+                    dgv_Baihat_nhacsi.Rows.RemoveAt(0);
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            txt_tentacgia.Text = "";
+            txt_thongtintacgia.Text = "";
         }
         #endregion
 
@@ -210,6 +223,19 @@ namespace GUI
                 dem++;
             }
             dgv_dsHangsx.ClearSelection();
+            try
+            {
+                while (dgv_Baihat_phathanh.Rows.Count > 1)
+                {
+                    dgv_Baihat_phathanh.Rows.RemoveAt(0);
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            txt_tenhangsanxuat.Text = "";
+            txt_thongtinhangsanxuat.Text = "";
         }
         #endregion
 
@@ -225,7 +251,19 @@ namespace GUI
                     dgv_dsCaSi.Rows[dem].DefaultCellStyle.BackColor = Color.PaleTurquoise;
                 dem++;
             }
-            dgv_dsCaSi.ClearSelection();
+            try
+            {
+                while (dgv_BaiHatTheoCaSi.Rows.Count > 1)
+                {
+                    dgv_BaiHatTheoCaSi.Rows.RemoveAt(0);
+                }
+            }
+            catch(Exception ex)
+            {
+
+            }  
+            txt_tencasi.Text = "";
+            txt_thongtincasi.Text = "";
         }
         #endregion
 
