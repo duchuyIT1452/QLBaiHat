@@ -49,10 +49,10 @@
             this.btn_ok.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_ok.ImageIndex = 2;
             this.btn_ok.ImageList = this.imageList1;
-            this.btn_ok.Location = new System.Drawing.Point(33, 363);
+            this.btn_ok.Location = new System.Drawing.Point(12, 363);
             this.btn_ok.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_ok.Name = "btn_ok";
-            this.btn_ok.Size = new System.Drawing.Size(101, 36);
+            this.btn_ok.Size = new System.Drawing.Size(120, 40);
             this.btn_ok.TabIndex = 4;
             this.btn_ok.Text = "Đồng ý";
             this.btn_ok.UseVisualStyleBackColor = false;
@@ -138,10 +138,10 @@
             this.btn_nhaplai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_nhaplai.ImageIndex = 1;
             this.btn_nhaplai.ImageList = this.imageList1;
-            this.btn_nhaplai.Location = new System.Drawing.Point(165, 363);
+            this.btn_nhaplai.Location = new System.Drawing.Point(159, 363);
             this.btn_nhaplai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_nhaplai.Name = "btn_nhaplai";
-            this.btn_nhaplai.Size = new System.Drawing.Size(101, 36);
+            this.btn_nhaplai.Size = new System.Drawing.Size(120, 40);
             this.btn_nhaplai.TabIndex = 5;
             this.btn_nhaplai.Text = "Nhập lại";
             this.btn_nhaplai.UseVisualStyleBackColor = false;
@@ -153,12 +153,12 @@
             this.btn_huy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_huy.ImageIndex = 0;
             this.btn_huy.ImageList = this.imageList1;
-            this.btn_huy.Location = new System.Drawing.Point(287, 363);
+            this.btn_huy.Location = new System.Drawing.Point(299, 363);
             this.btn_huy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_huy.Name = "btn_huy";
-            this.btn_huy.Size = new System.Drawing.Size(107, 36);
+            this.btn_huy.Size = new System.Drawing.Size(120, 40);
             this.btn_huy.TabIndex = 6;
-            this.btn_huy.Text = "Hủy";
+            this.btn_huy.Text = "Đóng";
             this.btn_huy.UseVisualStyleBackColor = false;
             this.btn_huy.Click += new System.EventHandler(this.btn_huy_Click);
             // 

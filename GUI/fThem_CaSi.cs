@@ -18,13 +18,16 @@ namespace GUI
             InitializeComponent();
         }
 
+        #region form thêm load
         private void fThem_CaSi_Load(object sender, EventArgs e)
         {
             txt_macasi.Text = "";
             txt_tencasi.Text = "";
             txt_thongtincasi.Text = "";
         }
+        #endregion
 
+        #region button thêm click
         private void btn_them_Click(object sender, EventArgs e)
         {
             String maCaSi, tenCaSi, thongTinCaSi;
@@ -39,6 +42,23 @@ namespace GUI
                     return;
                 }
 
+                if(txt_macasi.Text.Length > 10)
+                {
+                    MessageBox.Show("Mã ca sĩ chỉ được nhập tối đa 10 ký tự", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (txt_tencasi.Text.Length > 50)
+                {
+                    MessageBox.Show("Tên ca sĩ chỉ được nhập tối đa 50 ký tự", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (txt_thongtincasi.Text.Length > 1000)
+                {
+                    MessageBox.Show("Thông tin ca sĩ chỉ được nhập tối đa 1000 ký tự", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 maCaSi = txt_macasi.Text.ToString();
                 tenCaSi = txt_tencasi.Text.ToString();
                 thongTinCaSi = txt_thongtincasi.Text.ToString();
@@ -64,12 +84,16 @@ namespace GUI
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
 
+        #region button nhập lại click
         private void btn_nhaplai_Click(object sender, EventArgs e)
         {
             fThem_CaSi_Load(sender, e);
         }
+        #endregion
 
+        #region button đóng click
         private void btn_huythaotac_Click(object sender, EventArgs e)
         {
             string msg = "Xác nhận đóng!";
@@ -78,5 +102,6 @@ namespace GUI
             if (result == DialogResult.Yes)
                 Close();
         }
+        #endregion
     }
 }

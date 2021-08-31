@@ -101,7 +101,7 @@ namespace GUI
             this.btn_them.ImageList = this.imageList1;
             this.btn_them.Location = new System.Drawing.Point(33, 391);
             this.btn_them.Name = "btn_them";
-            this.btn_them.Size = new System.Drawing.Size(124, 44);
+            this.btn_them.Size = new System.Drawing.Size(120, 40);
             this.btn_them.TabIndex = 2;
             this.btn_them.Text = "Thêm";
             this.btn_them.UseVisualStyleBackColor = false;
@@ -140,9 +140,9 @@ namespace GUI
             this.btn_nhaplai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_nhaplai.ImageIndex = 1;
             this.btn_nhaplai.ImageList = this.imageList1;
-            this.btn_nhaplai.Location = new System.Drawing.Point(172, 391);
+            this.btn_nhaplai.Location = new System.Drawing.Point(177, 391);
             this.btn_nhaplai.Name = "btn_nhaplai";
-            this.btn_nhaplai.Size = new System.Drawing.Size(124, 44);
+            this.btn_nhaplai.Size = new System.Drawing.Size(120, 40);
             this.btn_nhaplai.TabIndex = 2;
             this.btn_nhaplai.Text = "Nhập lại";
             this.btn_nhaplai.UseVisualStyleBackColor = false;
@@ -155,11 +155,11 @@ namespace GUI
             this.btn_huythaotac.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_huythaotac.ImageIndex = 0;
             this.btn_huythaotac.ImageList = this.imageList1;
-            this.btn_huythaotac.Location = new System.Drawing.Point(316, 394);
+            this.btn_huythaotac.Location = new System.Drawing.Point(320, 391);
             this.btn_huythaotac.Name = "btn_huythaotac";
-            this.btn_huythaotac.Size = new System.Drawing.Size(124, 44);
+            this.btn_huythaotac.Size = new System.Drawing.Size(120, 40);
             this.btn_huythaotac.TabIndex = 2;
-            this.btn_huythaotac.Text = "Huỷ thao tác";
+            this.btn_huythaotac.Text = "Đóng";
             this.btn_huythaotac.UseVisualStyleBackColor = false;
             this.btn_huythaotac.Click += new System.EventHandler(this.btn_huythaotac_Click);
             // 

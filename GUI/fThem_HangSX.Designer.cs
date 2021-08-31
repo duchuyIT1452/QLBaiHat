@@ -114,9 +114,9 @@
             this.btn_them.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_them.ImageIndex = 4;
             this.btn_them.ImageList = this.imageList1;
-            this.btn_them.Location = new System.Drawing.Point(24, 408);
+            this.btn_them.Location = new System.Drawing.Point(18, 405);
             this.btn_them.Name = "btn_them";
-            this.btn_them.Size = new System.Drawing.Size(122, 39);
+            this.btn_them.Size = new System.Drawing.Size(120, 40);
             this.btn_them.TabIndex = 4;
             this.btn_them.Text = "Thêm mới";
             this.btn_them.UseVisualStyleBackColor = false;
@@ -139,9 +139,9 @@
             this.btn_nhaplai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_nhaplai.ImageIndex = 1;
             this.btn_nhaplai.ImageList = this.imageList1;
-            this.btn_nhaplai.Location = new System.Drawing.Point(176, 408);
+            this.btn_nhaplai.Location = new System.Drawing.Point(170, 405);
             this.btn_nhaplai.Name = "btn_nhaplai";
-            this.btn_nhaplai.Size = new System.Drawing.Size(112, 39);
+            this.btn_nhaplai.Size = new System.Drawing.Size(120, 40);
             this.btn_nhaplai.TabIndex = 5;
             this.btn_nhaplai.Text = "Nhập lại";
             this.btn_nhaplai.UseVisualStyleBackColor = false;
@@ -154,11 +154,11 @@
             this.btn_thoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_thoat.ImageIndex = 0;
             this.btn_thoat.ImageList = this.imageList1;
-            this.btn_thoat.Location = new System.Drawing.Point(332, 408);
+            this.btn_thoat.Location = new System.Drawing.Point(326, 405);
             this.btn_thoat.Name = "btn_thoat";
-            this.btn_thoat.Size = new System.Drawing.Size(111, 39);
+            this.btn_thoat.Size = new System.Drawing.Size(120, 40);
             this.btn_thoat.TabIndex = 6;
-            this.btn_thoat.Text = "Hủy thêm";
+            this.btn_thoat.Text = "Đóng";
             this.btn_thoat.UseVisualStyleBackColor = false;
             this.btn_thoat.Click += new System.EventHandler(this.btn_thoat_Click);
             // 

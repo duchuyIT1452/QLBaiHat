@@ -16,22 +16,13 @@ namespace BUS
         private string tenCaSi;
         private string thongTinCaSi;
 
+        #region constructor
         public CaSi_BUS()
         {
         }
+        #endregion
 
-        public CaSi_BUS(string maCaSi, string tenCaSi, string thongTinCaSi)
-        {
-            this.maCaSi = maCaSi;
-            this.tenCaSi = tenCaSi;
-            this.thongTinCaSi = thongTinCaSi;
-        }
-
-        public CaSi_BUS(string maCaSi)
-        {
-            this.maCaSi = maCaSi;
-        }
-
+        #region getter, setter
         public string MaCaSi 
         {
             get { return maCaSi; }
@@ -71,33 +62,52 @@ namespace BUS
                     thongTinCaSi = value;
             }
         }
+        #endregion
 
         #region hàm lấy bảng dử liệu và các phương thức xử lý
+
+        #region lấy toàn bộ ca sĩ trong bảng CASI
         public DataTable getCaSi()
         {
             return CaSi.getAllCaSi();
         }
+        #endregion
+
+        #region lấy ca sĩ bằng mã
         public DataTable getCasi_by_macasi(string macasi)
         {
             return CaSi.SearchByMa(macasi);
         }
+        #endregion
 
+        #region lấy ca sĩ bằng tên 
         public DataTable getCaSiByTen(string tenCaSi)
         {
             return CaSi.SearchByTen(tenCaSi);
         }
+        #endregion
+
+        #region thêm ca sĩ
         public void themCaSi(String maCaSi, String tenCaSi, String thongTinCaSi)
         {
             CaSi.InsertCaSi(maCaSi, tenCaSi, thongTinCaSi);
         }
-        public void xoaCasi()
+        #endregion
+
+        #region xoá ca sĩ bằng mã ca sĩ
+        public void xoaCasi(string maCaSi)
         {
             CaSi.DeleteCaSi(maCaSi);
         }
+        #endregion
+
+        #region cập nhật ca sĩ
         public void capNhatCaSi(String maCaSi, String tenCaSi, String thongTinCaSi)
         {
             CaSi.UpdateCaSi(maCaSi, tenCaSi, thongTinCaSi);
         }
+        #endregion
+
         #endregion
 
     }

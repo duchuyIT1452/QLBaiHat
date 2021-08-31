@@ -100,10 +100,10 @@ namespace GUI
             this.bt_dongY.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_dongY.ImageIndex = 4;
             this.bt_dongY.ImageList = this.imageList1;
-            this.bt_dongY.Location = new System.Drawing.Point(52, 227);
+            this.bt_dongY.Location = new System.Drawing.Point(22, 228);
             this.bt_dongY.Margin = new System.Windows.Forms.Padding(2);
             this.bt_dongY.Name = "bt_dongY";
-            this.bt_dongY.Size = new System.Drawing.Size(98, 44);
+            this.bt_dongY.Size = new System.Drawing.Size(120, 40);
             this.bt_dongY.TabIndex = 2;
             this.bt_dongY.Text = "Đồng ý";
             this.bt_dongY.UseVisualStyleBackColor = false;
@@ -126,10 +126,10 @@ namespace GUI
             this.bt_nhapLai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_nhapLai.ImageIndex = 1;
             this.bt_nhapLai.ImageList = this.imageList1;
-            this.bt_nhapLai.Location = new System.Drawing.Point(175, 227);
+            this.bt_nhapLai.Location = new System.Drawing.Point(166, 228);
             this.bt_nhapLai.Margin = new System.Windows.Forms.Padding(2);
             this.bt_nhapLai.Name = "bt_nhapLai";
-            this.bt_nhapLai.Size = new System.Drawing.Size(98, 44);
+            this.bt_nhapLai.Size = new System.Drawing.Size(120, 40);
             this.bt_nhapLai.TabIndex = 2;
             this.bt_nhapLai.Text = "Nhập lại";
             this.bt_nhapLai.UseVisualStyleBackColor = false;
@@ -142,12 +142,12 @@ namespace GUI
             this.bt_huyBo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_huyBo.ImageIndex = 0;
             this.bt_huyBo.ImageList = this.imageList1;
-            this.bt_huyBo.Location = new System.Drawing.Point(295, 227);
+            this.bt_huyBo.Location = new System.Drawing.Point(305, 228);
             this.bt_huyBo.Margin = new System.Windows.Forms.Padding(2);
             this.bt_huyBo.Name = "bt_huyBo";
-            this.bt_huyBo.Size = new System.Drawing.Size(98, 44);
+            this.bt_huyBo.Size = new System.Drawing.Size(120, 40);
             this.bt_huyBo.TabIndex = 2;
-            this.bt_huyBo.Text = "Hủy bỏ";
+            this.bt_huyBo.Text = "Đóng";
             this.bt_huyBo.UseVisualStyleBackColor = false;
             this.bt_huyBo.Click += new System.EventHandler(this.bt_huyBo_Click);
             // 

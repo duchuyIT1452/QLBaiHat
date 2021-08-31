@@ -95,7 +95,6 @@
             this.txt_thongtintacgia.Name = "txt_thongtintacgia";
             this.txt_thongtintacgia.Size = new System.Drawing.Size(382, 132);
             this.txt_thongtintacgia.TabIndex = 3;
-            this.txt_thongtintacgia.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label4
             // 
@@ -124,9 +123,9 @@
             this.btn_them.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_them.ImageIndex = 4;
             this.btn_them.ImageList = this.imageList1;
-            this.btn_them.Location = new System.Drawing.Point(27, 335);
+            this.btn_them.Location = new System.Drawing.Point(16, 329);
             this.btn_them.Name = "btn_them";
-            this.btn_them.Size = new System.Drawing.Size(111, 32);
+            this.btn_them.Size = new System.Drawing.Size(120, 40);
             this.btn_them.TabIndex = 4;
             this.btn_them.Text = "Thêm mới";
             this.btn_them.UseVisualStyleBackColor = false;
@@ -149,9 +148,9 @@
             this.btn_nhaplai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_nhaplai.ImageIndex = 1;
             this.btn_nhaplai.ImageList = this.imageList1;
-            this.btn_nhaplai.Location = new System.Drawing.Point(167, 335);
+            this.btn_nhaplai.Location = new System.Drawing.Point(163, 329);
             this.btn_nhaplai.Name = "btn_nhaplai";
-            this.btn_nhaplai.Size = new System.Drawing.Size(114, 32);
+            this.btn_nhaplai.Size = new System.Drawing.Size(120, 40);
             this.btn_nhaplai.TabIndex = 5;
             this.btn_nhaplai.Text = "Nhập lại";
             this.btn_nhaplai.UseVisualStyleBackColor = false;
@@ -164,11 +163,11 @@
             this.btn_huy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_huy.ImageIndex = 0;
             this.btn_huy.ImageList = this.imageList1;
-            this.btn_huy.Location = new System.Drawing.Point(300, 335);
+            this.btn_huy.Location = new System.Drawing.Point(306, 329);
             this.btn_huy.Name = "btn_huy";
-            this.btn_huy.Size = new System.Drawing.Size(109, 32);
+            this.btn_huy.Size = new System.Drawing.Size(120, 40);
             this.btn_huy.TabIndex = 6;
-            this.btn_huy.Text = "Hủy thêm";
+            this.btn_huy.Text = "Đóng";
             this.btn_huy.UseVisualStyleBackColor = false;
             this.btn_huy.Click += new System.EventHandler(this.btn_huy_Click);
             // 

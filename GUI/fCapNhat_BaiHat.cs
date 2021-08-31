@@ -24,20 +24,22 @@ namespace GUI
         public fCapNhat_BaiHat()
         {
             InitializeComponent();
-            
-
-            //txt_loibaihat.Text = "";
-            //txt_mabaihat.Text = "";
-            //txt_tenbaihat.Text = "";
         }
 
+        #region button sửa click
         private void btn_sua_Click(object sender, EventArgs e)
         {
             BaiHat_BUS bus = new BaiHat_BUS();
 
+            //bắt lỗi
             if(txt_loibaihat.Text == "" || txt_tenbaihat.Text == "")
             {
                 MessageBox.Show("Chưa cung cấp đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (txt_tenbaihat.Text.Length > 100)
+            {
+                MessageBox.Show("Tên bài hát chỉ được nhập tối đa 100 ký tự", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -50,17 +52,21 @@ namespace GUI
             maTheLoai = cb_theloai.SelectedValue.ToString();
             maTacGia = cb_tacgia.SelectedValue.ToString();
 
-
+            //cập nhật
             bus.capNhatBaiHat(maBaiHat, tenBaiHat, maTheLoai, maAlbum, maCaSi, maTacGia, maHangSanXuat, loiBaiHat);
             MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Close();
         }
+        #endregion
 
+        #region button nhập lại click
         private void btn_nhaplai_Click(object sender, EventArgs e)
         {
             fCapNhat_BaiHat_Load(sender, e);
         }
+        #endregion
 
+        #region form load
         private void fCapNhat_BaiHat_Load(object sender, EventArgs e)
         {
             this.ActiveControl = label1;
@@ -103,7 +109,9 @@ namespace GUI
             cb_hsx.ValueMember = "ma_hangsanxuat";
             cb_hsx.SelectedValue = maHangSanXuat;
         }
+        #endregion
 
+        #region button đóng click
         private void btn_huy_Click(object sender, EventArgs e)
         {
             string msg = "Xác nhận đóng!";
@@ -112,5 +120,6 @@ namespace GUI
             if (result == DialogResult.Yes)
                 Close();
         }
+        #endregion
     }
 }

@@ -18,6 +18,7 @@ namespace GUI
             InitializeComponent();
         }
 
+        #region button đồng ý click
         private void bt_dongY_Click(object sender, EventArgs e)
         {
             Album_BUS newAlbum;
@@ -34,6 +35,16 @@ namespace GUI
                     MessageBox.Show("Tên album không được để trống", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+                if(txt_maAlbum.Text.Length > 10)
+                {
+                    MessageBox.Show("Mã album chỉ được nhập tối đa 10 ký tự", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (txt_tenAlbum.Text.Length > 200)
+                {
+                    MessageBox.Show("Tên album chỉ được nhập tối đa 200 ký tự", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 newAlbum.themAlbum();
                 MessageBox.Show("Thêm thành công");
             }
@@ -48,14 +59,18 @@ namespace GUI
                 else MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
 
+        #region button nhập lại click
         private void bt_nhapLai_Click(object sender, EventArgs e)
         {
             txt_maAlbum.Text = "";
             txt_tenAlbum.Text = "";
             txt_maAlbum.Focus();
         }
+        #endregion
 
+        #region button đóng click
         private void bt_dong_Click(object sender, EventArgs e)
         {
             string msg = "Xác nhận đóng!";
@@ -64,5 +79,6 @@ namespace GUI
             if (result == DialogResult.Yes)
                 Close();
         }
+        #endregion
     }
 }

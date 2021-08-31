@@ -39,6 +39,7 @@ namespace DATA
         }
         #endregion
 
+        #region lấy ca sĩ bằng tên ca sĩ
         public DataTable SearchByTen(String tenCaSi)
         {
             String sql = "Select * from CaSi Where ten_casi like '%" + tenCaSi + "%'";
@@ -46,15 +47,22 @@ namespace DATA
             dt = conDB.GetTable(sql);
             return dt;
         }
+        #endregion
+
+        #region cập nhật ca sĩ
         public void UpdateCaSi(String maCaSi, String tenCaSi, String thongTinCaSi)
         {
             String sql = "Update CaSi Set ten_casi=N'" + tenCaSi + "', thongtin_casi=N'"+ thongTinCaSi + "' where ma_casi='" + maCaSi + "'";
             conDB.ExecuteNonQuery(sql);
         }
+        #endregion
+
+        #region xoá ca sĩ bằng mã ca sĩ
         public void DeleteCaSi(String maCaSi)
         {
             String sql = "Delete CaSi Where ma_casi='" + maCaSi + "'";
             conDB.ExecuteNonQuery(sql);
         }
+        #endregion
     }
 }

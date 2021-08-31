@@ -261,9 +261,9 @@ namespace GUI
             this.btn_sua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_sua.ImageIndex = 2;
             this.btn_sua.ImageList = this.imageList1;
-            this.btn_sua.Location = new System.Drawing.Point(40, 401);
+            this.btn_sua.Location = new System.Drawing.Point(46, 401);
             this.btn_sua.Name = "btn_sua";
-            this.btn_sua.Size = new System.Drawing.Size(128, 37);
+            this.btn_sua.Size = new System.Drawing.Size(120, 40);
             this.btn_sua.TabIndex = 3;
             this.btn_sua.Text = "Sửa";
             this.btn_sua.UseVisualStyleBackColor = false;
@@ -296,9 +296,9 @@ namespace GUI
             this.btn_nhaplai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_nhaplai.ImageIndex = 1;
             this.btn_nhaplai.ImageList = this.imageList1;
-            this.btn_nhaplai.Location = new System.Drawing.Point(188, 401);
+            this.btn_nhaplai.Location = new System.Drawing.Point(191, 401);
             this.btn_nhaplai.Name = "btn_nhaplai";
-            this.btn_nhaplai.Size = new System.Drawing.Size(128, 37);
+            this.btn_nhaplai.Size = new System.Drawing.Size(120, 40);
             this.btn_nhaplai.TabIndex = 3;
             this.btn_nhaplai.Text = "Nhập lại";
             this.btn_nhaplai.UseVisualStyleBackColor = false;
@@ -352,9 +352,9 @@ namespace GUI
             this.btn_huy.ImageList = this.imageList1;
             this.btn_huy.Location = new System.Drawing.Point(333, 401);
             this.btn_huy.Name = "btn_huy";
-            this.btn_huy.Size = new System.Drawing.Size(128, 37);
+            this.btn_huy.Size = new System.Drawing.Size(120, 40);
             this.btn_huy.TabIndex = 3;
-            this.btn_huy.Text = "Huỷ thao tác";
+            this.btn_huy.Text = "Đóng";
             this.btn_huy.UseVisualStyleBackColor = false;
             this.btn_huy.Click += new System.EventHandler(this.btn_huy_Click);
             // 

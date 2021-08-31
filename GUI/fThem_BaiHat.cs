@@ -62,6 +62,7 @@ namespace GUI
         }
         #endregion
 
+        #region button thêm click
         private void btn_them_Click(object sender, EventArgs e)
         {
             String maBaiHat, tenBaiHat, maTheLoai, maAlbum, maCaSi, maTacGia, maHSX, loiBaiHat;
@@ -76,7 +77,16 @@ namespace GUI
                     MessageBox.Show("Chưa cung cấp đầy đủ thông tin!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-
+                if(txt_mabaihat.Text.Length > 10)
+                {
+                    MessageBox.Show("Mã bài hát chỉ được nhập tối đa 10 ký tự", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if(txt_tenbaihat.Text.Length > 100)
+                {
+                    MessageBox.Show("Tên bài hát chỉ được nhập tối đa 100 ký tự", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 maBaiHat = txt_mabaihat.Text;
                 tenBaiHat = txt_tenbaihat.Text;
                 loiBaiHat = txt_loibaihat.Text;
@@ -107,12 +117,16 @@ namespace GUI
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
 
+        #region button nhập lại click
         private void btn_nhaplai_Click(object sender, EventArgs e)
         {
             fThem_BaiHat_Load(sender, e);
         }
+        #endregion
 
+        #region button đóng click
         private void btn_huy_Click(object sender, EventArgs e)
         {
             string msg = "Xác nhận đóng!";
@@ -121,5 +135,6 @@ namespace GUI
             if (result == DialogResult.Yes)
                 Close();
         }
+        #endregion
     }
 }

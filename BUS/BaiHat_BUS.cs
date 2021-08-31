@@ -21,26 +21,13 @@ namespace BUS
         private string maHangSanXuat;
         private string maTacGia;
 
+        #region constructor
         public BaiHat_BUS()
         {
         }
+        #endregion
 
-        public BaiHat_BUS(string maBaiHat)
-        {
-            this.maBaiHat = maBaiHat;
-        }
-
-        public BaiHat_BUS( string maBaiHat, string tenBaiHat, string maTheLoai, string maCaSi, string maAlbum, string loiBaiHat, string maHangSanXuat, string maTacGia)
-        {
-            this.maBaiHat = maBaiHat;
-            this.tenBaiHat = tenBaiHat;
-            this.maTheLoai = maTheLoai;
-            this.maCaSi = maCaSi;
-            this.maAlbum = maAlbum;
-            this.loiBaiHat = loiBaiHat;
-            this.maHangSanXuat = maHangSanXuat;
-            this.maTacGia = maTacGia;
-        }
+        #region getter, setter
         public string MaBaiHat
         {
             get { return maBaiHat; }
@@ -80,70 +67,104 @@ namespace BUS
                     loiBaiHat = value;
             }
         }
+        #endregion
+
+        #region lấy bài hát ra tabcontrol bài hát
         public DataTable getBaiHat()
         {
             return BaiHat.getAllBaiHat();
         }
+        #endregion
 
+        #region lấy bài hát ra home
         public DataTable getBaiHatHome()
         {
             return BaiHat.getAllBaiHatFormChinh();
         }
+        #endregion
 
+        #region lấy bài hát bằng lời bài hát
         public DataTable getBaiHatByLoiBaiHat(String loiBaiHat)
         {
             return BaiHat.getBaiHatByLoiBaiHat(loiBaiHat);
         }
+        #endregion
 
+        #region lấy bài hát bằng tên bài hát
         public DataTable getBaiHatByTenBaiHat(String tenBaiHat)
         {
             return BaiHat.SearchByTen(tenBaiHat);
         }
+        #endregion
 
+        #region lấy bài hát bằng mã bài hát
         public DataTable getBaiHatByMaBaiHat(string maBaiHat)
         {
             return BaiHat.SearchByMa(maBaiHat);
         }
+        #endregion
+
+        #region thêm bài hát
         public void themBaiHat(String maBaiHat, String tenBaiHat,String maTheLoai, String maAlbum,String maCaSi,String maTacGia,String maHangSanXuat,String loiBaiHat )
         {
             BaiHat.InsertBaiHat(maBaiHat,tenBaiHat, maTheLoai, maAlbum, maCaSi,  maTacGia, maHangSanXuat, loiBaiHat);
         }
+        #endregion
+
+        #region lấy bài hát theo toàn bộ các mã (foreign key)
         public DataTable getBaiHatByAllKey(string maTheLoai, string maAlbum, string maCaSi, string maTacGia, string maHangSanXuat)
         {
             return BaiHat.SearchByAllKey(maTheLoai, maAlbum, maCaSi, maTacGia, maHangSanXuat);
         }
+        #endregion
+
+        #region xoá bài hát theo mã bài hát
         public void xoaBaiHat(string maBaiHat)
         {
             BaiHat.DeleteBaiHat(maBaiHat);
         }
+        #endregion
+
+        #region cập nhật bài hát
         public void capNhatBaiHat(String maBaiHat, String tenBaiHat, String maTheLoai, String maAlbum, String maCaSi, String maTacGia, String maHSX, String loiBaiHat)
         {
             BaiHat.UpdateBaiHat(maBaiHat, tenBaiHat, maTheLoai, maAlbum, maCaSi, maTacGia, maHSX, loiBaiHat);
         }
+        #endregion
+
+        #region lấy bài hát theo mã album
         public DataTable listBaiHatTheoAlbum(String maAlbum)
         {
             return BaiHat.listBaiHatTheoAlbum(maAlbum);
         }
+        #endregion
+
+        #region lấy bài hát theo mã thể loại
         public DataTable listBaiHatTheoTheLoai(String maTheLoai)
         {
             return BaiHat.listBaiHatTheoTheLoai(maTheLoai);
         }
+        #endregion
+
+        #region lấy bài hát theo mã tác giả
         public DataTable listBaiHatTheoTacGia(String maTacGia)
         {
             return BaiHat.SearchByTacGia(maTacGia);
         }
+        #endregion
+
+        #region lấy bài hát theo mã hãng sản xuất
         public DataTable listBaiHatTheoHSX(String maHSX)
         {
             return BaiHat.SearchByHSX(maHSX);
         }
+        #endregion
+
+        #region lấy bài hát theo mã ca sĩ
         public DataTable listBaiHatTheoCaSi(String maCaSi)
         {
             return BaiHat.SearchByCaSi(maCaSi);
         }
-
-        public DataTable themBangBH(string maTG)
-        {
-            return BaiHat.themBangBH(maTG);
-        }
+        #endregion
     }
 }

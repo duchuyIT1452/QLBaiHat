@@ -18,6 +18,7 @@ namespace GUI
             InitializeComponent();
         }
 
+        #region button thêm click
         private void btn_them_Click(object sender, EventArgs e)
         {
             HangSanXuat_BUS hangsx;
@@ -39,6 +40,21 @@ namespace GUI
                     MessageBox.Show("Thông tin hãng sản xuất không được bỏ trống", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+                if (txt_mahangsx.Text.Length > 10)
+                {
+                    MessageBox.Show("Mã hãng sản xuất chỉ được nhập tối đa 10 ký tự", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (txt_tenhangsx.Text.Length > 100)
+                {
+                    MessageBox.Show("Tên hãng sản xuất chỉ được nhập tối đa 100 ký tự", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (txt_thongtin.Text.Length > 1000)
+                {
+                    MessageBox.Show("Thông tin hãng sản xuất chỉ được nhập tối đa 1000 ký tự", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 hangsx.Insert_HangSX();
                 MessageBox.Show("Thêm thành công");
             }
@@ -54,13 +70,17 @@ namespace GUI
             }
 
         }
+        #endregion
 
+        #region button nhập lại click
         private void btn_nhaplai_Click(object sender, EventArgs e)
         {
             txt_mahangsx.Text = txt_tenhangsx.Text = txt_thongtin.Text = "";
             txt_mahangsx.Focus();
         }
+        #endregion
 
+        #region button thoát click
         private void btn_thoat_Click(object sender, EventArgs e)
         {
             string msg = "Xác nhận đóng!";
@@ -69,5 +89,6 @@ namespace GUI
             if (result == DialogResult.Yes)
                 Close();
         }
+        #endregion
     }
 }

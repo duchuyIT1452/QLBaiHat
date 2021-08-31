@@ -37,6 +37,7 @@ namespace DATA
         }
         #endregion
 
+        #region thêm bài hát
         public void InsertBaiHat(String maBaiHat, String tenBaiHat, String maTheLoai, String maAlbum, String maCaSi, String maTacGia, String maHSX, String loiBaiHat)
         {
             String sql = "Insert Into BaiHat Values('" + maBaiHat + "', '" + tenBaiHat + "', '" + maTheLoai + "','" + maAlbum + "','" + maCaSi + "','" + maTacGia + "','" + maHSX + "','" + loiBaiHat + "')";
@@ -44,7 +45,9 @@ namespace DATA
             conDB.ExecuteNonQuery(sql);
             conDB.ExecuteNonQuery(sql1);
         }
+        #endregion
 
+        #region lấy bài hát bằng lời bài hát
         public DataTable getBaiHatByLoiBaiHat(String loiBaiHat)
         {
             String sql = "Select ma_baihat, ten_baihat, loi_baihat from baihat where loi_baihat like '%" + loiBaiHat + "%'";
@@ -52,7 +55,9 @@ namespace DATA
             dt = conDB.GetTable(sql);
             return dt;
         }
+        #endregion
 
+        #region lấy bài hát bằng mã bài hát
         public DataTable SearchByMa(String maBaiHat)
         {
             String sql = "Select * from BaiHat Where ma_BaiHat='" + maBaiHat + "'";
@@ -60,6 +65,9 @@ namespace DATA
             dt = conDB.GetTable(sql);
             return dt;
         }
+        #endregion
+
+        #region lấy bài hát bằng tên bài hát
         public DataTable SearchByTen(String tenBaiHat)
         {
             String sql = "Select ma_baihat, ten_baihat, loi_baihat from BaiHat Where ten_BaiHat like '%" + tenBaiHat + "%'";
@@ -67,20 +75,9 @@ namespace DATA
             dt = conDB.GetTable(sql);
             return dt;
         }
-        public DataTable SearchByTheLoai(String maTheLoai)
-        {
-            String sql = "Select * from BaiHat Where ma_theloai='" + maTheLoai + "'";
-            DataTable dt = new DataTable();
-            dt = conDB.GetTable(sql);
-            return dt;
-        }
-        public DataTable SearchByAlbum(String maAlbum)
-        {
-            String sql = "Select * from BaiHat Where ma_album='" + maAlbum + "'";
-            DataTable dt = new DataTable();
-            dt = conDB.GetTable(sql);
-            return dt;
-        }
+        #endregion
+
+        #region lấy bài hát bằng mã tác giả
         public DataTable SearchByTacGia(String maTacGia)
         {
             String sql = "Select ten_baihat, loi_baihat from baihat where ma_tacgia='" + maTacGia + "'";
@@ -88,6 +85,9 @@ namespace DATA
             dt = conDB.GetTable(sql);
             return dt;
         }
+        #endregion
+
+        #region lấy bài hát bằng mã ca sĩ
         public DataTable SearchByCaSi(String maCaSi)
         {
             String sql = "Select ten_baihat,loi_baihat from baihat_casi b INNER JOIN baihat bh ON b.ma_baihat = bh.ma_baihat INNER JOIN casi c ON b.ma_casi=c.ma_casi where c.ma_casi ='"+maCaSi+"' ";
@@ -95,6 +95,9 @@ namespace DATA
             dt = conDB.GetTable(sql);
             return dt;
         }
+        #endregion
+
+        #region lấy bài hát bằng mã hãng sản xuất
         public DataTable SearchByHSX(String maHSX)
         {
             String sql = "Select ten_baihat, loi_baihat from BaiHat Where ma_hangsanxuat='" + maHSX + "'";
@@ -102,13 +105,9 @@ namespace DATA
             dt = conDB.GetTable(sql);
             return dt;
         }
-        public DataTable SearchByLoiBaiHat(String loiBaiHat)
-        {
-            String sql = "Select * from BaiHat Where loi_baihat='" + loiBaiHat + "'";
-            DataTable dt = new DataTable();
-            dt = conDB.GetTable(sql);
-            return dt;
-        }
+        #endregion
+
+        #region lấy bài hát bằng tất cả các mã(foreign key)
         public DataTable SearchByAllKey(String maTheLoai, String maAlbum, String maCaSi, String maTacGia, String maHangSanXuat)
         {
             String sql = "Select * from BaiHat Where " + maTheLoai + maAlbum + maCaSi + maTacGia + maHangSanXuat;
@@ -116,6 +115,9 @@ namespace DATA
             dt = conDB.GetTable(sql);
             return dt;
         }
+        #endregion
+
+        #region cập nhật bài hát
         public void UpdateBaiHat(String maBaiHat, String tenBaiHat, String maTheLoai, String maAlbum, String maCaSi, String maTacGia, String maHSX, String loiBaiHat)
         {
             String sql = "Update BaiHat Set ma_album='" + maAlbum + "',ma_theloai='" + maTheLoai + "', ma_tacgia='"
@@ -124,6 +126,9 @@ namespace DATA
             conDB.ExecuteNonQuery(sql);
             conDB.ExecuteNonQuery(sql1);
         }
+        #endregion
+
+        #region xoá bài hát bằng mã bài hát
         public void DeleteBaiHat(String maBaiHat)
         {
             String sql = "Delete BaiHat Where ma_BaiHat='" + maBaiHat + "'";
@@ -131,6 +136,9 @@ namespace DATA
             conDB.ExecuteNonQuery(sql1);
             conDB.ExecuteNonQuery(sql);
         }
+        #endregion
+
+        #region lấy bài hát bằng mã album
         public DataTable listBaiHatTheoAlbum(String maAlbum)
         {
             String sql = "SELECT ma_baihat, ten_baihat,loi_baihat FROM BAIHAT WHERE ma_album='" + maAlbum + "'";
@@ -138,6 +146,9 @@ namespace DATA
             dt = conDB.GetTable(sql);
             return dt;
         }
+        #endregion
+
+        #region lấy bài hát bằng mã thể loại
         public DataTable listBaiHatTheoTheLoai(String maTheLoai)
         {
             String sql = "SELECT ma_baihat,ten_baihat, loi_baihat FROM BAIHAT WHERE ma_TheLoai='" + maTheLoai + "'";
@@ -145,13 +156,6 @@ namespace DATA
             dt = conDB.GetTable(sql);
             return dt;
         }
-        public DataTable themBangBH(string maTG)
-        {
-            string sql = "select ten_baihat, ten_casi, ten_hangsanxuat, loi_baihat from BAIHAT Inner join HANGSANXUAT ON BAIHAT.ma_hangsanxuat = HANGSANXUAT.ma_hangsanxuat INNER JOIN CASI ON BAIHAT.ma_casi = CASI.ma_casi WHERE ma_tacgia = '" + maTG + "'";
-            DataTable dt = new DataTable();
-            dt = conDB.GetTable(sql);
-            return dt;
-        }
-
+        #endregion
     }
 }

@@ -17,52 +17,10 @@ namespace GUI
     {
         public Form1()
         {
-            InitializeComponent();     
+            InitializeComponent();
         }
 
-        #region menu
-        private void quảnLýAlbumToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            tabControl_formChinh.SelectedIndex = 1;
-        }
-
-        private void quảnLýTHỂLOẠIToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            tabControl_formChinh.SelectedIndex = 2;
-        }
-
-        private void quảnLýCASĨToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            tabControl_formChinh.SelectedIndex = 3;
-        }
-
-        private void quảnLýTÁCGIẢToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            tabControl_formChinh.SelectedIndex = 4;
-        }
-
-        private void quảnLýBÀIHÁTToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            tabControl_formChinh.SelectedIndex = 7;
-        }
-
-        private void quảnLýHÃNGSẢNXUẤTToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            tabControl_formChinh.SelectedIndex = 5;
-        }
-
-        private void quảnLýTRACỨUTÌMKIẾMToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            tabControl_formChinh.SelectedIndex = 6;
-        }
-
-        private void đóngỨngDụngToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-        #endregion
-
-        // load dữ liệu
+        //-------------------------LOAD DỮ LIỆU-----------------------//
 
         #region form1 load
         private void Form1_Load(object sender, EventArgs e)
@@ -70,7 +28,7 @@ namespace GUI
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             LoadBaiHat_Home();
             load_BaiHat();
-            
+
         }
         #endregion
 
@@ -98,28 +56,28 @@ namespace GUI
             cb_theloai_formchinh.DataSource = tlBus.getTheLoai();
             cb_theloai_formchinh.DisplayMember = "ten_theloai";
             cb_theloai_formchinh.ValueMember = "ma_theloai";
-            
+
 
             //load combobox album
             Album_BUS abBus = new Album_BUS();
             cb_album_formchinh.DataSource = abBus.getAlbum();
             cb_album_formchinh.DisplayMember = "ten_album";
             cb_album_formchinh.ValueMember = "ma_album";
-            
+
 
             //load combobox ca sĩ
             CaSi_BUS csBus = new CaSi_BUS();
             cb_casi_formchinh.DataSource = csBus.getCaSi();
             cb_casi_formchinh.DisplayMember = "ten_casi";
             cb_casi_formchinh.ValueMember = "ma_casi";
-            
+
 
             //load combobox tác giả
             TacGia_BUS tgBus = new TacGia_BUS();
             cb_tacgia_formchinh.DataSource = tgBus.getAllTacGia();
             cb_tacgia_formchinh.DisplayMember = "ten_tacgia";
             cb_tacgia_formchinh.ValueMember = "ma_tacgia";
-            
+
 
             //load combobox hãng sản xuất
             HangSanXuat_BUS hsxBus = new HangSanXuat_BUS();
@@ -178,47 +136,6 @@ namespace GUI
                 dem++;
             }
             dgv_theloai.ClearSelection();
-        }
-        #endregion
-
-        #region reset dgv_timkiem
-        public void resetDgvTimKiem()
-        {
-            try
-            {
-                while (dgv_search_LoiBaiHat.Rows.Count > 1)
-                {
-                    dgv_search_LoiBaiHat.Rows.RemoveAt(0);
-                }
-                while (dgv_searchTenTheLoai.Rows.Count > 1)
-                {
-                    dgv_searchTenTheLoai.Rows.RemoveAt(0);
-                }
-                while (dgv_searchTenCaSi.Rows.Count > 1)
-                {
-                    dgv_searchTenCaSi.Rows.RemoveAt(0);
-                }
-                while (dgv_searchTenAlbum.Rows.Count > 1)
-                {
-                    dgv_searchTenAlbum.Rows.RemoveAt(0);
-                }
-                while (dgv_searchHangSanXuat.Rows.Count > 1)
-                {
-                    dgv_searchHangSanXuat.Rows.RemoveAt(0);
-                }
-                while (dgv_searchTenBaiHat.Rows.Count > 1)
-                {
-                    dgv_searchTenBaiHat.Rows.RemoveAt(0);
-                }
-                while (dgv_timkiemTacGia.Rows.Count > 1)
-                {
-                    dgv_timkiemTacGia.Rows.RemoveAt(0);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
         #endregion
 
@@ -286,7 +203,7 @@ namespace GUI
             CaSi_BUS bus = new CaSi_BUS();
             dgv_dsCaSi.DataSource = bus.getCaSi();
             int dem = 0;
-            foreach(DataRow row in bus.getCaSi().Rows)
+            foreach (DataRow row in bus.getCaSi().Rows)
             {
                 if (dem % 2 == 0)
                     dgv_dsCaSi.Rows[dem].DefaultCellStyle.BackColor = Color.PaleTurquoise;
@@ -299,119 +216,19 @@ namespace GUI
                     dgv_BaiHatTheoCaSi.Rows.RemoveAt(0);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }  
+            }
             txt_tencasi.Text = "";
             txt_thongtincasi.Text = "";
         }
         #endregion
 
-        #region tabcontrol form chính mouse click
-        private void tabControl_formChinh_MouseClick(object sender, MouseEventArgs e)
-        {
-            load_Album();
-            load_TheLoai();
-            load_Tacgia();
-            load_Hangsx();
-            load_CaSi();
-            load_BaiHat();
-            txt_timkiem.Text = "(Gõ nội dung cần tìm kiếm...)";
-            txt_timkiem.ForeColor = Color.Silver;
-            resetDgvTimKiem();
-            tabControl_TimKiem.SelectedIndex = 0;
-        }
-        #endregion
+        //----------------------------CLICK--------------------------//
 
-        //dataGridView cell click
+        //button thêm
 
-        #region dgv album cellclick
-        private void dgv_Album_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int d = e.RowIndex;
-            BaiHat_BUS bus = new BaiHat_BUS();
-            if (d>=0)
-            {
-                String ma = dgv_Album.Rows[d].Cells[0].Value.ToString();
-                dgv_AlbumBaihat.DataSource = bus.listBaiHatTheoAlbum(ma);
-            }    
-            
-            dgv_AlbumBaihat.ClearSelection();
-        }
-        #endregion
-
-        #region dgv thể loại cellclick
-        private void dgv_theloai_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int d = e.RowIndex;
-            BaiHat_BUS bus = new BaiHat_BUS();
-            if (d>=0)
-            {
-                String ma = dgv_theloai.Rows[d].Cells[0].Value.ToString();
-                dgv_TheloaiBaihat.DataSource = bus.listBaiHatTheoTheLoai(ma);
-            }    
-
-            dgv_TheloaiBaihat.ClearSelection();
-        }
-        #endregion
-
-        #region dgv nhạc sĩ cellclick
-        private void dgv_dsNhacSi_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                int d = e.RowIndex;
-                BaiHat_BUS bus = new BaiHat_BUS();
-                DataTable dt = new DataTable();
-                String ma = dgv_dsNhacSi.Rows[d].Cells[0].Value.ToString();
-                dt = bus.listBaiHatTheoTacGia(ma);
-                dgv_Baihat_nhacsi.DataSource = dt;
-                txt_tentacgia.Text = dgv_dsNhacSi.Rows[d].Cells[1].Value.ToString();
-                txt_thongtintacgia.Text = dgv_dsNhacSi.Rows[d].Cells[2].Value.ToString();
-                dgv_Baihat_nhacsi.ClearSelection();
-            }
-
-        }
-        #endregion
-
-        #region dataGridView hãng sản xuất cellclick
-        private void dgv_dsHangsx_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                int d = e.RowIndex;
-                BaiHat_BUS bus = new BaiHat_BUS();
-                DataTable dt = new DataTable();
-                String ma = dgv_dsHangsx.Rows[d].Cells[0].Value.ToString();
-                dt = bus.listBaiHatTheoHSX(ma);
-                dgv_Baihat_phathanh.DataSource = dt;
-                txt_tenhangsanxuat.Text = dgv_dsHangsx.Rows[d].Cells[1].Value.ToString();
-                txt_thongtinhangsanxuat.Text = dgv_dsHangsx.Rows[d].Cells[2].Value.ToString();
-                dgv_Baihat_phathanh.ClearSelection();
-            }
-        }
-        #endregion
-
-        #region ca sĩ cellclick
-        private void dgv_dsCaSi_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                int d = e.RowIndex;
-                BaiHat_BUS bus = new BaiHat_BUS();
-                DataTable dt = new DataTable();
-                String ma = dgv_dsCaSi.Rows[d].Cells[0].Value.ToString();
-                dt = bus.listBaiHatTheoCaSi(ma);
-                dgv_BaiHatTheoCaSi.DataSource = dt;
-                txt_tencasi.Text = dgv_dsCaSi.Rows[d].Cells[1].Value.ToString();
-                txt_thongtincasi.Text = dgv_dsCaSi.Rows[d].Cells[2].Value.ToString();
-                dgv_BaiHatTheoCaSi.ClearSelection();
-            }
-        }
-        #endregion
-
-        //button click
         #region button thêm album click
         private void bt_them_Click(object sender, EventArgs e)
         {
@@ -420,64 +237,6 @@ namespace GUI
             f.ShowDialog();
             this.Visible = true;
             load_Album();
-        }
-        #endregion
-
-        #region button xoá album click
-        private void bt_xoa_Click(object sender, EventArgs e)
-        {
-            Album_BUS bus = new Album_BUS();
-            string ma = dgv_Album.Rows[dgv_Album.CurrentCell.RowIndex].Cells[1].Value.ToString();
-            try
-            {
-                DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Xác nhận", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    bus.xoaAlbum(ma);
-                    load_Album();
-                }
-
-                else if (dialogResult == DialogResult.No)
-                    load_Album();
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        #endregion
-
-        #region Thoát
-        private void bt_dong_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("BẠN CHẮC CHẮN MUỐN ĐÓNG ỨNG DỤNG ?", "THOÁT CHƯƠNG TRÌNH", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                this.Close();
-        }
-        #endregion
-
-        #region button xoá thể loại click
-        private void bt_xoaTheLoai_Click(object sender, EventArgs e)
-        {
-            TheLoai_BUS bus = new TheLoai_BUS();
-            string ma = dgv_theloai.Rows[dgv_theloai.CurrentCell.RowIndex].Cells[1].Value.ToString();
-            try
-            {
-                DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Xác nhận", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    bus.xoaTheLoai(ma);
-                    load_TheLoai();
-                }
-
-                else if (dialogResult == DialogResult.No)
-                    load_TheLoai();
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
         #endregion
 
@@ -492,50 +251,69 @@ namespace GUI
         }
         #endregion
 
-        #region button đóng click
-        private void btn_close_Click(object sender, EventArgs e)
+        #region button thêm bài hát
+        private void btn_thembaihat_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Visible = false;
+            fThem_BaiHat f = new fThem_BaiHat();
+            f.ShowDialog();
+            this.Visible = true;
+            load_BaiHat();
         }
         #endregion
 
-        #region các hàm xử lý
-        private static string[] VietNamChar = new string[]
+        #region button thêm tác giả click
+        private void btn_themNS_Click(object sender, EventArgs e)
         {
-           "aAeEoOuUiIdDyY",
-           "áàạảãâấầậẩẫăắằặẳẵ",
-           "ÁÀẠẢÃÂẤẦẬẨẪĂẮẰẶẲẴ",
-           "éèẹẻẽêếềệểễ",
-           "ÉÈẸẺẼÊẾỀỆỂỄ",
-           "óòọỏõôốồộổỗơớờợởỡ",
-           "ÓÒỌỎÕÔỐỒỘỔỖƠỚỜỢỞỠ",
-           "úùụủũưứừựửữ",
-           "ÚÙỤỦŨƯỨỪỰỬỮ",
-           "íìịỉĩ",
-           "ÍÌỊỈĨ",
-           "đ",
-           "Đ",
-           "ýỳỵỷỹ",
-           "ÝỲỴỶỸ"
-        };
-        // ham thay the tieng viet co dau sang k dau
-        public static string ThayThe_Unicode(string strInput)
-        {
-            for (int i = 1; i < VietNamChar.Length; i++)
-            {
-                for (int j = 0; j < VietNamChar[i].Length; j++)
-                {
-                    strInput = strInput.Replace(VietNamChar[i][j], VietNamChar[0][i - 1]);
-                }
-            }
-            return strInput;
+            this.Visible = false;
+            fThem_Tacgia f = new fThem_Tacgia();
+            f.ShowDialog();
+            this.Visible = true;
+            load_Tacgia();
         }
         #endregion
+
+        #region button thêm ca sĩ click
+        private void btn_themcasi_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            fThem_CaSi f = new fThem_CaSi();
+            f.ShowDialog();
+            this.Visible = true;
+            load_CaSi();
+        }
+        #endregion
+
+        #region button thêm HSX click
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            fThem_HangSX f = new fThem_HangSX();
+            f.ShowDialog();
+            this.Visible = true;
+            load_Hangsx();
+        }
+        #endregion
+
+        #region thông báo khi formclosing
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            string msg = "Bạn có chắc chắn đóng không?";
+            DialogResult result = MessageBox.Show(msg, "Xác nhận đóng",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+                e.Cancel = false;
+            else if (result == DialogResult.No)
+                e.Cancel = true;
+        }
+        #endregion
+
+        //button tìm kiếm click
 
         #region button tìm kiếm click
         private void btn_timkiem_Click(object sender, EventArgs e)
         {
-            if(txt_timkiem.Text == "(Gõ nội dung cần tìm kiếm...)" || txt_timkiem.Text == "")
+            if (txt_timkiem.Text == "(Gõ nội dung cần tìm kiếm...)" || txt_timkiem.Text == "")
             {
                 MessageBox.Show("Thiếu nội dung cần tìm kiếm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -554,7 +332,7 @@ namespace GUI
                 }
                 if (dem == 0)
                 {
-                    DialogResult dialogResult = MessageBox.Show("Không có tên album trong danh sách!", "Thông báo", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    DialogResult dialogResult = MessageBox.Show("Không có tên album trong danh sách!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
 
@@ -572,7 +350,7 @@ namespace GUI
                 }
                 if (dem == 0)
                 {
-                    DialogResult dialogResult = MessageBox.Show("Không có tên thể loại trong danh sách!", "Thông báo", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    DialogResult dialogResult = MessageBox.Show("Không có tên thể loại trong danh sách!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
 
@@ -612,22 +390,22 @@ namespace GUI
                 }
             }
             //------------- Tìm kiếm bài hát theo lời bài hát -------------------//
-            if(tabControl_TimKiem.SelectedIndex == 3)
+            if (tabControl_TimKiem.SelectedIndex == 3)
             {
                 BaiHat_BUS bus = new BaiHat_BUS();
                 dgv_search_LoiBaiHat.DataSource = bus.getBaiHatByLoiBaiHat(txt_timkiem.Text.ToString());
                 int dem = 0;
-                foreach(DataRow row in bus.getBaiHatByLoiBaiHat(txt_timkiem.Text.ToString()).Rows)
+                foreach (DataRow row in bus.getBaiHatByLoiBaiHat(txt_timkiem.Text.ToString()).Rows)
                 {
                     dem++;
                 }
-                if(dem == 0)
+                if (dem == 0)
                 {
                     MessageBox.Show("Không có bài hát có lời bài hát này!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             //------------- Tìm kiếm bài hát theo tên bài hát -------------------//
-            if(tabControl_TimKiem.SelectedIndex == 0)
+            if (tabControl_TimKiem.SelectedIndex == 0)
             {
                 BaiHat_BUS bus = new BaiHat_BUS();
                 dgv_searchTenBaiHat.DataSource = bus.getBaiHatByTenBaiHat(txt_timkiem.Text.ToString());
@@ -659,37 +437,23 @@ namespace GUI
         }
         #endregion
 
-        #region Thêm HSX
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            fThem_HangSX f = new fThem_HangSX();
-            f.ShowDialog();
-            this.Visible = true;
-            load_Hangsx();
-        }
-        #endregion
+        //button xoá
 
-        #region xoá hãng sản xuất
-        private void btn_xoaHSX_Click(object sender, EventArgs e)
+        #region button xoá ca sĩ click
+        private void btn_xoacasi_Click(object sender, EventArgs e)
         {
-            HangSanXuat_BUS hangsx = new HangSanXuat_BUS();
-            string del = dgv_dsHangsx.Rows[dgv_dsHangsx.CurrentCell.RowIndex].Cells[0].Value.ToString();
+            CaSi_BUS bus = new CaSi_BUS();
+            string ma = dgv_dsCaSi.Rows[dgv_dsCaSi.CurrentCell.RowIndex].Cells[0].Value.ToString();
             try
             {
-                DialogResult dialog = MessageBox.Show("Bạn có chắc muốn xóa dữ liệu không?", "XÁC NHẬN XÓA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (dialog == DialogResult.Yes)
+                DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Xác nhận", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
                 {
-                    hangsx.Delete_HangSX(del);
-                    load_Hangsx();
+                    bus.xoaCasi(ma);
+                    load_CaSi();
                 }
-                else
-                {
-                    if (dialog == DialogResult.No)
-                    {
-                        load_Hangsx();
-                    }
-                }
+                else if (dialogResult == DialogResult.No)
+                    load_CaSi();
             }
             catch (Exception ex)
             {
@@ -698,42 +462,31 @@ namespace GUI
         }
         #endregion
 
-        #region Sửa HSX
-        private void btn_suaHSX_Click(object sender, EventArgs e)
+        #region button xoá bài hát click
+        private void btn_xoabaihat_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            fCapnhat_HangSX f = new fCapnhat_HangSX();
-            f.maH = dgv_dsHangsx.Rows[dgv_dsHangsx.CurrentCell.RowIndex].Cells[0].Value.ToString();
-            f.tenH = txt_tenhangsanxuat.Text;
-            if (txt_thongtinhangsanxuat.Text.Contains("Chưa có thông tin hãng sản xuất"))
+            BaiHat_BUS bus = new BaiHat_BUS();
+            string ma = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[0].Value.ToString();
+            try
             {
-                f.thongtinH = "";
-            }
-            else
-                f.thongtinH = txt_thongtinhangsanxuat.Text;
-            f.ShowDialog();
-            if (f.DialogResult == DialogResult.OK)
-            {
-                dgv_dsHangsx.DataSource = null;
-                load_Hangsx();
-            }
-            this.Visible = true;
-            load_Hangsx();
-        }
-        #endregion  
+                DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Xác nhận", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    bus.xoaBaiHat(ma);
+                    load_BaiHat();
+                }
 
-        #region button thêm tác giả click
-        private void btn_themNS_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            fThem_Tacgia f = new fThem_Tacgia();
-            f.ShowDialog();
-            this.Visible = true;
-            load_Tacgia();
+                else if (dialogResult == DialogResult.No)
+                    load_BaiHat();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         #endregion
 
-        #region xoá nhạc sĩ
+        #region button xoá nhạc sĩ click
         private void btn_xoaNS_Click(object sender, EventArgs e)
         {
             TacGia_BUS tg = new TacGia_BUS();
@@ -762,7 +515,166 @@ namespace GUI
         }
         #endregion
 
-        #region sửa nhạc sĩ
+        #region button xoá hãng sản xuất click
+        private void btn_xoaHSX_Click(object sender, EventArgs e)
+        {
+            HangSanXuat_BUS hangsx = new HangSanXuat_BUS();
+            string del = dgv_dsHangsx.Rows[dgv_dsHangsx.CurrentCell.RowIndex].Cells[0].Value.ToString();
+            try
+            {
+                DialogResult dialog = MessageBox.Show("Bạn có chắc muốn xóa dữ liệu không?", "XÁC NHẬN XÓA", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialog == DialogResult.Yes)
+                {
+                    hangsx.Delete_HangSX(del);
+                    load_Hangsx();
+                }
+                else
+                {
+                    if (dialog == DialogResult.No)
+                    {
+                        load_Hangsx();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        #endregion
+
+        #region button xoá album click
+        private void bt_xoa_Click(object sender, EventArgs e)
+        {
+            Album_BUS bus = new Album_BUS();
+            string ma = dgv_Album.Rows[dgv_Album.CurrentCell.RowIndex].Cells[1].Value.ToString();
+            try
+            {
+                DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Xác nhận", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    bus.xoaAlbum(ma);
+                    load_Album();
+                }
+
+                else if (dialogResult == DialogResult.No)
+                    load_Album();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        #endregion
+
+        #region button xoá thể loại click
+        private void bt_xoaTheLoai_Click(object sender, EventArgs e)
+        {
+            TheLoai_BUS bus = new TheLoai_BUS();
+            string ma = dgv_theloai.Rows[dgv_theloai.CurrentCell.RowIndex].Cells[1].Value.ToString();
+            try
+            {
+                DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Xác nhận", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    bus.xoaTheLoai(ma);
+                    load_TheLoai();
+                }
+
+                else if (dialogResult == DialogResult.No)
+                    load_TheLoai();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        #endregion
+
+        //button sửa
+
+        #region button sửa ca sĩ click
+        private void btn_editcasi_Click(object sender, EventArgs e)
+        {
+            string maCaSi = dgv_dsCaSi.Rows[dgv_dsCaSi.CurrentCell.RowIndex].Cells[0].Value.ToString();
+            string tenCaSi = dgv_dsCaSi.Rows[dgv_dsCaSi.CurrentCell.RowIndex].Cells[1].Value.ToString();
+            string thongTinCaSi = dgv_dsCaSi.Rows[dgv_dsCaSi.CurrentCell.RowIndex].Cells[2].Value.ToString();
+
+            fCapNhat_CaSi.maCaSi = maCaSi;
+            fCapNhat_CaSi.tenCaSi = tenCaSi;
+            fCapNhat_CaSi.thongTinCaSi = thongTinCaSi;
+
+            this.Visible = false;
+            fCapNhat_CaSi f = new fCapNhat_CaSi();
+            f.ShowDialog();
+            this.Visible = true;
+            load_CaSi();
+        }
+        #endregion
+
+        #region button sửa bài hát click
+        private void btn_suabaihat_Click(object sender, EventArgs e)
+        {
+            string maBaiHat = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[0].Value.ToString();
+            string tenBaiHat = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[1].Value.ToString();
+            string loiBaiHat = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[7].Value.ToString();
+            string maTheLoai = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[2].Value.ToString();
+            string maAlbum = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[3].Value.ToString();
+            string maCaSi = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[4].Value.ToString();
+            string maTacGia = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[5].Value.ToString();
+            string maHangSanXuat = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[6].Value.ToString();
+
+            fCapNhat_BaiHat.maBaiHat = maBaiHat;
+            fCapNhat_BaiHat.tenBaiHat = tenBaiHat;
+            fCapNhat_BaiHat.loiBaiHat = loiBaiHat;
+            fCapNhat_BaiHat.maTheLoai = maTheLoai;
+            fCapNhat_BaiHat.maAlbum = maAlbum;
+            fCapNhat_BaiHat.maCaSi = maCaSi;
+            fCapNhat_BaiHat.maTacGia = maTacGia;
+            fCapNhat_BaiHat.maHangSanXuat = maHangSanXuat;
+
+            this.Visible = false;
+            fCapNhat_BaiHat f = new fCapNhat_BaiHat();
+            f.ShowDialog();
+            this.Visible = true;
+            load_BaiHat();
+        }
+        #endregion
+
+        #region button sửa ca sĩ click
+        private void btn_chinhSuaAlbum_Click(object sender, EventArgs e)
+        {
+            fCapNhat_Album.maAlbum = dgv_Album.Rows[dgv_Album.CurrentCell.RowIndex].Cells[0].Value.ToString();
+            fCapNhat_Album.tenAlbum = dgv_Album.Rows[dgv_Album.CurrentCell.RowIndex].Cells[1].Value.ToString();
+            fCapNhat_Album.namPhatHanh = dgv_Album.Rows[dgv_Album.CurrentCell.RowIndex].Cells[2].Value.ToString();
+
+            this.Visible = false;
+            fCapNhat_Album f = new fCapNhat_Album();
+            f.ShowDialog();
+            this.Visible = true;
+
+            load_Album();
+        }
+        #endregion
+
+        #region button sửa thể loại click
+        private void btn_chinhSuaTheLoai_Click(object sender, EventArgs e)
+        {
+            fCapNhat_TheLoai.maTheLoai = dgv_theloai.Rows[dgv_theloai.CurrentCell.RowIndex].Cells[0].Value.ToString();
+            fCapNhat_TheLoai.tenTheLoai = dgv_theloai.Rows[dgv_theloai.CurrentCell.RowIndex].Cells[1].Value.ToString();
+
+            this.Visible = false;
+            fCapNhat_TheLoai f = new fCapNhat_TheLoai();
+            f.ShowDialog();
+            this.Visible = true;
+
+            load_TheLoai();
+        }
+        #endregion
+
+        #region button sửa nhạc sĩ click
         private void btn_suaNS_Click(object sender, EventArgs e)
         {
             this.Visible = false;
@@ -786,6 +698,233 @@ namespace GUI
         }
         #endregion
 
+        #region button sửa HSX click
+        private void btn_suaHSX_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            fCapnhat_HangSX f = new fCapnhat_HangSX();
+            f.maH = dgv_dsHangsx.Rows[dgv_dsHangsx.CurrentCell.RowIndex].Cells[0].Value.ToString();
+            f.tenH = txt_tenhangsanxuat.Text;
+            if (txt_thongtinhangsanxuat.Text.Contains("Chưa có thông tin hãng sản xuất"))
+            {
+                f.thongtinH = "";
+            }
+            else
+                f.thongtinH = txt_thongtinhangsanxuat.Text;
+            f.ShowDialog();
+            if (f.DialogResult == DialogResult.OK)
+            {
+                dgv_dsHangsx.DataSource = null;
+                load_Hangsx();
+            }
+            this.Visible = true;
+            load_Hangsx();
+        }
+        #endregion  
+
+        //button đóng ứng dụng click
+
+        #region button đóng click
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+        #endregion
+
+        //button hiển thị toàn bộ bài hát click
+
+        #region button hiển thị bài hát click
+        private void btn_hienthitoanbobaihat_Click(object sender, EventArgs e)
+        {
+            load_BaiHat();
+            cb_hangsanxuat_formchinh.SelectedIndex = -1;
+            cb_album_formchinh.SelectedIndex = -1;
+            cb_casi_formchinh.SelectedIndex = -1;
+            cb_theloai_formchinh.SelectedIndex = -1;
+            cb_tacgia_formchinh.SelectedIndex = -1;
+        }
+        #endregion
+
+        //dataGridView cell click
+
+        #region dgv album cellclick
+        private void dgv_Album_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int d = e.RowIndex;
+            BaiHat_BUS bus = new BaiHat_BUS();
+            if (d >= 0)
+            {
+                String ma = dgv_Album.Rows[d].Cells[0].Value.ToString();
+                dgv_AlbumBaihat.DataSource = bus.listBaiHatTheoAlbum(ma);
+            }
+
+            dgv_AlbumBaihat.ClearSelection();
+        }
+        #endregion
+
+        #region dgv thể loại cellclick
+        private void dgv_theloai_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int d = e.RowIndex;
+            BaiHat_BUS bus = new BaiHat_BUS();
+            if (d >= 0)
+            {
+                String ma = dgv_theloai.Rows[d].Cells[0].Value.ToString();
+                dgv_TheloaiBaihat.DataSource = bus.listBaiHatTheoTheLoai(ma);
+            }
+
+            dgv_TheloaiBaihat.ClearSelection();
+        }
+        #endregion
+
+        #region dgv nhạc sĩ cellclick
+        private void dgv_dsNhacSi_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                int d = e.RowIndex;
+                BaiHat_BUS bus = new BaiHat_BUS();
+                DataTable dt = new DataTable();
+                String ma = dgv_dsNhacSi.Rows[d].Cells[0].Value.ToString();
+                dt = bus.listBaiHatTheoTacGia(ma);
+                dgv_Baihat_nhacsi.DataSource = dt;
+                txt_tentacgia.Text = dgv_dsNhacSi.Rows[d].Cells[1].Value.ToString();
+                txt_thongtintacgia.Text = dgv_dsNhacSi.Rows[d].Cells[2].Value.ToString();
+                dgv_Baihat_nhacsi.ClearSelection();
+            }
+
+        }
+        #endregion
+
+        #region dgv hãng sản xuất cellclick
+        private void dgv_dsHangsx_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                int d = e.RowIndex;
+                BaiHat_BUS bus = new BaiHat_BUS();
+                DataTable dt = new DataTable();
+                String ma = dgv_dsHangsx.Rows[d].Cells[0].Value.ToString();
+                dt = bus.listBaiHatTheoHSX(ma);
+                dgv_Baihat_phathanh.DataSource = dt;
+                txt_tenhangsanxuat.Text = dgv_dsHangsx.Rows[d].Cells[1].Value.ToString();
+                txt_thongtinhangsanxuat.Text = dgv_dsHangsx.Rows[d].Cells[2].Value.ToString();
+                dgv_Baihat_phathanh.ClearSelection();
+            }
+        }
+        #endregion
+
+        #region dgv ca sĩ cellclick
+        private void dgv_dsCaSi_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                int d = e.RowIndex;
+                BaiHat_BUS bus = new BaiHat_BUS();
+                DataTable dt = new DataTable();
+                String ma = dgv_dsCaSi.Rows[d].Cells[0].Value.ToString();
+                dt = bus.listBaiHatTheoCaSi(ma);
+                dgv_BaiHatTheoCaSi.DataSource = dt;
+                txt_tencasi.Text = dgv_dsCaSi.Rows[d].Cells[1].Value.ToString();
+                txt_thongtincasi.Text = dgv_dsCaSi.Rows[d].Cells[2].Value.ToString();
+                dgv_BaiHatTheoCaSi.ClearSelection();
+            }
+        }
+        #endregion
+
+        //tool strip menu click
+
+        #region tool strip menu click
+        private void quảnLýAlbumToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tabControl_formChinh.SelectedIndex = 1;
+        }
+
+        private void quảnLýTHỂLOẠIToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tabControl_formChinh.SelectedIndex = 2;
+        }
+
+        private void quảnLýCASĨToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tabControl_formChinh.SelectedIndex = 3;
+        }
+
+        private void quảnLýTÁCGIẢToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tabControl_formChinh.SelectedIndex = 4;
+        }
+
+        private void quảnLýBÀIHÁTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tabControl_formChinh.SelectedIndex = 7;
+        }
+
+        private void quảnLýHÃNGSẢNXUẤTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tabControl_formChinh.SelectedIndex = 5;
+        }
+
+        private void quảnLýTRACỨUTÌMKIẾMToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tabControl_formChinh.SelectedIndex = 6;
+        }
+
+        private void đóngỨngDụngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+        #endregion
+
+        #region menu tool strip click
+        private void thôngTinSinhViênThựcHiệnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            fThongTinSV f = new fThongTinSV();
+            f.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void thôngTinĐềTàiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            fThongTinDeTai f = new fThongTinDeTai();
+            f.ShowDialog();
+            this.Visible = true;
+        }
+        #endregion
+
+        //tabcontrol click
+
+        #region tabcontrol form chính mouse click
+        private void tabControl_formChinh_MouseClick(object sender, MouseEventArgs e)
+        {
+            load_Album();
+            load_TheLoai();
+            load_Tacgia();
+            load_Hangsx();
+            load_CaSi();
+            load_BaiHat();
+            txt_timkiem.Text = "(Gõ nội dung cần tìm kiếm...)";
+            txt_timkiem.ForeColor = Color.Silver;
+            resetDgvTimKiem();
+            tabControl_TimKiem.SelectedIndex = 0;
+        }
+        #endregion
+
+        #region tabcontrol tìm kiếm click
+        private void tabControl_TimKiem_MouseClick(object sender, MouseEventArgs e)
+        {
+            txt_timkiem.Text = "(Gõ nội dung cần tìm kiếm...)";
+            txt_timkiem.ForeColor = Color.Silver;
+            resetDgvTimKiem();
+        }
+        #endregion
+
+        //------------------------------Các hàm xử lý để lọc, tìm kiếm...----------------------------//
+
+        //các hàm lọc bài hát theo thuộc tính
+
         #region set string sql
         string theLoai = "";
         string album = "";
@@ -796,7 +935,7 @@ namespace GUI
         {
             if (cb_theloai_formchinh.SelectedIndex == -1)
                 theLoai = "";
-            else 
+            else
             {
                 theLoai = "ma_theloai = " + "'" + cb_theloai_formchinh.SelectedValue.ToString() + "'";
             }
@@ -880,81 +1019,7 @@ namespace GUI
         }
         #endregion
 
-        #region button thêm bài hát
-        private void btn_thembaihat_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            fThem_BaiHat f = new fThem_BaiHat();
-            f.ShowDialog();
-            this.Visible = true;
-            load_BaiHat();
-        }
-        #endregion
-         
-        #region button hiển thị bài hát click
-        private void btn_hienthitoanbobaihat_Click(object sender, EventArgs e)
-        {
-            load_BaiHat();
-            cb_hangsanxuat_formchinh.SelectedIndex = -1;
-            cb_album_formchinh.SelectedIndex = -1;
-            cb_casi_formchinh.SelectedIndex = -1;
-            cb_theloai_formchinh.SelectedIndex = -1;
-            cb_tacgia_formchinh.SelectedIndex = -1;
-        }
-        #endregion
-
-        #region button xoá bài hát click
-        private void btn_xoabaihat_Click(object sender, EventArgs e)
-        {
-            BaiHat_BUS bus = new BaiHat_BUS();
-            string ma = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[0].Value.ToString();
-            try
-            {
-                DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Xác nhận", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    bus.xoaBaiHat(ma);
-                    load_BaiHat();
-                }
-
-                else if (dialogResult == DialogResult.No)
-                    load_BaiHat();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        #endregion
-
-        #region button sửa bài hát click
-        private void btn_suabaihat_Click(object sender, EventArgs e)
-        {
-            string maBaiHat = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[0].Value.ToString();
-            string tenBaiHat = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[1].Value.ToString();
-            string loiBaiHat = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[7].Value.ToString();
-            string maTheLoai = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[2].Value.ToString();
-            string maAlbum = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[3].Value.ToString();
-            string maCaSi = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[4].Value.ToString();
-            string maTacGia = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[5].Value.ToString();
-            string maHangSanXuat = dgv_baihat.Rows[dgv_baihat.CurrentCell.RowIndex].Cells[6].Value.ToString();
-
-            fCapNhat_BaiHat.maBaiHat = maBaiHat;
-            fCapNhat_BaiHat.tenBaiHat = tenBaiHat;
-            fCapNhat_BaiHat.loiBaiHat = loiBaiHat;
-            fCapNhat_BaiHat.maTheLoai = maTheLoai;
-            fCapNhat_BaiHat.maAlbum = maAlbum;
-            fCapNhat_BaiHat.maCaSi = maCaSi;
-            fCapNhat_BaiHat.maTacGia = maTacGia;
-            fCapNhat_BaiHat.maHangSanXuat = maHangSanXuat;
-
-            this.Visible = false;
-            fCapNhat_BaiHat f = new fCapNhat_BaiHat();
-            f.ShowDialog();
-            this.Visible = true;
-            load_BaiHat();
-        }
-        #endregion
+        //xử lí text trong ô tìm kiếm
 
         #region click tìm kiếm hidden text
         private void txt_timkiem_Enter(object sender, EventArgs e)
@@ -978,105 +1043,46 @@ namespace GUI
         }
         #endregion
 
-        #region menu tool strip click
-        private void thôngTinSinhViênThựcHiệnToolStripMenuItem_Click(object sender, EventArgs e)
+        #region reset dgv_timkiem
+        public void resetDgvTimKiem()
         {
-            this.Visible = false;
-            fThongTinSV f = new fThongTinSV();
-            f.ShowDialog();
-            this.Visible = true;
-        }
-
-        private void thôngTinĐềTàiToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            fThongTinDeTai f = new fThongTinDeTai();
-            f.ShowDialog();
-            this.Visible = true;
-        }
-        #endregion
-
-        #region button thêm ca sĩ click
-        private void btn_themcasi_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            fThem_CaSi f = new fThem_CaSi();
-            f.ShowDialog();
-            this.Visible = true;
-            load_CaSi();
-        }
-        #endregion
-
-        #region thông báo khi formclosing
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            string msg = "Bạn có chắc chắn đóng không?";
-            DialogResult result = MessageBox.Show(msg, "Xác nhận đóng",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-                e.Cancel = false;
-            else if (result == DialogResult.No)
-                e.Cancel = true;
-        }
-        #endregion
-
-        #region button sửa ca sĩ click
-        private void btn_editcasi_Click(object sender, EventArgs e)
-        {
-            string maCaSi = dgv_dsCaSi.Rows[dgv_dsCaSi.CurrentCell.RowIndex].Cells[0].Value.ToString();
-            string tenCaSi = dgv_dsCaSi.Rows[dgv_dsCaSi.CurrentCell.RowIndex].Cells[1].Value.ToString();
-            string thongTinCaSi = dgv_dsCaSi.Rows[dgv_dsCaSi.CurrentCell.RowIndex].Cells[2].Value.ToString();
-
-            fCapNhat_CaSi.maCaSi = maCaSi;
-            fCapNhat_CaSi.tenCaSi = tenCaSi;
-            fCapNhat_CaSi.thongTinCaSi = thongTinCaSi;
-
-            this.Visible = false;
-            fCapNhat_CaSi f = new fCapNhat_CaSi();
-            f.ShowDialog();
-            this.Visible = true;
-            load_CaSi();
+            try
+            {
+                while (dgv_search_LoiBaiHat.Rows.Count > 1)
+                {
+                    dgv_search_LoiBaiHat.Rows.RemoveAt(0);
+                }
+                while (dgv_searchTenTheLoai.Rows.Count > 1)
+                {
+                    dgv_searchTenTheLoai.Rows.RemoveAt(0);
+                }
+                while (dgv_searchTenCaSi.Rows.Count > 1)
+                {
+                    dgv_searchTenCaSi.Rows.RemoveAt(0);
+                }
+                while (dgv_searchTenAlbum.Rows.Count > 1)
+                {
+                    dgv_searchTenAlbum.Rows.RemoveAt(0);
+                }
+                while (dgv_searchHangSanXuat.Rows.Count > 1)
+                {
+                    dgv_searchHangSanXuat.Rows.RemoveAt(0);
+                }
+                while (dgv_searchTenBaiHat.Rows.Count > 1)
+                {
+                    dgv_searchTenBaiHat.Rows.RemoveAt(0);
+                }
+                while (dgv_timkiemTacGia.Rows.Count > 1)
+                {
+                    dgv_timkiemTacGia.Rows.RemoveAt(0);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         #endregion
 
-        #region button sửa ca sĩ click
-        private void btn_chinhSuaAlbum_Click(object sender, EventArgs e)
-        {
-            fCapNhat_Album.maAlbum = dgv_Album.Rows[dgv_Album.CurrentCell.RowIndex].Cells[0].Value.ToString();
-            fCapNhat_Album.tenAlbum = dgv_Album.Rows[dgv_Album.CurrentCell.RowIndex].Cells[1].Value.ToString();
-            fCapNhat_Album.namPhatHanh = dgv_Album.Rows[dgv_Album.CurrentCell.RowIndex].Cells[2].Value.ToString();
-
-            this.Visible = false;
-            fCapNhat_Album f = new fCapNhat_Album();
-            f.ShowDialog();
-            this.Visible = true;
-
-            load_Album();
-        }
-        #endregion
-
-        #region button sửa thể loại click
-        private void btn_chinhSuaTheLoai_Click(object sender, EventArgs e)
-        {
-            fCapNhat_TheLoai.maTheLoai = dgv_theloai.Rows[dgv_theloai.CurrentCell.RowIndex].Cells[0].Value.ToString();
-            fCapNhat_TheLoai.tenTheLoai = dgv_theloai.Rows[dgv_theloai.CurrentCell.RowIndex].Cells[1].Value.ToString();
-
-            this.Visible = false;
-            fCapNhat_TheLoai f = new fCapNhat_TheLoai();
-            f.ShowDialog();
-            this.Visible = true;
-
-            load_TheLoai();
-        }
-        #endregion
-
-        #region tabcontrol tìm kiếm click
-        private void tabControl_TimKiem_MouseClick(object sender, MouseEventArgs e)
-        {
-            txt_timkiem.Text = "(Gõ nội dung cần tìm kiếm...)";
-            txt_timkiem.ForeColor = Color.Silver;
-            resetDgvTimKiem();
-        }
-        #endregion
     }
 }

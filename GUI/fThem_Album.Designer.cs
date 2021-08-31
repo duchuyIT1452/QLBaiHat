@@ -95,10 +95,10 @@ namespace GUI
             this.bt_dongY.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_dongY.ImageIndex = 4;
             this.bt_dongY.ImageList = this.imageList1;
-            this.bt_dongY.Location = new System.Drawing.Point(35, 243);
+            this.bt_dongY.Location = new System.Drawing.Point(19, 242);
             this.bt_dongY.Margin = new System.Windows.Forms.Padding(2);
             this.bt_dongY.Name = "bt_dongY";
-            this.bt_dongY.Size = new System.Drawing.Size(95, 36);
+            this.bt_dongY.Size = new System.Drawing.Size(120, 40);
             this.bt_dongY.TabIndex = 1;
             this.bt_dongY.Text = "Đồng ý";
             this.bt_dongY.UseVisualStyleBackColor = false;
@@ -121,10 +121,10 @@ namespace GUI
             this.bt_nhapLai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_nhapLai.ImageIndex = 1;
             this.bt_nhapLai.ImageList = this.imageList1;
-            this.bt_nhapLai.Location = new System.Drawing.Point(177, 243);
+            this.bt_nhapLai.Location = new System.Drawing.Point(161, 242);
             this.bt_nhapLai.Margin = new System.Windows.Forms.Padding(2);
             this.bt_nhapLai.Name = "bt_nhapLai";
-            this.bt_nhapLai.Size = new System.Drawing.Size(95, 36);
+            this.bt_nhapLai.Size = new System.Drawing.Size(120, 40);
             this.bt_nhapLai.TabIndex = 1;
             this.bt_nhapLai.Text = "Nhập lại";
             this.bt_nhapLai.UseVisualStyleBackColor = false;
@@ -137,10 +137,10 @@ namespace GUI
             this.bt_dong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_dong.ImageIndex = 0;
             this.bt_dong.ImageList = this.imageList1;
-            this.bt_dong.Location = new System.Drawing.Point(309, 243);
+            this.bt_dong.Location = new System.Drawing.Point(293, 242);
             this.bt_dong.Margin = new System.Windows.Forms.Padding(2);
             this.bt_dong.Name = "bt_dong";
-            this.bt_dong.Size = new System.Drawing.Size(95, 36);
+            this.bt_dong.Size = new System.Drawing.Size(120, 40);
             this.bt_dong.TabIndex = 1;
             this.bt_dong.Text = "Đóng";
             this.bt_dong.UseVisualStyleBackColor = false;
@@ -166,7 +166,7 @@ namespace GUI
             // 
             // dtp_namphathanh
             // 
-            this.dtp_namphathanh.CustomFormat = "yyyy";
+            this.dtp_namphathanh.CustomFormat = "";
             this.dtp_namphathanh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtp_namphathanh.Location = new System.Drawing.Point(177, 178);
             this.dtp_namphathanh.Margin = new System.Windows.Forms.Padding(2);
