@@ -29,9 +29,6 @@ namespace BUS
 
             set
             {
-                if (value.Trim().Equals(""))
-                    throw new Exception("Nhập mã ca sĩ !");
-                else
                     maCaSi = value;
             }
         }
@@ -41,9 +38,6 @@ namespace BUS
 
             set
             {
-                if (value.Trim().Equals(""))
-                    throw new Exception("Nhập tên ca sĩ !");
-                else
                     tenCaSi = value;
             }
         }

@@ -34,9 +34,6 @@ namespace BUS
 
             set
             {
-                if (value.Trim().Equals(""))
-                    throw new Exception("Nhập mã bài hát !");
-                else
                     maBaiHat = value;
             }
         }
@@ -46,9 +43,6 @@ namespace BUS
 
             set
             {
-                if (value.Trim().Equals(""))
-                    throw new Exception("Nhập tên bài hát !");
-                else
                     tenBaiHat = value;
             }
         }
@@ -58,15 +52,55 @@ namespace BUS
 
             set
             {
-                if (value.Trim().Equals(""))
-                    throw new Exception("Chưa nhập lời cho bài hát !");
-                else
-                    if (value == "Chưa có lời cho bài hát !! == > bấm [Đồng ý] lần nữa để lưu bài hát này !")
-                    loiBaiHat = "";
-                else
                     loiBaiHat = value;
             }
         }
+
+        public string MaAlbum
+        {
+            get { return maAlbum; }
+            set
+            {
+                maAlbum = value;
+            }
+        }
+        public string MaHangSanXuat
+        {
+            get { return maHangSanXuat; }
+
+            set
+            {
+                maHangSanXuat = value;
+            }
+        }
+        public string MaTheLoai
+        {
+            get { return maTheLoai; }
+
+            set
+            {
+                maTheLoai = value;
+            }
+        }
+        public string MaCaSi
+        {
+            get { return maCaSi; }
+
+            set
+            {
+                maCaSi = value;
+            }
+        }
+        public string MaTacGia
+        {
+            get { return maTacGia; }
+
+            set
+            {
+                maTacGia = value;
+            }
+        }
+
         #endregion
 
         #region lấy bài hát ra tabcontrol bài hát

@@ -12,9 +12,11 @@ namespace BUS
     {
         GetData_BaiHat_CaSi BaiHat_CaSi = new GetData_BaiHat_CaSi();
 
+        #region lấy ca sĩ bằng mã bài hát
         public DataTable getCaSi_By_MaBaiHat(string maBaiHat)
         {
             return BaiHat_CaSi.getCaSi_By_MaBaiHat(maBaiHat);
         }
+        #endregion
     }
 }

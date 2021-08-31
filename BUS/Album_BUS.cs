@@ -17,6 +17,7 @@ namespace BUS
         private string tenAlbum;
         private DateTime namPhatHanh;
 
+        #region getter setter
         public string MaAlbum
         {
             get { return maAlbum; }
@@ -79,6 +80,9 @@ namespace BUS
                 }
             }
         }
+        #endregion
+
+        #region constructor
         public Album_BUS()
         {
 
@@ -89,6 +93,9 @@ namespace BUS
             this.tenAlbum = ten;
             this.namPhatHanh = nam;
         }
+        #endregion
+
+        #region lấy dữ liệu từ data
         public void themAlbum()
         {
             newAlbum.themAlbum(maAlbum, tenAlbum, namPhatHanh);
@@ -109,5 +116,6 @@ namespace BUS
         {
             return newAlbum.findAlbum(tenAlbum);
         }
+        #endregion
     }
 }
