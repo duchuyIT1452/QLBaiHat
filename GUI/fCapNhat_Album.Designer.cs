@@ -148,6 +148,8 @@ namespace GUI
             // 
             // txt_maAlbum
             // 
+            this.txt_maAlbum.Enabled = false;
+            this.txt_maAlbum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_maAlbum.Location = new System.Drawing.Point(223, 80);
             this.txt_maAlbum.Margin = new System.Windows.Forms.Padding(2);
             this.txt_maAlbum.Multiline = true;
@@ -157,6 +159,7 @@ namespace GUI
             // 
             // txt_tenAlbum
             // 
+            this.txt_tenAlbum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_tenAlbum.Location = new System.Drawing.Point(223, 139);
             this.txt_tenAlbum.Margin = new System.Windows.Forms.Padding(2);
             this.txt_tenAlbum.Multiline = true;
@@ -167,11 +170,12 @@ namespace GUI
             // dtp_namPhatHanh
             // 
             this.dtp_namPhatHanh.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_namPhatHanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_namPhatHanh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtp_namPhatHanh.Location = new System.Drawing.Point(223, 206);
             this.dtp_namPhatHanh.Margin = new System.Windows.Forms.Padding(2);
             this.dtp_namPhatHanh.Name = "dtp_namPhatHanh";
-            this.dtp_namPhatHanh.Size = new System.Drawing.Size(289, 20);
+            this.dtp_namPhatHanh.Size = new System.Drawing.Size(289, 22);
             this.dtp_namPhatHanh.TabIndex = 3;
             // 
             // fCapNhat_Album

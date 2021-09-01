@@ -77,6 +77,7 @@ namespace GUI
             // 
             // txt_maTheLoai
             // 
+            this.txt_maTheLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_maTheLoai.Location = new System.Drawing.Point(140, 74);
             this.txt_maTheLoai.Margin = new System.Windows.Forms.Padding(2);
             this.txt_maTheLoai.Multiline = true;
@@ -86,6 +87,7 @@ namespace GUI
             // 
             // txt_tenTheLoai
             // 
+            this.txt_tenTheLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_tenTheLoai.Location = new System.Drawing.Point(140, 144);
             this.txt_tenTheLoai.Margin = new System.Windows.Forms.Padding(2);
             this.txt_tenTheLoai.Multiline = true;

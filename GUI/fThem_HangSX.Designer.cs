@@ -75,6 +75,7 @@
             // 
             // txt_mahangsx
             // 
+            this.txt_mahangsx.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_mahangsx.Location = new System.Drawing.Point(184, 55);
             this.txt_mahangsx.Multiline = true;
             this.txt_mahangsx.Name = "txt_mahangsx";
@@ -83,6 +84,7 @@
             // 
             // txt_tenhangsx
             // 
+            this.txt_tenhangsx.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_tenhangsx.Location = new System.Drawing.Point(184, 98);
             this.txt_tenhangsx.Multiline = true;
             this.txt_tenhangsx.Name = "txt_tenhangsx";
@@ -101,8 +103,10 @@
             // 
             // txt_thongtin
             // 
+            this.txt_thongtin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_thongtin.Location = new System.Drawing.Point(32, 195);
             this.txt_thongtin.Name = "txt_thongtin";
+            this.txt_thongtin.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
             this.txt_thongtin.Size = new System.Drawing.Size(402, 189);
             this.txt_thongtin.TabIndex = 3;
             this.txt_thongtin.Text = "";

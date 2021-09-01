@@ -28,7 +28,6 @@ namespace GUI
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             LoadBaiHat_Home();
             load_BaiHat();
-
         }
         #endregion
 
@@ -119,7 +118,19 @@ namespace GUI
                     dgv_Album.Rows[dem].DefaultCellStyle.BackColor = Color.PaleTurquoise;
                 dem++;
             }
+            try
+            {
+                while (dgv_AlbumBaihat.Rows.Count > 1)
+                {
+                    dgv_AlbumBaihat.Rows.RemoveAt(0);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             dgv_Album.ClearSelection();
+            dgv_AlbumBaihat.ClearSelection();
         }
         #endregion
 
@@ -135,7 +146,19 @@ namespace GUI
                     dgv_theloai.Rows[dem].DefaultCellStyle.BackColor = Color.PaleTurquoise;
                 dem++;
             }
+            try
+            {
+                while (dgv_TheloaiBaihat.Rows.Count > 1)
+                {
+                    dgv_TheloaiBaihat.Rows.RemoveAt(0);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             dgv_theloai.ClearSelection();
+            dgv_TheloaiBaihat.ClearSelection();
         }
         #endregion
 
@@ -222,6 +245,7 @@ namespace GUI
             }
             txt_tencasi.Text = "";
             txt_thongtincasi.Text = "";
+            dgv_dsCaSi.ClearSelection();
         }
         #endregion
 
@@ -838,36 +862,43 @@ namespace GUI
         private void quảnLýAlbumToolStripMenuItem_Click(object sender, EventArgs e)
         {
             tabControl_formChinh.SelectedIndex = 1;
+            load_Album();
         }
 
         private void quảnLýTHỂLOẠIToolStripMenuItem_Click(object sender, EventArgs e)
         {
             tabControl_formChinh.SelectedIndex = 2;
+            load_TheLoai();
         }
 
         private void quảnLýCASĨToolStripMenuItem_Click(object sender, EventArgs e)
         {
             tabControl_formChinh.SelectedIndex = 3;
+            load_CaSi();
         }
 
         private void quảnLýTÁCGIẢToolStripMenuItem_Click(object sender, EventArgs e)
         {
             tabControl_formChinh.SelectedIndex = 4;
+            load_Tacgia();
         }
 
         private void quảnLýBÀIHÁTToolStripMenuItem_Click(object sender, EventArgs e)
         {
             tabControl_formChinh.SelectedIndex = 7;
+            load_BaiHat();
         }
 
         private void quảnLýHÃNGSẢNXUẤTToolStripMenuItem_Click(object sender, EventArgs e)
         {
             tabControl_formChinh.SelectedIndex = 5;
+            load_Hangsx();
         }
 
         private void quảnLýTRACỨUTÌMKIẾMToolStripMenuItem_Click(object sender, EventArgs e)
         {
             tabControl_formChinh.SelectedIndex = 6;
+            resetDgvTimKiem();
         }
 
         private void đóngỨngDụngToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1083,6 +1114,5 @@ namespace GUI
             }
         }
         #endregion
-
     }
 }

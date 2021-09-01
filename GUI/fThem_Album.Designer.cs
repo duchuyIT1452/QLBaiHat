@@ -148,6 +148,7 @@ namespace GUI
             // 
             // txt_maAlbum
             // 
+            this.txt_maAlbum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_maAlbum.Location = new System.Drawing.Point(177, 68);
             this.txt_maAlbum.Margin = new System.Windows.Forms.Padding(2);
             this.txt_maAlbum.Multiline = true;
@@ -157,6 +158,7 @@ namespace GUI
             // 
             // txt_tenAlbum
             // 
+            this.txt_tenAlbum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_tenAlbum.Location = new System.Drawing.Point(177, 121);
             this.txt_tenAlbum.Margin = new System.Windows.Forms.Padding(2);
             this.txt_tenAlbum.Multiline = true;
@@ -167,11 +169,12 @@ namespace GUI
             // dtp_namphathanh
             // 
             this.dtp_namphathanh.CustomFormat = "";
+            this.dtp_namphathanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_namphathanh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtp_namphathanh.Location = new System.Drawing.Point(177, 178);
             this.dtp_namphathanh.Margin = new System.Windows.Forms.Padding(2);
             this.dtp_namphathanh.Name = "dtp_namphathanh";
-            this.dtp_namphathanh.Size = new System.Drawing.Size(200, 20);
+            this.dtp_namphathanh.Size = new System.Drawing.Size(200, 22);
             this.dtp_namphathanh.TabIndex = 3;
             // 
             // fThem_Album

@@ -215,7 +215,7 @@ namespace GUI
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.chứcNăngChínhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chucNangChinhToolStripMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýAlbumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýTHỂLOẠIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýCASĨToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -2534,7 +2534,7 @@ namespace GUI
             this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.chứcNăngChínhToolStripMenuItem,
+            this.chucNangChinhToolStripMenu,
             this.trợGiúpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -2543,9 +2543,9 @@ namespace GUI
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // chứcNăngChínhToolStripMenuItem
+            // chucNangChinhToolStripMenu
             // 
-            this.chứcNăngChínhToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.chucNangChinhToolStripMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.quảnLýAlbumToolStripMenuItem,
             this.quảnLýTHỂLOẠIToolStripMenuItem,
             this.quảnLýCASĨToolStripMenuItem,
@@ -2554,10 +2554,10 @@ namespace GUI
             this.quảnLýHÃNGSẢNXUẤTToolStripMenuItem,
             this.quảnLýTRACỨUTÌMKIẾMToolStripMenuItem,
             this.đóngỨngDụngToolStripMenuItem});
-            this.chứcNăngChínhToolStripMenuItem.Image = global::GUI.Properties.Resources.settings;
-            this.chứcNăngChínhToolStripMenuItem.Name = "chứcNăngChínhToolStripMenuItem";
-            this.chứcNăngChínhToolStripMenuItem.Size = new System.Drawing.Size(130, 24);
-            this.chứcNăngChínhToolStripMenuItem.Text = "Chức năng chính";
+            this.chucNangChinhToolStripMenu.Image = global::GUI.Properties.Resources.settings;
+            this.chucNangChinhToolStripMenu.Name = "chucNangChinhToolStripMenu";
+            this.chucNangChinhToolStripMenu.Size = new System.Drawing.Size(130, 24);
+            this.chucNangChinhToolStripMenu.Text = "Chức năng chính";
             // 
             // quảnLýAlbumToolStripMenuItem
             // 
@@ -2763,7 +2763,7 @@ namespace GUI
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.TabPage tabPage8;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem chứcNăngChínhToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem chucNangChinhToolStripMenu;
         private System.Windows.Forms.ToolStripMenuItem trợGiúpToolStripMenuItem;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ToolStripMenuItem quảnLýAlbumToolStripMenuItem;

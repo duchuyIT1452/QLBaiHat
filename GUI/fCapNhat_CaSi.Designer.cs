@@ -56,6 +56,8 @@ namespace GUI
             // 
             // txt_macasi
             // 
+            this.txt_macasi.Enabled = false;
+            this.txt_macasi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_macasi.Location = new System.Drawing.Point(127, 59);
             this.txt_macasi.Multiline = true;
             this.txt_macasi.Name = "txt_macasi";
@@ -89,6 +91,7 @@ namespace GUI
             // 
             // txt_tencasi
             // 
+            this.txt_tencasi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_tencasi.Location = new System.Drawing.Point(127, 110);
             this.txt_tencasi.Multiline = true;
             this.txt_tencasi.Name = "txt_tencasi";
@@ -97,9 +100,11 @@ namespace GUI
             // 
             // txt_thongtincasi
             // 
+            this.txt_thongtincasi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_thongtincasi.Location = new System.Drawing.Point(46, 204);
             this.txt_thongtincasi.Multiline = true;
             this.txt_thongtincasi.Name = "txt_thongtincasi";
+            this.txt_thongtincasi.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txt_thongtincasi.Size = new System.Drawing.Size(373, 175);
             this.txt_thongtincasi.TabIndex = 1;
             // 

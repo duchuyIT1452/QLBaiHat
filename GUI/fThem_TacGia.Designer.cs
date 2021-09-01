@@ -56,6 +56,7 @@
             // 
             // txt_matacgia
             // 
+            this.txt_matacgia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_matacgia.Location = new System.Drawing.Point(121, 62);
             this.txt_matacgia.Multiline = true;
             this.txt_matacgia.Name = "txt_matacgia";
@@ -82,6 +83,7 @@
             // 
             // txt_tentacgia
             // 
+            this.txt_tentacgia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_tentacgia.Location = new System.Drawing.Point(121, 110);
             this.txt_tentacgia.Multiline = true;
             this.txt_tentacgia.Name = "txt_tentacgia";
@@ -90,9 +92,11 @@
             // 
             // txt_thongtintacgia
             // 
+            this.txt_thongtintacgia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_thongtintacgia.Location = new System.Drawing.Point(27, 187);
             this.txt_thongtintacgia.Multiline = true;
             this.txt_thongtintacgia.Name = "txt_thongtintacgia";
+            this.txt_thongtintacgia.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txt_thongtintacgia.Size = new System.Drawing.Size(382, 132);
             this.txt_thongtintacgia.TabIndex = 3;
             // 

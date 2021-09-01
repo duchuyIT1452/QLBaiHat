@@ -165,6 +165,7 @@ namespace GUI
             this.txt_loibaihat.Location = new System.Drawing.Point(45, 193);
             this.txt_loibaihat.Multiline = true;
             this.txt_loibaihat.Name = "txt_loibaihat";
+            this.txt_loibaihat.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txt_loibaihat.Size = new System.Drawing.Size(419, 176);
             this.txt_loibaihat.TabIndex = 2;
             // 
