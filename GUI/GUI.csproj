@@ -83,6 +83,12 @@
     <Compile Include="fCapNhat_TheLoai.Designer.cs">
       <DependentUpon>fCapNhat_TheLoai.cs</DependentUpon>
     </Compile>
+    <Compile Include="fLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLoad.Designer.cs">
+      <DependentUpon>fLoad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fCapNhat_TheLoai.resx">
       <DependentUpon>fCapNhat_TheLoai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fLoad.resx">
+      <DependentUpon>fLoad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -240,6 +249,8 @@
     <Content Include="ICON\settings.png" />
     <Content Include="ICON\singer.png" />
     <Content Include="ICON\writer.png" />
+    <None Include="Resources\alexander-shatov-qt7S2QuAhJI-unsplash.png" />
+    <None Include="Resources\alexander-shatov-qt7S2QuAhJI-unsplash.jpg" />
     <None Include="Resources\icons8-add-40.png" />
     <None Include="Resources\icons8-delete-64.png" />
     <None Include="Resources\icons8-edit-48.png" />

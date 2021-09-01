@@ -73,6 +73,26 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap alexander_shatov_qt7S2QuAhJI_unsplash {
+            get {
+                object obj = ResourceManager.GetObject("alexander-shatov-qt7S2QuAhJI-unsplash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap alexander_shatov_qt7S2QuAhJI_unsplash1 {
+            get {
+                object obj = ResourceManager.GetObject("alexander-shatov-qt7S2QuAhJI-unsplash1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap categories {
             get {
                 object obj = ResourceManager.GetObject("categories", resourceCulture);
@@ -206,6 +226,16 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap info__1_ {
             get {
                 object obj = ResourceManager.GetObject("info__1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kushal_medhi_5v5VKmvNqF8_unsplash {
+            get {
+                object obj = ResourceManager.GetObject("kushal-medhi-5v5VKmvNqF8-unsplash", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
