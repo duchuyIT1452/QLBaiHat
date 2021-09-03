@@ -78,6 +78,7 @@ namespace GUI
             // btn_dongY
             // 
             this.btn_dongY.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_dongY.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_dongY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_dongY.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_dongY.ImageIndex = 2;
@@ -104,6 +105,7 @@ namespace GUI
             // btn_nhapLai
             // 
             this.btn_nhapLai.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_nhapLai.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_nhapLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_nhapLai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_nhapLai.ImageIndex = 1;
@@ -120,6 +122,7 @@ namespace GUI
             // btn_dong
             // 
             this.btn_dong.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_dong.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_dong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_dong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_dong.ImageIndex = 0;
@@ -168,6 +171,7 @@ namespace GUI
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "fCapNhat_TheLoai";

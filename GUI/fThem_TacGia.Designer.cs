@@ -123,6 +123,7 @@
             // btn_them
             // 
             this.btn_them.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_them.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_them.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_them.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_them.ImageIndex = 4;
@@ -148,6 +149,7 @@
             // btn_nhaplai
             // 
             this.btn_nhaplai.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_nhaplai.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_nhaplai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_nhaplai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_nhaplai.ImageIndex = 1;
@@ -163,6 +165,7 @@
             // btn_huy
             // 
             this.btn_huy.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_huy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_huy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_huy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_huy.ImageIndex = 0;

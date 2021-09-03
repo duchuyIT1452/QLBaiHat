@@ -257,6 +257,7 @@ namespace GUI
             // btn_sua
             // 
             this.btn_sua.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_sua.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_sua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_sua.ImageIndex = 2;
@@ -292,6 +293,7 @@ namespace GUI
             // btn_nhaplai
             // 
             this.btn_nhaplai.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_nhaplai.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_nhaplai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_nhaplai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_nhaplai.ImageIndex = 1;
@@ -346,6 +348,7 @@ namespace GUI
             // btn_huy
             // 
             this.btn_huy.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_huy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_huy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_huy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_huy.ImageIndex = 0;
@@ -375,6 +378,7 @@ namespace GUI
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fCapNhat_BaiHat";
             this.Text = "Cập nhật bài hát";

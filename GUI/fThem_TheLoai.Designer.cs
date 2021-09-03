@@ -98,6 +98,7 @@ namespace GUI
             // bt_dongY
             // 
             this.bt_dongY.BackColor = System.Drawing.Color.CadetBlue;
+            this.bt_dongY.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_dongY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_dongY.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_dongY.ImageIndex = 4;
@@ -124,6 +125,7 @@ namespace GUI
             // bt_nhapLai
             // 
             this.bt_nhapLai.BackColor = System.Drawing.Color.CadetBlue;
+            this.bt_nhapLai.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_nhapLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_nhapLai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_nhapLai.ImageIndex = 1;
@@ -140,6 +142,7 @@ namespace GUI
             // bt_huyBo
             // 
             this.bt_huyBo.BackColor = System.Drawing.Color.CadetBlue;
+            this.bt_huyBo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_huyBo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_huyBo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_huyBo.ImageIndex = 0;

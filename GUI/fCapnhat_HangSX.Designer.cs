@@ -46,6 +46,7 @@
             // btn_ok
             // 
             this.btn_ok.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_ok.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_ok.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_ok.ImageIndex = 2;
             this.btn_ok.ImageList = this.imageList1;
@@ -140,6 +141,7 @@
             // btn_nhaplai
             // 
             this.btn_nhaplai.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_nhaplai.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_nhaplai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_nhaplai.ImageIndex = 1;
             this.btn_nhaplai.ImageList = this.imageList1;
@@ -155,6 +157,7 @@
             // btn_huy
             // 
             this.btn_huy.BackColor = System.Drawing.Color.CadetBlue;
+            this.btn_huy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_huy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_huy.ImageIndex = 0;
             this.btn_huy.ImageList = this.imageList1;
@@ -183,6 +186,7 @@
             this.Controls.Add(this.btn_huy);
             this.Controls.Add(this.btn_nhaplai);
             this.Controls.Add(this.btn_ok);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
