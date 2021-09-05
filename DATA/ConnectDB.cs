@@ -32,10 +32,5 @@ namespace DATA
             cmd.ExecuteNonQuery();
             conn.Close();
         }
-
-        internal int executeNonQuery(string p)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
