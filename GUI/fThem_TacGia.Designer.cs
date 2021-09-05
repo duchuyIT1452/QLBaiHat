@@ -197,6 +197,7 @@
             this.Controls.Add(this.btn_them);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fThem_Tacgia";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm tác giả";
             this.ResumeLayout(false);
             this.PerformLayout();

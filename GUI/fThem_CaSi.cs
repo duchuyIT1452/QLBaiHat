@@ -24,6 +24,7 @@ namespace GUI
             txt_macasi.Text = "";
             txt_tencasi.Text = "";
             txt_thongtincasi.Text = "";
+            txt_macasi.Select();
         }
         #endregion
 

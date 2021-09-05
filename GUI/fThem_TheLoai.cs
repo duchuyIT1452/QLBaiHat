@@ -80,5 +80,10 @@ namespace GUI
             }
         }
         #endregion
+
+        private void fThem_TheLoai_Load(object sender, EventArgs e)
+        {
+            txt_maTheLoai.Select();
+        }
     }
 }

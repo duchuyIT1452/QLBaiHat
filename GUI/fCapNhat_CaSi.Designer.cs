@@ -189,6 +189,7 @@ namespace GUI
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fCapNhat_CaSi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cập nhật ca sĩ";
             this.Load += new System.EventHandler(this.fCapNhat_CaSi_Load);
             this.ResumeLayout(false);

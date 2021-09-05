@@ -59,6 +59,7 @@ namespace GUI
             txt_loibaihat.Text = "";
             txt_mabaihat.Text = "";
             txt_tenbaihat.Text = "";
+            txt_mabaihat.Select();
         }
         #endregion
 

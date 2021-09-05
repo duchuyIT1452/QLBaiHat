@@ -188,6 +188,7 @@ namespace GUI
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fThem_CaSi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm ca sĩ";
             this.Load += new System.EventHandler(this.fThem_CaSi_Load);
             this.ResumeLayout(false);

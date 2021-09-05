@@ -191,6 +191,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "fCapnhat_HangSX";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cập nhật thông tin HSX";
             this.Load += new System.EventHandler(this.fCapnhat_HangSX_Load);
             this.ResumeLayout(false);

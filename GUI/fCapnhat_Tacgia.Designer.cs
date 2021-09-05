@@ -189,6 +189,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fCapnhat_Tacgia";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cập nhật tác giả";
             this.Load += new System.EventHandler(this.fCapnhat_Tacgia_Load);
             this.ResumeLayout(false);

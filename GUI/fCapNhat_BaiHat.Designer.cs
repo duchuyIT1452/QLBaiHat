@@ -381,6 +381,7 @@ namespace GUI
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fCapNhat_BaiHat";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cập nhật bài hát";
             this.Load += new System.EventHandler(this.fCapNhat_BaiHat_Load);
             this.groupBox1.ResumeLayout(false);

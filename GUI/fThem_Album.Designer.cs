@@ -199,7 +199,9 @@ namespace GUI
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "fThem_Album";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm album";
+            this.Load += new System.EventHandler(this.fThem_Album_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

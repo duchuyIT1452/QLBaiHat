@@ -100,6 +100,7 @@ namespace GUI
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fThongTinDeTai";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin đề tài";
             this.ResumeLayout(false);
             this.PerformLayout();

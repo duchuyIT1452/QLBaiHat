@@ -80,5 +80,10 @@ namespace GUI
                 Close();
         }
         #endregion
+
+        private void fThem_Album_Load(object sender, EventArgs e)
+        {
+            txt_maAlbum.Select();
+        }
     }
 }

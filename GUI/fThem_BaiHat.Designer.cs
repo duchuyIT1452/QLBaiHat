@@ -391,6 +391,7 @@ namespace GUI
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fThem_BaiHat";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm bài hát";
             this.Load += new System.EventHandler(this.fThem_BaiHat_Load);
             this.panel1.ResumeLayout(false);
