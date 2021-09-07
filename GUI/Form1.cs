@@ -812,8 +812,9 @@ namespace GUI
                 String ma = dgv_dsNhacSi.Rows[d].Cells[0].Value.ToString();
                 dt = bus.listBaiHatTheoTacGia(ma);
                 dgv_Baihat_nhacsi.DataSource = dt;
-                txt_tentacgia.Text = dgv_dsNhacSi.Rows[d].Cells[1].Value.ToString();
-                txt_thongtintacgia.Text = dgv_dsNhacSi.Rows[d].Cells[2].Value.ToString();
+                // txt_tentacgia.Text = dgv_dsNhacSi.Rows[d].Cells[1].Value.ToString();
+                txt_thongtintacgia.Text = dgv_dsNhacSi.Rows[d].Cells[1].Value.ToString();
+                //txt_thongtintacgia.Text = dgv_dsNhacSi.Rows[d].Cells[2].Value.ToString();
                 dgv_Baihat_nhacsi.ClearSelection();
             }
 
